@@ -1,0 +1,40 @@
+{
+    "stickerList": [{
+        "type": "sticker",
+        "centerIndexList": [54],
+        "offsetX": 0.0,
+        "offsetY": 0.0,
+        "baseScale": 1.3024,
+        "startIndex": 6,
+        "endIndex": 26,
+        "width": 495,
+        "height": 120,
+        "frames": 2,
+        "action": 0,
+        "stickerName": "nose_000",
+        "duration": 100,
+        "stickerLooping": 1,
+        "audioPath": "",
+        "audioLooping": 0,
+        "maxcount": 5
+    }, {
+        "type": "sticker",
+        "centerIndexList": [39],
+        "offsetX": 0.0,
+        "offsetY":0.0,
+        "baseScale": 1.3453,
+        "startIndex": 6,
+        "endIndex": 26,
+        "width": 454,
+        "height": 150,
+        "frames": 2,
+        "action": 0,
+        "stickerName": "ear_000",
+        "duration": 100,
+        "stickerLooping": 1,
+        "audioPath": "",
+        "audioLooping": 0,
+        "maxcount": 5
+    }
+]
+}

@@ -1,0 +1,21 @@
+{
+    "stickerList": [ {
+        "type": "sticker",
+        "centerIndexList": [0],
+        "offsetX": 0.0,
+        "offsetY":-0.3,
+        "baseScale": 1.8,
+        "startIndex": 10,
+        "endIndex": 26,
+        "width":417,
+        "height": 213,
+        "frames": 1,
+        "action": 0,
+        "stickerName": "dj_98_133",
+        "duration": 100,
+        "stickerLooping": 1,
+        "audioPath": "",
+        "audioLooping": 0,
+        "maxcount": 5
+    }]
+}

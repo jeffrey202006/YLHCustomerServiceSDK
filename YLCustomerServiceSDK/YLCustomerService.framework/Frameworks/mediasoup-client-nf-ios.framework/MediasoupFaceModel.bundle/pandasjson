@@ -1,0 +1,21 @@
+{
+    "stickerList": [ {
+        "type": "sticker",
+        "centerIndexList": [39],
+        "offsetX": 0.0,
+        "offsetY":0.2,
+        "baseScale": 1.3,
+        "startIndex": 6,
+        "endIndex": 26,
+        "width":374,
+        "height": 271,
+        "frames": 1,
+        "action": 0,
+        "stickerName": "p_00",
+        "duration": 100,
+        "stickerLooping": 1,
+        "audioPath": "",
+        "audioLooping": 0,
+        "maxcount": 5
+    }]
+}

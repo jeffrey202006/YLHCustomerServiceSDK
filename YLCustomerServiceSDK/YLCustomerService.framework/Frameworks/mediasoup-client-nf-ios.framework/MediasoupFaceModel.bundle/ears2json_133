@@ -1,0 +1,21 @@
+{
+    "stickerList": [ {
+        "type": "sticker",
+        "centerIndexList": [0],
+        "offsetX": 0.0,
+        "offsetY":-0.2,
+        "baseScale": 1.2,
+        "startIndex": 10,
+        "endIndex": 26,
+        "width":376,
+        "height": 263,
+        "frames": 1,
+        "action": 0,
+        "stickerName": "dj_95_133",
+        "duration": 100,
+        "stickerLooping": 1,
+        "audioPath": "",
+        "audioLooping": 0,
+        "maxcount": 5
+    }]
+}

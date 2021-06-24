@@ -1,0 +1,16 @@
+PODS:
+  - YLCustomerServiceSDK (0.3.0)
+
+DEPENDENCIES:
+  - YLCustomerServiceSDK (~> 0.3.0)
+
+SPEC REPOS:
+  trunk:
+    - YLCustomerServiceSDK
+
+SPEC CHECKSUMS:
+  YLCustomerServiceSDK: e4f4b9aaf613b539713c3460ac1fe031afe5a2f7
+
+PODFILE CHECKSUM: 5ca5665205bc7bfe8a2fa47a56161e66121ee11b
+
+COCOAPODS: 1.10.1

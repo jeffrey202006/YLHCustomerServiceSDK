@@ -1,0 +1,6 @@
+framework module YLCustomerService {
+  umbrella header "YLCustomerService.h"
+
+  export *
+  module * { export * }
+}
