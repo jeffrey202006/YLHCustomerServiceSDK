@@ -6,7 +6,7 @@
 	<dict>
 		<key>Frameworks/GPUImageNFFramework.framework/GPUImageNFFramework</key>
 		<data>
-		NLHx9Lx8e48Ul5AdxGV7Yn4W13A=
+		yW8mtwzHNymYi9bw9P3cKJM+xGo=
 		</data>
 		<key>Frameworks/GPUImageNFFramework.framework/Info.plist</key>
 		<data>
@@ -51,10 +51,6 @@
 		<key>MediasoupFaceModel.bundle/Info.plist</key>
 		<data>
 		wrBslzFKRKGZDcYg0GS0dJVDPPQ=
-		</data>
-		<key>MediasoupFaceModel.bundle/MediasoupFaceModel</key>
-		<data>
-		TW0LigeRu403lGuKSXog5yjeN+E=
 		</data>
 		<key>MediasoupFaceModel.bundle/Normal.fsh</key>
 		<data>
@@ -563,11 +559,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			NLHx9Lx8e48Ul5AdxGV7Yn4W13A=
+			yW8mtwzHNymYi9bw9P3cKJM+xGo=
 			</data>
 			<key>hash2</key>
 			<data>
-			RmxbAPd3eR/+HQRrj4PROdwurWcDKYipjwwZc9FA5E8=
+			iBO0MvVUvqPW8zco76VjTwn7weuH32Rs1XHivvRCzYY=
 			</data>
 		</dict>
 		<key>Frameworks/GPUImageNFFramework.framework/Info.plist</key>
@@ -678,17 +674,6 @@
 			<key>hash2</key>
 			<data>
 			tExR17AVPhImw7WUO2RGe+qaBXdgnWrp4PlufUQDHQI=
-			</data>
-		</dict>
-		<key>MediasoupFaceModel.bundle/MediasoupFaceModel</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			TW0LigeRu403lGuKSXog5yjeN+E=
-			</data>
-			<key>hash2</key>
-			<data>
-			+p270J768lgTl/CQ/OhkLYp708Oe1iokEyTrY4HKfXE=
 			</data>
 		</dict>
 		<key>MediasoupFaceModel.bundle/Normal.fsh</key>
