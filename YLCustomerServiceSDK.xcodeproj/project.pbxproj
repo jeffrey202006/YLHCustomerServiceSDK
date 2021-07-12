@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5073317A269C347D00976122 /* YLHCustomerServiceSDK.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 50733179269C347D00976122 /* YLHCustomerServiceSDK.podspec */; };
 		67673E9C266761C200AC8858 /* YLCustomerServiceSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67673E92266761C200AC8858 /* YLCustomerServiceSDK.framework */; };
 		67673EA3266761C200AC8858 /* YLCustomerServiceSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 67673E95266761C200AC8858 /* YLCustomerServiceSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		67673EBA266764E000AC8858 /* YLCustomerService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67673EB82667630500AC8858 /* YLCustomerService.framework */; };
@@ -40,6 +41,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		50733179269C347D00976122 /* YLHCustomerServiceSDK.podspec */ = {isa = PBXFileReference; lastKnownFileType = file; path = YLHCustomerServiceSDK.podspec; sourceTree = SOURCE_ROOT; };
 		67673E92266761C200AC8858 /* YLCustomerServiceSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YLCustomerServiceSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		67673E95266761C200AC8858 /* YLCustomerServiceSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YLCustomerServiceSDK.h; sourceTree = "<group>"; };
 		67673E96266761C200AC8858 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 		67673E94266761C200AC8858 /* YLCustomerServiceSDK */ = {
 			isa = PBXGroup;
 			children = (
+				50733179269C347D00976122 /* YLHCustomerServiceSDK.podspec */,
 				67673EB82667630500AC8858 /* YLCustomerService.framework */,
 				67673E95266761C200AC8858 /* YLCustomerServiceSDK.h */,
 				67673E96266761C200AC8858 /* Info.plist */,
@@ -191,6 +194,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5073317A269C347D00976122 /* YLHCustomerServiceSDK.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
