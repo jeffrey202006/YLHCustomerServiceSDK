@@ -4,10 +4,6 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>.DS_Store</key>
-		<data>
-		nAr+4BSbb5pMwtwWqNNgcVbS6jg=
-		</data>
 		<key>Frameworks/mediasoup-client-nf-ios.framework/Frameworks/GPUImageNFFramework.framework/GPUImageNFFramework</key>
 		<data>
 		yW8mtwzHNymYi9bw9P3cKJM+xGo=
@@ -562,7 +558,7 @@
 		</data>
 		<key>Frameworks/mediasoup-client-nf-ios.framework/mediasoup-client-nf-ios</key>
 		<data>
-		1QVAKXlPttMcubB6P9Sdv1MYwHo=
+		TaM23QRFrhnVu6hiTBCdQxm9NAM=
 		</data>
 		<key>Headers/PasteboardTextView.h</key>
 		<data>
@@ -638,83 +634,83 @@
 		</data>
 		<key>IMUICameraCell.nib/objects-12.3+.nib</key>
 		<data>
-		c91n9aAXHdjnLJa7YQF94pHvw7E=
+		ickNHzpSfiZSHs5Adc2m5pTy0JI=
 		</data>
 		<key>IMUICameraCell.nib/runtime.nib</key>
 		<data>
-		XPsBZF6xzh+d4WwT9mMq0uKCCb8=
+		lEBdpkWfFTC3O9MU7Q4mgzGOmyo=
 		</data>
 		<key>IMUICameraView.nib</key>
 		<data>
-		pYkAFy9QceMqwv/1BqnDeKxsMzI=
+		XQUqB0k1ArGWUvynYLyFN0t0qpA=
 		</data>
 		<key>IMUICustomInputView.nib</key>
 		<data>
-		glUhK8iZs77xWSmucAF7M+1lJ38=
+		5RuOvDF5eHfSmi5zRB8y9M8ZsyI=
 		</data>
 		<key>IMUIEmojiCell.nib/objects-12.3+.nib</key>
 		<data>
-		KFXAQcxV6aUw+FbNu9LVvH8PiQA=
+		sbQivQXpv1u0CBTf7LxQWwNPDSs=
 		</data>
 		<key>IMUIEmojiCell.nib/runtime.nib</key>
 		<data>
-		MQmOGLKKKhM6049coaTRTdsCB30=
+		ZX66rsTQWdnU7h7NqRkQW7sHIR4=
 		</data>
 		<key>IMUIEmojiItemCell.nib/objects-12.3+.nib</key>
 		<data>
-		sj0v9lr3vxw6mVXBGMgpBSchA8Q=
+		P7FJ1rrUgTzW4vqfIzwXYFqBJ2Y=
 		</data>
 		<key>IMUIEmojiItemCell.nib/runtime.nib</key>
 		<data>
-		Qc8346puFaXjFGoKV+ehW+xLOTY=
+		DVK2v+BeWetViBgrqrC1G7d8/LI=
 		</data>
 		<key>IMUIFeatureListIconCell.nib/objects-12.3+.nib</key>
 		<data>
-		TkwXu0JvExdckvK8tdbx/lgMQVs=
+		aXkSVlhEg7CxdWZI9xDhC2cr2B8=
 		</data>
 		<key>IMUIFeatureListIconCell.nib/runtime.nib</key>
 		<data>
-		VutYaIxQAVQFt1F5sQ1ZD6j7LrM=
+		+OCfKyClZkFFUM+EWqVro4FBLds=
 		</data>
 		<key>IMUIFeatureListView.nib</key>
 		<data>
-		BbY7dUTgbgVYDauxBy0go5b7oDw=
+		vWmzTyjzZRw1XifYX5HEmwv2Jfg=
 		</data>
 		<key>IMUIFeatureView.nib</key>
 		<data>
-		I7d5AoDHmUSxoJ+d/Zj6qGwy02E=
+		M2qgKZ1pmRYcudM3wq1dHgbu4Ug=
 		</data>
 		<key>IMUIGalleryCell.nib/objects-12.3+.nib</key>
 		<data>
-		9Nr04CwylU/JchMJDIgGq96J49Y=
+		r2KKHbgMF5C4iWBEI3Y9VEX/faA=
 		</data>
 		<key>IMUIGalleryCell.nib/runtime.nib</key>
 		<data>
-		zUl0btQRLZh+hu+7ft74fpT+r1A=
+		D23uZO2kU4aoJlZVrCRiNMZgzZc=
 		</data>
 		<key>IMUIGalleryContainerCell.nib/objects-12.3+.nib</key>
 		<data>
-		WUjjQFOgVytVryal+OOcx/F66G4=
+		31iCpsImHUptkQR2Vdu9r0UHWd8=
 		</data>
 		<key>IMUIGalleryContainerCell.nib/runtime.nib</key>
 		<data>
-		Vs7ZkB5ptcMRS0Lh9+N4LIQDrDI=
+		kwrST9oCkjCjacQPbiI0XdgokPM=
 		</data>
 		<key>IMUIMessageCollectionView.nib</key>
 		<data>
-		BLlPM/PAsZyvYPwmqn8OZ/MuV7o=
+		eaGHqLhc861nlmgF1/AGU7V9tNA=
 		</data>
 		<key>IMUIPermissionDenyedView.nib</key>
 		<data>
-		yC0EpOKkmwMDPK46aLz501vTaxE=
+		NDDiu8GdWQ2DLkNi9idxhIZCk7g=
 		</data>
 		<key>IMUIRecordVoiceCell.nib/objects-12.3+.nib</key>
 		<data>
-		jLxf6d2M8AQFX9H3yuQhgStb4oY=
+		uIFflljc85Rq7r4gahKSdrg8vEI=
 		</data>
 		<key>IMUIRecordVoiceCell.nib/runtime.nib</key>
 		<data>
-		0PCR4SaOfEealWI7o8g7l0mHuDA=
+		8pwAtVHpJh3d+F67mBCVpq+dYqg=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -3843,11 +3839,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			1QVAKXlPttMcubB6P9Sdv1MYwHo=
+			TaM23QRFrhnVu6hiTBCdQxm9NAM=
 			</data>
 			<key>hash2</key>
 			<data>
-			J6LetFL1hl7l0fBNkEKPIauaJRNx2otanSTFa/OF70w=
+			lpamB+I25PK/r6Z0MF7q939FEBSChpUUJkAKxA9IiSI=
 			</data>
 		</dict>
 		<key>Headers/PasteboardTextView.h</key>
@@ -4052,220 +4048,220 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			c91n9aAXHdjnLJa7YQF94pHvw7E=
+			ickNHzpSfiZSHs5Adc2m5pTy0JI=
 			</data>
 			<key>hash2</key>
 			<data>
-			4IeiKUZMW2L6YxBC6ellvqOkwjWM7WDR2xxpSVcmZLM=
+			eVvM5S4BUr69SmMbZNURcfdZ6dP1HzWXFXEEJA1Z3D8=
 			</data>
 		</dict>
 		<key>IMUICameraCell.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			XPsBZF6xzh+d4WwT9mMq0uKCCb8=
+			lEBdpkWfFTC3O9MU7Q4mgzGOmyo=
 			</data>
 			<key>hash2</key>
 			<data>
-			u4bJm/3ZQxKxTdGkwODR4dgXDjiK+8lgm0x5FTfU970=
+			gcXB6Op59ve2YMnpIzrluoUsKdLZAzAT8H6TAZYeQIY=
 			</data>
 		</dict>
 		<key>IMUICameraView.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			pYkAFy9QceMqwv/1BqnDeKxsMzI=
+			XQUqB0k1ArGWUvynYLyFN0t0qpA=
 			</data>
 			<key>hash2</key>
 			<data>
-			uyzgsr74jbWz8zQSEpqJZ3ycc5kKNHG3N54SgPhra80=
+			SuF6mGBIPCfpK0MLC+KmjsBBb5Hvx5jvC37VP4UZWvs=
 			</data>
 		</dict>
 		<key>IMUICustomInputView.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			glUhK8iZs77xWSmucAF7M+1lJ38=
+			5RuOvDF5eHfSmi5zRB8y9M8ZsyI=
 			</data>
 			<key>hash2</key>
 			<data>
-			m3INpxBncz1d2VAkGDnniGfjya4v6LUhP6+rG9iM2K8=
+			abG2BNjfEaJSUoo/JQgmkTUqJRQlfkB9g9YAed5LIfs=
 			</data>
 		</dict>
 		<key>IMUIEmojiCell.nib/objects-12.3+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			KFXAQcxV6aUw+FbNu9LVvH8PiQA=
+			sbQivQXpv1u0CBTf7LxQWwNPDSs=
 			</data>
 			<key>hash2</key>
 			<data>
-			TvrBQb1WW43q7/mfHpHHgvNcF2+pinDp/g3gRfGQYPI=
+			UUVQbA4GeW0igV98lGg+ESnmlHVy3phs4DRNS+3Tm8E=
 			</data>
 		</dict>
 		<key>IMUIEmojiCell.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			MQmOGLKKKhM6049coaTRTdsCB30=
+			ZX66rsTQWdnU7h7NqRkQW7sHIR4=
 			</data>
 			<key>hash2</key>
 			<data>
-			3sZILcZ1/v+KZoGJhwZbMoLaI9SuYfjBuUlppT+XRqs=
+			U6aCtg6mwWhI7ol7kr/zdZeStCmapDtck9tA7vhfs0U=
 			</data>
 		</dict>
 		<key>IMUIEmojiItemCell.nib/objects-12.3+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			sj0v9lr3vxw6mVXBGMgpBSchA8Q=
+			P7FJ1rrUgTzW4vqfIzwXYFqBJ2Y=
 			</data>
 			<key>hash2</key>
 			<data>
-			ITkA1pxfSpO+m6kJoLENecz0h+jXOrWC2tnYlCM6tWE=
+			x7YlrYupi5vIzGpyudCQpbTmB4LcYzP2XkE83gD24PA=
 			</data>
 		</dict>
 		<key>IMUIEmojiItemCell.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Qc8346puFaXjFGoKV+ehW+xLOTY=
+			DVK2v+BeWetViBgrqrC1G7d8/LI=
 			</data>
 			<key>hash2</key>
 			<data>
-			WuKKlMbB//rLk/O7eRr4g0q8o7Gj99xsc1yZWuodHlM=
+			uEuTfcgG2zHsD51Qq2TV9UtGw51Jdghxwp7M+di1Psk=
 			</data>
 		</dict>
 		<key>IMUIFeatureListIconCell.nib/objects-12.3+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			TkwXu0JvExdckvK8tdbx/lgMQVs=
+			aXkSVlhEg7CxdWZI9xDhC2cr2B8=
 			</data>
 			<key>hash2</key>
 			<data>
-			Hi9kX/SeV/qSinBGYBUd48gUdT0uOET48WpG4I72mO4=
+			cB+428pz+XoF8/fbm7xhKAkPyBAXTxou2sFci9N/ClI=
 			</data>
 		</dict>
 		<key>IMUIFeatureListIconCell.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			VutYaIxQAVQFt1F5sQ1ZD6j7LrM=
+			+OCfKyClZkFFUM+EWqVro4FBLds=
 			</data>
 			<key>hash2</key>
 			<data>
-			yKVUdlIxD2h9DjnAC22MJGkSHe2nzb1Y+2UZ5x7t2gw=
+			z0SjMN9703SrBKVrGVgAZ0WHEg/+s+Bp9LP/ioliZIw=
 			</data>
 		</dict>
 		<key>IMUIFeatureListView.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			BbY7dUTgbgVYDauxBy0go5b7oDw=
+			vWmzTyjzZRw1XifYX5HEmwv2Jfg=
 			</data>
 			<key>hash2</key>
 			<data>
-			Ff4/mF9ClQHs29UtC7IQZU2lhtfNNipzIqx5E6flEeA=
+			8CJ++GElmp42KgWViyOHbDsXohEUnXudyLv6GB/DtTo=
 			</data>
 		</dict>
 		<key>IMUIFeatureView.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			I7d5AoDHmUSxoJ+d/Zj6qGwy02E=
+			M2qgKZ1pmRYcudM3wq1dHgbu4Ug=
 			</data>
 			<key>hash2</key>
 			<data>
-			NJ05YHX1IS+wOFXUSL2RcxbZVYT3GFH8jhJewcHclrE=
+			Az8VpkkmMrJ5EXVTbvihR15/l7KmxQk93kOi2ZOONAE=
 			</data>
 		</dict>
 		<key>IMUIGalleryCell.nib/objects-12.3+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			9Nr04CwylU/JchMJDIgGq96J49Y=
+			r2KKHbgMF5C4iWBEI3Y9VEX/faA=
 			</data>
 			<key>hash2</key>
 			<data>
-			OtA5WAY2ghwhu+YZilyYzwpyNbUsqyEw+YrTO+RwZQY=
+			MUGyq1nEnljgUv+oHOReVzH/PNuPp4NjrSkNELng+u4=
 			</data>
 		</dict>
 		<key>IMUIGalleryCell.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			zUl0btQRLZh+hu+7ft74fpT+r1A=
+			D23uZO2kU4aoJlZVrCRiNMZgzZc=
 			</data>
 			<key>hash2</key>
 			<data>
-			GbaDzb+l5+vFkTZYNw+nNT04sSIv7iL5KjYWFlzTFlM=
+			PUJO+vwcfodRt/87Ntx5HR3oBs4/4RN6H73d8k2BE50=
 			</data>
 		</dict>
 		<key>IMUIGalleryContainerCell.nib/objects-12.3+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			WUjjQFOgVytVryal+OOcx/F66G4=
+			31iCpsImHUptkQR2Vdu9r0UHWd8=
 			</data>
 			<key>hash2</key>
 			<data>
-			Vdc/39aXM5sMa9bZXVJbsPtBp9URjLZlVymj0JOdnd0=
+			AycLpih93F79rwZ54A7REqE7sZ9IF66ogvya9q9UjFI=
 			</data>
 		</dict>
 		<key>IMUIGalleryContainerCell.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Vs7ZkB5ptcMRS0Lh9+N4LIQDrDI=
+			kwrST9oCkjCjacQPbiI0XdgokPM=
 			</data>
 			<key>hash2</key>
 			<data>
-			R1TnPpTX25+aXWU/I9iVvjdwXhTkCIQYZF4WUFFvPA4=
+			o4Inog0Sp1a2CO4+bnVZf7eEcgj4412ZVD6UOX/IG0w=
 			</data>
 		</dict>
 		<key>IMUIMessageCollectionView.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			BLlPM/PAsZyvYPwmqn8OZ/MuV7o=
+			eaGHqLhc861nlmgF1/AGU7V9tNA=
 			</data>
 			<key>hash2</key>
 			<data>
-			z30KaC831Nq7qVY+8z5xzSJYh+ugMstM8RYW0lUnqfk=
+			w8xtmRqK5FXqxwRskD+6FsmInCbn3rgHxpFF4IrY/04=
 			</data>
 		</dict>
 		<key>IMUIPermissionDenyedView.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			yC0EpOKkmwMDPK46aLz501vTaxE=
+			NDDiu8GdWQ2DLkNi9idxhIZCk7g=
 			</data>
 			<key>hash2</key>
 			<data>
-			DHCHpjN4aiSncZIcQFFPo7wYiiJzzyM42erod0wY1LY=
+			I2ujGXiOStGT9j1f5pOd97INXgGjF8S3LTfPkxI0mpI=
 			</data>
 		</dict>
 		<key>IMUIRecordVoiceCell.nib/objects-12.3+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			jLxf6d2M8AQFX9H3yuQhgStb4oY=
+			uIFflljc85Rq7r4gahKSdrg8vEI=
 			</data>
 			<key>hash2</key>
 			<data>
-			rO9Tmo77kEZrt2eTV5NASynfq8ZA4LL+XL5YglrnEDQ=
+			MHRypP/4NvWTdfDh2vuV2CNTn4nybHuz3CBIPzqjPl0=
 			</data>
 		</dict>
 		<key>IMUIRecordVoiceCell.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			0PCR4SaOfEealWI7o8g7l0mHuDA=
+			8pwAtVHpJh3d+F67mBCVpq+dYqg=
 			</data>
 			<key>hash2</key>
 			<data>
-			HjfSjb5Nxi+peu+UJI/dNEXy3wUcJlnKpnPGW+MOz9g=
+			x3INjSzQBn94yqJtJamrztYNRDE79JuNRSyMCM1pgBc=
 			</data>
 		</dict>
 		<key>LICENSE</key>
