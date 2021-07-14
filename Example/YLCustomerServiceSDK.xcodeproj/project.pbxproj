@@ -241,7 +241,7 @@
 				ORGANIZATIONNAME = liaohai;
 				TargetAttributes = {
 					6003F589195388D20070C39A = {
-						DevelopmentTeam = CC682M9BKN;
+						DevelopmentTeam = 7468N87BYD;
 						LastSwiftMigration = 1150;
 					};
 					6003F5AD195388D20070C39A = {
@@ -299,21 +299,21 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-YLCustomerServiceSDK_Example/Pods-YLCustomerServiceSDK_Example-resources.sh",
-				"${PODS_ROOT}/YLCustomerServiceSDK/YLCustomerServiceSDK/YLCustomerService.framework/YLSkinDefault.bundle",
-				"${PODS_ROOT}/YLCustomerServiceSDK/YLCustomerServiceSDK/YLCustomerService.framework/YLCustomerService.bundle",
-				"${PODS_ROOT}/YLCustomerServiceSDK/YLCustomerServiceSDK/YLCustomerService.framework/IMUICameraView.nib",
-				"${PODS_ROOT}/YLCustomerServiceSDK/YLCustomerServiceSDK/YLCustomerService.framework/IMUICustomInputView.nib",
-				"${PODS_ROOT}/YLCustomerServiceSDK/YLCustomerServiceSDK/YLCustomerService.framework/IMUIFeatureListView.nib",
-				"${PODS_ROOT}/YLCustomerServiceSDK/YLCustomerServiceSDK/YLCustomerService.framework/IMUIFeatureView.nib",
-				"${PODS_ROOT}/YLCustomerServiceSDK/YLCustomerServiceSDK/YLCustomerService.framework/IMUIMessageCollectionView.nib",
-				"${PODS_ROOT}/YLCustomerServiceSDK/YLCustomerServiceSDK/YLCustomerService.framework/IMUIPermissionDenyedView.nib",
-				"${PODS_ROOT}/YLCustomerServiceSDK/YLCustomerServiceSDK/YLCustomerService.framework/IMUICameraCell.nib",
-				"${PODS_ROOT}/YLCustomerServiceSDK/YLCustomerServiceSDK/YLCustomerService.framework/IMUIEmojiCell.nib",
-				"${PODS_ROOT}/YLCustomerServiceSDK/YLCustomerServiceSDK/YLCustomerService.framework/IMUIEmojiItemCell.nib",
-				"${PODS_ROOT}/YLCustomerServiceSDK/YLCustomerServiceSDK/YLCustomerService.framework/IMUIFeatureListIconCell.nib",
-				"${PODS_ROOT}/YLCustomerServiceSDK/YLCustomerServiceSDK/YLCustomerService.framework/IMUIGalleryCell.nib",
-				"${PODS_ROOT}/YLCustomerServiceSDK/YLCustomerServiceSDK/YLCustomerService.framework/IMUIGalleryContainerCell.nib",
-				"${PODS_ROOT}/YLCustomerServiceSDK/YLCustomerServiceSDK/YLCustomerService.framework/IMUIRecordVoiceCell.nib",
+				"${PODS_ROOT}/YLHCustomerServiceSDK/YLCustomerServiceSDK/YLCustomerService.framework/YLSkinDefault.bundle",
+				"${PODS_ROOT}/YLHCustomerServiceSDK/YLCustomerServiceSDK/YLCustomerService.framework/YLCustomerService.bundle",
+				"${PODS_ROOT}/YLHCustomerServiceSDK/YLCustomerServiceSDK/YLCustomerService.framework/IMUICameraView.nib",
+				"${PODS_ROOT}/YLHCustomerServiceSDK/YLCustomerServiceSDK/YLCustomerService.framework/IMUICustomInputView.nib",
+				"${PODS_ROOT}/YLHCustomerServiceSDK/YLCustomerServiceSDK/YLCustomerService.framework/IMUIFeatureListView.nib",
+				"${PODS_ROOT}/YLHCustomerServiceSDK/YLCustomerServiceSDK/YLCustomerService.framework/IMUIFeatureView.nib",
+				"${PODS_ROOT}/YLHCustomerServiceSDK/YLCustomerServiceSDK/YLCustomerService.framework/IMUIMessageCollectionView.nib",
+				"${PODS_ROOT}/YLHCustomerServiceSDK/YLCustomerServiceSDK/YLCustomerService.framework/IMUIPermissionDenyedView.nib",
+				"${PODS_ROOT}/YLHCustomerServiceSDK/YLCustomerServiceSDK/YLCustomerService.framework/IMUICameraCell.nib",
+				"${PODS_ROOT}/YLHCustomerServiceSDK/YLCustomerServiceSDK/YLCustomerService.framework/IMUIEmojiCell.nib",
+				"${PODS_ROOT}/YLHCustomerServiceSDK/YLCustomerServiceSDK/YLCustomerService.framework/IMUIEmojiItemCell.nib",
+				"${PODS_ROOT}/YLHCustomerServiceSDK/YLCustomerServiceSDK/YLCustomerService.framework/IMUIFeatureListIconCell.nib",
+				"${PODS_ROOT}/YLHCustomerServiceSDK/YLCustomerServiceSDK/YLCustomerService.framework/IMUIGalleryCell.nib",
+				"${PODS_ROOT}/YLHCustomerServiceSDK/YLCustomerServiceSDK/YLCustomerService.framework/IMUIGalleryContainerCell.nib",
+				"${PODS_ROOT}/YLHCustomerServiceSDK/YLCustomerServiceSDK/YLCustomerService.framework/IMUIRecordVoiceCell.nib",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
@@ -367,10 +367,10 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-YLCustomerServiceSDK_Example/Pods-YLCustomerServiceSDK_Example-frameworks.sh",
-				"${PODS_ROOT}/YLCustomerServiceSDK/YLCustomerServiceSDK/YLCustomerService.framework",
-				"${PODS_ROOT}/YLCustomerServiceSDK/YLCustomerServiceSDK/YLCustomerService.framework/Frameworks/mediasoup-client-nf-ios.framework",
-				"${PODS_ROOT}/YLCustomerServiceSDK/YLCustomerServiceSDK/YLCustomerService.framework/Frameworks/mediasoup-client-nf-ios.framework/Frameworks/GPUImageNFFramework.framework",
-				"${PODS_ROOT}/YLCustomerServiceSDK/YLCustomerServiceSDK/YLCustomerService.framework/Frameworks/mediasoup-client-nf-ios.framework/Frameworks/YLWebRTC.framework",
+				"${PODS_ROOT}/YLHCustomerServiceSDK/YLCustomerServiceSDK/YLCustomerService.framework",
+				"${PODS_ROOT}/YLHCustomerServiceSDK/YLCustomerServiceSDK/YLCustomerService.framework/Frameworks/mediasoup-client-nf-ios.framework",
+				"${PODS_ROOT}/YLHCustomerServiceSDK/YLCustomerServiceSDK/YLCustomerService.framework/Frameworks/mediasoup-client-nf-ios.framework/Frameworks/GPUImageNFFramework.framework",
+				"${PODS_ROOT}/YLHCustomerServiceSDK/YLCustomerServiceSDK/YLCustomerService.framework/Frameworks/mediasoup-client-nf-ios.framework/Frameworks/YLWebRTC.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -523,7 +523,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = CC682M9BKN;
+				DEVELOPMENT_TEAM = 7468N87BYD;
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "YLCustomerServiceSDK/YLCustomerServiceSDK-Prefix.pch";
@@ -549,7 +549,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = CC682M9BKN;
+				DEVELOPMENT_TEAM = 7468N87BYD;
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "YLCustomerServiceSDK/YLCustomerServiceSDK-Prefix.pch";
