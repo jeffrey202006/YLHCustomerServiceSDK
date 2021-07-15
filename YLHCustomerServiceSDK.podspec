@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'YLHCustomerServiceSDK'
-  s.version          = '1.3.8'
+  s.version          = '1.3.8.1'
   s.summary          = '智能客服sdk.'
 
 # This description is used to generate tags and improve search results.
