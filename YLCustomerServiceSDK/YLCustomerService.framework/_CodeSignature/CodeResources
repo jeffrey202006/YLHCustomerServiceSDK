@@ -6,15 +6,15 @@
 	<dict>
 		<key>.DS_Store</key>
 		<data>
-		QHL2nY4a+4sKF5bs7SAxeVcDgGE=
+		aU8Q5VNVr9WzSBGx7OyB0Ff2jqQ=
 		</data>
 		<key>Frameworks/mediasoup-client-nf-ios.framework/Frameworks/GPUImageNFFramework.framework/GPUImageNFFramework</key>
 		<data>
-		yW8mtwzHNymYi9bw9P3cKJM+xGo=
+		QOeZVLcJCfBtZVakAoThuLMXMrU=
 		</data>
 		<key>Frameworks/mediasoup-client-nf-ios.framework/Frameworks/GPUImageNFFramework.framework/Info.plist</key>
 		<data>
-		NC9WFsa5C2f1dmxB3CIQQU5Olhg=
+		u8WtSEyutg9u+LbhVkwv7koLP2c=
 		</data>
 		<key>Frameworks/mediasoup-client-nf-ios.framework/Frameworks/GPUImageNFFramework.framework/MFPixelBufferHelper.bundle/Normal.fsh</key>
 		<data>
@@ -34,7 +34,7 @@
 		</data>
 		<key>Frameworks/mediasoup-client-nf-ios.framework/Frameworks/GPUImageNFFramework.framework/_CodeSignature/CodeResources</key>
 		<data>
-		p8lbfEhpk3U2Za4pDprOzTcDvNg=
+		amWM3aIb5Jf6Y59lKWxnBpEqcwk=
 		</data>
 		<key>Frameworks/mediasoup-client-nf-ios.framework/Frameworks/YLWebRTC.framework/Info.plist</key>
 		<data>
@@ -42,7 +42,7 @@
 		</data>
 		<key>Frameworks/mediasoup-client-nf-ios.framework/Frameworks/YLWebRTC.framework/YLWebRTC</key>
 		<data>
-		ojmUOeAic4oKaUmO4yu8iX/mjQQ=
+		s+Pc//675h9GNotQaqElumhDCIE=
 		</data>
 		<key>Frameworks/mediasoup-client-nf-ios.framework/Frameworks/YLWebRTC.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -50,11 +50,7 @@
 		</data>
 		<key>Frameworks/mediasoup-client-nf-ios.framework/Info.plist</key>
 		<data>
-		XzZDdLN27IoOCyoe9WbTsKhJ3kY=
-		</data>
-		<key>Frameworks/mediasoup-client-nf-ios.framework/MediasoupFaceModel.bundle/Info.plist</key>
-		<data>
-		wrBslzFKRKGZDcYg0GS0dJVDPPQ=
+		nL5lJKybYvBz3G9H5vwmoT7cBU4=
 		</data>
 		<key>Frameworks/mediasoup-client-nf-ios.framework/MediasoupFaceModel.bundle/Normal.fsh</key>
 		<data>
@@ -558,11 +554,11 @@
 		</data>
 		<key>Frameworks/mediasoup-client-nf-ios.framework/_CodeSignature/CodeResources</key>
 		<data>
-		ub9oVGycPR1AfkIwrVFIrf4c7pY=
+		xJQrqTrio6+FwgB9cpgtBGtv4tA=
 		</data>
 		<key>Frameworks/mediasoup-client-nf-ios.framework/mediasoup-client-nf-ios</key>
 		<data>
-		0X9iGA+4O2DgUT8mnjDj4iX4Co0=
+		7JJwLYNa0mpHg43++Ya28mT4JJg=
 		</data>
 		<key>Headers/PasteboardTextView.h</key>
 		<data>
@@ -1816,7 +1812,7 @@
 		</dict>
 		<key>YLSkinDefault.bundle/Info.plist</key>
 		<data>
-		vrBxKKcnh5QnsYkBG+p67nikU7o=
+		fsVaMtvHEZ3of4qigJO/GZw3M0k=
 		</data>
 		<key>YLSkinDefault.bundle/cs_rewoard_vip_icon@2x.png</key>
 		<data>
@@ -2325,22 +2321,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			yW8mtwzHNymYi9bw9P3cKJM+xGo=
+			QOeZVLcJCfBtZVakAoThuLMXMrU=
 			</data>
 			<key>hash2</key>
 			<data>
-			iBO0MvVUvqPW8zco76VjTwn7weuH32Rs1XHivvRCzYY=
+			JHbI8ydfsFrP98x7b5GspaanMwMAjyt53EC4Mpm82dQ=
 			</data>
 		</dict>
 		<key>Frameworks/mediasoup-client-nf-ios.framework/Frameworks/GPUImageNFFramework.framework/Info.plist</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			NC9WFsa5C2f1dmxB3CIQQU5Olhg=
+			u8WtSEyutg9u+LbhVkwv7koLP2c=
 			</data>
 			<key>hash2</key>
 			<data>
-			OAIG6B3zgxEpTJz8lYKIPPAHzkNvH2a/mPS2BhY1RIo=
+			Q7LMT7WmYrKlG7gILIZpVz/xeL/Km64spJmy9xXaWos=
 			</data>
 		</dict>
 		<key>Frameworks/mediasoup-client-nf-ios.framework/Frameworks/GPUImageNFFramework.framework/MFPixelBufferHelper.bundle/Normal.fsh</key>
@@ -2391,11 +2387,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			p8lbfEhpk3U2Za4pDprOzTcDvNg=
+			amWM3aIb5Jf6Y59lKWxnBpEqcwk=
 			</data>
 			<key>hash2</key>
 			<data>
-			RzXWHmLnNj3sSar+ir++Vq1PHfxhFzdztdGFIrffPBE=
+			M+zNwf12n+jj1ErXO1Vd3r0DXFJtsCJWSEIuuCWVd4w=
 			</data>
 		</dict>
 		<key>Frameworks/mediasoup-client-nf-ios.framework/Frameworks/YLWebRTC.framework/Info.plist</key>
@@ -2413,11 +2409,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ojmUOeAic4oKaUmO4yu8iX/mjQQ=
+			s+Pc//675h9GNotQaqElumhDCIE=
 			</data>
 			<key>hash2</key>
 			<data>
-			X4zb+I85TLPz8N8/9yo77qbUNOhFlh65eE80e2Zyd3w=
+			/dkmf/oPL0wnle2Z4pjlNMnm40xxv6hYHyy68tqoloU=
 			</data>
 		</dict>
 		<key>Frameworks/mediasoup-client-nf-ios.framework/Frameworks/YLWebRTC.framework/_CodeSignature/CodeResources</key>
@@ -2435,22 +2431,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			XzZDdLN27IoOCyoe9WbTsKhJ3kY=
+			nL5lJKybYvBz3G9H5vwmoT7cBU4=
 			</data>
 			<key>hash2</key>
 			<data>
-			ItW8ImWu7OzROpqC1LcRMYGZ+99I6QUtBwRIJ4UqLc0=
-			</data>
-		</dict>
-		<key>Frameworks/mediasoup-client-nf-ios.framework/MediasoupFaceModel.bundle/Info.plist</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			wrBslzFKRKGZDcYg0GS0dJVDPPQ=
-			</data>
-			<key>hash2</key>
-			<data>
-			tExR17AVPhImw7WUO2RGe+qaBXdgnWrp4PlufUQDHQI=
+			mLLuuFn0L7UV+hY2jM6+xlB8fgN70zTb3m7sz62KnjE=
 			</data>
 		</dict>
 		<key>Frameworks/mediasoup-client-nf-ios.framework/MediasoupFaceModel.bundle/Normal.fsh</key>
@@ -3832,22 +3817,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ub9oVGycPR1AfkIwrVFIrf4c7pY=
+			xJQrqTrio6+FwgB9cpgtBGtv4tA=
 			</data>
 			<key>hash2</key>
 			<data>
-			zpk9f7+QbdpjoeLA5gjdfwT+y//ejJ5Tp1Svy1eQkiw=
+			gcUwF8ZdNiZuh1HwPoROyDsovs0xwJRsA0RktKeqHrE=
 			</data>
 		</dict>
 		<key>Frameworks/mediasoup-client-nf-ios.framework/mediasoup-client-nf-ios</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			0X9iGA+4O2DgUT8mnjDj4iX4Co0=
+			7JJwLYNa0mpHg43++Ya28mT4JJg=
 			</data>
 			<key>hash2</key>
 			<data>
-			uBSGr/YA3YKqJ59JPk0YeyutPHXsBckjZ681jh3cdug=
+			PzUSKF6jZyN5zK8tFKyrsQ2qXDqkLUSw5U3Gw50bnpI=
 			</data>
 		</dict>
 		<key>Headers/PasteboardTextView.h</key>
@@ -7210,11 +7195,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			vrBxKKcnh5QnsYkBG+p67nikU7o=
+			fsVaMtvHEZ3of4qigJO/GZw3M0k=
 			</data>
 			<key>hash2</key>
 			<data>
-			GG6Gm8QveEpQmYSim0ogmUgan+Q/cPFoaDJcIvCrBSk=
+			kM50vSeiRxTQv3Rz/4cd2uqltLsnMTHNy9OhJtQq6nk=
 			</data>
 		</dict>
 		<key>YLSkinDefault.bundle/cs_rewoard_vip_icon@2x.png</key>

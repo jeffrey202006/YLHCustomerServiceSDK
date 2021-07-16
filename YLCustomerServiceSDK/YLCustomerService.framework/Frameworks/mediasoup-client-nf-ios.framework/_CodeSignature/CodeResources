@@ -6,11 +6,11 @@
 	<dict>
 		<key>Frameworks/GPUImageNFFramework.framework/GPUImageNFFramework</key>
 		<data>
-		yW8mtwzHNymYi9bw9P3cKJM+xGo=
+		QOeZVLcJCfBtZVakAoThuLMXMrU=
 		</data>
 		<key>Frameworks/GPUImageNFFramework.framework/Info.plist</key>
 		<data>
-		NC9WFsa5C2f1dmxB3CIQQU5Olhg=
+		u8WtSEyutg9u+LbhVkwv7koLP2c=
 		</data>
 		<key>Frameworks/GPUImageNFFramework.framework/MFPixelBufferHelper.bundle/Normal.fsh</key>
 		<data>
@@ -30,7 +30,7 @@
 		</data>
 		<key>Frameworks/GPUImageNFFramework.framework/_CodeSignature/CodeResources</key>
 		<data>
-		p8lbfEhpk3U2Za4pDprOzTcDvNg=
+		amWM3aIb5Jf6Y59lKWxnBpEqcwk=
 		</data>
 		<key>Frameworks/YLWebRTC.framework/Info.plist</key>
 		<data>
@@ -38,7 +38,7 @@
 		</data>
 		<key>Frameworks/YLWebRTC.framework/YLWebRTC</key>
 		<data>
-		ojmUOeAic4oKaUmO4yu8iX/mjQQ=
+		s+Pc//675h9GNotQaqElumhDCIE=
 		</data>
 		<key>Frameworks/YLWebRTC.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -46,11 +46,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		XzZDdLN27IoOCyoe9WbTsKhJ3kY=
-		</data>
-		<key>MediasoupFaceModel.bundle/Info.plist</key>
-		<data>
-		wrBslzFKRKGZDcYg0GS0dJVDPPQ=
+		nL5lJKybYvBz3G9H5vwmoT7cBU4=
 		</data>
 		<key>MediasoupFaceModel.bundle/Normal.fsh</key>
 		<data>
@@ -559,22 +555,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			yW8mtwzHNymYi9bw9P3cKJM+xGo=
+			QOeZVLcJCfBtZVakAoThuLMXMrU=
 			</data>
 			<key>hash2</key>
 			<data>
-			iBO0MvVUvqPW8zco76VjTwn7weuH32Rs1XHivvRCzYY=
+			JHbI8ydfsFrP98x7b5GspaanMwMAjyt53EC4Mpm82dQ=
 			</data>
 		</dict>
 		<key>Frameworks/GPUImageNFFramework.framework/Info.plist</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			NC9WFsa5C2f1dmxB3CIQQU5Olhg=
+			u8WtSEyutg9u+LbhVkwv7koLP2c=
 			</data>
 			<key>hash2</key>
 			<data>
-			OAIG6B3zgxEpTJz8lYKIPPAHzkNvH2a/mPS2BhY1RIo=
+			Q7LMT7WmYrKlG7gILIZpVz/xeL/Km64spJmy9xXaWos=
 			</data>
 		</dict>
 		<key>Frameworks/GPUImageNFFramework.framework/MFPixelBufferHelper.bundle/Normal.fsh</key>
@@ -625,11 +621,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			p8lbfEhpk3U2Za4pDprOzTcDvNg=
+			amWM3aIb5Jf6Y59lKWxnBpEqcwk=
 			</data>
 			<key>hash2</key>
 			<data>
-			RzXWHmLnNj3sSar+ir++Vq1PHfxhFzdztdGFIrffPBE=
+			M+zNwf12n+jj1ErXO1Vd3r0DXFJtsCJWSEIuuCWVd4w=
 			</data>
 		</dict>
 		<key>Frameworks/YLWebRTC.framework/Info.plist</key>
@@ -647,11 +643,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ojmUOeAic4oKaUmO4yu8iX/mjQQ=
+			s+Pc//675h9GNotQaqElumhDCIE=
 			</data>
 			<key>hash2</key>
 			<data>
-			X4zb+I85TLPz8N8/9yo77qbUNOhFlh65eE80e2Zyd3w=
+			/dkmf/oPL0wnle2Z4pjlNMnm40xxv6hYHyy68tqoloU=
 			</data>
 		</dict>
 		<key>Frameworks/YLWebRTC.framework/_CodeSignature/CodeResources</key>
@@ -663,17 +659,6 @@
 			<key>hash2</key>
 			<data>
 			ft7ENmkcRq+muqJ8q1oKtTvSo4HOJpo37LDJ1Sd51xQ=
-			</data>
-		</dict>
-		<key>MediasoupFaceModel.bundle/Info.plist</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			wrBslzFKRKGZDcYg0GS0dJVDPPQ=
-			</data>
-			<key>hash2</key>
-			<data>
-			tExR17AVPhImw7WUO2RGe+qaBXdgnWrp4PlufUQDHQI=
 			</data>
 		</dict>
 		<key>MediasoupFaceModel.bundle/Normal.fsh</key>
