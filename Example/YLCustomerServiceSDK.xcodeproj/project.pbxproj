@@ -39,6 +39,7 @@
 /* Begin PBXFileReference section */
 		04B45FF18A18DB96F328D4A0 /* Pods_YLCustomerServiceSDK_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YLCustomerServiceSDK_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A253B9E3CF23A1704ADB3B3 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		50784B6026A675F400DEB43F /* YLHCustomerServiceSDK.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; name = YLHCustomerServiceSDK.podspec; path = ../YLHCustomerServiceSDK.podspec; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* YLCustomerServiceSDK_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YLCustomerServiceSDK_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -184,6 +185,7 @@
 		60FF7A9C1954A5C5007DD14C /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
+				50784B6026A675F400DEB43F /* YLHCustomerServiceSDK.podspec */,
 				4A253B9E3CF23A1704ADB3B3 /* LICENSE */,
 			);
 			name = "Podspec Metadata";
