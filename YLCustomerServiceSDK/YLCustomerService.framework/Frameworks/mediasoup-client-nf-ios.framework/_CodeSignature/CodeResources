@@ -6,7 +6,7 @@
 	<dict>
 		<key>Frameworks/GPUImageNFFramework.framework/GPUImageNFFramework</key>
 		<data>
-		QOeZVLcJCfBtZVakAoThuLMXMrU=
+		TPus2OD9Sen2xt5uOYv5Ouxpua0=
 		</data>
 		<key>Frameworks/GPUImageNFFramework.framework/Info.plist</key>
 		<data>
@@ -28,21 +28,25 @@
 		<data>
 		F1NydkKvkoduDWswPw3tObiif5U=
 		</data>
+		<key>Frameworks/GPUImageNFFramework.framework/_CodeSignature/CodeDirectory</key>
+		<data>
+		pFfhklqyWJkOKq/5LA4QMSwBim0=
+		</data>
+		<key>Frameworks/GPUImageNFFramework.framework/_CodeSignature/CodeRequirements</key>
+		<data>
+		NX92UNea7vHOOKzc9iMCnSTAISY=
+		</data>
+		<key>Frameworks/GPUImageNFFramework.framework/_CodeSignature/CodeRequirements-1</key>
+		<data>
+		YPGTfmQaiYdJgJRYMeUHDmuU77k=
+		</data>
 		<key>Frameworks/GPUImageNFFramework.framework/_CodeSignature/CodeResources</key>
 		<data>
 		amWM3aIb5Jf6Y59lKWxnBpEqcwk=
 		</data>
-		<key>Frameworks/YLWebRTC.framework/Info.plist</key>
+		<key>Frameworks/GPUImageNFFramework.framework/_CodeSignature/CodeSignature</key>
 		<data>
-		ibfHZCnz7mR2uyDoWCQ2AFHiKFE=
-		</data>
-		<key>Frameworks/YLWebRTC.framework/YLWebRTC</key>
-		<data>
-		s+Pc//675h9GNotQaqElumhDCIE=
-		</data>
-		<key>Frameworks/YLWebRTC.framework/_CodeSignature/CodeResources</key>
-		<data>
-		O8N4MUvufTkPXrH/GVosfDHIbn0=
+		KYE4wHhyosYP5R+6z7R0NfSU0aw=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -555,11 +559,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			QOeZVLcJCfBtZVakAoThuLMXMrU=
+			TPus2OD9Sen2xt5uOYv5Ouxpua0=
 			</data>
 			<key>hash2</key>
 			<data>
-			JHbI8ydfsFrP98x7b5GspaanMwMAjyt53EC4Mpm82dQ=
+			LYJbTiUfk7TDRGRPUjWEFzdd5PtIwk/z37vxH/VHPzw=
 			</data>
 		</dict>
 		<key>Frameworks/GPUImageNFFramework.framework/Info.plist</key>
@@ -617,6 +621,39 @@
 			GWg2akpNqt2bAi3Woy9OC+xQ7ENeO+gKBTG4co5JrYQ=
 			</data>
 		</dict>
+		<key>Frameworks/GPUImageNFFramework.framework/_CodeSignature/CodeDirectory</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			pFfhklqyWJkOKq/5LA4QMSwBim0=
+			</data>
+			<key>hash2</key>
+			<data>
+			ycboY+5d+VHgmAHHQpw2Tk50pA2KfKSRetu0RqVmLzo=
+			</data>
+		</dict>
+		<key>Frameworks/GPUImageNFFramework.framework/_CodeSignature/CodeRequirements</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			NX92UNea7vHOOKzc9iMCnSTAISY=
+			</data>
+			<key>hash2</key>
+			<data>
+			ikQb6q8x/LN0syYXTYPBUSbP6mp6kk3aQ6/ElTEYcko=
+			</data>
+		</dict>
+		<key>Frameworks/GPUImageNFFramework.framework/_CodeSignature/CodeRequirements-1</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			YPGTfmQaiYdJgJRYMeUHDmuU77k=
+			</data>
+			<key>hash2</key>
+			<data>
+			abg1YAi6jpAmWxRheAofUm6qtnn8coRhRHJCRYGmEPc=
+			</data>
+		</dict>
 		<key>Frameworks/GPUImageNFFramework.framework/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash</key>
@@ -628,37 +665,15 @@
 			M+zNwf12n+jj1ErXO1Vd3r0DXFJtsCJWSEIuuCWVd4w=
 			</data>
 		</dict>
-		<key>Frameworks/YLWebRTC.framework/Info.plist</key>
+		<key>Frameworks/GPUImageNFFramework.framework/_CodeSignature/CodeSignature</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ibfHZCnz7mR2uyDoWCQ2AFHiKFE=
+			KYE4wHhyosYP5R+6z7R0NfSU0aw=
 			</data>
 			<key>hash2</key>
 			<data>
-			J7huZqPCjW/L8UGx6TBNeyzVkEp+tof30rmvGe0BmdI=
-			</data>
-		</dict>
-		<key>Frameworks/YLWebRTC.framework/YLWebRTC</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			s+Pc//675h9GNotQaqElumhDCIE=
-			</data>
-			<key>hash2</key>
-			<data>
-			/dkmf/oPL0wnle2Z4pjlNMnm40xxv6hYHyy68tqoloU=
-			</data>
-		</dict>
-		<key>Frameworks/YLWebRTC.framework/_CodeSignature/CodeResources</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			O8N4MUvufTkPXrH/GVosfDHIbn0=
-			</data>
-			<key>hash2</key>
-			<data>
-			ft7ENmkcRq+muqJ8q1oKtTvSo4HOJpo37LDJ1Sd51xQ=
+			XyhShQWaA36lvCUXYFwpXKcRguFkpfon3YYOyVLW4l8=
 			</data>
 		</dict>
 		<key>MediasoupFaceModel.bundle/Normal.fsh</key>

@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
 s.name             = 'YLHCustomerServiceSDK'
-s.version          = '1.3.9.3'
+s.version          = '1.3.10'
 s.summary          = '智能客服sdk.'
 
 # This description is used to generate tags and improve search results.
@@ -45,13 +45,13 @@ s.resource = ['YLCustomerServiceSDK/YLCustomerService.framework/YLSkinDefault.bu
 
 s.public_header_files = ['YLCustomerServiceSDK/YLCustomerService.framework/Headers/*.h', 'YLCustomerServiceSDK/YLViewController.h']
 
-s.vendored_frameworks = 'YLCustomerServiceSDK/YLCustomerService.framework'
-#s.vendored_frameworks = 'YLCustomerServiceSDK/YLCustomerService.framework',
-#                        'YLCustomerServiceSDK/YLCustomerService.framework/Frameworks/mediasoup-client-nf-ios.framework',
+#s.vendored_frameworks = 'YLCustomerServiceSDK/YLCustomerService.framework'
+s.vendored_frameworks = 'YLCustomerServiceSDK/YLCustomerService.framework',
+                        'YLCustomerServiceSDK/YLCustomerService.framework/Frameworks/mediasoup-client-nf-ios.framework'
 #                        'YLCustomerServiceSDK/YLCustomerService.framework/Frameworks/mediasoup-client-nf-ios.framework/Frameworks/*.framework'
 
 s.frameworks = "Foundation", "UIKit"
-s.library = 'stdc++'
+s.library = 'stdc++','libc++','VideoToolbox'
 
 s.xcconfig = {
 'HEADER_SEARCH_PATHS' => '${PODS_ROOT}/YLCustomerServiceSDK/YLCustomerServiceSDK/YLCustomerService.framework/Headers'
