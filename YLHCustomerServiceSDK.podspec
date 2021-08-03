@@ -50,8 +50,8 @@ s.vendored_frameworks = 'YLCustomerServiceSDK/YLCustomerService.framework',
                         'YLCustomerServiceSDK/YLCustomerService.framework/Frameworks/mediasoup-client-nf-ios.framework'
 #                        'YLCustomerServiceSDK/YLCustomerService.framework/Frameworks/mediasoup-client-nf-ios.framework/Frameworks/*.framework'
 
-s.frameworks = "Foundation", "UIKit"
-s.library = 'stdc++','c++','VideoToolbox'
+s.frameworks = "Foundation", "UIKit", "VideoToolbox"
+s.library = 'stdc++','c++'
 
 s.xcconfig = {
 'HEADER_SEARCH_PATHS' => '${PODS_ROOT}/YLCustomerServiceSDK/YLCustomerServiceSDK/YLCustomerService.framework/Headers'
