@@ -6,11 +6,19 @@
 	<dict>
 		<key>.DS_Store</key>
 		<data>
-		pnMxL0i4i9NFlLu/WslR2lRXPgo=
+		YoLU6beufGss4f2LFcR7kdRsbqM=
+		</data>
+		<key>Frameworks/.DS_Store</key>
+		<data>
+		hEfUTGZhBpY6JDJLKeqUFBrmzGo=
+		</data>
+		<key>Frameworks/mediasoup-client-nf-ios.framework/.DS_Store</key>
+		<data>
+		qrN5L1Fw1W6LMZjejQcVWaHEY3w=
 		</data>
 		<key>Frameworks/mediasoup-client-nf-ios.framework/Frameworks/GPUImageNFFramework.framework/GPUImageNFFramework</key>
 		<data>
-		TPus2OD9Sen2xt5uOYv5Ouxpua0=
+		x+sWLbfMvmhjsLqmNWBAQjqiGpE=
 		</data>
 		<key>Frameworks/mediasoup-client-nf-ios.framework/Frameworks/GPUImageNFFramework.framework/Info.plist</key>
 		<data>
@@ -558,7 +566,7 @@
 		</data>
 		<key>Frameworks/mediasoup-client-nf-ios.framework/_CodeSignature/CodeDirectory</key>
 		<data>
-		5+SXEAzowhj/7iOToXRO8ccJQ2o=
+		ghueXKXvpD9cQiJQ5/hTYEQYRIM=
 		</data>
 		<key>Frameworks/mediasoup-client-nf-ios.framework/_CodeSignature/CodeRequirements</key>
 		<data>
@@ -566,19 +574,19 @@
 		</data>
 		<key>Frameworks/mediasoup-client-nf-ios.framework/_CodeSignature/CodeRequirements-1</key>
 		<data>
-		8v8M2pFz+jf3fPjIE9B7WHpa39Y=
+		XhXgCb27G18OHdKDddNVZH5WVkE=
 		</data>
 		<key>Frameworks/mediasoup-client-nf-ios.framework/_CodeSignature/CodeResources</key>
 		<data>
-		iyk+2deVNEa2z8hbMgsVpg+8QwU=
+		4Mdca/CpABjiAjIKbCEqaUth4Qk=
 		</data>
 		<key>Frameworks/mediasoup-client-nf-ios.framework/_CodeSignature/CodeSignature</key>
 		<data>
-		4XWrlyDN7Ip43dMPxtIZW3E6GyA=
+		UfrwICYntdvdCBZcHDcg2IBbBPc=
 		</data>
 		<key>Frameworks/mediasoup-client-nf-ios.framework/mediasoup-client-nf-ios</key>
 		<data>
-		QCorTLuomoAQQh2nbbE/hCHsWQA=
+		Nt+mDu5meQxn8CdkybBZFFd0eXM=
 		</data>
 		<key>Headers/PasteboardTextView.h</key>
 		<data>
@@ -630,7 +638,7 @@
 		</data>
 		<key>Headers/YLCustomerServiceManager.h</key>
 		<data>
-		Ex319sG66lj85l94mQlyo1kV+8Y=
+		y9qcwKn4W6rdOZXBcfSAYeB3igQ=
 		</data>
 		<key>Headers/YLHomeCstmVC.h</key>
 		<data>
@@ -638,7 +646,7 @@
 		</data>
 		<key>Headers/YLLoginUserModel.h</key>
 		<data>
-		LS+Wh5Cvtfiid6Vq3S/QuxQC9Mk=
+		wKcSyvw03ZItamJIeFvcqpO5ty4=
 		</data>
 		<key>Headers/YLPhotoHelper.h</key>
 		<data>
@@ -654,91 +662,87 @@
 		</data>
 		<key>IMUICameraCell.nib/objects-12.3+.nib</key>
 		<data>
-		IW7EIeAgVTvBqgAyJ7K+zxxqjs8=
+		rQqaOzFq19cF/TzI1as0MtEk2kM=
 		</data>
 		<key>IMUICameraCell.nib/runtime.nib</key>
 		<data>
-		eGhRGKy5LdqAKfnyDcEZ31lvM6g=
+		D7fBegUaArVVnqdA4wzYffZAwLk=
 		</data>
 		<key>IMUICameraView.nib</key>
 		<data>
-		iG1wKIuuko+NzGi8me71VZRJ9vU=
+		6/D8QlHsScmhXgWfEIOqRae4pjo=
 		</data>
 		<key>IMUICustomInputView.nib</key>
 		<data>
-		o/fXu3aYx8SNz8PRs8hffLQI2yc=
+		1dtA/bWDvR7//2I780xN+4zkdKY=
 		</data>
 		<key>IMUIEmojiCell.nib/objects-12.3+.nib</key>
 		<data>
-		rqukjKVZyxBikXRQUuyOO6fP5uQ=
+		cjwUg2RdOGcP+YgwfDs7LWfJEJE=
 		</data>
 		<key>IMUIEmojiCell.nib/runtime.nib</key>
 		<data>
-		Nkxh2fkMbcs45kEeyylZACFVdK8=
+		P1AdrPgMkc91zAv7wW1e/v0e6fA=
 		</data>
 		<key>IMUIEmojiItemCell.nib/objects-12.3+.nib</key>
 		<data>
-		PRNnke/uNMeIVtJQhraUhlU0mSs=
+		YkQ8b0mizaM01tv4+5M9woeYdHI=
 		</data>
 		<key>IMUIEmojiItemCell.nib/runtime.nib</key>
 		<data>
-		mDNMfAkUHN2usbzAgXsefO6xY9U=
+		LUXXqI7dsWBmhejammdrIpxnUBg=
 		</data>
 		<key>IMUIFeatureListIconCell.nib/objects-12.3+.nib</key>
 		<data>
-		D3qUlh0Xf1CswNg8ELYhR+yp26Y=
+		XKTfHoLHVzQ13hj5pkiqGe/Kxm8=
 		</data>
 		<key>IMUIFeatureListIconCell.nib/runtime.nib</key>
 		<data>
-		TR7kglxiv6Ld5FioPqBlh4hlt/0=
+		9Rg/4GXvFdOto+Pwkkew5TuwvxU=
 		</data>
 		<key>IMUIFeatureListView.nib</key>
 		<data>
-		En9K2umV5p+gwAMlc6EtE3oN0bg=
+		JqcnqBA3csDeYG+I4SC9Cr7f9Sc=
 		</data>
 		<key>IMUIFeatureView.nib</key>
 		<data>
-		+m+BYIk7lU6GrCU5uL3jS7aQ3pA=
+		KmaAOJHMJG/bF2t1XgAODmYRp1c=
 		</data>
 		<key>IMUIGalleryCell.nib/objects-12.3+.nib</key>
 		<data>
-		ngUiKljBVPMrDrqT12UEAiRylYM=
+		g3iS7YdN92ijn2HMBnzCnNpTLSk=
 		</data>
 		<key>IMUIGalleryCell.nib/runtime.nib</key>
 		<data>
-		6Op+zbWe+16WCR00o9jbJZMWVSM=
+		3xml3bAM8P6qmA57w/KoqeoFmOg=
 		</data>
 		<key>IMUIGalleryContainerCell.nib/objects-12.3+.nib</key>
 		<data>
-		mV1P2gSNMk9HwDBb5y7wvJoY9Ic=
+		bYuHI30JoosJDVgPeGTocVC214s=
 		</data>
 		<key>IMUIGalleryContainerCell.nib/runtime.nib</key>
 		<data>
-		QsHRcu/V6InZSCGCrEGspqTTUE0=
+		yko/u+SmIMIRoFeVVGZWQ4+Xgm8=
 		</data>
 		<key>IMUIMessageCollectionView.nib</key>
 		<data>
-		3MUBSoHcFyx3yXJmw5nQoG6GvOc=
+		mET3Rt7nodzxg7W640IwhcmoMAM=
 		</data>
 		<key>IMUIPermissionDenyedView.nib</key>
 		<data>
-		UJs+nRiIBMpKgvCnL6idO8xJpNE=
+		4+0peloj9koI9CQp9xfpRnQqCF8=
 		</data>
 		<key>IMUIRecordVoiceCell.nib/objects-12.3+.nib</key>
 		<data>
-		0TT2jD8qQNIZKCu1TQ4fFSU3ae4=
+		otqzbypBkemu8zIPwfjE93Hl0+E=
 		</data>
 		<key>IMUIRecordVoiceCell.nib/runtime.nib</key>
 		<data>
-		pDvO4iMrxpcwHSfQbi01m8VwCxo=
+		Hp6exDB0DT8rMg8zpnyUp10Q3UU=
 		</data>
 		<key>Info.plist</key>
 		<data>
 		wIbMuv2tTgs6pSbCWVvFJyaj1Gw=
-		</data>
-		<key>LICENSE</key>
-		<data>
-		ycUL1Gtpq6YuYcZdirCN0ejIOzg=
 		</data>
 		<key>Modules/YLCustomerService.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<data>
@@ -754,7 +758,7 @@
 		</data>
 		<key>Modules/YLCustomerService.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		85adZLInr+CGncYlXUwxgZaKfzw=
+		Si0mgSM2HpyK4Mi9fUX+w0pTnhs=
 		</data>
 		<key>Modules/YLCustomerService.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -762,7 +766,7 @@
 		</data>
 		<key>Modules/YLCustomerService.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		85adZLInr+CGncYlXUwxgZaKfzw=
+		Si0mgSM2HpyK4Mi9fUX+w0pTnhs=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -2341,11 +2345,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			TPus2OD9Sen2xt5uOYv5Ouxpua0=
+			x+sWLbfMvmhjsLqmNWBAQjqiGpE=
 			</data>
 			<key>hash2</key>
 			<data>
-			LYJbTiUfk7TDRGRPUjWEFzdd5PtIwk/z37vxH/VHPzw=
+			VCgDkE63WmSWA7h+jDyV5pqRoxFIdTzF459HyntjjJM=
 			</data>
 		</dict>
 		<key>Frameworks/mediasoup-client-nf-ios.framework/Frameworks/GPUImageNFFramework.framework/Info.plist</key>
@@ -3848,11 +3852,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			5+SXEAzowhj/7iOToXRO8ccJQ2o=
+			ghueXKXvpD9cQiJQ5/hTYEQYRIM=
 			</data>
 			<key>hash2</key>
 			<data>
-			havDqtrBV/asMoYTtzniWS4yK1piuXqYP1EMTtgKwq8=
+			Dn4YNkvjrKU1+Zct6q1W+QRNEdL0qvO3SoqvWqJdzj8=
 			</data>
 		</dict>
 		<key>Frameworks/mediasoup-client-nf-ios.framework/_CodeSignature/CodeRequirements</key>
@@ -3870,44 +3874,44 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			8v8M2pFz+jf3fPjIE9B7WHpa39Y=
+			XhXgCb27G18OHdKDddNVZH5WVkE=
 			</data>
 			<key>hash2</key>
 			<data>
-			bl7UpxpDsl0Z0Tss5efRb1nspK46LMYsN9suLEExsrc=
+			H4XBwpDydJ02QA+ocFH7SPs1CZJa/IUKizm6GEZS9hg=
 			</data>
 		</dict>
 		<key>Frameworks/mediasoup-client-nf-ios.framework/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			iyk+2deVNEa2z8hbMgsVpg+8QwU=
+			4Mdca/CpABjiAjIKbCEqaUth4Qk=
 			</data>
 			<key>hash2</key>
 			<data>
-			YMpH+c3grdxjRDi0xv+1OM8McUuXsaMQUmIlWEHSekk=
+			85Ea8UENGeEE4kxLyfIe5ustl9LQer65G4wxRnmmf6w=
 			</data>
 		</dict>
 		<key>Frameworks/mediasoup-client-nf-ios.framework/_CodeSignature/CodeSignature</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			4XWrlyDN7Ip43dMPxtIZW3E6GyA=
+			UfrwICYntdvdCBZcHDcg2IBbBPc=
 			</data>
 			<key>hash2</key>
 			<data>
-			H0K6/5PX7bcrNTLz0xAQomW60iCr4MvnWatjoz/Ac+w=
+			3V1GDzC+E7RdTyzXcw/YGW0ZPlZhTVJM+4pHH6PH7es=
 			</data>
 		</dict>
 		<key>Frameworks/mediasoup-client-nf-ios.framework/mediasoup-client-nf-ios</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			QCorTLuomoAQQh2nbbE/hCHsWQA=
+			Nt+mDu5meQxn8CdkybBZFFd0eXM=
 			</data>
 			<key>hash2</key>
 			<data>
-			29LlhSLMldi1Qnu1eBEaWScDtUVswc0vHOSRkou+b6A=
+			SY5FEUc1611R8nwVghpk604bhyD80pzCnMYGE6ZM3No=
 			</data>
 		</dict>
 		<key>Headers/PasteboardTextView.h</key>
@@ -4046,11 +4050,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Ex319sG66lj85l94mQlyo1kV+8Y=
+			y9qcwKn4W6rdOZXBcfSAYeB3igQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			YKB1UN0ZAv+55xbJU6MYuxdrNVzINj7JMbDjY7SZ1Zw=
+			SzTktXSnHs0pWCcaBQ0ARxsqlzocBPRhpp+k8LFBlHo=
 			</data>
 		</dict>
 		<key>Headers/YLHomeCstmVC.h</key>
@@ -4068,11 +4072,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			LS+Wh5Cvtfiid6Vq3S/QuxQC9Mk=
+			wKcSyvw03ZItamJIeFvcqpO5ty4=
 			</data>
 			<key>hash2</key>
 			<data>
-			PWkpq5o+9RygOtn56e81qBszv6zBrz8piS1ZOn1wfAQ=
+			5mT2AqeDpTmW94LkmL6AM6mgVEOEGHPCgb7erhS5fIM=
 			</data>
 		</dict>
 		<key>Headers/YLPhotoHelper.h</key>
@@ -4112,231 +4116,220 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			IW7EIeAgVTvBqgAyJ7K+zxxqjs8=
+			rQqaOzFq19cF/TzI1as0MtEk2kM=
 			</data>
 			<key>hash2</key>
 			<data>
-			H/n3wlLLPjFyvfCFU7328zuuyRTDFMgNjfzrKmsIInM=
+			4Qd61ohRGhCK9JKdyIN+yUEVLQC3Xe95YDu3R/87M1M=
 			</data>
 		</dict>
 		<key>IMUICameraCell.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			eGhRGKy5LdqAKfnyDcEZ31lvM6g=
+			D7fBegUaArVVnqdA4wzYffZAwLk=
 			</data>
 			<key>hash2</key>
 			<data>
-			RNpE91J1OhHZB6o8TIdBVeETCNvym0nAHvY4VCXyBc8=
+			OhaQ++vJ1dlRePb0/ZJrFzPutVAGOIh70cxgIkjAjPY=
 			</data>
 		</dict>
 		<key>IMUICameraView.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			iG1wKIuuko+NzGi8me71VZRJ9vU=
+			6/D8QlHsScmhXgWfEIOqRae4pjo=
 			</data>
 			<key>hash2</key>
 			<data>
-			HbwUWW1G4SbjYcO3QizLK/gwsNeU4Xe1YeysUZU3jUA=
+			CabeRkZeFH3brg3lvT0N8oMM0OaUCrR+Fd2fHzx2gDQ=
 			</data>
 		</dict>
 		<key>IMUICustomInputView.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			o/fXu3aYx8SNz8PRs8hffLQI2yc=
+			1dtA/bWDvR7//2I780xN+4zkdKY=
 			</data>
 			<key>hash2</key>
 			<data>
-			THd7up8tTHqK1TnZruV9cy+ZWi62JADS+N76f6g+1eY=
+			u7keN8QxMn9Voi9BPqcyc9NGIKlrynUiikjKikw1FwI=
 			</data>
 		</dict>
 		<key>IMUIEmojiCell.nib/objects-12.3+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			rqukjKVZyxBikXRQUuyOO6fP5uQ=
+			cjwUg2RdOGcP+YgwfDs7LWfJEJE=
 			</data>
 			<key>hash2</key>
 			<data>
-			Yh7ohMaZKGLe2ubT+d2nki9HKWbmxMWJAv2bAHJc65U=
+			YW4SZsQt1jBjrzgmxp+0YDMKAbzBhrefQL92XZAWUPk=
 			</data>
 		</dict>
 		<key>IMUIEmojiCell.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Nkxh2fkMbcs45kEeyylZACFVdK8=
+			P1AdrPgMkc91zAv7wW1e/v0e6fA=
 			</data>
 			<key>hash2</key>
 			<data>
-			LOKJDHXpAGf9zIyyM1MI8HE5VUvrp14AnibnjAFA14g=
+			SHWbdXBpCPOm8eShw0YLFpodusqAi9hTdo77YYIV4C0=
 			</data>
 		</dict>
 		<key>IMUIEmojiItemCell.nib/objects-12.3+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			PRNnke/uNMeIVtJQhraUhlU0mSs=
+			YkQ8b0mizaM01tv4+5M9woeYdHI=
 			</data>
 			<key>hash2</key>
 			<data>
-			e0QhdZkyuWT2yIWdREjYsoSW/+sAeHwjHxaByk05OLs=
+			z/hvfHTGB572848A6VmmRQNAAhIo8ofELKNCJOK8Jsw=
 			</data>
 		</dict>
 		<key>IMUIEmojiItemCell.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			mDNMfAkUHN2usbzAgXsefO6xY9U=
+			LUXXqI7dsWBmhejammdrIpxnUBg=
 			</data>
 			<key>hash2</key>
 			<data>
-			c7Mir5OhTX1FQTLM+FCabUmfgEgRYAh5IXVuINhuwig=
+			geVSsA8dIc4vSZQGlGb/KT9APhgZP/8G6pmUYOX5jTY=
 			</data>
 		</dict>
 		<key>IMUIFeatureListIconCell.nib/objects-12.3+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			D3qUlh0Xf1CswNg8ELYhR+yp26Y=
+			XKTfHoLHVzQ13hj5pkiqGe/Kxm8=
 			</data>
 			<key>hash2</key>
 			<data>
-			TGpqsdLZewDbWnvRh7gEbHyr+6bNbFjkOT2eedyydNE=
+			Bab2VCBVm2zE3msrFOGSjfHeZdrutrWrD+piSez1c1U=
 			</data>
 		</dict>
 		<key>IMUIFeatureListIconCell.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			TR7kglxiv6Ld5FioPqBlh4hlt/0=
+			9Rg/4GXvFdOto+Pwkkew5TuwvxU=
 			</data>
 			<key>hash2</key>
 			<data>
-			M7l4W5qlG5x/phShigSEJI8EC3iHokRJHvJh9fkJQYQ=
+			BYVVoEy8IkOtkn2xHHlG1hFNS2nyzgIK4nMj4p6ieHA=
 			</data>
 		</dict>
 		<key>IMUIFeatureListView.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			En9K2umV5p+gwAMlc6EtE3oN0bg=
+			JqcnqBA3csDeYG+I4SC9Cr7f9Sc=
 			</data>
 			<key>hash2</key>
 			<data>
-			FH4NFBmu4J0NcsOX0CSoXYial/X3kakuCy9f7KOSJiU=
+			jJVbbJLoRp1uLLxmjN0CgB4iPp+h5oPaHfvZyVrc1S4=
 			</data>
 		</dict>
 		<key>IMUIFeatureView.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			+m+BYIk7lU6GrCU5uL3jS7aQ3pA=
+			KmaAOJHMJG/bF2t1XgAODmYRp1c=
 			</data>
 			<key>hash2</key>
 			<data>
-			VriKtELM8CHkohTTQRixJlbdVTwGiU+L4YFZOv8nooc=
+			IsknhkPwmjoFw5Tqm60pt9llQ915UR6p7qvg49XO8sE=
 			</data>
 		</dict>
 		<key>IMUIGalleryCell.nib/objects-12.3+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ngUiKljBVPMrDrqT12UEAiRylYM=
+			g3iS7YdN92ijn2HMBnzCnNpTLSk=
 			</data>
 			<key>hash2</key>
 			<data>
-			nP7mKoesOGBquznBRspWKEtVOYdiXqZ6Y1t9f69TXus=
+			MPqIDV+8pgyzbgZ42oFt8aUDhEBuhwMAQcefmgWsGuM=
 			</data>
 		</dict>
 		<key>IMUIGalleryCell.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			6Op+zbWe+16WCR00o9jbJZMWVSM=
+			3xml3bAM8P6qmA57w/KoqeoFmOg=
 			</data>
 			<key>hash2</key>
 			<data>
-			0Fx8ee7KrYJOyEnOv3ZmRecNY+b0zWFSOVDhF+374Mw=
+			oBF1b3R+ENNqkX9ml3+8sVCnTaRoWJh/yNoDMx+6kSI=
 			</data>
 		</dict>
 		<key>IMUIGalleryContainerCell.nib/objects-12.3+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			mV1P2gSNMk9HwDBb5y7wvJoY9Ic=
+			bYuHI30JoosJDVgPeGTocVC214s=
 			</data>
 			<key>hash2</key>
 			<data>
-			ucf+vGnH4vca9ro22q47+mB8EWsdTt8ntEiplSQzsXU=
+			THeLnLTaQgDvA4who/SxH45QJFaehDb3GpPUdmHGBxg=
 			</data>
 		</dict>
 		<key>IMUIGalleryContainerCell.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			QsHRcu/V6InZSCGCrEGspqTTUE0=
+			yko/u+SmIMIRoFeVVGZWQ4+Xgm8=
 			</data>
 			<key>hash2</key>
 			<data>
-			wWZZgsBbFsfrxRcU9Z6UZGcFN1ViJFxr/oJJRpmJiPM=
+			DAQK5C2YOJERBIFCv7nfcn25NU+UGP+/Xl5/IQOhNwg=
 			</data>
 		</dict>
 		<key>IMUIMessageCollectionView.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			3MUBSoHcFyx3yXJmw5nQoG6GvOc=
+			mET3Rt7nodzxg7W640IwhcmoMAM=
 			</data>
 			<key>hash2</key>
 			<data>
-			mzUrhYAVdRUl8wjnawO7+gemqbTrud0R+kh+yBRj3fU=
+			Z6RMjnjsi7dTX1Ay7mn/KELko0nbSj3vgTMMFqKs0M0=
 			</data>
 		</dict>
 		<key>IMUIPermissionDenyedView.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			UJs+nRiIBMpKgvCnL6idO8xJpNE=
+			4+0peloj9koI9CQp9xfpRnQqCF8=
 			</data>
 			<key>hash2</key>
 			<data>
-			8EMxFZocT8ia85ue89S4NyA942i+X4/K3x1gFfpECe8=
+			3HCnpHUjQRbAutqsy9VNM6gSjktvqxys22eH554fCZw=
 			</data>
 		</dict>
 		<key>IMUIRecordVoiceCell.nib/objects-12.3+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			0TT2jD8qQNIZKCu1TQ4fFSU3ae4=
+			otqzbypBkemu8zIPwfjE93Hl0+E=
 			</data>
 			<key>hash2</key>
 			<data>
-			GL4DCySsLwNs5WqqNgjwtm6rVrwVFYHXhoIEtnCOpnQ=
+			Azfvmy2X88LywfXY6l8YWeoGAph/nMC2CXfgqrCxd1o=
 			</data>
 		</dict>
 		<key>IMUIRecordVoiceCell.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			pDvO4iMrxpcwHSfQbi01m8VwCxo=
+			Hp6exDB0DT8rMg8zpnyUp10Q3UU=
 			</data>
 			<key>hash2</key>
 			<data>
-			SQ7Iy7nD0n+4PwVvurP6vuRfyIa4AALXHnhAB4UWnqo=
-			</data>
-		</dict>
-		<key>LICENSE</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			ycUL1Gtpq6YuYcZdirCN0ejIOzg=
-			</data>
-			<key>hash2</key>
-			<data>
-			NW5CJe0HffJYaGeVeXhBBLG3pXUuusxzBKLU7A8Z6Wg=
+			xa+OZuZjokBpifG76HM9O5vLbpDLzfP3GNmQX4g9ul0=
 			</data>
 		</dict>
 		<key>Modules/YLCustomerService.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
@@ -4376,11 +4369,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			85adZLInr+CGncYlXUwxgZaKfzw=
+			Si0mgSM2HpyK4Mi9fUX+w0pTnhs=
 			</data>
 			<key>hash2</key>
 			<data>
-			Z4JBdELQeYjUMU3slGyTCS+qzpfZphVsR0b9XGj9MiM=
+			3MijsPAvSR9fpz9SgbtEv0Nv3PojQaNZW0FjiqxZSI8=
 			</data>
 		</dict>
 		<key>Modules/YLCustomerService.swiftmodule/arm64.swiftdoc</key>
@@ -4398,11 +4391,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			85adZLInr+CGncYlXUwxgZaKfzw=
+			Si0mgSM2HpyK4Mi9fUX+w0pTnhs=
 			</data>
 			<key>hash2</key>
 			<data>
-			Z4JBdELQeYjUMU3slGyTCS+qzpfZphVsR0b9XGj9MiM=
+			3MijsPAvSR9fpz9SgbtEv0Nv3PojQaNZW0FjiqxZSI8=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

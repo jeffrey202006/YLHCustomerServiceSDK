@@ -19,22 +19,14 @@
 @property (nonatomic, assign) NSInteger env; //0 生产， 1 测试
 
 /**
- 设置app key
- 参数
-     appkey：app key
-     appSecret：app secret
-     privateKey：private key
- */
-- (void)setAppKey:(NSString *_Nonnull)appKey appSecret:(NSString *_Nonnull)appSecret privateKey:(NSString *_Nonnull)privateKey;
-
-/**
  用户登录
  参数
     userInfo：用户信息的用户模型
     success：成功回调
-    error：失败回调（code：1:鉴权失败 2:参数不合法 3:im登陆失败 4:用户Uid为空 5: 用户信息同步失败）
+    error：失败回调（code：1:参数不合法 2：im登陆失败 3：用户信息同步失败）
 */
 - (void)loginWithUserInfo:(YLLoginUserModel *_Nonnull)userInfo success:(void(^ _Nonnull)(void))success error:(void(^ _Nonnull)(int code, NSString * _Nullable msg))error;
+
 
 /**
  游客登录

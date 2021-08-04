@@ -7,6 +7,7 @@
 //
 
 #import "YLViewController.h"
+//#import "HBRSAHandler.h"
 #import <YLCustomerService/YLCustomerService.h>
 //#import <YLHCustomerServiceSDK/YLCustomerService.h>
 
@@ -23,7 +24,6 @@ static NSString * _Nullable privateKey = @"MIICdQIBADANBgkqhkiG9w0BAQEFAASCAl8wg
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)didReceiveMemoryWarning
@@ -61,6 +61,7 @@ static NSString * _Nullable privateKey = @"MIICdQIBADANBgkqhkiG9w0BAQEFAASCAl8wg
 
 - (void)icsManager:(void(^ _Nonnull)(void))success {
     [[YLCustomerServiceManager sharedManager] setAppKey:appKey appSecret:appSecret privateKey:privateKey];
+    [YLCustomerServiceManager sharedManager].env = 3;
     YLLoginUserModel *loginModel = [[YLLoginUserModel alloc] init];
     loginModel.avatar = @"";
     loginModel.userUid = @"20016304";
