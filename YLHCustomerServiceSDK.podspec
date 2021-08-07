@@ -46,10 +46,11 @@ s.resource = ['YLCustomerServiceSDK/YLCustomerService.framework/YLSkinDefault.bu
 
 s.public_header_files = ['YLCustomerServiceSDK/YLCustomerService.framework/Headers/*.h', 'YLCustomerServiceSDK/YLViewController.h']
 
-#s.vendored_frameworks = 'YLCustomerServiceSDK/YLCustomerService.framework'
 s.vendored_frameworks = 'YLCustomerServiceSDK/YLCustomerService.framework',
                         'YLCustomerServiceSDK/YLCustomerService.framework/Frameworks/mediasoup-client-nf-ios.framework'
-#                        'YLCustomerServiceSDK/YLCustomerService.framework/Frameworks/mediasoup-client-nf-ios.framework/Frameworks/*.framework'
+                        
+#s.vendored_frameworks = 'YLCustomerServiceSDK/YLCustomerService.framework'
+# 'YLCustomerServiceSDK/YLCustomerService.framework/Frameworks/mediasoup-client-nf-ios.framework/Frameworks/*.framework'
 
 s.frameworks = "Foundation", "UIKit", "VideoToolbox"
 s.library = 'stdc++','c++'
