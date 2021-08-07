@@ -62,6 +62,7 @@
     //来源页 测试使用
     loginModel.sourcePage = @"test";
     [[YLCustomerServiceManager sharedManager] loginWithUserInfo:loginModel success:^{
+        //登录验证成功，开始跳转相应页面
         success();
     } error:^(int code, NSString *msg) {
         NSLog(@"code:%d,msg:%@",code,msg);
