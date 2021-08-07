@@ -321,6 +321,7 @@
 				"${PODS_ROOT}/Target Support Files/Pods-YLCustomerServiceSDK_Example/Pods-YLCustomerServiceSDK_Example-resources.sh",
 				"${PODS_ROOT}/YLHCustomerServiceSDK/YLCustomerServiceSDK/YLCustomerService.framework/YLSkinDefault.bundle",
 				"${PODS_ROOT}/YLHCustomerServiceSDK/YLCustomerServiceSDK/YLCustomerService.framework/YLCustomerService.bundle",
+				"${PODS_ROOT}/YLHCustomerServiceSDK/YLCustomerServiceSDK/YLCustomerService.framework/Frameworks/mediasoup-client-nf-ios.framework/MediasoupFaceModel.bundle",
 				"${PODS_ROOT}/YLHCustomerServiceSDK/YLCustomerServiceSDK/YLCustomerService.framework/IMUICameraView.nib",
 				"${PODS_ROOT}/YLHCustomerServiceSDK/YLCustomerServiceSDK/YLCustomerService.framework/IMUICustomInputView.nib",
 				"${PODS_ROOT}/YLHCustomerServiceSDK/YLCustomerServiceSDK/YLCustomerService.framework/IMUIFeatureListView.nib",
@@ -339,6 +340,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/YLSkinDefault.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/YLCustomerService.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MediasoupFaceModel.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IMUICameraView.nib",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IMUICustomInputView.nib",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IMUIFeatureListView.nib",

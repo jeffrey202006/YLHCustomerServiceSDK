@@ -7,13 +7,7 @@
 //
 
 #import "YLViewController.h"
-//#import "HBRSAHandler.h"
 #import <YLCustomerService/YLCustomerService.h>
-//#import <YLHCustomerServiceSDK/YLCustomerService.h>
-
-static NSString * _Nullable appKey = @"JFOIhKxj";
-static NSString * _Nullable appSecret = @"755eed37afea3bda04d932479448eb5eb52fe319";
-static NSString * _Nullable privateKey = @"MIICdQIBADANBgkqhkiG9w0BAQEFAASCAl8wggJbAgEAAoGBAI+jWul3oeF+ZLTDPnDCS7kwn3iVxe9D+d07WUCIbW49xhReQnsRXYio4rD7MOstLfqgLgele/QmjT5NM6M2HVW3tUP/+4rG+YmhnzCrHiWV5pEh9PLnFgYXUIDuNc0qyEKsktt5ycY/o3V1A3BWvU0XYBCUrMZkC1UnosLeCQrtAgMBAAECgYBm/rqEqDzSpT/vAgU284s6umvPGo44l+SFxzWjeXAGWZM8La678mLASGFsiGG2cMoEaXE4GGg+VJp47wC06muzYLwjdrBvrRs2hckI6mGdT9XuM04tbmlnaQsHxDiMLdJSkl8wDWpZCYY5arlkYypIak3411/r73d1YEgpZRKD3QJBAOVtJPzDcUZF5RQqMSnKNxHNo67TiYaS6isAVxVwJgqePxfDJxopTsq4rvDOV+e2lIDQlJcBqFZz/DRhALvsYeMCQQCgRnP9rfDHYTeEuhYfFonoKzhvV6Tk/P6+QxLpMeffwRGjSBKoXHu6dFxheA6WOULKgcLQQiPbrvPuVExgUDjvAkBdZF6oHg8gYhdsa/hzYIOmVaWJ50aWZ3u3YX4RlgOGUwCv9ZsXRTVzxFZCZFzYUDSHc2DpT51tA+3ojIw183WtAkBI5mLBwwkelvB6tW10bHsDmA0OT84XvZ9dCQMkAGgYVSfhndmmrJI2h9CxILt5xsfDdmwW786BkL0w7TTkJfkPAkBdHmW2luQQFldE/xAvdldAiwFS6HalyKbgNt1hNCf8Eao+g4bNO1WZFWzUZYnIMEvXo9V0pfiMhjHLv+iSZJZL";
 
 @interface YLViewController ()
 
@@ -60,20 +54,17 @@ static NSString * _Nullable privateKey = @"MIICdQIBADANBgkqhkiG9w0BAQEFAASCAl8wg
 }
 
 - (void)icsManager:(void(^ _Nonnull)(void))success {
-    [[YLCustomerServiceManager sharedManager] setAppKey:appKey appSecret:appSecret privateKey:privateKey];
-    [YLCustomerServiceManager sharedManager].env = 3;
+    //根据需求可自行配置环境 这里是测试环境
+    [YLCustomerServiceManager sharedManager].env = 1;
     YLLoginUserModel *loginModel = [[YLLoginUserModel alloc] init];
-    loginModel.avatar = @"";
-    loginModel.userUid = @"20016304";
-    loginModel.nickname = @"test";
-    loginModel.mobile = @"15800000001";
-    loginModel.username = @"test";
+    loginModel.accessToken = @"e98cf94573c8481aa0fe6e40cfadfaf5";
+    loginModel.userUid = @"20016300";
+    //来源页 测试使用
     loginModel.sourcePage = @"test";
-
     [[YLCustomerServiceManager sharedManager] loginWithUserInfo:loginModel success:^{
         success();
     } error:^(int code, NSString *msg) {
-        
+        NSLog(@"code:%d,msg:%@",code,msg);
     }];
 }
 
