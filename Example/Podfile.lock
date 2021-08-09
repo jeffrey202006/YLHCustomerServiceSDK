@@ -1,16 +1,16 @@
 PODS:
-  - YLHCustomerServiceSDK (1.3.12)
+  - YLHCustomerServiceSDK (1.3.13)
 
 DEPENDENCIES:
-  - YLHCustomerServiceSDK (~> 1.3.12)
+  - YLHCustomerServiceSDK (~> 1.3.13)
 
 SPEC REPOS:
   trunk:
     - YLHCustomerServiceSDK
 
 SPEC CHECKSUMS:
-  YLHCustomerServiceSDK: 49cd79f73233d5e3abd34a019d0a852ffd3dd279
+  YLHCustomerServiceSDK: 7169b35442cf632c9dc6a5b7dff5ab16f1f96a21
 
-PODFILE CHECKSUM: 6786581820c681995113432f4fa0ce23f3ef300a
+PODFILE CHECKSUM: a2854647f9b26b90033dc329adf265c993ec6314
 
 COCOAPODS: 1.9.3
