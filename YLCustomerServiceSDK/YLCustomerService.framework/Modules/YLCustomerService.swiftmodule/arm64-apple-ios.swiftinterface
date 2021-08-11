@@ -2,7 +2,10 @@
 // swift-compiler-version: Apple Swift version 5.3.2 effective-4.2 (swiftlang-1200.0.45 clang-1200.0.32.28)
 // swift-module-flags: -target arm64-apple-ios10.0 -enable-objc-interop -enable-library-evolution -swift-version 4.2 -enforce-exclusivity=checked -O -module-name YLCustomerService
 import AVFoundation
+import AVKit
 import Accelerate
+import Combine
+import CommonCrypto
 import CoreGraphics
 import CoreImage
 import Foundation
@@ -10,6 +13,7 @@ import ImageIO
 import MobileCoreServices
 import Photos
 import Swift
+import SwiftUI
 import UIKit
 @_exported import YLCustomerService
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc open class IMUITextRobotToHuman : UIKit.UIView, YLCustomerService.IMUIMessageContentViewProtocol {
@@ -22,95 +26,154 @@ import UIKit
   @objc public func layoutContentView(message: YLCustomerService.IMUIMessageModelProtocol)
   @objc deinit
 }
-extension Kingfisher where Base : YLCustomerService.ImageView {
-  @discardableResult
-  final public func setImage(with resource: YLCustomerService.Resource?, placeholder: YLCustomerService.Placeholder? = nil, options: YLCustomerService.KingfisherOptionsInfo? = nil, progressBlock: YLCustomerService.DownloadProgressBlock? = nil, completionHandler: YLCustomerService.CompletionHandler? = nil) -> YLCustomerService.RetrieveImageTask
-  final public func cancelDownloadTask()
+@available(iOS 13.0, OSX 10.15, tvOS 13.0, watchOS 6.0, *)
+extension KFImage {
+  public static func source(_ source: YLCustomerService.Source?, isLoaded: SwiftUI.Binding<Swift.Bool> = .constant(false)) -> YLCustomerService.KFImage
+  public static func resource(_ resource: YLCustomerService.Resource?, isLoaded: SwiftUI.Binding<Swift.Bool> = .constant(false)) -> YLCustomerService.KFImage
+  public static func url(_ url: Foundation.URL?, cacheKey: Swift.String? = nil, isLoaded: SwiftUI.Binding<Swift.Bool> = .constant(false)) -> YLCustomerService.KFImage
+  public static func dataProvider(_ provider: YLCustomerService.ImageDataProvider?, isLoaded: SwiftUI.Binding<Swift.Bool> = .constant(false)) -> YLCustomerService.KFImage
+  public static func data(_ data: Foundation.Data?, cacheKey: Swift.String, isLoaded: SwiftUI.Binding<Swift.Bool> = .constant(false)) -> YLCustomerService.KFImage
 }
-extension Kingfisher where Base : YLCustomerService.ImageView {
-  final public var webURL: Foundation.URL? {
+@available(iOS 13.0, OSX 10.15, tvOS 13.0, watchOS 6.0, *)
+extension KFImage {
+  public func placeholder<Content>(@SwiftUI.ViewBuilder _ content: () -> Content) -> YLCustomerService.KFImage where Content : SwiftUI.View
+  public func cancelOnDisappear(_ flag: Swift.Bool) -> YLCustomerService.KFImage
+  public func fade(duration: Foundation.TimeInterval) -> YLCustomerService.KFImage
+}
+public protocol AsyncImageDownloadRequestModifier {
+  func modified(for request: Foundation.URLRequest, reportModified: @escaping (Foundation.URLRequest?) -> Swift.Void)
+  var onDownloadTaskStarted: ((YLCustomerService.DownloadTask?) -> Swift.Void)? { get }
+}
+public protocol ImageDownloadRequestModifier : YLCustomerService.AsyncImageDownloadRequestModifier {
+  func modified(for request: Foundation.URLRequest) -> Foundation.URLRequest?
+}
+extension ImageDownloadRequestModifier {
+  public func modified(for request: Foundation.URLRequest, reportModified: @escaping (Foundation.URLRequest?) -> Swift.Void)
+  public var onDownloadTaskStarted: ((YLCustomerService.DownloadTask?) -> Swift.Void)? {
     get
   }
-  final public var indicatorType: YLCustomerService.IndicatorType {
-    get
-    set(newValue)
-  }
-  final public var indicator: YLCustomerService.Indicator? {
-    get
-  }
-  final public var placeholder: YLCustomerService.Placeholder? {
-    get
-  }
 }
-extension Kingfisher where Base : YLCustomerService.Image {
-  final public var normalized: YLCustomerService.Image {
-    get
-  }
+public struct AnyModifier : YLCustomerService.ImageDownloadRequestModifier {
+  public func modified(for request: Foundation.URLRequest) -> Foundation.URLRequest?
+  public init(modify: @escaping (Foundation.URLRequest) -> Foundation.URLRequest?)
 }
-extension Kingfisher where Base : YLCustomerService.Image {
-  final public func pngRepresentation() -> Foundation.Data?
-  final public func jpegRepresentation(compressionQuality: CoreGraphics.CGFloat) -> Foundation.Data?
-  final public func gifRepresentation() -> Foundation.Data?
+extension NSNotification.Name {
+  public static var KingfisherDidCleanDiskCache: Foundation.Notification.Name
 }
-extension Kingfisher where Base : YLCustomerService.Image {
-  public static func animated(with data: Foundation.Data, scale: CoreGraphics.CGFloat = 1.0, duration: Foundation.TimeInterval = 0.0, preloadAll: Swift.Bool, onlyFirstFrame: Swift.Bool = false) -> YLCustomerService.Image?
-  public static func image(data: Foundation.Data, scale: CoreGraphics.CGFloat, preloadAllAnimationData: Swift.Bool, onlyFirstFrame: Swift.Bool) -> YLCustomerService.Image?
-}
-extension Kingfisher where Base : YLCustomerService.Image {
-  final public func image(withBlendMode blendMode: CoreGraphics.CGBlendMode, alpha: CoreGraphics.CGFloat = 1.0, backgroundColor: YLCustomerService.Color? = nil) -> YLCustomerService.Image
-  final public func image(withRoundRadius radius: CoreGraphics.CGFloat, fit size: CoreGraphics.CGSize, roundingCorners corners: YLCustomerService.RectCorner = .all, backgroundColor: YLCustomerService.Color? = nil) -> YLCustomerService.Image
-  final public func resize(to size: CoreGraphics.CGSize) -> YLCustomerService.Image
-  final public func resize(to size: CoreGraphics.CGSize, for contentMode: YLCustomerService.ContentMode) -> YLCustomerService.Image
-  final public func crop(to size: CoreGraphics.CGSize, anchorOn anchor: CoreGraphics.CGPoint) -> YLCustomerService.Image
-  final public func blurred(withRadius radius: CoreGraphics.CGFloat) -> YLCustomerService.Image
-  final public func overlaying(with color: YLCustomerService.Color, fraction: CoreGraphics.CGFloat) -> YLCustomerService.Image
-  final public func tinted(with color: YLCustomerService.Color) -> YLCustomerService.Image
-  final public func adjusted(brightness: CoreGraphics.CGFloat, contrast: CoreGraphics.CGFloat, saturation: CoreGraphics.CGFloat, inputEV: CoreGraphics.CGFloat) -> YLCustomerService.Image
-  final public func scaled(to scale: CoreGraphics.CGFloat) -> YLCustomerService.Image
-}
-extension Kingfisher where Base : YLCustomerService.Image {
-  final public var decoded: YLCustomerService.Image {
+public var KingfisherDiskCacheCleanedHashKey: Swift.String
+public enum CacheType {
+  case none
+  case memory
+  case disk
+  public var cached: Swift.Bool {
     get
   }
-  final public func decoded(scale: CoreGraphics.CGFloat) -> YLCustomerService.Image
-}
-public enum ImageFormat {
-  case unknown
-  case PNG
-  case JPEG
-  case GIF
-  public static func == (a: YLCustomerService.ImageFormat, b: YLCustomerService.ImageFormat) -> Swift.Bool
+  public static func == (a: YLCustomerService.CacheType, b: YLCustomerService.CacheType) -> Swift.Bool
   public var hashValue: Swift.Int {
     get
   }
   public func hash(into hasher: inout Swift.Hasher)
 }
-public struct DataProxy {
+public struct CacheStoreResult {
+  public let memoryCacheResult: Swift.Result<(), Swift.Never>
+  public let diskCacheResult: Swift.Result<(), YLCustomerService.KingfisherError>
 }
-extension Data : YLCustomerService.KingfisherCompatible {
-  public typealias CompatibleType = YLCustomerService.DataProxy
-  public var kf: YLCustomerService.DataProxy {
+extension UIImage : YLCustomerService.CacheCostCalculable {
+  public var cacheCost: Swift.Int {
     get
   }
 }
-extension DataProxy {
-  public var imageFormat: YLCustomerService.ImageFormat {
+extension Data : YLCustomerService.DataTransformable {
+  public func toData() throws -> Foundation.Data
+  public static func fromData(_ data: Foundation.Data) throws -> Foundation.Data
+  public static var empty: Foundation.Data
+}
+public enum ImageCacheResult {
+  case disk(YLCustomerService.KFCrossPlatformImage)
+  case memory(YLCustomerService.KFCrossPlatformImage)
+  case none
+  public var image: YLCustomerService.KFCrossPlatformImage? {
+    get
+  }
+  public var cacheType: YLCustomerService.CacheType {
     get
   }
 }
-public struct CGSizeProxy {
+open class ImageCache {
+  public static var `default`: YLCustomerService.ImageCache
+  final public let memoryStorage: YLCustomerService.MemoryStorage.Backend<YLCustomerService.KFCrossPlatformImage>
+  final public let diskStorage: YLCustomerService.DiskStorage.Backend<Foundation.Data>
+  public typealias DiskCachePathClosure = (Foundation.URL, Swift.String) -> Foundation.URL
+  public init(memoryStorage: YLCustomerService.MemoryStorage.Backend<YLCustomerService.KFCrossPlatformImage>, diskStorage: YLCustomerService.DiskStorage.Backend<Foundation.Data>)
+  public convenience init(name: Swift.String)
+  public convenience init(name: Swift.String, cacheDirectoryURL: Foundation.URL?, diskCachePathClosure: YLCustomerService.ImageCache.DiskCachePathClosure? = nil) throws
+  @objc deinit
+  open func store(_ image: YLCustomerService.KFCrossPlatformImage, original: Foundation.Data? = nil, forKey key: Swift.String, options: YLCustomerService.KingfisherParsedOptionsInfo, toDisk: Swift.Bool = true, completionHandler: ((YLCustomerService.CacheStoreResult) -> Swift.Void)? = nil)
+  open func store(_ image: YLCustomerService.KFCrossPlatformImage, original: Foundation.Data? = nil, forKey key: Swift.String, processorIdentifier identifier: Swift.String = "", cacheSerializer serializer: YLCustomerService.CacheSerializer = DefaultCacheSerializer.default, toDisk: Swift.Bool = true, callbackQueue: YLCustomerService.CallbackQueue = .untouch, completionHandler: ((YLCustomerService.CacheStoreResult) -> Swift.Void)? = nil)
+  open func storeToDisk(_ data: Foundation.Data, forKey key: Swift.String, processorIdentifier identifier: Swift.String = "", expiration: YLCustomerService.StorageExpiration? = nil, callbackQueue: YLCustomerService.CallbackQueue = .untouch, completionHandler: ((YLCustomerService.CacheStoreResult) -> Swift.Void)? = nil)
+  open func removeImage(forKey key: Swift.String, processorIdentifier identifier: Swift.String = "", fromMemory: Swift.Bool = true, fromDisk: Swift.Bool = true, callbackQueue: YLCustomerService.CallbackQueue = .untouch, completionHandler: (() -> Swift.Void)? = nil)
+  open func retrieveImage(forKey key: Swift.String, options: YLCustomerService.KingfisherOptionsInfo? = nil, callbackQueue: YLCustomerService.CallbackQueue = .mainCurrentOrAsync, completionHandler: ((Swift.Result<YLCustomerService.ImageCacheResult, YLCustomerService.KingfisherError>) -> Swift.Void)?)
+  open func retrieveImageInMemoryCache(forKey key: Swift.String, options: YLCustomerService.KingfisherOptionsInfo? = nil) -> YLCustomerService.KFCrossPlatformImage?
+  open func retrieveImageInDiskCache(forKey key: Swift.String, options: YLCustomerService.KingfisherOptionsInfo? = nil, callbackQueue: YLCustomerService.CallbackQueue = .untouch, completionHandler: @escaping (Swift.Result<YLCustomerService.KFCrossPlatformImage?, YLCustomerService.KingfisherError>) -> Swift.Void)
+  public func clearCache(completion handler: (() -> Swift.Void)? = nil)
+  @objc public func clearMemoryCache()
+  open func clearDiskCache(completion handler: (() -> Swift.Void)? = nil)
+  open func cleanExpiredCache(completion handler: (() -> Swift.Void)? = nil)
+  open func cleanExpiredMemoryCache()
+  open func cleanExpiredDiskCache(completion handler: (() -> Swift.Void)? = nil)
+  @objc public func backgroundCleanExpiredDiskCache()
+  open func imageCachedType(forKey key: Swift.String, processorIdentifier identifier: Swift.String = DefaultImageProcessor.default.identifier) -> YLCustomerService.CacheType
+  public func isCached(forKey key: Swift.String, processorIdentifier identifier: Swift.String = DefaultImageProcessor.default.identifier) -> Swift.Bool
+  open func hash(forKey key: Swift.String, processorIdentifier identifier: Swift.String = DefaultImageProcessor.default.identifier) -> Swift.String
+  open func calculateDiskStorageSize(completion handler: @escaping ((Swift.Result<Swift.UInt, YLCustomerService.KingfisherError>) -> Swift.Void))
+  open func cachePath(forKey key: Swift.String, processorIdentifier identifier: Swift.String = DefaultImageProcessor.default.identifier) -> Swift.String
 }
-extension CGSize : YLCustomerService.KingfisherCompatible {
-  public typealias CompatibleType = YLCustomerService.CGSizeProxy
-  public var kf: YLCustomerService.CGSizeProxy {
+extension UIApplication : YLCustomerService.KingfisherCompatible {
+}
+extension KingfisherWrapper where Base : UIKit.UIApplication {
+  public static var shared: UIKit.UIApplication? {
     get
   }
 }
-extension CGSizeProxy {
-  public func resize(to size: CoreGraphics.CGSize, for contentMode: YLCustomerService.ContentMode) -> CoreGraphics.CGSize
-  public func constrained(_ size: CoreGraphics.CGSize) -> CoreGraphics.CGSize
-  public func filling(_ size: CoreGraphics.CGSize) -> CoreGraphics.CGSize
-  public func constrainedRect(for size: CoreGraphics.CGSize, anchor: CoreGraphics.CGPoint) -> CoreGraphics.CGRect
+public enum Source {
+  public enum Identifier {
+    public typealias Value = Swift.UInt
+  }
+  case network(YLCustomerService.Resource)
+  case provider(YLCustomerService.ImageDataProvider)
+  public var cacheKey: Swift.String {
+    get
+  }
+  public var url: Foundation.URL? {
+    get
+  }
+}
+extension Source : Swift.Hashable {
+  public static func == (lhs: YLCustomerService.Source, rhs: YLCustomerService.Source) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public protocol Resource {
+  var cacheKey: Swift.String { get }
+  var downloadURL: Foundation.URL { get }
+}
+extension Resource {
+  public func convertToSource(overrideCacheKey: Swift.String? = nil) -> YLCustomerService.Source
+}
+public struct ImageResource : YLCustomerService.Resource {
+  public init(downloadURL: Foundation.URL, cacheKey: Swift.String? = nil)
+  public let cacheKey: Swift.String
+  public let downloadURL: Foundation.URL
+}
+extension URL : YLCustomerService.Resource {
+  public var cacheKey: Swift.String {
+    get
+  }
+  public var downloadURL: Foundation.URL {
+    get
+  }
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc open class IMUITextActivityContentView : UIKit.UIView, YLCustomerService.IMUIMessageContentViewProtocol, YLCustomerService.PasteboardTextViewDelegateall {
   @objc weak public var delegate: YLCustomerService.IMUIMessageContentViewDelegate?
@@ -123,6 +186,13 @@ extension CGSizeProxy {
   @objc public func getContentSelected(_ attach: UIKit.NSTextAttachment!)
   @objc deinit
 }
+public protocol ImageDownloadRedirectHandler {
+  func handleHTTPRedirection(for task: YLCustomerService.SessionDataTask, response: Foundation.HTTPURLResponse, newRequest: Foundation.URLRequest, completionHandler: @escaping (Foundation.URLRequest?) -> Swift.Void)
+}
+public struct AnyRedirectHandler : YLCustomerService.ImageDownloadRedirectHandler {
+  public func handleHTTPRedirection(for task: YLCustomerService.SessionDataTask, response: Foundation.HTTPURLResponse, newRequest: Foundation.URLRequest, completionHandler: @escaping (Foundation.URLRequest?) -> Swift.Void)
+  public init(handle: @escaping (YLCustomerService.SessionDataTask, Foundation.HTTPURLResponse, Foundation.URLRequest, @escaping (Foundation.URLRequest?) -> Swift.Void) -> Swift.Void)
+}
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class IMUITextTalkTimeContentView : UIKit.UIView, YLCustomerService.IMUIMessageContentViewProtocol {
   @objc weak public var delegate: YLCustomerService.IMUIMessageContentViewDelegate?
   public static var outGoingVideoDurationColor: UIKit.UIColor
@@ -131,6 +201,18 @@ extension CGSizeProxy {
   @objc public func layoutContentView(message: YLCustomerService.IMUIMessageModelProtocol)
   @objc deinit
 }
+public protocol CacheSerializer {
+  func data(with image: YLCustomerService.KFCrossPlatformImage, original: Foundation.Data?) -> Foundation.Data?
+  func image(with data: Foundation.Data, options: YLCustomerService.KingfisherParsedOptionsInfo) -> YLCustomerService.KFCrossPlatformImage?
+}
+public struct DefaultCacheSerializer : YLCustomerService.CacheSerializer {
+  public static var `default`: YLCustomerService.DefaultCacheSerializer
+  public var compressionQuality: CoreGraphics.CGFloat
+  public var preferCacheOriginalData: Swift.Bool
+  public init()
+  public func data(with image: YLCustomerService.KFCrossPlatformImage, original: Foundation.Data?) -> Foundation.Data?
+  public func image(with data: Foundation.Data, options: YLCustomerService.KingfisherParsedOptionsInfo) -> YLCustomerService.KFCrossPlatformImage?
+}
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers open class IMUIBaseMessageCell : UIKit.UICollectionViewCell, YLCustomerService.IMUIMessageContentViewDelegate, UIKit.UIGestureRecognizerDelegate {
   @objc public static var avatarCornerRadius: CoreGraphics.CGFloat
   @objc public static var backgroundColor: UIKit.UIColor
@@ -138,6 +220,34 @@ extension CGSizeProxy {
   @objc public func click(index: Swift.Int)
   @objc public func clickRobot(index: Swift.Int)
   @objc deinit
+}
+public enum StorageExpiration {
+  case never
+  case seconds(Foundation.TimeInterval)
+  case days(Swift.Int)
+  case date(Foundation.Date)
+  case expired
+}
+public enum ExpirationExtending {
+  case none
+  case cacheTime
+  case expirationTime(_: YLCustomerService.StorageExpiration)
+}
+public protocol CacheCostCalculable {
+  var cacheCost: Swift.Int { get }
+}
+public protocol DataTransformable {
+  func toData() throws -> Foundation.Data
+  static func fromData(_ data: Foundation.Data) throws -> Self
+  static var empty: Self { get }
+}
+extension CGSize : YLCustomerService.KingfisherCompatibleValue {
+}
+extension KingfisherWrapper where Base == CoreGraphics.CGSize {
+  public func resize(to size: CoreGraphics.CGSize, for contentMode: YLCustomerService.ContentMode) -> CoreGraphics.CGSize
+  public func constrained(_ size: CoreGraphics.CGSize) -> CoreGraphics.CGSize
+  public func filling(_ size: CoreGraphics.CGSize) -> CoreGraphics.CGSize
+  public func constrainedRect(for size: CoreGraphics.CGSize, anchor: CoreGraphics.CGPoint) -> CoreGraphics.CGRect
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc open class IMUITextMessageContentView : UIKit.UIView, YLCustomerService.IMUIMessageContentViewProtocol {
   @objc weak public var delegate: YLCustomerService.IMUIMessageContentViewDelegate?
@@ -157,93 +267,100 @@ extension CGSizeProxy {
   @objc deinit
   @objc override dynamic public init()
 }
-public typealias IndicatorView = UIKit.UIView
-public enum IndicatorType {
-  case none
-  case activity
-  case image(imageData: Foundation.Data)
-  case custom(indicator: YLCustomerService.Indicator)
-}
-public protocol Indicator {
-  func startAnimatingView()
-  func stopAnimatingView()
-  var viewCenter: CoreGraphics.CGPoint { get set }
-  var view: YLCustomerService.IndicatorView { get }
-}
-extension Indicator {
-  public var viewCenter: CoreGraphics.CGPoint {
-    get
-    set(newValue)
+public enum MemoryStorage {
+  public class Backend<T> where T : YLCustomerService.CacheCostCalculable {
+    public var config: YLCustomerService.MemoryStorage.Config {
+      get
+      set(value)
+    }
+    public init(config: YLCustomerService.MemoryStorage.Config)
+    public func removeExpired()
+    public func store(value: T, forKey key: Swift.String, expiration: YLCustomerService.StorageExpiration? = nil)
+    public func value(forKey key: Swift.String, extendingExpiration: YLCustomerService.ExpirationExtending = .cacheTime) -> T?
+    public func isCached(forKey key: Swift.String) -> Swift.Bool
+    public func remove(forKey key: Swift.String)
+    public func removeAll()
+    @objc deinit
   }
 }
-@objc public protocol IMUICustomInputViewDelegate : ObjectiveC.NSObjectProtocol {
-  @objc optional func textDidChange(text: Swift.String)
-  @objc optional func keyBoardWillShow(height: CoreGraphics.CGFloat, durationTime: Swift.Double)
-}
-extension NSNotification.Name {
-  public static var KingfisherDidCleanDiskCache: Foundation.Notification.Name
-}
-public var KingfisherDiskCacheCleanedHashKey: Swift.String
-public typealias RetrieveImageDiskTask = Dispatch.DispatchWorkItem
-public enum CacheType {
-  case none
-  case memory
-  case disk
-  public var cached: Swift.Bool {
-    get
+extension MemoryStorage {
+  public struct Config {
+    public var totalCostLimit: Swift.Int
+    public var countLimit: Swift.Int
+    public var expiration: YLCustomerService.StorageExpiration
+    public let cleanInterval: Foundation.TimeInterval
+    public init(totalCostLimit: Swift.Int, cleanInterval: Foundation.TimeInterval = 120)
   }
-  public static func == (a: YLCustomerService.CacheType, b: YLCustomerService.CacheType) -> Swift.Bool
+}
+public enum ImageFormat {
+  case unknown
+  case PNG
+  case JPEG
+  case GIF
+  public enum JPEGMarker {
+    case SOF0
+    case SOF2
+    case DHT
+    case DQT
+    case DRI
+    case SOS
+    case RSTn(Swift.UInt8)
+    case APPn
+    case COM
+    case EOI
+  }
+  public static func == (a: YLCustomerService.ImageFormat, b: YLCustomerService.ImageFormat) -> Swift.Bool
   public var hashValue: Swift.Int {
     get
   }
   public func hash(into hasher: inout Swift.Hasher)
 }
-open class ImageCache {
-  open var maxMemoryCost: Swift.UInt {
+extension Data : YLCustomerService.KingfisherCompatibleValue {
+}
+extension KingfisherWrapper where Base == Foundation.Data {
+  public var imageFormat: YLCustomerService.ImageFormat {
     get
-    set(value)
   }
-  final public let diskCachePath: Swift.String
-  open var pathExtension: Swift.String?
-  open var maxCachePeriodInSecond: Swift.Double
-  open var maxDiskCacheSize: Swift.UInt
-  public static var `default`: YLCustomerService.ImageCache
-  public typealias DiskCachePathClosure = (Swift.String?, Swift.String) -> Swift.String
-  final public class func defaultDiskCachePathClosure(path: Swift.String?, cacheName: Swift.String) -> Swift.String
-  public init(name: Swift.String, path: Swift.String? = nil, diskCachePathClosure: (Swift.String?, Swift.String) -> Swift.String = ImageCache.defaultDiskCachePathClosure)
+  public func contains(jpeg marker: YLCustomerService.ImageFormat.JPEGMarker) -> Swift.Bool
+}
+public protocol ImageDownloaderDelegate : AnyObject {
+  func imageDownloader(_ downloader: YLCustomerService.ImageDownloader, willDownloadImageForURL url: Foundation.URL, with request: Foundation.URLRequest?)
+  func imageDownloader(_ downloader: YLCustomerService.ImageDownloader, didFinishDownloadingImageForURL url: Foundation.URL, with response: Foundation.URLResponse?, error: Swift.Error?)
+  func imageDownloader(_ downloader: YLCustomerService.ImageDownloader, didDownload data: Foundation.Data, with dataTask: YLCustomerService.SessionDataTask) -> Foundation.Data?
+  func imageDownloader(_ downloader: YLCustomerService.ImageDownloader, didDownload data: Foundation.Data, for url: Foundation.URL) -> Foundation.Data?
+  func imageDownloader(_ downloader: YLCustomerService.ImageDownloader, didDownload image: YLCustomerService.KFCrossPlatformImage, for url: Foundation.URL, with response: Foundation.URLResponse?)
+  func isValidStatusCode(_ code: Swift.Int, for downloader: YLCustomerService.ImageDownloader) -> Swift.Bool
+}
+extension ImageDownloaderDelegate {
+  public func imageDownloader(_ downloader: YLCustomerService.ImageDownloader, willDownloadImageForURL url: Foundation.URL, with request: Foundation.URLRequest?)
+  public func imageDownloader(_ downloader: YLCustomerService.ImageDownloader, didFinishDownloadingImageForURL url: Foundation.URL, with response: Foundation.URLResponse?, error: Swift.Error?)
+  public func imageDownloader(_ downloader: YLCustomerService.ImageDownloader, didDownload image: YLCustomerService.KFCrossPlatformImage, for url: Foundation.URL, with response: Foundation.URLResponse?)
+  public func isValidStatusCode(_ code: Swift.Int, for downloader: YLCustomerService.ImageDownloader) -> Swift.Bool
+  public func imageDownloader(_ downloader: YLCustomerService.ImageDownloader, didDownload data: Foundation.Data, with task: YLCustomerService.SessionDataTask) -> Foundation.Data?
+  public func imageDownloader(_ downloader: YLCustomerService.ImageDownloader, didDownload data: Foundation.Data, for url: Foundation.URL) -> Foundation.Data?
+}
+@objc public protocol IMUICustomInputViewDelegate : ObjectiveC.NSObjectProtocol {
+  @objc optional func textDidChange(text: Swift.String)
+  @objc optional func keyBoardWillShow(height: CoreGraphics.CGFloat, durationTime: Swift.Double)
+}
+public typealias PrefetcherProgressBlock = (([YLCustomerService.Resource], [YLCustomerService.Resource], [YLCustomerService.Resource]) -> Swift.Void)
+public typealias PrefetcherSourceProgressBlock = (([YLCustomerService.Source], [YLCustomerService.Source], [YLCustomerService.Source]) -> Swift.Void)
+public typealias PrefetcherCompletionHandler = (([YLCustomerService.Resource], [YLCustomerService.Resource], [YLCustomerService.Resource]) -> Swift.Void)
+public typealias PrefetcherSourceCompletionHandler = (([YLCustomerService.Source], [YLCustomerService.Source], [YLCustomerService.Source]) -> Swift.Void)
+@_hasMissingDesignatedInitializers public class ImagePrefetcher : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+  public var maxConcurrentDownloads: Swift.Int
+  public convenience init(urls: [Foundation.URL], options: YLCustomerService.KingfisherOptionsInfo? = nil, progressBlock: YLCustomerService.PrefetcherProgressBlock? = nil, completionHandler: YLCustomerService.PrefetcherCompletionHandler? = nil)
+  public convenience init(urls: [Foundation.URL], options: YLCustomerService.KingfisherOptionsInfo? = nil, completionHandler: YLCustomerService.PrefetcherCompletionHandler? = nil)
+  public convenience init(resources: [YLCustomerService.Resource], options: YLCustomerService.KingfisherOptionsInfo? = nil, progressBlock: YLCustomerService.PrefetcherProgressBlock? = nil, completionHandler: YLCustomerService.PrefetcherCompletionHandler? = nil)
+  public convenience init(resources: [YLCustomerService.Resource], options: YLCustomerService.KingfisherOptionsInfo? = nil, completionHandler: YLCustomerService.PrefetcherCompletionHandler? = nil)
+  public convenience init(sources: [YLCustomerService.Source], options: YLCustomerService.KingfisherOptionsInfo? = nil, progressBlock: YLCustomerService.PrefetcherSourceProgressBlock? = nil, completionHandler: YLCustomerService.PrefetcherSourceCompletionHandler? = nil)
+  public convenience init(sources: [YLCustomerService.Source], options: YLCustomerService.KingfisherOptionsInfo? = nil, completionHandler: YLCustomerService.PrefetcherSourceCompletionHandler? = nil)
+  public func start()
+  public func stop()
   @objc deinit
-  open func store(_ image: YLCustomerService.Image, original: Foundation.Data? = nil, forKey key: Swift.String, processorIdentifier identifier: Swift.String = "", cacheSerializer serializer: YLCustomerService.CacheSerializer = DefaultCacheSerializer.default, toDisk: Swift.Bool = true, completionHandler: (() -> Swift.Void)? = nil)
-  open func removeImage(forKey key: Swift.String, processorIdentifier identifier: Swift.String = "", fromMemory: Swift.Bool = true, fromDisk: Swift.Bool = true, completionHandler: (() -> Swift.Void)? = nil)
-  @discardableResult
-  open func retrieveImage(forKey key: Swift.String, options: YLCustomerService.KingfisherOptionsInfo?, completionHandler: ((YLCustomerService.Image?, YLCustomerService.CacheType) -> Swift.Void)?) -> YLCustomerService.RetrieveImageDiskTask?
-  open func retrieveImageInMemoryCache(forKey key: Swift.String, options: YLCustomerService.KingfisherOptionsInfo? = nil) -> YLCustomerService.Image?
-  open func retrieveImageInDiskCache(forKey key: Swift.String, options: YLCustomerService.KingfisherOptionsInfo? = nil) -> YLCustomerService.Image?
-  @objc public func clearMemoryCache()
-  open func clearDiskCache(completion handler: (() -> ())? = nil)
-  open func cleanExpiredDiskCache(completion handler: (() -> ())? = nil)
-  @objc public func backgroundCleanExpiredDiskCache()
-  open func imageCachedType(forKey key: Swift.String, processorIdentifier identifier: Swift.String = "") -> YLCustomerService.CacheType
-  open func hash(forKey key: Swift.String, processorIdentifier identifier: Swift.String = "") -> Swift.String
-  open func calculateDiskCacheSize(completion handler: @escaping ((Swift.UInt) -> Swift.Void))
-  open func cachePath(forKey key: Swift.String, processorIdentifier identifier: Swift.String = "") -> Swift.String
-  open func cachePath(forComputedKey key: Swift.String) -> Swift.String
-}
-extension ImageCache {
-  @available(*, deprecated, message: "CacheCheckResult is deprecated. Use imageCachedType(forKey:processorIdentifier:) API instead.")
-  public struct CacheCheckResult {
-    public let cached: Swift.Bool
-    public let cacheType: YLCustomerService.CacheType?
-  }
-  @available(*, deprecated, renamed: "imageCachedType(forKey:processorIdentifier:)", message: "Use imageCachedType(forKey:processorIdentifier:) instead. CacheCheckResult.none indicates not being cached.")
-  open func isImageCached(forKey key: Swift.String, processorIdentifier identifier: Swift.String = "") -> YLCustomerService.ImageCache.CacheCheckResult
-}
-extension UIApplication : YLCustomerService.KingfisherCompatible {
-  public typealias CompatibleType = YLCustomerService.Kingfisher<UIKit.UIApplication>
-}
-extension Kingfisher where Base : UIKit.UIApplication {
-  public static var shared: UIKit.UIApplication? {
-    get
-  }
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc open class IMUITextExpendButton : UIKit.UIView {
   @objc public static var TextColor: UIKit.UIColor
@@ -343,13 +460,123 @@ extension UICollectionView {
   public func reloadDataNoScroll()
   public func reloadDataHorizontalNoScroll()
 }
-public protocol ImageDownloadRequestModifier {
-  func modified(for request: Foundation.URLRequest) -> Foundation.URLRequest?
+public enum ImageProcessItem {
+  case image(YLCustomerService.KFCrossPlatformImage)
+  case data(Foundation.Data)
 }
-public struct AnyModifier : YLCustomerService.ImageDownloadRequestModifier {
-  public func modified(for request: Foundation.URLRequest) -> Foundation.URLRequest?
-  public init(modify: @escaping (Foundation.URLRequest) -> Foundation.URLRequest?)
+public protocol ImageProcessor {
+  var identifier: Swift.String { get }
+  func process(item: YLCustomerService.ImageProcessItem, options: YLCustomerService.KingfisherParsedOptionsInfo) -> YLCustomerService.KFCrossPlatformImage?
 }
+extension ImageProcessor {
+  public func append(another: YLCustomerService.ImageProcessor) -> YLCustomerService.ImageProcessor
+}
+public struct DefaultImageProcessor : YLCustomerService.ImageProcessor {
+  public static var `default`: YLCustomerService.DefaultImageProcessor
+  public let identifier: Swift.String
+  public init()
+  public func process(item: YLCustomerService.ImageProcessItem, options: YLCustomerService.KingfisherParsedOptionsInfo) -> YLCustomerService.KFCrossPlatformImage?
+}
+public struct RectCorner : Swift.OptionSet {
+  public let rawValue: Swift.Int
+  public static var topLeft: YLCustomerService.RectCorner
+  public static var topRight: YLCustomerService.RectCorner
+  public static var bottomLeft: YLCustomerService.RectCorner
+  public static var bottomRight: YLCustomerService.RectCorner
+  public static var all: YLCustomerService.RectCorner
+  public init(rawValue: Swift.Int)
+  public typealias Element = YLCustomerService.RectCorner
+  public typealias ArrayLiteralElement = YLCustomerService.RectCorner
+  public typealias RawValue = Swift.Int
+}
+public struct BlendImageProcessor : YLCustomerService.ImageProcessor {
+  public let identifier: Swift.String
+  public let blendMode: CoreGraphics.CGBlendMode
+  public let alpha: CoreGraphics.CGFloat
+  public let backgroundColor: YLCustomerService.KFCrossPlatformColor?
+  public init(blendMode: CoreGraphics.CGBlendMode, alpha: CoreGraphics.CGFloat = 1.0, backgroundColor: YLCustomerService.KFCrossPlatformColor? = nil)
+  public func process(item: YLCustomerService.ImageProcessItem, options: YLCustomerService.KingfisherParsedOptionsInfo) -> YLCustomerService.KFCrossPlatformImage?
+}
+public struct RoundCornerImageProcessor : YLCustomerService.ImageProcessor {
+  public enum Radius {
+    case widthFraction(CoreGraphics.CGFloat)
+    case heightFraction(CoreGraphics.CGFloat)
+    case point(CoreGraphics.CGFloat)
+  }
+  public let identifier: Swift.String
+  public let radius: YLCustomerService.RoundCornerImageProcessor.Radius
+  public let roundingCorners: YLCustomerService.RectCorner
+  public let targetSize: CoreGraphics.CGSize?
+  public let backgroundColor: YLCustomerService.KFCrossPlatformColor?
+  public init(cornerRadius: CoreGraphics.CGFloat, targetSize: CoreGraphics.CGSize? = nil, roundingCorners corners: YLCustomerService.RectCorner = .all, backgroundColor: YLCustomerService.KFCrossPlatformColor? = nil)
+  public init(radius: YLCustomerService.RoundCornerImageProcessor.Radius, targetSize: CoreGraphics.CGSize? = nil, roundingCorners corners: YLCustomerService.RectCorner = .all, backgroundColor: YLCustomerService.KFCrossPlatformColor? = nil)
+  public func process(item: YLCustomerService.ImageProcessItem, options: YLCustomerService.KingfisherParsedOptionsInfo) -> YLCustomerService.KFCrossPlatformImage?
+}
+public enum ContentMode {
+  case none
+  case aspectFit
+  case aspectFill
+  public static func == (a: YLCustomerService.ContentMode, b: YLCustomerService.ContentMode) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+}
+public struct ResizingImageProcessor : YLCustomerService.ImageProcessor {
+  public let identifier: Swift.String
+  public let referenceSize: CoreGraphics.CGSize
+  public let targetContentMode: YLCustomerService.ContentMode
+  public init(referenceSize: CoreGraphics.CGSize, mode: YLCustomerService.ContentMode = .none)
+  public func process(item: YLCustomerService.ImageProcessItem, options: YLCustomerService.KingfisherParsedOptionsInfo) -> YLCustomerService.KFCrossPlatformImage?
+}
+public struct BlurImageProcessor : YLCustomerService.ImageProcessor {
+  public let identifier: Swift.String
+  public let blurRadius: CoreGraphics.CGFloat
+  public init(blurRadius: CoreGraphics.CGFloat)
+  public func process(item: YLCustomerService.ImageProcessItem, options: YLCustomerService.KingfisherParsedOptionsInfo) -> YLCustomerService.KFCrossPlatformImage?
+}
+public struct OverlayImageProcessor : YLCustomerService.ImageProcessor {
+  public let identifier: Swift.String
+  public let overlay: YLCustomerService.KFCrossPlatformColor
+  public let fraction: CoreGraphics.CGFloat
+  public init(overlay: YLCustomerService.KFCrossPlatformColor, fraction: CoreGraphics.CGFloat = 0.5)
+  public func process(item: YLCustomerService.ImageProcessItem, options: YLCustomerService.KingfisherParsedOptionsInfo) -> YLCustomerService.KFCrossPlatformImage?
+}
+public struct TintImageProcessor : YLCustomerService.ImageProcessor {
+  public let identifier: Swift.String
+  public let tint: YLCustomerService.KFCrossPlatformColor
+  public init(tint: YLCustomerService.KFCrossPlatformColor)
+  public func process(item: YLCustomerService.ImageProcessItem, options: YLCustomerService.KingfisherParsedOptionsInfo) -> YLCustomerService.KFCrossPlatformImage?
+}
+public struct ColorControlsProcessor : YLCustomerService.ImageProcessor {
+  public let identifier: Swift.String
+  public let brightness: CoreGraphics.CGFloat
+  public let contrast: CoreGraphics.CGFloat
+  public let saturation: CoreGraphics.CGFloat
+  public let inputEV: CoreGraphics.CGFloat
+  public init(brightness: CoreGraphics.CGFloat, contrast: CoreGraphics.CGFloat, saturation: CoreGraphics.CGFloat, inputEV: CoreGraphics.CGFloat)
+  public func process(item: YLCustomerService.ImageProcessItem, options: YLCustomerService.KingfisherParsedOptionsInfo) -> YLCustomerService.KFCrossPlatformImage?
+}
+public struct BlackWhiteProcessor : YLCustomerService.ImageProcessor {
+  public let identifier: Swift.String
+  public init()
+  public func process(item: YLCustomerService.ImageProcessItem, options: YLCustomerService.KingfisherParsedOptionsInfo) -> YLCustomerService.KFCrossPlatformImage?
+}
+public struct CroppingImageProcessor : YLCustomerService.ImageProcessor {
+  public let identifier: Swift.String
+  public let size: CoreGraphics.CGSize
+  public let anchor: CoreGraphics.CGPoint
+  public init(size: CoreGraphics.CGSize, anchor: CoreGraphics.CGPoint = CGPoint(x: 0.5, y: 0.5))
+  public func process(item: YLCustomerService.ImageProcessItem, options: YLCustomerService.KingfisherParsedOptionsInfo) -> YLCustomerService.KFCrossPlatformImage?
+}
+public struct DownsamplingImageProcessor : YLCustomerService.ImageProcessor {
+  public let size: CoreGraphics.CGSize
+  public let identifier: Swift.String
+  public init(size: CoreGraphics.CGSize)
+  public func process(item: YLCustomerService.ImageProcessItem, options: YLCustomerService.KingfisherParsedOptionsInfo) -> YLCustomerService.KFCrossPlatformImage?
+}
+infix operator |> : AdditionPrecedence
+public func |> (left: YLCustomerService.ImageProcessor, right: YLCustomerService.ImageProcessor) -> YLCustomerService.ImageProcessor
 public enum IMUIEmojiType {
   case emoji
   case image
@@ -479,12 +706,9 @@ extension IMUIInputView : YLCustomerService.IMUICustomInputViewDelegate {
   @objc dynamic public func textDidChange(text: Swift.String)
   @objc dynamic public func keyBoardWillShow(height: CoreGraphics.CGFloat, durationTime: Swift.Double)
 }
-public struct FormatIndicatedCacheSerializer : YLCustomerService.CacheSerializer {
-  public static var png: YLCustomerService.FormatIndicatedCacheSerializer
-  public static var jpeg: YLCustomerService.FormatIndicatedCacheSerializer
-  public static var gif: YLCustomerService.FormatIndicatedCacheSerializer
-  public func data(with image: YLCustomerService.Image, original: Foundation.Data?) -> Foundation.Data?
-  public func image(with data: Foundation.Data, options: YLCustomerService.KingfisherOptionsInfo?) -> YLCustomerService.Image?
+public struct ImageProgressive {
+  public static var `default`: YLCustomerService.ImageProgressive
+  public init(isBlur: Swift.Bool, isFastestScan: Swift.Bool, scanInterval: Foundation.TimeInterval)
 }
 extension UIImage {
   public class func imuiImage(with name: Swift.String) -> UIKit.UIImage?
@@ -578,54 +802,133 @@ extension UIImage {
   @objc deinit
   @objc override dynamic public init()
 }
-public protocol AnimatedImageViewDelegate : AnyObject {
-  func animatedImageView(_ imageView: YLCustomerService.AnimatedImageView, didPlayAnimationLoops count: Swift.UInt)
-  func animatedImageViewDidFinishAnimating(_ imageView: YLCustomerService.AnimatedImageView)
+public protocol KFOptionSetter {
+  var options: YLCustomerService.KingfisherParsedOptionsInfo { get nonmutating set }
+  var onFailureDelegate: YLCustomerService.Delegate<YLCustomerService.KingfisherError, Swift.Void> { get }
+  var onSuccessDelegate: YLCustomerService.Delegate<YLCustomerService.RetrieveImageResult, Swift.Void> { get }
+  var onProgressDelegate: YLCustomerService.Delegate<(Swift.Int64, Swift.Int64), Swift.Void> { get }
+  var delegateObserver: Swift.AnyObject { get }
 }
-extension AnimatedImageViewDelegate {
-  public func animatedImageView(_ imageView: YLCustomerService.AnimatedImageView, didPlayAnimationLoops count: Swift.UInt)
-  public func animatedImageViewDidFinishAnimating(_ imageView: YLCustomerService.AnimatedImageView)
+extension KF.Builder : YLCustomerService.KFOptionSetter {
+  public var delegateObserver: Swift.AnyObject {
+    get
+  }
 }
-@objc @_inheritsConvenienceInitializers open class AnimatedImageView : UIKit.UIImageView {
-  public enum RepeatCount : Swift.Equatable {
-    case once
-    case finite(count: Swift.UInt)
-    case infinite
-    public static func == (lhs: YLCustomerService.AnimatedImageView.RepeatCount, rhs: YLCustomerService.AnimatedImageView.RepeatCount) -> Swift.Bool
-  }
-  public var autoPlayAnimatedImage: Swift.Bool
-  public var framePreloadCount: Swift.Int
-  public var needsPrescaling: Swift.Bool
-  public var runLoopMode: Foundation.RunLoop.Mode {
+@available(iOS 13.0, OSX 10.15, tvOS 13.0, watchOS 6.0, *)
+extension KFImage : YLCustomerService.KFOptionSetter {
+  public var options: YLCustomerService.KingfisherParsedOptionsInfo {
     get
-    set(value)
+    nonmutating set(newValue)
   }
-  public var repeatCount: YLCustomerService.AnimatedImageView.RepeatCount {
+  public var onFailureDelegate: YLCustomerService.Delegate<YLCustomerService.KingfisherError, Swift.Void> {
     get
-    set(value)
   }
-  weak public var delegate: YLCustomerService.AnimatedImageViewDelegate?
-  @objc override dynamic open var image: YLCustomerService.Image? {
-    @objc get
-    @objc set(value)
+  public var onSuccessDelegate: YLCustomerService.Delegate<YLCustomerService.RetrieveImageResult, Swift.Void> {
+    get
   }
+  public var onProgressDelegate: YLCustomerService.Delegate<(Swift.Int64, Swift.Int64), Swift.Void> {
+    get
+  }
+  public var delegateObserver: Swift.AnyObject {
+    get
+  }
+}
+extension KFOptionSetter {
+  public func onProgress(_ block: YLCustomerService.DownloadProgressBlock?) -> Self
+  public func onSuccess(_ block: ((YLCustomerService.RetrieveImageResult) -> Swift.Void)?) -> Self
+  public func onFailure(_ block: ((YLCustomerService.KingfisherError) -> Swift.Void)?) -> Self
+}
+extension KFOptionSetter {
+  public func targetCache(_ cache: YLCustomerService.ImageCache) -> Self
+  public func originalCache(_ cache: YLCustomerService.ImageCache) -> Self
+  public func downloader(_ downloader: YLCustomerService.ImageDownloader) -> Self
+  public func downloadPriority(_ priority: Swift.Float) -> Self
+  public func forceRefresh(_ enabled: Swift.Bool = true) -> Self
+  public func fromMemoryCacheOrRefresh(_ enabled: Swift.Bool = true) -> Self
+  public func cacheMemoryOnly(_ enabled: Swift.Bool = true) -> Self
+  public func waitForCache(_ enabled: Swift.Bool = true) -> Self
+  public func onlyFromCache(_ enabled: Swift.Bool = true) -> Self
+  public func backgroundDecode(_ enabled: Swift.Bool = true) -> Self
+  public func callbackQueue(_ queue: YLCustomerService.CallbackQueue) -> Self
+  public func scaleFactor(_ factor: CoreGraphics.CGFloat) -> Self
+  public func cacheOriginalImage(_ enabled: Swift.Bool = true) -> Self
+  public func loadDiskFileSynchronously(_ enabled: Swift.Bool = true) -> Self
+  public func processingQueue(_ queue: YLCustomerService.CallbackQueue?) -> Self
+  public func alternativeSources(_ sources: [YLCustomerService.Source]?) -> Self
+  public func retry(_ strategy: YLCustomerService.RetryStrategy) -> Self
+  public func retry(maxCount: Swift.Int, interval: YLCustomerService.DelayRetryStrategy.Interval = .seconds(3)) -> Self
+  public func lowDataModeSource(_ source: YLCustomerService.Source?) -> Self
+  public func forceTransition(_ enabled: Swift.Bool = true) -> Self
+}
+extension KFOptionSetter {
+  public func requestModifier(_ modifier: YLCustomerService.ImageDownloadRequestModifier) -> Self
+  public func requestModifier(_ modifyBlock: @escaping (inout Foundation.URLRequest) -> Swift.Void) -> Self
+}
+extension KFOptionSetter {
+  public func redirectHandler(_ handler: YLCustomerService.ImageDownloadRedirectHandler) -> Self
+  public func redirectHandler(_ block: @escaping (YLCustomerService.KF.RedirectPayload) -> Swift.Void) -> Self
+}
+extension KFOptionSetter {
+  public func setProcessor(_ processor: YLCustomerService.ImageProcessor) -> Self
+  public func setProcessors(_ processors: [YLCustomerService.ImageProcessor]) -> Self
+  public func appendProcessor(_ processor: YLCustomerService.ImageProcessor) -> Self
+  public func roundCorner(radius: YLCustomerService.RoundCornerImageProcessor.Radius, targetSize: CoreGraphics.CGSize? = nil, roundingCorners corners: YLCustomerService.RectCorner = .all, backgroundColor: YLCustomerService.KFCrossPlatformColor? = nil) -> Self
+  public func blur(radius: CoreGraphics.CGFloat) -> Self
+  public func overlay(color: YLCustomerService.KFCrossPlatformColor, fraction: CoreGraphics.CGFloat = 0.5) -> Self
+  public func tint(color: YLCustomerService.KFCrossPlatformColor) -> Self
+  public func blackWhite() -> Self
+  public func cropping(size: CoreGraphics.CGSize, anchor: CoreGraphics.CGPoint = .init(x: 0.5, y: 0.5)) -> Self
+  public func downsampling(size: CoreGraphics.CGSize) -> Self
+  public func resizing(referenceSize: CoreGraphics.CGSize, mode: YLCustomerService.ContentMode = .none) -> Self
+}
+extension KFOptionSetter {
+  public func serialize(by cacheSerializer: YLCustomerService.CacheSerializer) -> Self
+  public func serialize(as format: YLCustomerService.ImageFormat, jpegCompressionQuality: CoreGraphics.CGFloat? = nil) -> Self
+}
+extension KFOptionSetter {
+  public func imageModifier(_ modifier: YLCustomerService.ImageModifier?) -> Self
+  public func imageModifier(_ block: @escaping (inout YLCustomerService.KFCrossPlatformImage) throws -> Swift.Void) -> Self
+}
+extension KFOptionSetter {
+  public func memoryCacheExpiration(_ expiration: YLCustomerService.StorageExpiration?) -> Self
+  public func memoryCacheAccessExtending(_ extending: YLCustomerService.ExpirationExtending) -> Self
+  public func diskCacheExpiration(_ expiration: YLCustomerService.StorageExpiration?) -> Self
+  public func diskCacheAccessExtending(_ extending: YLCustomerService.ExpirationExtending) -> Self
+}
+extension KingfisherWrapper where Base : YLCustomerService.KFCrossPlatformImage {
+  public func image(withBlendMode blendMode: CoreGraphics.CGBlendMode, alpha: CoreGraphics.CGFloat = 1.0, backgroundColor: YLCustomerService.KFCrossPlatformColor? = nil) -> YLCustomerService.KFCrossPlatformImage
+  public func image(withRoundRadius radius: CoreGraphics.CGFloat, fit size: CoreGraphics.CGSize, roundingCorners corners: YLCustomerService.RectCorner = .all, backgroundColor: YLCustomerService.KFCrossPlatformColor? = nil) -> YLCustomerService.KFCrossPlatformImage
+  public func resize(to size: CoreGraphics.CGSize) -> YLCustomerService.KFCrossPlatformImage
+  public func resize(to targetSize: CoreGraphics.CGSize, for contentMode: YLCustomerService.ContentMode) -> YLCustomerService.KFCrossPlatformImage
+  public func crop(to size: CoreGraphics.CGSize, anchorOn anchor: CoreGraphics.CGPoint) -> YLCustomerService.KFCrossPlatformImage
+  public func blurred(withRadius radius: CoreGraphics.CGFloat) -> YLCustomerService.KFCrossPlatformImage
+  public func overlaying(with color: YLCustomerService.KFCrossPlatformColor, fraction: CoreGraphics.CGFloat) -> YLCustomerService.KFCrossPlatformImage
+  public func tinted(with color: YLCustomerService.KFCrossPlatformColor) -> YLCustomerService.KFCrossPlatformImage
+  public func adjusted(brightness: CoreGraphics.CGFloat, contrast: CoreGraphics.CGFloat, saturation: CoreGraphics.CGFloat, inputEV: CoreGraphics.CGFloat) -> YLCustomerService.KFCrossPlatformImage
+  public func scaled(to scale: CoreGraphics.CGFloat) -> YLCustomerService.KFCrossPlatformImage
+}
+extension KingfisherWrapper where Base : YLCustomerService.KFCrossPlatformImage {
+  public var decoded: YLCustomerService.KFCrossPlatformImage {
+    get
+  }
+  public func decoded(scale: CoreGraphics.CGFloat) -> YLCustomerService.KFCrossPlatformImage
+  public func decoded(on context: CoreGraphics.CGContext) -> YLCustomerService.KFCrossPlatformImage
+}
+@_hasMissingDesignatedInitializers public class SessionDataTask {
+  public typealias CancelToken = Swift.Int
+  public var mutableData: Foundation.Data {
+    get
+  }
+  final public let originalURL: Foundation.URL?
+  final public let task: Foundation.URLSessionDataTask
   @objc deinit
-  @objc override dynamic open var isAnimating: Swift.Bool {
-    @objc get
-  }
-  @objc override dynamic open func startAnimating()
-  @objc override dynamic open func stopAnimating()
-  @objc override dynamic open func display(_ layer: QuartzCore.CALayer)
-  @objc override dynamic open func didMoveToWindow()
-  @objc override dynamic open func didMoveToSuperview()
-  @objc override dynamic public init(image: UIKit.UIImage?)
-  @available(iOS 3.0, *)
-  @objc override dynamic public init(image: UIKit.UIImage?, highlightedImage: UIKit.UIImage?)
-  @objc override dynamic public init(frame: CoreGraphics.CGRect)
-  @objc required dynamic public init?(coder: Foundation.NSCoder)
 }
-extension CGImageSource : YLCustomerService.KingfisherCompatible {
-  public typealias CompatibleType = YLCustomerService.Kingfisher<ImageIO.CGImageSource>
+public enum CallbackQueue {
+  case mainAsync
+  case mainCurrentOrAsync
+  case untouch
+  case dispatch(Dispatch.DispatchQueue)
+  public func execute(_ block: @escaping () -> Swift.Void)
 }
 extension UIImage {
   public var jpegRepresentationData: Foundation.Data! {
@@ -640,6 +943,33 @@ extension UIImage {
   @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @objc public func layoutContentView(message: YLCustomerService.IMUIMessageModelProtocol)
   @objc deinit
+}
+public enum DiskStorage {
+  @_hasMissingDesignatedInitializers public class Backend<T> where T : YLCustomerService.DataTransformable {
+    public var config: YLCustomerService.DiskStorage.Config
+    final public let directoryURL: Foundation.URL
+    public convenience init(config: YLCustomerService.DiskStorage.Config) throws
+    public func store(value: T, forKey key: Swift.String, expiration: YLCustomerService.StorageExpiration? = nil) throws
+    public func value(forKey key: Swift.String, extendingExpiration: YLCustomerService.ExpirationExtending = .cacheTime) throws -> T?
+    public func isCached(forKey key: Swift.String) -> Swift.Bool
+    public func isCached(forKey key: Swift.String, referenceDate: Foundation.Date) -> Swift.Bool
+    public func remove(forKey key: Swift.String) throws
+    public func removeAll() throws
+    public func cacheFileURL(forKey key: Swift.String) -> Foundation.URL
+    public func removeExpiredValues() throws -> [Foundation.URL]
+    public func totalSize() throws -> Swift.UInt
+    @objc deinit
+  }
+}
+extension DiskStorage {
+  public struct Config {
+    public var sizeLimit: Swift.UInt
+    public var expiration: YLCustomerService.StorageExpiration
+    public var pathExtension: Swift.String?
+    public var usesHashedFileName: Swift.Bool
+    public var autoExtAfterHashedFileName: Swift.Bool
+    public init(name: Swift.String, sizeLimit: Swift.UInt, fileManager: Foundation.FileManager = .default, directory: Foundation.URL? = nil)
+  }
 }
 @objc public protocol IMUIFeatureListDelegate : ObjectiveC.NSObjectProtocol {
   @objc optional func onSelectedFeature(with cell: YLCustomerService.IMUIFeatureListIconCell)
@@ -683,73 +1013,27 @@ extension IMUIFeatureListView : UIKit.UICollectionViewDataSource, UIKit.UICollec
 extension Bundle {
   public class func imuiBundle() -> Foundation.Bundle
 }
-public typealias ImageDownloaderProgressBlock = YLCustomerService.DownloadProgressBlock
-public typealias ImageDownloaderCompletionHandler = ((YLCustomerService.Image?, Foundation.NSError?, Foundation.URL?, Foundation.Data?) -> Swift.Void)
-public struct RetrieveImageDownloadTask {
-  weak public var ownerDownloader: YLCustomerService.ImageDownloader? {
-    get
-  }
-  public func cancel()
-  public var url: Foundation.URL? {
-    get
-  }
-  public var priority: Swift.Float {
+extension KingfisherWrapper where Base : YLCustomerService.KFCrossPlatformImage {
+  public var imageFrameCount: Swift.Int? {
     get
     set(newValue)
   }
 }
-public enum KingfisherError : Swift.Int {
-  case badData
-  case notModified
-  case invalidStatusCode
-  case notCached
-  case invalidURL
-  case downloadCancelledBeforeStarting
-  public typealias RawValue = Swift.Int
-  public init?(rawValue: Swift.Int)
-  public var rawValue: Swift.Int {
+extension KingfisherWrapper where Base : YLCustomerService.KFCrossPlatformImage {
+  public var normalized: YLCustomerService.KFCrossPlatformImage {
     get
   }
 }
-public var KingfisherErrorStatusCodeKey: Swift.String
-public protocol ImageDownloaderDelegate : AnyObject {
-  func imageDownloader(_ downloader: YLCustomerService.ImageDownloader, willDownloadImageForURL url: Foundation.URL, with request: Foundation.URLRequest?)
-  func imageDownloader(_ downloader: YLCustomerService.ImageDownloader, didFinishDownloadingImageForURL url: Foundation.URL, with response: Foundation.URLResponse?, error: Swift.Error?)
-  func imageDownloader(_ downloader: YLCustomerService.ImageDownloader, didDownload image: YLCustomerService.Image, for url: Foundation.URL, with response: Foundation.URLResponse?)
-  func isValidStatusCode(_ code: Swift.Int, for downloader: YLCustomerService.ImageDownloader) -> Swift.Bool
-  func imageDownloader(_ downloader: YLCustomerService.ImageDownloader, didDownload data: Foundation.Data, for url: Foundation.URL) -> Foundation.Data?
+extension KingfisherWrapper where Base : YLCustomerService.KFCrossPlatformImage {
+  public func pngRepresentation() -> Foundation.Data?
+  public func jpegRepresentation(compressionQuality: CoreGraphics.CGFloat) -> Foundation.Data?
+  public func gifRepresentation() -> Foundation.Data?
+  public func data(format: YLCustomerService.ImageFormat, compressionQuality: CoreGraphics.CGFloat = 1.0) -> Foundation.Data?
 }
-extension ImageDownloaderDelegate {
-  public func imageDownloader(_ downloader: YLCustomerService.ImageDownloader, willDownloadImageForURL url: Foundation.URL, with request: Foundation.URLRequest?)
-  public func imageDownloader(_ downloader: YLCustomerService.ImageDownloader, didFinishDownloadingImageForURL url: Foundation.URL, with response: Foundation.URLResponse?, error: Swift.Error?)
-  public func imageDownloader(_ downloader: YLCustomerService.ImageDownloader, didDownload image: YLCustomerService.Image, for url: Foundation.URL, with response: Foundation.URLResponse?)
-  public func isValidStatusCode(_ code: Swift.Int, for downloader: YLCustomerService.ImageDownloader) -> Swift.Bool
-  public func imageDownloader(_ downloader: YLCustomerService.ImageDownloader, didDownload data: Foundation.Data, for url: Foundation.URL) -> Foundation.Data?
-}
-public protocol AuthenticationChallengeResponsable : AnyObject {
-  func downloader(_ downloader: YLCustomerService.ImageDownloader, didReceive challenge: Foundation.URLAuthenticationChallenge, completionHandler: @escaping (Foundation.URLSession.AuthChallengeDisposition, Foundation.URLCredential?) -> Swift.Void)
-  func downloader(_ downloader: YLCustomerService.ImageDownloader, task: Foundation.URLSessionTask, didReceive challenge: Foundation.URLAuthenticationChallenge, completionHandler: @escaping (Foundation.URLSession.AuthChallengeDisposition, Foundation.URLCredential?) -> Swift.Void)
-}
-open class ImageDownloader {
-  open var downloadTimeout: Swift.Double
-  open var trustedHosts: Swift.Set<Swift.String>?
-  open var sessionConfiguration: Foundation.URLSessionConfiguration {
-    get
-    set(value)
-  }
-  open var requestsUsePipelining: Swift.Bool
-  weak open var delegate: YLCustomerService.ImageDownloaderDelegate?
-  weak open var authenticationChallengeResponder: YLCustomerService.AuthenticationChallengeResponsable?
-  public static var `default`: YLCustomerService.ImageDownloader
-  public init(name: Swift.String)
-  @objc deinit
-  @discardableResult
-  open func downloadImage(with url: Foundation.URL, retrieveImageTask: YLCustomerService.RetrieveImageTask? = nil, options: YLCustomerService.KingfisherOptionsInfo? = nil, progressBlock: YLCustomerService.ImageDownloaderProgressBlock? = nil, completionHandler: YLCustomerService.ImageDownloaderCompletionHandler? = nil) -> YLCustomerService.RetrieveImageDownloadTask?
-}
-extension ImageDownloader {
-  public func cancelAll()
-}
-extension ImageDownloader : YLCustomerService.ImageDownloaderDelegate {
+extension KingfisherWrapper where Base : YLCustomerService.KFCrossPlatformImage {
+  public static func animatedImage(data: Foundation.Data, options: YLCustomerService.ImageCreatingOptions) -> YLCustomerService.KFCrossPlatformImage?
+  public static func image(data: Foundation.Data, options: YLCustomerService.ImageCreatingOptions) -> YLCustomerService.KFCrossPlatformImage?
+  public static func downsampledImage(data: Foundation.Data, to pointSize: CoreGraphics.CGSize, scale: CoreGraphics.CGFloat) -> YLCustomerService.KFCrossPlatformImage?
 }
 @objc @_inheritsConvenienceInitializers public class IMUIFeatureListIconCell : UIKit.UICollectionViewCell {
   @objc @IBOutlet weak public var featureIconBtn: UIKit.UIButton!
@@ -760,157 +1044,189 @@ extension ImageDownloader : YLCustomerService.ImageDownloaderDelegate {
   public func layout(with data: YLCustomerService.IMUIFeatureIconModel, onClickCallback: @escaping (YLCustomerService.IMUIFeatureListIconCell) -> ())
   @objc deinit
 }
-public enum ImageTransition {
-  case none
-  case fade(Foundation.TimeInterval)
-  case flipFromLeft(Foundation.TimeInterval)
-  case flipFromRight(Foundation.TimeInterval)
-  case flipFromTop(Foundation.TimeInterval)
-  case flipFromBottom(Foundation.TimeInterval)
-  case custom(duration: Foundation.TimeInterval, options: UIKit.UIView.AnimationOptions, animations: ((UIKit.UIImageView, UIKit.UIImage) -> Swift.Void)?, completion: ((Swift.Bool) -> Swift.Void)?)
-}
 @objc public protocol IMUIUserProtocol : ObjectiveC.NSObjectProtocol {
   @objc func userId() -> Swift.String
   @objc func displayName() -> Swift.String
   @objc func Avatar() -> UIKit.UIImage?
   @objc optional func avatarUrlString() -> Swift.String?
 }
-public enum ImageProcessItem {
-  case image(YLCustomerService.Image)
-  case data(Foundation.Data)
+extension KingfisherWrapper where Base : UIKit.UIButton {
+  @discardableResult
+  public func setImage(with source: YLCustomerService.Source?, for state: UIKit.UIControl.State, placeholder: UIKit.UIImage? = nil, options: YLCustomerService.KingfisherOptionsInfo? = nil, progressBlock: YLCustomerService.DownloadProgressBlock? = nil, completionHandler: ((Swift.Result<YLCustomerService.RetrieveImageResult, YLCustomerService.KingfisherError>) -> Swift.Void)? = nil) -> YLCustomerService.DownloadTask?
+  @discardableResult
+  public func setImage(with resource: YLCustomerService.Resource?, for state: UIKit.UIControl.State, placeholder: UIKit.UIImage? = nil, options: YLCustomerService.KingfisherOptionsInfo? = nil, progressBlock: YLCustomerService.DownloadProgressBlock? = nil, completionHandler: ((Swift.Result<YLCustomerService.RetrieveImageResult, YLCustomerService.KingfisherError>) -> Swift.Void)? = nil) -> YLCustomerService.DownloadTask?
+  @discardableResult
+  public func setImage(with source: YLCustomerService.Source?, for state: UIKit.UIControl.State, placeholder: UIKit.UIImage? = nil, parsedOptions: YLCustomerService.KingfisherParsedOptionsInfo, progressBlock: YLCustomerService.DownloadProgressBlock? = nil, completionHandler: ((Swift.Result<YLCustomerService.RetrieveImageResult, YLCustomerService.KingfisherError>) -> Swift.Void)? = nil) -> YLCustomerService.DownloadTask?
+  public func cancelImageDownloadTask()
+  @discardableResult
+  public func setBackgroundImage(with source: YLCustomerService.Source?, for state: UIKit.UIControl.State, placeholder: UIKit.UIImage? = nil, options: YLCustomerService.KingfisherOptionsInfo? = nil, progressBlock: YLCustomerService.DownloadProgressBlock? = nil, completionHandler: ((Swift.Result<YLCustomerService.RetrieveImageResult, YLCustomerService.KingfisherError>) -> Swift.Void)? = nil) -> YLCustomerService.DownloadTask?
+  @discardableResult
+  public func setBackgroundImage(with resource: YLCustomerService.Resource?, for state: UIKit.UIControl.State, placeholder: UIKit.UIImage? = nil, options: YLCustomerService.KingfisherOptionsInfo? = nil, progressBlock: YLCustomerService.DownloadProgressBlock? = nil, completionHandler: ((Swift.Result<YLCustomerService.RetrieveImageResult, YLCustomerService.KingfisherError>) -> Swift.Void)? = nil) -> YLCustomerService.DownloadTask?
+  public func cancelBackgroundImageDownloadTask()
 }
-public protocol ImageProcessor {
-  var identifier: Swift.String { get }
-  func process(item: YLCustomerService.ImageProcessItem, options: YLCustomerService.KingfisherOptionsInfo) -> YLCustomerService.Image?
+extension KingfisherWrapper where Base : UIKit.UIButton {
+  public func taskIdentifier(for state: UIKit.UIControl.State) -> YLCustomerService.Source.Identifier.Value?
 }
-extension ImageProcessor {
-  public func append(another: YLCustomerService.ImageProcessor) -> YLCustomerService.ImageProcessor
+extension KingfisherWrapper where Base : UIKit.UIButton {
+  public func backgroundTaskIdentifier(for state: UIKit.UIControl.State) -> YLCustomerService.Source.Identifier.Value?
 }
-public struct DefaultImageProcessor : YLCustomerService.ImageProcessor {
-  public static var `default`: YLCustomerService.DefaultImageProcessor
-  public let identifier: Swift.String
-  public init()
-  public func process(item: YLCustomerService.ImageProcessItem, options: YLCustomerService.KingfisherOptionsInfo) -> YLCustomerService.Image?
+extension KingfisherWrapper where Base : UIKit.NSTextAttachment {
+  @discardableResult
+  public func setImage(with source: YLCustomerService.Source?, attributedView: YLCustomerService.KFCrossPlatformView, placeholder: YLCustomerService.KFCrossPlatformImage? = nil, options: YLCustomerService.KingfisherOptionsInfo? = nil, progressBlock: YLCustomerService.DownloadProgressBlock? = nil, completionHandler: ((Swift.Result<YLCustomerService.RetrieveImageResult, YLCustomerService.KingfisherError>) -> Swift.Void)? = nil) -> YLCustomerService.DownloadTask?
+  @discardableResult
+  public func setImage(with resource: YLCustomerService.Resource?, attributedView: YLCustomerService.KFCrossPlatformView, placeholder: YLCustomerService.KFCrossPlatformImage? = nil, options: YLCustomerService.KingfisherOptionsInfo? = nil, progressBlock: YLCustomerService.DownloadProgressBlock? = nil, completionHandler: ((Swift.Result<YLCustomerService.RetrieveImageResult, YLCustomerService.KingfisherError>) -> Swift.Void)? = nil) -> YLCustomerService.DownloadTask?
+  public func cancelDownloadTask()
 }
-public struct RectCorner : Swift.OptionSet {
-  public let rawValue: Swift.Int
-  public static var topLeft: YLCustomerService.RectCorner
-  public static var topRight: YLCustomerService.RectCorner
-  public static var bottomLeft: YLCustomerService.RectCorner
-  public static var bottomRight: YLCustomerService.RectCorner
-  public static var all: YLCustomerService.RectCorner
-  public init(rawValue: Swift.Int)
-  public typealias Element = YLCustomerService.RectCorner
-  public typealias ArrayLiteralElement = YLCustomerService.RectCorner
-  public typealias RawValue = Swift.Int
-}
-public struct BlendImageProcessor : YLCustomerService.ImageProcessor {
-  public let identifier: Swift.String
-  public let blendMode: CoreGraphics.CGBlendMode
-  public let alpha: CoreGraphics.CGFloat
-  public let backgroundColor: YLCustomerService.Color?
-  public init(blendMode: CoreGraphics.CGBlendMode, alpha: CoreGraphics.CGFloat = 1.0, backgroundColor: YLCustomerService.Color? = nil)
-  public func process(item: YLCustomerService.ImageProcessItem, options: YLCustomerService.KingfisherOptionsInfo) -> YLCustomerService.Image?
-}
-public struct RoundCornerImageProcessor : YLCustomerService.ImageProcessor {
-  public let identifier: Swift.String
-  public let cornerRadius: CoreGraphics.CGFloat
-  public let roundingCorners: YLCustomerService.RectCorner
-  public let targetSize: CoreGraphics.CGSize?
-  public let backgroundColor: YLCustomerService.Color?
-  public init(cornerRadius: CoreGraphics.CGFloat, targetSize: CoreGraphics.CGSize? = nil, roundingCorners corners: YLCustomerService.RectCorner = .all, backgroundColor: YLCustomerService.Color? = nil)
-  public func process(item: YLCustomerService.ImageProcessItem, options: YLCustomerService.KingfisherOptionsInfo) -> YLCustomerService.Image?
-}
-public enum ContentMode {
-  case none
-  case aspectFit
-  case aspectFill
-  public static func == (a: YLCustomerService.ContentMode, b: YLCustomerService.ContentMode) -> Swift.Bool
-  public var hashValue: Swift.Int {
+extension KingfisherWrapper where Base : UIKit.NSTextAttachment {
+  public var taskIdentifier: YLCustomerService.Source.Identifier.Value? {
     get
   }
-  public func hash(into hasher: inout Swift.Hasher)
 }
-public struct ResizingImageProcessor : YLCustomerService.ImageProcessor {
-  public let identifier: Swift.String
-  public let referenceSize: CoreGraphics.CGSize
-  public let targetContentMode: YLCustomerService.ContentMode
-  public init(referenceSize: CoreGraphics.CGSize, mode: YLCustomerService.ContentMode = .none)
-  public func process(item: YLCustomerService.ImageProcessItem, options: YLCustomerService.KingfisherOptionsInfo) -> YLCustomerService.Image?
+public typealias IndicatorView = UIKit.UIView
+public enum IndicatorType {
+  case none
+  case activity
+  case image(imageData: Foundation.Data)
+  case custom(indicator: YLCustomerService.Indicator)
 }
-public struct BlurImageProcessor : YLCustomerService.ImageProcessor {
-  public let identifier: Swift.String
-  public let blurRadius: CoreGraphics.CGFloat
-  public init(blurRadius: CoreGraphics.CGFloat)
-  public func process(item: YLCustomerService.ImageProcessItem, options: YLCustomerService.KingfisherOptionsInfo) -> YLCustomerService.Image?
+public protocol Indicator {
+  func startAnimatingView()
+  func stopAnimatingView()
+  var centerOffset: CoreGraphics.CGPoint { get }
+  var view: YLCustomerService.IndicatorView { get }
+  func sizeStrategy(in imageView: YLCustomerService.KFCrossPlatformImageView) -> YLCustomerService.IndicatorSizeStrategy
 }
-public struct OverlayImageProcessor : YLCustomerService.ImageProcessor {
-  public let identifier: Swift.String
-  public let overlay: YLCustomerService.Color
-  public let fraction: CoreGraphics.CGFloat
-  public init(overlay: YLCustomerService.Color, fraction: CoreGraphics.CGFloat = 0.5)
-  public func process(item: YLCustomerService.ImageProcessItem, options: YLCustomerService.KingfisherOptionsInfo) -> YLCustomerService.Image?
+public enum IndicatorSizeStrategy {
+  case intrinsicSize
+  case full
+  case size(CoreGraphics.CGSize)
 }
-public struct TintImageProcessor : YLCustomerService.ImageProcessor {
-  public let identifier: Swift.String
-  public let tint: YLCustomerService.Color
-  public init(tint: YLCustomerService.Color)
-  public func process(item: YLCustomerService.ImageProcessItem, options: YLCustomerService.KingfisherOptionsInfo) -> YLCustomerService.Image?
+extension Indicator {
+  public var centerOffset: CoreGraphics.CGPoint {
+    get
+  }
+  public func sizeStrategy(in imageView: YLCustomerService.KFCrossPlatformImageView) -> YLCustomerService.IndicatorSizeStrategy
 }
-public struct ColorControlsProcessor : YLCustomerService.ImageProcessor {
-  public let identifier: Swift.String
-  public let brightness: CoreGraphics.CGFloat
-  public let contrast: CoreGraphics.CGFloat
-  public let saturation: CoreGraphics.CGFloat
-  public let inputEV: CoreGraphics.CGFloat
-  public init(brightness: CoreGraphics.CGFloat, contrast: CoreGraphics.CGFloat, saturation: CoreGraphics.CGFloat, inputEV: CoreGraphics.CGFloat)
-  public func process(item: YLCustomerService.ImageProcessItem, options: YLCustomerService.KingfisherOptionsInfo) -> YLCustomerService.Image?
-}
-public struct BlackWhiteProcessor : YLCustomerService.ImageProcessor {
-  public let identifier: Swift.String
-  public init()
-  public func process(item: YLCustomerService.ImageProcessItem, options: YLCustomerService.KingfisherOptionsInfo) -> YLCustomerService.Image?
-}
-public struct CroppingImageProcessor : YLCustomerService.ImageProcessor {
-  public let identifier: Swift.String
-  public let size: CoreGraphics.CGSize
-  public let anchor: CoreGraphics.CGPoint
-  public init(size: CoreGraphics.CGSize, anchor: CoreGraphics.CGPoint = CGPoint(x: 0.5, y: 0.5))
-  public func process(item: YLCustomerService.ImageProcessItem, options: YLCustomerService.KingfisherOptionsInfo) -> YLCustomerService.Image?
-}
-public func >> (left: YLCustomerService.ImageProcessor, right: YLCustomerService.ImageProcessor) -> YLCustomerService.ImageProcessor
 @objc public protocol IMUIMessageProtocol : ObjectiveC.NSObjectProtocol {
   @objc var msgId: Swift.String { get }
 }
-public typealias PrefetcherProgressBlock = (([YLCustomerService.Resource], [YLCustomerService.Resource], [YLCustomerService.Resource]) -> Swift.Void)
-public typealias PrefetcherCompletionHandler = (([YLCustomerService.Resource], [YLCustomerService.Resource], [YLCustomerService.Resource]) -> Swift.Void)
-public class ImagePrefetcher {
-  public var maxConcurrentDownloads: Swift.Int
-  public convenience init(urls: [Foundation.URL], options: YLCustomerService.KingfisherOptionsInfo? = nil, progressBlock: YLCustomerService.PrefetcherProgressBlock? = nil, completionHandler: YLCustomerService.PrefetcherCompletionHandler? = nil)
-  public init(resources: [YLCustomerService.Resource], options: YLCustomerService.KingfisherOptionsInfo? = nil, progressBlock: YLCustomerService.PrefetcherProgressBlock? = nil, completionHandler: YLCustomerService.PrefetcherCompletionHandler? = nil)
-  public func start()
-  public func stop()
-  @objc deinit
+public protocol ImageModifier {
+  func modify(_ image: YLCustomerService.KFCrossPlatformImage) -> YLCustomerService.KFCrossPlatformImage
 }
-public typealias Transformer = (CoreImage.CIImage) -> CoreImage.CIImage?
-public protocol CIImageProcessor : YLCustomerService.ImageProcessor {
-  var filter: YLCustomerService.Filter { get }
+public struct AnyImageModifier : YLCustomerService.ImageModifier {
+  public init(modify: @escaping (YLCustomerService.KFCrossPlatformImage) throws -> YLCustomerService.KFCrossPlatformImage)
+  public func modify(_ image: YLCustomerService.KFCrossPlatformImage) -> YLCustomerService.KFCrossPlatformImage
 }
-extension CIImageProcessor {
-  public func process(item: YLCustomerService.ImageProcessItem, options: YLCustomerService.KingfisherOptionsInfo) -> YLCustomerService.Image?
+public struct RenderingModeImageModifier : YLCustomerService.ImageModifier {
+  public let renderingMode: UIKit.UIImage.RenderingMode
+  public init(renderingMode: UIKit.UIImage.RenderingMode = .automatic)
+  public func modify(_ image: YLCustomerService.KFCrossPlatformImage) -> YLCustomerService.KFCrossPlatformImage
 }
-public struct Filter {
-  public init(transform: @escaping YLCustomerService.Transformer)
-  public static var tint: (YLCustomerService.Color) -> YLCustomerService.Filter
-  public typealias ColorElement = (CoreGraphics.CGFloat, CoreGraphics.CGFloat, CoreGraphics.CGFloat, CoreGraphics.CGFloat)
-  public static var colorControl: (YLCustomerService.Filter.ColorElement) -> YLCustomerService.Filter
+public struct FlipsForRightToLeftLayoutDirectionImageModifier : YLCustomerService.ImageModifier {
+  public init()
+  public func modify(_ image: YLCustomerService.KFCrossPlatformImage) -> YLCustomerService.KFCrossPlatformImage
 }
-extension Filter {
-  @available(*, deprecated, renamed: "init(transform:)", message: "Use init(transform:) instead.")
-  public init(tranform: @escaping YLCustomerService.Transformer)
+public struct AlignmentRectInsetsImageModifier : YLCustomerService.ImageModifier {
+  public let alignmentInsets: UIKit.UIEdgeInsets
+  public init(alignmentInsets: UIKit.UIEdgeInsets)
+  public func modify(_ image: YLCustomerService.KFCrossPlatformImage) -> YLCustomerService.KFCrossPlatformImage
 }
-extension Kingfisher where Base : YLCustomerService.Image {
-  final public func apply(_ filter: YLCustomerService.Filter) -> YLCustomerService.Image
+extension KingfisherWrapper where Base : YLCustomerService.KFCrossPlatformImageView {
+  @discardableResult
+  public func setImage(with source: YLCustomerService.Source?, placeholder: YLCustomerService.Placeholder? = nil, options: YLCustomerService.KingfisherOptionsInfo? = nil, progressBlock: YLCustomerService.DownloadProgressBlock? = nil, completionHandler: ((Swift.Result<YLCustomerService.RetrieveImageResult, YLCustomerService.KingfisherError>) -> Swift.Void)? = nil) -> YLCustomerService.DownloadTask?
+  @discardableResult
+  public func setImage(with source: YLCustomerService.Source?, placeholder: YLCustomerService.Placeholder? = nil, options: YLCustomerService.KingfisherOptionsInfo? = nil, completionHandler: ((Swift.Result<YLCustomerService.RetrieveImageResult, YLCustomerService.KingfisherError>) -> Swift.Void)? = nil) -> YLCustomerService.DownloadTask?
+  @discardableResult
+  public func setImage(with resource: YLCustomerService.Resource?, placeholder: YLCustomerService.Placeholder? = nil, options: YLCustomerService.KingfisherOptionsInfo? = nil, progressBlock: YLCustomerService.DownloadProgressBlock? = nil, completionHandler: ((Swift.Result<YLCustomerService.RetrieveImageResult, YLCustomerService.KingfisherError>) -> Swift.Void)? = nil) -> YLCustomerService.DownloadTask?
+  @discardableResult
+  public func setImage(with resource: YLCustomerService.Resource?, placeholder: YLCustomerService.Placeholder? = nil, options: YLCustomerService.KingfisherOptionsInfo? = nil, completionHandler: ((Swift.Result<YLCustomerService.RetrieveImageResult, YLCustomerService.KingfisherError>) -> Swift.Void)? = nil) -> YLCustomerService.DownloadTask?
+  @discardableResult
+  public func setImage(with provider: YLCustomerService.ImageDataProvider?, placeholder: YLCustomerService.Placeholder? = nil, options: YLCustomerService.KingfisherOptionsInfo? = nil, progressBlock: YLCustomerService.DownloadProgressBlock? = nil, completionHandler: ((Swift.Result<YLCustomerService.RetrieveImageResult, YLCustomerService.KingfisherError>) -> Swift.Void)? = nil) -> YLCustomerService.DownloadTask?
+  @discardableResult
+  public func setImage(with provider: YLCustomerService.ImageDataProvider?, placeholder: YLCustomerService.Placeholder? = nil, options: YLCustomerService.KingfisherOptionsInfo? = nil, completionHandler: ((Swift.Result<YLCustomerService.RetrieveImageResult, YLCustomerService.KingfisherError>) -> Swift.Void)? = nil) -> YLCustomerService.DownloadTask?
+  public func cancelDownloadTask()
+}
+extension KingfisherWrapper where Base : YLCustomerService.KFCrossPlatformImageView {
+  public var taskIdentifier: YLCustomerService.Source.Identifier.Value? {
+    get
+  }
+  public var indicatorType: YLCustomerService.IndicatorType {
+    get
+    set(newValue)
+  }
+  public var indicator: YLCustomerService.Indicator? {
+    get
+  }
+  public var placeholder: YLCustomerService.Placeholder? {
+    get
+  }
+}
+public struct AVAssetImageDataProvider : YLCustomerService.ImageDataProvider {
+  public enum AVAssetImageDataProviderError : Swift.Error {
+    case userCancelled
+    case invalidImage(_: CoreGraphics.CGImage?)
+  }
+  public let assetImageGenerator: AVFoundation.AVAssetImageGenerator
+  public let time: CoreMedia.CMTime
+  public var cacheKey: Swift.String {
+    get
+  }
+  public init(assetImageGenerator: AVFoundation.AVAssetImageGenerator, time: CoreMedia.CMTime)
+  public init(assetURL: Foundation.URL, time: CoreMedia.CMTime)
+  public init(assetURL: Foundation.URL, seconds: Foundation.TimeInterval)
+  public func data(handler: @escaping (Swift.Result<Foundation.Data, Swift.Error>) -> Swift.Void)
+}
+public protocol ImageDataProvider {
+  var cacheKey: Swift.String { get }
+  func data(handler: @escaping (Swift.Result<Foundation.Data, Swift.Error>) -> Swift.Void)
+  var contentURL: Foundation.URL? { get }
+}
+extension ImageDataProvider {
+  public var contentURL: Foundation.URL? {
+    get
+  }
+  public func convertToSource() -> YLCustomerService.Source
+}
+public struct LocalFileImageDataProvider : YLCustomerService.ImageDataProvider {
+  public let fileURL: Foundation.URL
+  public init(fileURL: Foundation.URL, cacheKey: Swift.String? = nil)
+  public var cacheKey: Swift.String
+  public func data(handler: (Swift.Result<Foundation.Data, Swift.Error>) -> Swift.Void)
+  public var contentURL: Foundation.URL? {
+    get
+  }
+}
+public struct Base64ImageDataProvider : YLCustomerService.ImageDataProvider {
+  public let base64String: Swift.String
+  public init(base64String: Swift.String, cacheKey: Swift.String)
+  public var cacheKey: Swift.String
+  public func data(handler: (Swift.Result<Foundation.Data, Swift.Error>) -> Swift.Void)
+}
+public struct RawImageDataProvider : YLCustomerService.ImageDataProvider {
+  public let data: Foundation.Data
+  public init(data: Foundation.Data, cacheKey: Swift.String)
+  public var cacheKey: Swift.String
+  public func data(handler: @escaping (Swift.Result<Foundation.Data, Swift.Error>) -> Swift.Void)
+}
+@available(iOS 13.0, OSX 10.15, tvOS 13.0, watchOS 6.0, *)
+public struct KFImage : SwiftUI.View {
+  @available(*, deprecated, message: "Some options are not available in SwiftUI yet. Use `KFImage(source:isLoaded:)` to create a `KFImage` and configure the options through modifier instead.")
+  public init(source: YLCustomerService.Source?, options: YLCustomerService.KingfisherOptionsInfo? = nil, isLoaded: SwiftUI.Binding<Swift.Bool> = .constant(false))
+  public init(source: YLCustomerService.Source?, isLoaded: SwiftUI.Binding<Swift.Bool> = .constant(false))
+  public init(_ url: Foundation.URL?, isLoaded: SwiftUI.Binding<Swift.Bool> = .constant(false))
+  public var body: some SwiftUI.View {
+    get
+  }
+  public func loadImmediately(_ start: Swift.Bool = true) -> YLCustomerService.KFImage
+  public typealias Body = @_opaqueReturnTypeOf("$s17YLCustomerService7KFImageV4bodyQrvp", 0) 🦸
+}
+@available(iOS 13.0, OSX 10.15, tvOS 13.0, watchOS 6.0, *)
+extension KFImage {
+  public func configure(_ block: @escaping (SwiftUI.Image) -> SwiftUI.Image) -> YLCustomerService.KFImage
+  public func resizable(capInsets: SwiftUI.EdgeInsets = EdgeInsets(), resizingMode: SwiftUI.Image.ResizingMode = .stretch) -> YLCustomerService.KFImage
+  public func renderingMode(_ renderingMode: SwiftUI.Image.TemplateRenderingMode?) -> YLCustomerService.KFImage
+  public func interpolation(_ interpolation: SwiftUI.Image.Interpolation) -> YLCustomerService.KFImage
+  public func antialiased(_ isAntialiased: Swift.Bool) -> YLCustomerService.KFImage
 }
 @_inheritsConvenienceInitializers @objc open class IMUIAttributeTextView : YLCustomerService.PasteboardTextView {
   @objc override dynamic public init(frame: CoreGraphics.CGRect, textContainer: UIKit.NSTextContainer?)
@@ -920,30 +1236,47 @@ extension Kingfisher where Base : YLCustomerService.Image {
   }
   @objc deinit
 }
-public protocol ImageModifier {
-  func modify(_ image: YLCustomerService.Image) -> YLCustomerService.Image
+public struct ImageLoadingResult {
+  public let image: YLCustomerService.KFCrossPlatformImage
+  public let url: Foundation.URL?
+  public let originalData: Foundation.Data
 }
-public struct DefaultImageModifier : YLCustomerService.ImageModifier {
-  public static var `default`: YLCustomerService.DefaultImageModifier
-  public func modify(_ image: YLCustomerService.Image) -> YLCustomerService.Image
+public struct DownloadTask {
+  public let sessionTask: YLCustomerService.SessionDataTask
+  public let cancelToken: YLCustomerService.SessionDataTask.CancelToken
+  public func cancel()
 }
-public struct AnyImageModifier : YLCustomerService.ImageModifier {
-  public init(modify: @escaping (YLCustomerService.Image) -> YLCustomerService.Image)
-  public func modify(_ image: YLCustomerService.Image) -> YLCustomerService.Image
+open class ImageDownloader {
+  public static var `default`: YLCustomerService.ImageDownloader
+  open var downloadTimeout: Swift.Double
+  open var trustedHosts: Swift.Set<Swift.String>?
+  open var sessionConfiguration: Foundation.URLSessionConfiguration {
+    get
+    set(value)
+  }
+  open var sessionDelegate: YLCustomerService.SessionDelegate {
+    get
+    set(value)
+  }
+  open var requestsUsePipelining: Swift.Bool
+  weak open var delegate: YLCustomerService.ImageDownloaderDelegate?
+  weak open var authenticationChallengeResponder: YLCustomerService.AuthenticationChallengeResponsable?
+  public init(name: Swift.String)
+  @objc deinit
+  @discardableResult
+  open func downloadImage(with url: Foundation.URL, options: YLCustomerService.KingfisherParsedOptionsInfo, completionHandler: ((Swift.Result<YLCustomerService.ImageLoadingResult, YLCustomerService.KingfisherError>) -> Swift.Void)? = nil) -> YLCustomerService.DownloadTask?
+  @discardableResult
+  open func downloadImage(with url: Foundation.URL, options: YLCustomerService.KingfisherOptionsInfo? = nil, progressBlock: YLCustomerService.DownloadProgressBlock? = nil, completionHandler: ((Swift.Result<YLCustomerService.ImageLoadingResult, YLCustomerService.KingfisherError>) -> Swift.Void)? = nil) -> YLCustomerService.DownloadTask?
+  @discardableResult
+  open func downloadImage(with url: Foundation.URL, options: YLCustomerService.KingfisherOptionsInfo? = nil, completionHandler: ((Swift.Result<YLCustomerService.ImageLoadingResult, YLCustomerService.KingfisherError>) -> Swift.Void)? = nil) -> YLCustomerService.DownloadTask?
 }
-public struct RenderingModeImageModifier : YLCustomerService.ImageModifier {
-  public let renderingMode: UIKit.UIImage.RenderingMode
-  public init(renderingMode: UIKit.UIImage.RenderingMode = .automatic)
-  public func modify(_ image: YLCustomerService.Image) -> YLCustomerService.Image
+extension ImageDownloader {
+  public func cancelAll()
+  public func cancel(url: Foundation.URL)
 }
-public struct FlipsForRightToLeftLayoutDirectionImageModifier : YLCustomerService.ImageModifier {
-  public init()
-  public func modify(_ image: YLCustomerService.Image) -> YLCustomerService.Image
+extension ImageDownloader : YLCustomerService.AuthenticationChallengeResponsable {
 }
-public struct AlignmentRectInsetsImageModifier : YLCustomerService.ImageModifier {
-  public let alignmentInsets: UIKit.UIEdgeInsets
-  public init(alignmentInsets: UIKit.UIEdgeInsets)
-  public func modify(_ image: YLCustomerService.Image) -> YLCustomerService.Image
+extension ImageDownloader : YLCustomerService.ImageDownloaderDelegate {
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc open class IMUITextExpendContentView : UIKit.UIView, YLCustomerService.IMUIMessageContentViewProtocol {
   @objc weak public var delegate: YLCustomerService.IMUIMessageContentViewDelegate?
@@ -954,103 +1287,6 @@ public struct AlignmentRectInsetsImageModifier : YLCustomerService.ImageModifier
   @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @objc public func layoutContentView(message: YLCustomerService.IMUIMessageModelProtocol)
   @objc deinit
-}
-public typealias KingfisherOptionsInfo = [YLCustomerService.KingfisherOptionsInfoItem]
-public enum KingfisherOptionsInfoItem {
-  case targetCache(YLCustomerService.ImageCache)
-  case originalCache(YLCustomerService.ImageCache)
-  case downloader(YLCustomerService.ImageDownloader)
-  case transition(YLCustomerService.ImageTransition)
-  case downloadPriority(Swift.Float)
-  case forceRefresh
-  case fromMemoryCacheOrRefresh
-  case forceTransition
-  case cacheMemoryOnly
-  case waitForCache
-  case onlyFromCache
-  case backgroundDecode
-  case callbackDispatchQueue(Dispatch.DispatchQueue?)
-  case scaleFactor(CoreGraphics.CGFloat)
-  case preloadAllAnimationData
-  case requestModifier(YLCustomerService.ImageDownloadRequestModifier)
-  case processor(YLCustomerService.ImageProcessor)
-  case cacheSerializer(YLCustomerService.CacheSerializer)
-  case imageModifier(YLCustomerService.ImageModifier)
-  case keepCurrentImageWhileLoading
-  case onlyLoadFirstFrame
-  case cacheOriginalImage
-}
-precedencegroup ItemComparisonPrecedence {
-  higherThan: LogicalConjunctionPrecedence
-}
-infix operator <== : ItemComparisonPrecedence
-extension Collection where Self.Element == YLCustomerService.KingfisherOptionsInfoItem {
-  public var targetCache: YLCustomerService.ImageCache? {
-    get
-  }
-  public var originalCache: YLCustomerService.ImageCache? {
-    get
-  }
-  public var downloader: YLCustomerService.ImageDownloader? {
-    get
-  }
-  public var transition: YLCustomerService.ImageTransition {
-    get
-  }
-  public var downloadPriority: Swift.Float {
-    get
-  }
-  public var forceRefresh: Swift.Bool {
-    get
-  }
-  public var fromMemoryCacheOrRefresh: Swift.Bool {
-    get
-  }
-  public var forceTransition: Swift.Bool {
-    get
-  }
-  public var cacheMemoryOnly: Swift.Bool {
-    get
-  }
-  public var waitForCache: Swift.Bool {
-    get
-  }
-  public var onlyFromCache: Swift.Bool {
-    get
-  }
-  public var backgroundDecode: Swift.Bool {
-    get
-  }
-  public var preloadAllAnimationData: Swift.Bool {
-    get
-  }
-  public var callbackDispatchQueue: Dispatch.DispatchQueue {
-    get
-  }
-  public var scaleFactor: CoreGraphics.CGFloat {
-    get
-  }
-  public var modifier: YLCustomerService.ImageDownloadRequestModifier {
-    get
-  }
-  public var processor: YLCustomerService.ImageProcessor {
-    get
-  }
-  public var imageModifier: YLCustomerService.ImageModifier {
-    get
-  }
-  public var cacheSerializer: YLCustomerService.CacheSerializer {
-    get
-  }
-  public var keepCurrentImageWhileLoading: Swift.Bool {
-    get
-  }
-  public var onlyLoadFirstFrame: Swift.Bool {
-    get
-  }
-  public var cacheOriginalImage: Swift.Bool {
-    get
-  }
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class IMUIImageMessageContentView : UIKit.UIView, YLCustomerService.IMUIMessageContentViewProtocol {
   @objc weak public var delegate: YLCustomerService.IMUIMessageContentViewDelegate?
@@ -1069,17 +1305,55 @@ extension Bundle {
   @objc func layoutMediaDownloadFail()
   @objc var statusViewID: Swift.String { get }
 }
+public protocol AuthenticationChallengeResponsable : AnyObject {
+  func downloader(_ downloader: YLCustomerService.ImageDownloader, didReceive challenge: Foundation.URLAuthenticationChallenge, completionHandler: @escaping (Foundation.URLSession.AuthChallengeDisposition, Foundation.URLCredential?) -> Swift.Void)
+  func downloader(_ downloader: YLCustomerService.ImageDownloader, task: Foundation.URLSessionTask, didReceive challenge: Foundation.URLAuthenticationChallenge, completionHandler: @escaping (Foundation.URLSession.AuthChallengeDisposition, Foundation.URLCredential?) -> Swift.Void)
+}
+extension AuthenticationChallengeResponsable {
+  public func downloader(_ downloader: YLCustomerService.ImageDownloader, didReceive challenge: Foundation.URLAuthenticationChallenge, completionHandler: @escaping (Foundation.URLSession.AuthChallengeDisposition, Foundation.URLCredential?) -> Swift.Void)
+  public func downloader(_ downloader: YLCustomerService.ImageDownloader, task: Foundation.URLSessionTask, didReceive challenge: Foundation.URLAuthenticationChallenge, completionHandler: @escaping (Foundation.URLSession.AuthChallengeDisposition, Foundation.URLCredential?) -> Swift.Void)
+}
+@_hasMissingDesignatedInitializers public class RetryContext {
+  final public let source: YLCustomerService.Source
+  final public let error: YLCustomerService.KingfisherError
+  public var retriedCount: Swift.Int
+  public var userInfo: Any? {
+    get
+  }
+  @objc deinit
+}
+public enum RetryDecision {
+  case retry(userInfo: Any?)
+  case stop
+}
+public protocol RetryStrategy {
+  func retry(context: YLCustomerService.RetryContext, retryHandler: @escaping (YLCustomerService.RetryDecision) -> Swift.Void)
+}
+public struct DelayRetryStrategy : YLCustomerService.RetryStrategy {
+  public enum Interval {
+    case seconds(Foundation.TimeInterval)
+    case accumulated(Foundation.TimeInterval)
+    case custom(block: (Swift.Int) -> Foundation.TimeInterval)
+  }
+  public let maxRetryCount: Swift.Int
+  public let retryInterval: YLCustomerService.DelayRetryStrategy.Interval
+  public init(maxRetryCount: Swift.Int, retryInterval: YLCustomerService.DelayRetryStrategy.Interval = .seconds(3))
+  public func retry(context: YLCustomerService.RetryContext, retryHandler: @escaping (YLCustomerService.RetryDecision) -> Swift.Void)
+}
 extension CMSampleBuffer {
   public func imageFromSampleBuffer_Type32BGRA(sampleBuffer: CoreMedia.CMSampleBuffer) -> UIKit.UIImage
 }
-public protocol CacheSerializer {
-  func data(with image: YLCustomerService.Image, original: Foundation.Data?) -> Foundation.Data?
-  func image(with data: Foundation.Data, options: YLCustomerService.KingfisherOptionsInfo?) -> YLCustomerService.Image?
+public protocol Placeholder {
+  func add(to imageView: YLCustomerService.KFCrossPlatformImageView)
+  func remove(from imageView: YLCustomerService.KFCrossPlatformImageView)
 }
-public struct DefaultCacheSerializer : YLCustomerService.CacheSerializer {
-  public static var `default`: YLCustomerService.DefaultCacheSerializer
-  public func data(with image: YLCustomerService.Image, original: Foundation.Data?) -> Foundation.Data?
-  public func image(with data: Foundation.Data, options: YLCustomerService.KingfisherOptionsInfo?) -> YLCustomerService.Image?
+extension UIImage : YLCustomerService.Placeholder {
+  public func add(to imageView: YLCustomerService.KFCrossPlatformImageView)
+  public func remove(from imageView: YLCustomerService.KFCrossPlatformImageView)
+}
+extension Placeholder where Self : YLCustomerService.KFCrossPlatformView {
+  public func add(to imageView: YLCustomerService.KFCrossPlatformImageView)
+  public func remove(from imageView: YLCustomerService.KFCrossPlatformImageView)
 }
 @objc public protocol IMUIMessageCellLayoutProtocol : ObjectiveC.NSObjectProtocol {
   @objc var cellHeight: CoreGraphics.CGFloat { get }
@@ -1113,6 +1387,13 @@ extension IMUIMessageCellLayoutProtocol {
   public var statusViewFrame: CoreGraphics.CGRect {
     get
   }
+}
+public struct ImageCreatingOptions {
+  public let scale: CoreGraphics.CGFloat
+  public let duration: Foundation.TimeInterval
+  public let preloadAll: Swift.Bool
+  public let onlyFirstFrame: Swift.Bool
+  public init(scale: CoreGraphics.CGFloat = 1.0, duration: Foundation.TimeInterval = 0.0, preloadAll: Swift.Bool = false, onlyFirstFrame: Swift.Bool = false)
 }
 extension Date {
   public func plus(seconds s: Swift.UInt) -> Foundation.Date
@@ -1161,36 +1442,178 @@ extension Date {
     get
   }
 }
-extension Kingfisher where Base : UIKit.UIButton {
-  @discardableResult
-  final public func setImage(with resource: YLCustomerService.Resource?, for state: UIKit.UIControl.State, placeholder: UIKit.UIImage? = nil, options: YLCustomerService.KingfisherOptionsInfo? = nil, progressBlock: YLCustomerService.DownloadProgressBlock? = nil, completionHandler: YLCustomerService.CompletionHandler? = nil) -> YLCustomerService.RetrieveImageTask
-  final public func cancelImageDownloadTask()
-  @discardableResult
-  final public func setBackgroundImage(with resource: YLCustomerService.Resource?, for state: UIKit.UIControl.State, placeholder: UIKit.UIImage? = nil, options: YLCustomerService.KingfisherOptionsInfo? = nil, progressBlock: YLCustomerService.DownloadProgressBlock? = nil, completionHandler: YLCustomerService.CompletionHandler? = nil) -> YLCustomerService.RetrieveImageTask
-  final public func cancelBackgroundImageDownloadTask()
+public typealias KingfisherOptionsInfo = [YLCustomerService.KingfisherOptionsInfoItem]
+public enum KingfisherOptionsInfoItem {
+  case targetCache(YLCustomerService.ImageCache)
+  case originalCache(YLCustomerService.ImageCache)
+  case downloader(YLCustomerService.ImageDownloader)
+  case transition(YLCustomerService.ImageTransition)
+  case downloadPriority(Swift.Float)
+  case forceRefresh
+  case fromMemoryCacheOrRefresh
+  case forceTransition
+  case cacheMemoryOnly
+  case waitForCache
+  case onlyFromCache
+  case backgroundDecode
+  case callbackQueue(YLCustomerService.CallbackQueue)
+  case scaleFactor(CoreGraphics.CGFloat)
+  case preloadAllAnimationData
+  case requestModifier(YLCustomerService.AsyncImageDownloadRequestModifier)
+  case redirectHandler(YLCustomerService.ImageDownloadRedirectHandler)
+  case processor(YLCustomerService.ImageProcessor)
+  case cacheSerializer(YLCustomerService.CacheSerializer)
+  case imageModifier(YLCustomerService.ImageModifier)
+  case keepCurrentImageWhileLoading
+  case onlyLoadFirstFrame
+  case cacheOriginalImage
+  case onFailureImage(YLCustomerService.KFCrossPlatformImage?)
+  case alsoPrefetchToMemory
+  case loadDiskFileSynchronously
+  case memoryCacheExpiration(YLCustomerService.StorageExpiration)
+  case memoryCacheAccessExtendingExpiration(YLCustomerService.ExpirationExtending)
+  case diskCacheExpiration(YLCustomerService.StorageExpiration)
+  case diskCacheAccessExtendingExpiration(YLCustomerService.ExpirationExtending)
+  case processingQueue(YLCustomerService.CallbackQueue)
+  case progressiveJPEG(YLCustomerService.ImageProgressive)
+  case alternativeSources([YLCustomerService.Source])
+  case retryStrategy(YLCustomerService.RetryStrategy)
+  case lowDataMode(YLCustomerService.Source?)
 }
-extension Kingfisher where Base : UIKit.UIButton {
-  final public func webURL(for state: UIKit.UIControl.State) -> Foundation.URL?
+public struct KingfisherParsedOptionsInfo {
+  public var targetCache: YLCustomerService.ImageCache?
+  public var originalCache: YLCustomerService.ImageCache?
+  public var downloader: YLCustomerService.ImageDownloader?
+  public var transition: YLCustomerService.ImageTransition
+  public var downloadPriority: Swift.Float
+  public var forceRefresh: Swift.Bool
+  public var fromMemoryCacheOrRefresh: Swift.Bool
+  public var forceTransition: Swift.Bool
+  public var cacheMemoryOnly: Swift.Bool
+  public var waitForCache: Swift.Bool
+  public var onlyFromCache: Swift.Bool
+  public var backgroundDecode: Swift.Bool
+  public var preloadAllAnimationData: Swift.Bool
+  public var callbackQueue: YLCustomerService.CallbackQueue
+  public var scaleFactor: CoreGraphics.CGFloat
+  public var requestModifier: YLCustomerService.AsyncImageDownloadRequestModifier?
+  public var redirectHandler: YLCustomerService.ImageDownloadRedirectHandler?
+  public var processor: YLCustomerService.ImageProcessor
+  public var imageModifier: YLCustomerService.ImageModifier?
+  public var cacheSerializer: YLCustomerService.CacheSerializer
+  public var keepCurrentImageWhileLoading: Swift.Bool
+  public var onlyLoadFirstFrame: Swift.Bool
+  public var cacheOriginalImage: Swift.Bool
+  public var onFailureImage: YLCustomerService.KFCrossPlatformImage??
+  public var alsoPrefetchToMemory: Swift.Bool
+  public var loadDiskFileSynchronously: Swift.Bool
+  public var memoryCacheExpiration: YLCustomerService.StorageExpiration?
+  public var memoryCacheAccessExtendingExpiration: YLCustomerService.ExpirationExtending
+  public var diskCacheExpiration: YLCustomerService.StorageExpiration?
+  public var diskCacheAccessExtendingExpiration: YLCustomerService.ExpirationExtending
+  public var processingQueue: YLCustomerService.CallbackQueue?
+  public var progressiveJPEG: YLCustomerService.ImageProgressive?
+  public var alternativeSources: [YLCustomerService.Source]?
+  public var retryStrategy: YLCustomerService.RetryStrategy?
+  public var lowDataModeSource: YLCustomerService.Source?
+  public init(_ info: YLCustomerService.KingfisherOptionsInfo?)
 }
-extension Kingfisher where Base : UIKit.UIButton {
-  final public func backgroundWebURL(for state: UIKit.UIControl.State) -> Foundation.URL?
+public protocol AnimatedImageViewDelegate : AnyObject {
+  func animatedImageView(_ imageView: YLCustomerService.AnimatedImageView, didPlayAnimationLoops count: Swift.UInt)
+  func animatedImageViewDidFinishAnimating(_ imageView: YLCustomerService.AnimatedImageView)
 }
-public protocol Resource {
-  var cacheKey: Swift.String { get }
-  var downloadURL: Foundation.URL { get }
+extension AnimatedImageViewDelegate {
+  public func animatedImageView(_ imageView: YLCustomerService.AnimatedImageView, didPlayAnimationLoops count: Swift.UInt)
+  public func animatedImageViewDidFinishAnimating(_ imageView: YLCustomerService.AnimatedImageView)
 }
-public struct ImageResource : YLCustomerService.Resource {
-  public let cacheKey: Swift.String
-  public let downloadURL: Foundation.URL
-  public init(downloadURL: Foundation.URL, cacheKey: Swift.String? = nil)
-}
-extension URL : YLCustomerService.Resource {
-  public var cacheKey: Swift.String {
+@objc @_inheritsConvenienceInitializers open class AnimatedImageView : UIKit.UIImageView {
+  public enum RepeatCount : Swift.Equatable {
+    case once
+    case finite(count: Swift.UInt)
+    case infinite
+    public static func == (lhs: YLCustomerService.AnimatedImageView.RepeatCount, rhs: YLCustomerService.AnimatedImageView.RepeatCount) -> Swift.Bool
+  }
+  public var autoPlayAnimatedImage: Swift.Bool
+  public var framePreloadCount: Swift.Int
+  public var needsPrescaling: Swift.Bool
+  public var backgroundDecode: Swift.Bool
+  public var runLoopMode: Foundation.RunLoop.Mode {
+    get
+    set(value)
+  }
+  public var repeatCount: YLCustomerService.AnimatedImageView.RepeatCount {
+    get
+    set(value)
+  }
+  weak public var delegate: YLCustomerService.AnimatedImageViewDelegate?
+  public var animator: YLCustomerService.AnimatedImageView.Animator? {
     get
   }
-  public var downloadURL: Foundation.URL {
-    get
+  @objc override dynamic open var image: YLCustomerService.KFCrossPlatformImage? {
+    @objc get
+    @objc set(value)
   }
+  @objc override dynamic open var isHighlighted: Swift.Bool {
+    @objc get
+    @objc set(newValue)
+  }
+  @objc deinit
+  @objc override dynamic open var isAnimating: Swift.Bool {
+    @objc get
+  }
+  @objc override dynamic open func startAnimating()
+  @objc override dynamic open func stopAnimating()
+  @objc override dynamic open func display(_ layer: QuartzCore.CALayer)
+  @objc override dynamic open func didMoveToWindow()
+  @objc override dynamic open func didMoveToSuperview()
+  @objc override dynamic public init(image: UIKit.UIImage?)
+  @available(iOS 3.0, *)
+  @objc override dynamic public init(image: UIKit.UIImage?, highlightedImage: UIKit.UIImage?)
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+extension AnimatedImageView {
+  @_hasMissingDesignatedInitializers public class Animator {
+    final public let maxFrameCount: Swift.Int
+    public var currentFrameImage: UIKit.UIImage? {
+      get
+    }
+    public var currentFrameDuration: Foundation.TimeInterval {
+      get
+    }
+    public var currentFrameIndex: Swift.Int {
+      get
+    }
+    public var isLastFrame: Swift.Bool {
+      get
+    }
+    @objc deinit
+    public func frame(at index: Swift.Int) -> YLCustomerService.KFCrossPlatformImage?
+    public func duration(at index: Swift.Int) -> Foundation.TimeInterval
+  }
+}
+public typealias DownloadProgressBlock = ((Swift.Int64, Swift.Int64) -> Swift.Void)
+public struct RetrieveImageResult {
+  public let image: YLCustomerService.KFCrossPlatformImage
+  public let cacheType: YLCustomerService.CacheType
+  public let source: YLCustomerService.Source
+  public let originalSource: YLCustomerService.Source
+}
+public struct PropagationError {
+  public let source: YLCustomerService.Source
+  public let error: YLCustomerService.KingfisherError
+}
+public typealias DownloadTaskUpdatedBlock = ((YLCustomerService.DownloadTask?) -> Swift.Void)
+public class KingfisherManager {
+  public static var shared: YLCustomerService.KingfisherManager
+  public var cache: YLCustomerService.ImageCache
+  public var downloader: YLCustomerService.ImageDownloader
+  public var defaultOptions: YLCustomerService.KingfisherOptionsInfo
+  public init(downloader: YLCustomerService.ImageDownloader, cache: YLCustomerService.ImageCache)
+  @discardableResult
+  public func retrieveImage(with resource: YLCustomerService.Resource, options: YLCustomerService.KingfisherOptionsInfo? = nil, progressBlock: YLCustomerService.DownloadProgressBlock? = nil, downloadTaskUpdated: YLCustomerService.DownloadTaskUpdatedBlock? = nil, completionHandler: ((Swift.Result<YLCustomerService.RetrieveImageResult, YLCustomerService.KingfisherError>) -> Swift.Void)?) -> YLCustomerService.DownloadTask?
+  public func retrieveImage(with source: YLCustomerService.Source, options: YLCustomerService.KingfisherOptionsInfo? = nil, progressBlock: YLCustomerService.DownloadProgressBlock? = nil, downloadTaskUpdated: YLCustomerService.DownloadTaskUpdatedBlock? = nil, completionHandler: ((Swift.Result<YLCustomerService.RetrieveImageResult, YLCustomerService.KingfisherError>) -> Swift.Void)?) -> YLCustomerService.DownloadTask?
+  @objc deinit
 }
 public protocol IMUIAudioPlayerDelegate : ObjectiveC.NSObjectProtocol {
   func didAudioPlayerBeginPlay(_ AudioPlayer: AVFoundation.AVAudioPlayer)
@@ -1210,13 +1633,69 @@ public protocol IMUIAudioPlayerDelegate : ObjectiveC.NSObjectProtocol {
 extension IMUIAudioPlayerHelper : AVFoundation.AVAudioPlayerDelegate {
   @objc dynamic public func audioPlayerDidFinishPlaying(_ player: AVFoundation.AVAudioPlayer, successfully flag: Swift.Bool)
 }
-extension String : YLCustomerService.KingfisherCompatible {
-  public typealias CompatibleType = YLCustomerService.Kingfisher<Swift.String>
+public typealias Transformer = (CoreImage.CIImage) -> CoreImage.CIImage?
+public protocol CIImageProcessor : YLCustomerService.ImageProcessor {
+  var filter: YLCustomerService.Filter { get }
 }
-extension Kingfisher where Base == Swift.String {
-  final public var md5: Swift.String {
-    get
+extension CIImageProcessor {
+  public func process(item: YLCustomerService.ImageProcessItem, options: YLCustomerService.KingfisherParsedOptionsInfo) -> YLCustomerService.KFCrossPlatformImage?
+}
+public struct Filter {
+  public init(transform: @escaping YLCustomerService.Transformer)
+  public static var tint: (YLCustomerService.KFCrossPlatformColor) -> YLCustomerService.Filter
+  public typealias ColorElement = (CoreGraphics.CGFloat, CoreGraphics.CGFloat, CoreGraphics.CGFloat, CoreGraphics.CGFloat)
+  public static var colorControl: (YLCustomerService.Filter.ColorElement) -> YLCustomerService.Filter
+}
+extension KingfisherWrapper where Base : YLCustomerService.KFCrossPlatformImage {
+  public func apply(_ filter: YLCustomerService.Filter) -> YLCustomerService.KFCrossPlatformImage
+}
+public enum KF {
+  public static func source(_ source: YLCustomerService.Source?) -> YLCustomerService.KF.Builder
+  public static func resource(_ resource: YLCustomerService.Resource?) -> YLCustomerService.KF.Builder
+  public static func url(_ url: Foundation.URL?, cacheKey: Swift.String? = nil) -> YLCustomerService.KF.Builder
+  public static func dataProvider(_ provider: YLCustomerService.ImageDataProvider?) -> YLCustomerService.KF.Builder
+  public static func data(_ data: Foundation.Data?, cacheKey: Swift.String) -> YLCustomerService.KF.Builder
+}
+extension KF {
+  @_hasMissingDesignatedInitializers public class Builder {
+    public var options: YLCustomerService.KingfisherParsedOptionsInfo
+    final public let onFailureDelegate: YLCustomerService.Delegate<YLCustomerService.KingfisherError, Swift.Void>
+    final public let onSuccessDelegate: YLCustomerService.Delegate<YLCustomerService.RetrieveImageResult, Swift.Void>
+    final public let onProgressDelegate: YLCustomerService.Delegate<(Swift.Int64, Swift.Int64), Swift.Void>
+    @objc deinit
   }
+}
+extension KF.Builder {
+  @discardableResult
+  public func set(to imageView: YLCustomerService.KFCrossPlatformImageView) -> YLCustomerService.DownloadTask?
+  @discardableResult
+  public func set(to attachment: UIKit.NSTextAttachment, attributedView: YLCustomerService.KFCrossPlatformView) -> YLCustomerService.DownloadTask?
+  @discardableResult
+  public func set(to button: UIKit.UIButton, for state: UIKit.UIControl.State) -> YLCustomerService.DownloadTask?
+  @discardableResult
+  public func setBackground(to button: UIKit.UIButton, for state: UIKit.UIControl.State) -> YLCustomerService.DownloadTask?
+}
+extension KF.Builder {
+  public func placeholder(_ placeholder: YLCustomerService.Placeholder?) -> Self
+  public func placeholder(_ image: YLCustomerService.KFCrossPlatformImage?) -> Self
+}
+extension KF.Builder {
+  public func transition(_ transition: YLCustomerService.ImageTransition) -> Self
+  public func fade(duration: Foundation.TimeInterval) -> Self
+  public func keepCurrentImageWhileLoading(_ enabled: Swift.Bool = true) -> Self
+  public func onlyLoadFirstFrame(_ enabled: Swift.Bool = true) -> Self
+  public func onFailureImage(_ image: YLCustomerService.KFCrossPlatformImage?) -> Self
+  public func progressiveJPEG(_ progressive: YLCustomerService.ImageProgressive? = .default) -> Self
+}
+extension KF {
+  public struct RedirectPayload {
+    public let task: YLCustomerService.SessionDataTask
+    public let response: Foundation.HTTPURLResponse
+    public let newRequest: Foundation.URLRequest
+    public let completionHandler: (Foundation.URLRequest?) -> Swift.Void
+  }
+}
+extension String : YLCustomerService.KingfisherCompatibleValue {
 }
 @objc @_inheritsConvenienceInitializers public class IMUIWebImageTaskCache : ObjectiveC.NSObject {
   @objc override dynamic public init()
@@ -1233,24 +1712,105 @@ extension Kingfisher where Base == Swift.String {
   @objc public func getContentSelected(_ attach: UIKit.NSTextAttachment!)
   @objc deinit
 }
-public protocol Placeholder {
-  func add(to imageView: YLCustomerService.ImageView)
-  func remove(from imageView: YLCustomerService.ImageView)
-}
-extension Placeholder where Self : YLCustomerService.Image {
-  public func add(to imageView: YLCustomerService.ImageView)
-  public func remove(from imageView: YLCustomerService.ImageView)
-}
-extension UIImage : YLCustomerService.Placeholder {
-}
-extension Placeholder where Self : YLCustomerService.View {
-  public func add(to imageView: YLCustomerService.ImageView)
-  public func remove(from imageView: YLCustomerService.ImageView)
-}
 extension UIColor {
   @objc dynamic public convenience init(red: Swift.Int, green: Swift.Int, blue: Swift.Int)
   @objc dynamic public convenience init(netHex: Swift.Int)
   @objc dynamic public class func hexStringToUIColor(hex: Swift.String) -> UIKit.UIColor
+}
+public typealias KFCrossPlatformImage = UIKit.UIImage
+public typealias KFCrossPlatformColor = UIKit.UIColor
+public typealias KFCrossPlatformImageView = UIKit.UIImageView
+public typealias KFCrossPlatformView = UIKit.UIView
+public typealias KFCrossPlatformButton = UIKit.UIButton
+public struct KingfisherWrapper<Base> {
+  public let base: Base
+  public init(_ base: Base)
+}
+public protocol KingfisherCompatible : AnyObject {
+}
+public protocol KingfisherCompatibleValue {
+}
+extension KingfisherCompatible {
+  public var kf: YLCustomerService.KingfisherWrapper<Self> {
+    get
+    set(newValue)
+  }
+}
+extension KingfisherCompatibleValue {
+  public var kf: YLCustomerService.KingfisherWrapper<Self> {
+    get
+    set(newValue)
+  }
+}
+extension UIImage : YLCustomerService.KingfisherCompatible {
+}
+extension UIImageView : YLCustomerService.KingfisherCompatible {
+}
+extension UIButton : YLCustomerService.KingfisherCompatible {
+}
+extension NSTextAttachment : YLCustomerService.KingfisherCompatible {
+}
+public enum KingfisherError : Swift.Error {
+  public enum RequestErrorReason {
+    case emptyRequest
+    case invalidURL(request: Foundation.URLRequest)
+    case taskCancelled(task: YLCustomerService.SessionDataTask, token: YLCustomerService.SessionDataTask.CancelToken)
+  }
+  public enum ResponseErrorReason {
+    case invalidURLResponse(response: Foundation.URLResponse)
+    case invalidHTTPStatusCode(response: Foundation.HTTPURLResponse)
+    case URLSessionError(error: Swift.Error)
+    case dataModifyingFailed(task: YLCustomerService.SessionDataTask)
+    case noURLResponse(task: YLCustomerService.SessionDataTask)
+  }
+  public enum CacheErrorReason {
+    case fileEnumeratorCreationFailed(url: Foundation.URL)
+    case invalidFileEnumeratorContent(url: Foundation.URL)
+    case invalidURLResource(error: Swift.Error, key: Swift.String, url: Foundation.URL)
+    case cannotLoadDataFromDisk(url: Foundation.URL, error: Swift.Error)
+    case cannotCreateDirectory(path: Swift.String, error: Swift.Error)
+    case imageNotExisting(key: Swift.String)
+    case cannotConvertToData(object: Any, error: Swift.Error)
+    case cannotSerializeImage(image: YLCustomerService.KFCrossPlatformImage?, original: Foundation.Data?, serializer: YLCustomerService.CacheSerializer)
+    case cannotCreateCacheFile(fileURL: Foundation.URL, key: Swift.String, data: Foundation.Data, error: Swift.Error)
+    case cannotSetCacheFileAttribute(filePath: Swift.String, attributes: [Foundation.FileAttributeKey : Any], error: Swift.Error)
+    case diskStorageIsNotReady(cacheURL: Foundation.URL)
+  }
+  public enum ProcessorErrorReason {
+    case processingFailed(processor: YLCustomerService.ImageProcessor, item: YLCustomerService.ImageProcessItem)
+  }
+  public enum ImageSettingErrorReason {
+    case emptySource
+    case notCurrentSourceTask(result: YLCustomerService.RetrieveImageResult?, error: Swift.Error?, source: YLCustomerService.Source)
+    case dataProviderError(provider: YLCustomerService.ImageDataProvider, error: Swift.Error)
+    case alternativeSourcesExhausted([YLCustomerService.PropagationError])
+  }
+  case requestError(reason: YLCustomerService.KingfisherError.RequestErrorReason)
+  case responseError(reason: YLCustomerService.KingfisherError.ResponseErrorReason)
+  case cacheError(reason: YLCustomerService.KingfisherError.CacheErrorReason)
+  case processorError(reason: YLCustomerService.KingfisherError.ProcessorErrorReason)
+  case imageSettingError(reason: YLCustomerService.KingfisherError.ImageSettingErrorReason)
+  public var isTaskCancelled: Swift.Bool {
+    get
+  }
+  public func isInvalidResponseStatusCode(_ code: Swift.Int) -> Swift.Bool
+  public var isInvalidResponseStatusCode: Swift.Bool {
+    get
+  }
+  public var isNotCurrentTask: Swift.Bool {
+    get
+  }
+}
+extension KingfisherError : Foundation.LocalizedError {
+  public var errorDescription: Swift.String? {
+    get
+  }
+}
+extension KingfisherError : Foundation.CustomNSError {
+  public static var domain: Swift.String
+  public var errorCode: Swift.Int {
+    get
+  }
 }
 @objc public protocol IMUIInputViewDelegate : ObjectiveC.NSObjectProtocol {
   @objc optional func sendTextMessage(_ messageText: Swift.String)
@@ -1304,52 +1864,6 @@ extension UIColor {
   @objc public func layoutContentView(message: YLCustomerService.IMUIMessageModelProtocol)
   @objc deinit
 }
-public typealias DownloadProgressBlock = ((Swift.Int64, Swift.Int64) -> Swift.Void)
-public typealias CompletionHandler = ((YLCustomerService.Image?, Foundation.NSError?, YLCustomerService.CacheType, Foundation.URL?) -> Swift.Void)
-@_hasMissingDesignatedInitializers final public class RetrieveImageTask {
-  public static var empty: YLCustomerService.RetrieveImageTask
-  final public var downloadTask: YLCustomerService.RetrieveImageDownloadTask?
-  final public func cancel()
-  @objc deinit
-}
-public var KingfisherErrorDomain: Swift.String
-@_hasMissingDesignatedInitializers public class KingfisherManager {
-  public static var shared: YLCustomerService.KingfisherManager
-  public var cache: YLCustomerService.ImageCache
-  public var downloader: YLCustomerService.ImageDownloader
-  public var defaultOptions: [YLCustomerService.KingfisherOptionsInfoItem]
-  @discardableResult
-  public func retrieveImage(with resource: YLCustomerService.Resource, options: YLCustomerService.KingfisherOptionsInfo?, progressBlock: YLCustomerService.DownloadProgressBlock?, completionHandler: YLCustomerService.CompletionHandler?) -> YLCustomerService.RetrieveImageTask
-  @objc deinit
-}
-public typealias Image = UIKit.UIImage
-public typealias Color = UIKit.UIColor
-public typealias ImageView = UIKit.UIImageView
-public typealias View = UIKit.UIView
-public typealias Button = UIKit.UIButton
-final public class Kingfisher<Base> {
-  final public let base: Base
-  public init(_ base: Base)
-  @objc deinit
-}
-public protocol KingfisherCompatible {
-  associatedtype CompatibleType
-  var kf: Self.CompatibleType { get }
-}
-extension KingfisherCompatible {
-  public var kf: YLCustomerService.Kingfisher<Self> {
-    get
-  }
-}
-extension UIImage : YLCustomerService.KingfisherCompatible {
-  public typealias CompatibleType = YLCustomerService.Kingfisher<UIKit.UIImage>
-}
-extension UIImageView : YLCustomerService.KingfisherCompatible {
-  public typealias CompatibleType = YLCustomerService.Kingfisher<UIKit.UIImageView>
-}
-extension UIButton : YLCustomerService.KingfisherCompatible {
-  public typealias CompatibleType = YLCustomerService.Kingfisher<UIKit.UIButton>
-}
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc open class IMUITextRobotContentView : UIKit.UIView, YLCustomerService.IMUIMessageContentViewProtocol {
   @objc weak public var delegate: YLCustomerService.IMUIMessageContentViewDelegate?
   @objc public static var outGoingTextColor: UIKit.UIColor?
@@ -1359,6 +1873,14 @@ extension UIButton : YLCustomerService.KingfisherCompatible {
   @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @objc public func layoutContentView(message: YLCustomerService.IMUIMessageModelProtocol)
   @objc deinit
+}
+public struct FormatIndicatedCacheSerializer : YLCustomerService.CacheSerializer {
+  public static var png: YLCustomerService.FormatIndicatedCacheSerializer
+  public static var jpeg: YLCustomerService.FormatIndicatedCacheSerializer
+  public static func jpeg(compressionQuality: CoreGraphics.CGFloat) -> YLCustomerService.FormatIndicatedCacheSerializer
+  public static var gif: YLCustomerService.FormatIndicatedCacheSerializer
+  public func data(with image: YLCustomerService.KFCrossPlatformImage, original: Foundation.Data?) -> Foundation.Data?
+  public func image(with data: Foundation.Data, options: YLCustomerService.KingfisherParsedOptionsInfo) -> YLCustomerService.KFCrossPlatformImage?
 }
 @objc public protocol IMUIMessageContentViewDelegate : ObjectiveC.NSObjectProtocol {
   @objc func click(index: Swift.Int)
@@ -1413,6 +1935,15 @@ extension UIView {
   }
   public func move(with vector: CoreGraphics.CGVector)
   public func positionInLeftSide(with point: CoreGraphics.CGPoint) -> Swift.Bool
+}
+public enum ImageTransition {
+  case none
+  case fade(Foundation.TimeInterval)
+  case flipFromLeft(Foundation.TimeInterval)
+  case flipFromRight(Foundation.TimeInterval)
+  case flipFromTop(Foundation.TimeInterval)
+  case flipFromBottom(Foundation.TimeInterval)
+  case custom(duration: Foundation.TimeInterval, options: UIKit.UIView.AnimationOptions, animations: ((UIKit.UIImageView, UIKit.UIImage) -> Swift.Void)?, completion: ((Swift.Bool) -> Swift.Void)?)
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class IMUIVoiceMessageContentView : UIKit.UIView, YLCustomerService.IMUIMessageContentViewProtocol {
   @objc weak public var delegate: YLCustomerService.IMUIMessageContentViewDelegate?
@@ -1486,6 +2017,33 @@ extension IMUICustomInputView : UIKit.UITextViewDelegate {
   @objc public func layoutSuccessStatus()
   @objc deinit
 }
+public class Delegate<Input, Output> {
+  public init()
+  public func delegate<T>(on target: T, block: ((T, Input) -> Output)?) where T : AnyObject
+  public func call(_ input: Input) -> Output?
+  public func callAsFunction(_ input: Input) -> Output?
+  @objc deinit
+}
+extension Delegate where Input == Swift.Void {
+  public func call() -> Output?
+  public func callAsFunction() -> Output?
+}
+extension Delegate where Input == Swift.Void, Output : YLCustomerService.OptionalProtocol {
+  public func call() -> Output
+  public func callAsFunction() -> Output
+}
+extension Delegate where Output : YLCustomerService.OptionalProtocol {
+  public func call(_ input: Input) -> Output
+  public func callAsFunction(_ input: Input) -> Output
+}
+public protocol OptionalProtocol {
+  static var _createNil: Self { get }
+}
+extension Optional : YLCustomerService.OptionalProtocol {
+  public static var _createNil: Swift.Optional<Wrapped> {
+    get
+  }
+}
 @objc public protocol IMUIMessageModelProtocol : YLCustomerService.IMUIMessageProtocol {
   @objc var fromUser: YLCustomerService.IMUIUserProtocol { get }
   @objc var layout: YLCustomerService.IMUIMessageCellLayoutProtocol { get }
@@ -1501,4 +2059,16 @@ extension IMUICustomInputView : UIKit.UITextViewDelegate {
   @objc optional func atPersons() -> [Swift.String]?
   @objc optional func previewImage() -> UIKit.UIImage?
   @objc optional func uploadProgress() -> CoreGraphics.CGFloat
+}
+@_inheritsConvenienceInitializers @objc(KFSessionDelegate) open class SessionDelegate : ObjectiveC.NSObject {
+  @objc deinit
+  @objc override dynamic public init()
+}
+extension SessionDelegate : Foundation.URLSessionDataDelegate {
+  @objc dynamic open func urlSession(_ session: Foundation.URLSession, dataTask: Foundation.URLSessionDataTask, didReceive response: Foundation.URLResponse, completionHandler: @escaping (Foundation.URLSession.ResponseDisposition) -> Swift.Void)
+  @objc dynamic open func urlSession(_ session: Foundation.URLSession, dataTask: Foundation.URLSessionDataTask, didReceive data: Foundation.Data)
+  @objc dynamic open func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didCompleteWithError error: Swift.Error?)
+  @objc dynamic open func urlSession(_ session: Foundation.URLSession, didReceive challenge: Foundation.URLAuthenticationChallenge, completionHandler: @escaping (Foundation.URLSession.AuthChallengeDisposition, Foundation.URLCredential?) -> Swift.Void)
+  @objc dynamic open func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didReceive challenge: Foundation.URLAuthenticationChallenge, completionHandler: @escaping (Foundation.URLSession.AuthChallengeDisposition, Foundation.URLCredential?) -> Swift.Void)
+  @objc dynamic open func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, willPerformHTTPRedirection response: Foundation.HTTPURLResponse, newRequest request: Foundation.URLRequest, completionHandler: @escaping (Foundation.URLRequest?) -> Swift.Void)
 }
