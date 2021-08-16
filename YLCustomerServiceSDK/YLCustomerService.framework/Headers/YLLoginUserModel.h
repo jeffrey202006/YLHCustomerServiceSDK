@@ -18,11 +18,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSString *nickname; //用户昵称
 @property (nonatomic, strong) NSString *realName; //真实名字
 @property (nonatomic, strong) NSString *remark; //用户备注
+@property (nonatomic, strong) NSString *userUid; //用户Uid（必传）
 @property (nonatomic, strong) NSString *username; //用户名
 @property (nonatomic, strong) NSString *sourcePage; //来源页
-
-@property (nonatomic, strong) NSString *userUid; //用户Uid（必传）
-@property (nonatomic, strong) NSString *accessToken; //accessToken（必传）
 
 @end
 

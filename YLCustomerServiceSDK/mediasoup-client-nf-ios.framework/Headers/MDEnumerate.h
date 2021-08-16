@@ -1,0 +1,63 @@
+//
+//  MDEnumerate.h
+//  mediasoup-client-ios
+//
+//  Created by 永亮iOS on 2021/3/3.
+//  Copyright © 2021 Denvir Ethan. All rights reserved.
+//
+
+#ifndef MDEnumerate_h
+#define MDEnumerate_h
+
+//美颜
+typedef enum:NSUInteger {
+    MD_ENUM_BEAUTY_TYPE_NONE, //无
+    MD_ENUM_BEAUTY_TYPE_MOPI, //磨皮
+    MD_ENUM_BEAUTY_TYPE_MEIFU, //美肤
+    MD_ENUM_BEAUTY_TYPE_HONGRUN, //红润
+    MD_ENUM_BEAUTY_TYPE_SUXING, //塑形
+    MD_ENUM_BEAUTY_TYPE_SAIHONG, //腮红
+}MD_ENUM_BEAUTY_TYPE;
+
+//滤镜
+typedef enum:NSUInteger {
+    MD_ENUM_FILTER_TYPE_NONE, //无
+    MD_ENUM_FILTER_TYPE_QY, //轻氧
+    MD_ENUM_FILTER_TYPE_CB, //超白
+    MD_ENUM_FILTER_TYPE_BZ, //白皙
+    MD_ENUM_FILTER_TYPE_RH, //柔和
+    MD_ENUM_FILTER_TYPE_WX, //微醺
+    MD_ENUM_FILTER_TYPE_CL, //初恋
+    MD_ENUM_FILTER_TYPE_NY, //奶油
+    MD_ENUM_FILTER_TYPE_QC, //清纯
+    MD_ENUM_FILTER_TYPE_BX, //白雪
+    MD_ENUM_FILTER_TYPE_MS, //慕斯
+    MD_ENUM_FILTER_TYPE_FF, //非凡
+    MD_ENUM_FILTER_TYPE_HP, //活泼
+    MD_ENUM_FILTER_TYPE_CX, //初心
+    MD_ENUM_FILTER_TYPE_QW, //蔷薇
+    MD_ENUM_FILTER_TYPE_DR, //动人
+    MD_ENUM_FILTER_TYPE_RX, //日系
+    MD_ENUM_FILTER_TYPE_LD, //蓝调
+    MD_ENUM_FILTER_TYPE_NH, //奶灰
+    MD_ENUM_FILTER_TYPE_SS, //深邃
+    MD_ENUM_FILTER_TYPE_QQ, //曲奇
+}MD_ENUM_FILTER_TYPE;
+
+//贴纸
+typedef enum:NSUInteger {
+    MD_ENUM_STICKER_TYPE_NONE, //无
+    MD_ENUM_STICKER_TYPE_RABIT_EAR, //兔子耳
+    MD_ENUM_STICKER_TYPE_WORD_FACE, //单词脸
+    MD_ENUM_STICKER_TYPE_RABIT_FACE, //兔子脸
+    MD_ENUM_STICKER_TYPE_PANDA_FACE, //熊猫脸
+    MD_ENUM_STICKER_TYPE_PANDA_EAR, //熊猫耳
+    MD_ENUM_STICKER_TYPE_MOUSE_FACE, //老鼠脸
+    MD_ENUM_STICKER_TYPE_OLDMAN_FACE, //老人脸
+    MD_ENUM_STICKER_TYPE_PIG_FACE, //猪猪脸
+    MD_ENUM_STICKER_TYPE_CAT_EAR, //猫耳朵
+    MD_ENUM_STICKER_TYPE_GLASS_FACE, //眼镜脸
+    MD_ENUM_STICKER_TYPE_DOT_FACE, //狗狗脸
+}MD_ENUM_STICKER_TYPE;
+
+#endif /* MDEnumerate_h */
