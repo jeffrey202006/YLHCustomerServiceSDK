@@ -1,0 +1,39 @@
+{
+    "stickerList": [{
+        "type": "sticker",
+        "centerIndexList": [54],
+        "offsetX": 1.0,
+        "offsetY": -1.0,
+        "baseScale": 0.5,
+        "startIndex": 6,
+        "endIndex": 26,
+        "width": 346,
+        "height":298,
+        "frames": 1,
+        "action": 0,
+        "stickerName": "dw_03",
+        "duration": 100,
+        "stickerLooping": 1,
+        "audioPath": "",
+        "audioLooping": 0,
+        "maxcount": 5
+    }, {
+        "type": "sticker",
+        "centerIndexList": [54],
+        "offsetX": -1.0,
+        "offsetY":1.0,
+        "baseScale": 0.5,
+        "startIndex": 6,
+        "endIndex": 26,
+        "width":413,
+        "height": 531,
+        "frames": 1,
+        "action": 0,
+        "stickerName": "dw_35",
+        "duration": 100,
+        "stickerLooping": 1,
+        "audioPath": "",
+        "audioLooping": 0,
+        "maxcount": 5
+    }]
+}

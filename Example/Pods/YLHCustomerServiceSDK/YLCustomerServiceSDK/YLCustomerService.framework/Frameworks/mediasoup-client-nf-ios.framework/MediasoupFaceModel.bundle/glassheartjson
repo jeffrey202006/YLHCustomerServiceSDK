@@ -1,0 +1,21 @@
+{
+    "stickerList": [{
+        "type": "sticker",
+        "centerIndexList": [51,52],
+        "offsetX": 0.0,
+        "offsetY": 0.0,
+        "baseScale": 1.0,
+        "startIndex": 6,
+        "endIndex": 26,
+        "width": 436,
+        "height": 172,
+        "frames": 1,
+        "action": 0,
+        "stickerName": "dj_08",
+        "duration": 100,
+        "stickerLooping": 1,
+        "audioPath": "",
+        "audioLooping": 0,
+        "maxcount": 5
+    }]
+}

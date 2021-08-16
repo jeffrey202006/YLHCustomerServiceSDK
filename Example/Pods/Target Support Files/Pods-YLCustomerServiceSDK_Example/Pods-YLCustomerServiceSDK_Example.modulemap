@@ -1,0 +1,6 @@
+framework module Pods_YLCustomerServiceSDK_Example {
+  umbrella header "Pods-YLCustomerServiceSDK_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
