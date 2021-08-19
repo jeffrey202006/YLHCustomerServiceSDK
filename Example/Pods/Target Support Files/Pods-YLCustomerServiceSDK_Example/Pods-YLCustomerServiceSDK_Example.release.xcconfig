@@ -1,7 +1,8 @@
-FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/YLHCustomerServiceSDK" "${PODS_ROOT}/YLHCustomerServiceSDK/YLCustomerServiceSDK" "${PODS_ROOT}/YLHCustomerServiceSDK/YLCustomerServiceSDK/YLCustomerService.framework/Frameworks"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/YLHCustomerServiceSDK" "${PODS_ROOT}/YLHCustomerServiceSDK/YLCustomerServiceSDK"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
 HEADER_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/YLHCustomerServiceSDK/YLHCustomerServiceSDK.framework/Headers" ${PODS_ROOT}/YLCustomerServiceSDK/YLCustomerServiceSDK/YLCustomerService.framework/Headers
-OTHER_LDFLAGS = $(inherited) -ObjC -l"c++" -l"stdc++" -framework "Foundation" -framework "UIKit" -framework "VideoToolbox" -framework "YLCustomerService" -framework "YLHCustomerServiceSDK" -framework "mediasoup-client-nf-ios"
+LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
+OTHER_LDFLAGS = $(inherited) -ObjC -l"c++" -l"stdc++" -framework "Foundation" -framework "GPUImageNFFramework" -framework "UIKit" -framework "VideoToolbox" -framework "YLCustomerService" -framework "YLHCustomerServiceSDK" -framework "YLWebRTC" -framework "mediasoup-client-nf-ios"
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
 PODS_PODFILE_DIR_PATH = ${SRCROOT}/.

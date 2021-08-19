@@ -1,5 +1,5 @@
 CONFIGURATION_BUILD_DIR = ${PODS_CONFIGURATION_BUILD_DIR}/YLHCustomerServiceSDK
-FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/YLHCustomerServiceSDK/YLCustomerServiceSDK" "${PODS_ROOT}/YLHCustomerServiceSDK/YLCustomerServiceSDK/YLCustomerService.framework/Frameworks"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/YLHCustomerServiceSDK/YLCustomerServiceSDK"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
 HEADER_SEARCH_PATHS = $(inherited) ${PODS_ROOT}/YLCustomerServiceSDK/YLCustomerServiceSDK/YLCustomerService.framework/Headers
 PODS_BUILD_DIR = ${BUILD_DIR}

@@ -1,0 +1,6 @@
+framework module YLWebRTC {
+  umbrella header "YLWebRTC.h"
+
+  export *
+  module * { export * }
+}

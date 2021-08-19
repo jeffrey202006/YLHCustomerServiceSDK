@@ -222,6 +222,7 @@
 				6003F588195388D20070C39A /* Resources */,
 				083937E21FACFA5AC9F9BAFF /* [CP] Copy Pods Resources */,
 				505546ED26B12DC3008DD90F /* CopyFiles */,
+				969C8ABEE7A773B5A9496129 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -321,7 +322,6 @@
 				"${PODS_ROOT}/Target Support Files/Pods-YLCustomerServiceSDK_Example/Pods-YLCustomerServiceSDK_Example-resources.sh",
 				"${PODS_ROOT}/YLHCustomerServiceSDK/YLCustomerServiceSDK/YLCustomerService.framework/YLSkinDefault.bundle",
 				"${PODS_ROOT}/YLHCustomerServiceSDK/YLCustomerServiceSDK/YLCustomerService.framework/YLCustomerService.bundle",
-				"${PODS_ROOT}/YLHCustomerServiceSDK/YLCustomerServiceSDK/YLCustomerService.framework/Frameworks/mediasoup-client-nf-ios.framework/MediasoupFaceModel.bundle",
 				"${PODS_ROOT}/YLHCustomerServiceSDK/YLCustomerServiceSDK/YLCustomerService.framework/IMUICameraView.nib",
 				"${PODS_ROOT}/YLHCustomerServiceSDK/YLCustomerServiceSDK/YLCustomerService.framework/IMUICustomInputView.nib",
 				"${PODS_ROOT}/YLHCustomerServiceSDK/YLCustomerServiceSDK/YLCustomerService.framework/IMUIFeatureListView.nib",
@@ -340,7 +340,6 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/YLSkinDefault.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/YLCustomerService.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MediasoupFaceModel.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IMUICameraView.nib",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IMUICustomInputView.nib",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IMUIFeatureListView.nib",
@@ -380,6 +379,30 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		969C8ABEE7A773B5A9496129 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YLCustomerServiceSDK_Example/Pods-YLCustomerServiceSDK_Example-frameworks.sh",
+				"${PODS_ROOT}/YLHCustomerServiceSDK/YLCustomerServiceSDK/YLCustomerService.framework",
+				"${PODS_ROOT}/YLHCustomerServiceSDK/YLCustomerServiceSDK/mediasoup-client-nf-ios.framework",
+				"${PODS_ROOT}/YLHCustomerServiceSDK/YLCustomerServiceSDK/YLWebRTC.framework",
+				"${PODS_ROOT}/YLHCustomerServiceSDK/YLCustomerServiceSDK/GPUImageNFFramework.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YLCustomerService.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/mediasoup-client-nf-ios.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YLWebRTC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GPUImageNFFramework.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YLCustomerServiceSDK_Example/Pods-YLCustomerServiceSDK_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

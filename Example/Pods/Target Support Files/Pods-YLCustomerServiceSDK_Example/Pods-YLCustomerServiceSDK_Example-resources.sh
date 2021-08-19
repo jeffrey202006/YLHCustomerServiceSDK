@@ -99,7 +99,6 @@ EOM
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "${PODS_ROOT}/YLHCustomerServiceSDK/YLCustomerServiceSDK/YLCustomerService.framework/YLSkinDefault.bundle"
   install_resource "${PODS_ROOT}/YLHCustomerServiceSDK/YLCustomerServiceSDK/YLCustomerService.framework/YLCustomerService.bundle"
-  install_resource "${PODS_ROOT}/YLHCustomerServiceSDK/YLCustomerServiceSDK/YLCustomerService.framework/Frameworks/mediasoup-client-nf-ios.framework/MediasoupFaceModel.bundle"
   install_resource "${PODS_ROOT}/YLHCustomerServiceSDK/YLCustomerServiceSDK/YLCustomerService.framework/IMUICameraView.nib"
   install_resource "${PODS_ROOT}/YLHCustomerServiceSDK/YLCustomerServiceSDK/YLCustomerService.framework/IMUICustomInputView.nib"
   install_resource "${PODS_ROOT}/YLHCustomerServiceSDK/YLCustomerServiceSDK/YLCustomerService.framework/IMUIFeatureListView.nib"
@@ -117,7 +116,6 @@ fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "${PODS_ROOT}/YLHCustomerServiceSDK/YLCustomerServiceSDK/YLCustomerService.framework/YLSkinDefault.bundle"
   install_resource "${PODS_ROOT}/YLHCustomerServiceSDK/YLCustomerServiceSDK/YLCustomerService.framework/YLCustomerService.bundle"
-  install_resource "${PODS_ROOT}/YLHCustomerServiceSDK/YLCustomerServiceSDK/YLCustomerService.framework/Frameworks/mediasoup-client-nf-ios.framework/MediasoupFaceModel.bundle"
   install_resource "${PODS_ROOT}/YLHCustomerServiceSDK/YLCustomerServiceSDK/YLCustomerService.framework/IMUICameraView.nib"
   install_resource "${PODS_ROOT}/YLHCustomerServiceSDK/YLCustomerServiceSDK/YLCustomerService.framework/IMUICustomInputView.nib"
   install_resource "${PODS_ROOT}/YLHCustomerServiceSDK/YLCustomerServiceSDK/YLCustomerService.framework/IMUIFeatureListView.nib"
