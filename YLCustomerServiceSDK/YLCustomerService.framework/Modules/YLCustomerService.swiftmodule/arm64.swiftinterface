@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.3.2 effective-4.2 (swiftlang-1200.0.45 clang-1200.0.32.28)
+// swift-compiler-version: Apple Swift version 5.4.2 effective-4.2 (swiftlang-1205.0.28.2 clang-1205.0.19.57)
 // swift-module-flags: -target arm64-apple-ios10.0 -enable-objc-interop -enable-library-evolution -swift-version 4.2 -enforce-exclusivity=checked -O -module-name YLCustomerService
 import AVFoundation
 import AVKit
@@ -267,8 +267,8 @@ extension MemoryStorage {
   }
 }
 @_inheritsConvenienceInitializers @objc(KFSessionDelegate) open class SessionDelegate : ObjectiveC.NSObject {
-  @objc deinit
   @objc override dynamic public init()
+  @objc deinit
 }
 extension SessionDelegate : Foundation.URLSessionDataDelegate {
   @objc dynamic open func urlSession(_ session: Foundation.URLSession, dataTask: Foundation.URLSessionDataTask, didReceive response: Foundation.URLResponse, completionHandler: @escaping (Foundation.URLSession.ResponseDisposition) -> Swift.Void)
@@ -290,7 +290,7 @@ extension KF.Builder : YLCustomerService.KFOptionSetter {
     get
   }
 }
-@available(iOS 13.0, OSX 10.15, tvOS 13.0, watchOS 6.0, *)
+@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
 extension KFImage : YLCustomerService.KFOptionSetter {
   public var options: YLCustomerService.KingfisherParsedOptionsInfo {
     get
@@ -418,8 +418,8 @@ extension IMUIFeatureCellProtocol {
   public func register(_ cellClass: Swift.AnyClass?, forCellWithReuseIdentifier identifier: Swift.String)
   public func register(_ nib: UIKit.UINib?, forCellWithReuseIdentifier identifier: Swift.String)
   open func layoutFeature(with type: YLCustomerService.IMUIFeatureType)
-  @objc deinit
   @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc deinit
 }
 extension IMUIFeatureView : UIKit.UICollectionViewDelegate, UIKit.UICollectionViewDataSource, UIKit.UICollectionViewDelegateFlowLayout {
   @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, numberOfItemsInSection section: Swift.Int) -> Swift.Int
@@ -532,10 +532,10 @@ public enum ImageFormat {
     case EOI
   }
   public static func == (a: YLCustomerService.ImageFormat, b: YLCustomerService.ImageFormat) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
   }
-  public func hash(into hasher: inout Swift.Hasher)
 }
 extension Data : YLCustomerService.KingfisherCompatibleValue {
 }
@@ -709,8 +709,8 @@ extension Source : Swift.Hashable {
   case left = 0
   case right
   case bottom
-  public typealias RawValue = Swift.UInt
   public init?(rawValue: Swift.UInt)
+  public typealias RawValue = Swift.UInt
   public var rawValue: Swift.UInt {
     get
   }
@@ -765,17 +765,17 @@ public enum IMUIEmojiType {
   case image
   case gif
   public static func == (a: YLCustomerService.IMUIEmojiType, b: YLCustomerService.IMUIEmojiType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
   }
-  public func hash(into hasher: inout Swift.Hasher)
 }
 @objc public class IMUIEmojiModel : ObjectiveC.NSObject {
   public init(_ emojiType: YLCustomerService.IMUIEmojiType, _ emoji: Swift.String?, _ mediaPath: Swift.String?)
   public convenience init(emojiType: YLCustomerService.IMUIEmojiType, emoji: Swift.String)
   public convenience init(emojiType: YLCustomerService.IMUIEmojiType, mediaPath: Swift.String)
-  @objc deinit
   @objc override dynamic public init()
+  @objc deinit
 }
 extension String {
   public func heightWithConstrainedWidth(width: CoreGraphics.CGFloat, font: UIKit.UIFont) -> CoreGraphics.CGFloat
@@ -911,8 +911,8 @@ public struct DelayRetryStrategy : YLCustomerService.RetryStrategy {
   public func register(_ cellClass: Swift.AnyClass?, forCellWithReuseIdentifier identifier: Swift.String)
   public func register(_ nib: UIKit.UINib?, forCellWithReuseIdentifier identifier: Swift.String)
   public func reloadData()
-  @objc deinit
   @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc deinit
 }
 extension IMUIFeatureListView : UIKit.UICollectionViewDelegate {
 }
@@ -943,9 +943,9 @@ extension IMUIFeatureListView : UIKit.UICollectionViewDataSource, UIKit.UICollec
   @objc optional func messageCollectionView(selectedIndex: Swift.Int, didTapRobotCell: UIKit.UICollectionViewCell, model: YLCustomerService.IMUIMessageProtocol)
 }
 public protocol IMUIAudioPlayerDelegate : ObjectiveC.NSObjectProtocol {
-  func didAudioPlayerBeginPlay(_ AudioPlayer: AVFoundation.AVAudioPlayer)
-  func didAudioPlayerStopPlay(_ AudioPlayer: AVFoundation.AVAudioPlayer)
-  func didAudioPlayerPausePlay(_ AudioPlayer: AVFoundation.AVAudioPlayer)
+  func didAudioPlayerBeginPlay(_ AudioPlayer: AVFAudio.AVAudioPlayer)
+  func didAudioPlayerStopPlay(_ AudioPlayer: AVFAudio.AVAudioPlayer)
+  func didAudioPlayerPausePlay(_ AudioPlayer: AVFAudio.AVAudioPlayer)
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class IMUIAudioPlayerHelper : ObjectiveC.NSObject {
   @objc public static var sharedInstance: YLCustomerService.IMUIAudioPlayerHelper
@@ -957,8 +957,8 @@ public protocol IMUIAudioPlayerDelegate : ObjectiveC.NSObjectProtocol {
   open func renewProgressCallback(_ identfy: Swift.String, progressCallback: @escaping YLCustomerService.IMUIAudioPlayerHelper.ProgressCallback)
   @objc open func stopAudio()
 }
-extension IMUIAudioPlayerHelper : AVFoundation.AVAudioPlayerDelegate {
-  @objc dynamic public func audioPlayerDidFinishPlaying(_ player: AVFoundation.AVAudioPlayer, successfully flag: Swift.Bool)
+extension IMUIAudioPlayerHelper : AVFAudio.AVAudioPlayerDelegate {
+  @objc dynamic public func audioPlayerDidFinishPlaying(_ player: AVFAudio.AVAudioPlayer, successfully flag: Swift.Bool)
 }
 public protocol Placeholder {
   func add(to imageView: YLCustomerService.KFCrossPlatformImageView)
@@ -978,8 +978,8 @@ extension Placeholder where Self : YLCustomerService.KFCrossPlatformView {
   case success
   case mediaDownloading
   case mediaDownloadFail
-  public typealias RawValue = Swift.UInt
   public init?(rawValue: Swift.UInt)
+  public typealias RawValue = Swift.UInt
   public var rawValue: Swift.UInt {
     get
   }
@@ -1013,8 +1013,8 @@ public protocol IMUIMessageDataSource {
   @objc open var resizableBubbleImage: UIKit.UIImage {
     @objc get
   }
-  @objc deinit
   @objc override dynamic public init()
+  @objc deinit
 }
 public enum DiskStorage {
   @_hasMissingDesignatedInitializers public class Backend<T> where T : YLCustomerService.DataTransformable {
@@ -1280,10 +1280,10 @@ public enum IMUIFeatureType {
   case empty
   case none
   public static func == (a: YLCustomerService.IMUIFeatureType, b: YLCustomerService.IMUIFeatureType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
   }
-  public func hash(into hasher: inout Swift.Hasher)
 }
 public protocol IMUIFeatureViewDelegate : ObjectiveC.NSObjectProtocol {
   func didSelectPhoto(with images: [UIKit.UIImage])
@@ -1423,8 +1423,8 @@ extension IMUIInputView : YLCustomerService.IMUICustomInputViewDelegate {
   @objc open var bubbleContentType: Swift.String {
     @objc get
   }
-  @objc deinit
   @objc override dynamic public init()
+  @objc deinit
 }
 public typealias KFCrossPlatformImage = UIKit.UIImage
 public typealias KFCrossPlatformColor = UIKit.UIColor
@@ -1479,8 +1479,8 @@ public struct FormatIndicatedCacheSerializer : YLCustomerService.CacheSerializer
   public var photoCount: Swift.Int?
   public var isAllowToSend: Swift.Bool?
   public init(featureType: YLCustomerService.IMUIFeatureType, _ defoultImage: UIKit.UIImage?, _ selectedImage: UIKit.UIImage?, _ photoCount: Swift.Int?, _ isAllowToSend: Swift.Bool?)
-  @objc deinit
   @objc override dynamic public init()
+  @objc deinit
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc open class IMUITextExpendButton : UIKit.UIView {
   @objc public static var TextColor: UIKit.UIColor
@@ -1570,7 +1570,7 @@ extension KF {
   @objc public func layoutContentView(message: YLCustomerService.IMUIMessageModelProtocol)
   @objc deinit
 }
-@available(iOS 13.0, OSX 10.15, tvOS 13.0, watchOS 6.0, *)
+@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
 extension KFImage {
   public static func source(_ source: YLCustomerService.Source?, isLoaded: SwiftUI.Binding<Swift.Bool> = .constant(false)) -> YLCustomerService.KFImage
   public static func resource(_ resource: YLCustomerService.Resource?, isLoaded: SwiftUI.Binding<Swift.Bool> = .constant(false)) -> YLCustomerService.KFImage
@@ -1578,7 +1578,7 @@ extension KFImage {
   public static func dataProvider(_ provider: YLCustomerService.ImageDataProvider?, isLoaded: SwiftUI.Binding<Swift.Bool> = .constant(false)) -> YLCustomerService.KFImage
   public static func data(_ data: Foundation.Data?, cacheKey: Swift.String, isLoaded: SwiftUI.Binding<Swift.Bool> = .constant(false)) -> YLCustomerService.KFImage
 }
-@available(iOS 13.0, OSX 10.15, tvOS 13.0, watchOS 6.0, *)
+@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
 extension KFImage {
   public func placeholder<Content>(@SwiftUI.ViewBuilder _ content: () -> Content) -> YLCustomerService.KFImage where Content : SwiftUI.View
   public func cancelOnDisappear(_ flag: Swift.Bool) -> YLCustomerService.KFImage
@@ -1658,8 +1658,8 @@ public struct RectCorner : Swift.OptionSet {
   public static var bottomRight: YLCustomerService.RectCorner
   public static var all: YLCustomerService.RectCorner
   public init(rawValue: Swift.Int)
-  public typealias Element = YLCustomerService.RectCorner
   public typealias ArrayLiteralElement = YLCustomerService.RectCorner
+  public typealias Element = YLCustomerService.RectCorner
   public typealias RawValue = Swift.Int
 }
 public struct BlendImageProcessor : YLCustomerService.ImageProcessor {
@@ -1690,10 +1690,10 @@ public enum ContentMode {
   case aspectFit
   case aspectFill
   public static func == (a: YLCustomerService.ContentMode, b: YLCustomerService.ContentMode) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
   }
-  public func hash(into hasher: inout Swift.Hasher)
 }
 public struct ResizingImageProcessor : YLCustomerService.ImageProcessor {
   public let identifier: Swift.String
@@ -1940,7 +1940,7 @@ public struct Filter {
 extension KingfisherWrapper where Base : YLCustomerService.KFCrossPlatformImage {
   public func apply(_ filter: YLCustomerService.Filter) -> YLCustomerService.KFCrossPlatformImage
 }
-@available(iOS 13.0, OSX 10.15, tvOS 13.0, watchOS 6.0, *)
+@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
 public struct KFImage : SwiftUI.View {
   @available(*, deprecated, message: "Some options are not available in SwiftUI yet. Use `KFImage(source:isLoaded:)` to create a `KFImage` and configure the options through modifier instead.")
   public init(source: YLCustomerService.Source?, options: YLCustomerService.KingfisherOptionsInfo? = nil, isLoaded: SwiftUI.Binding<Swift.Bool> = .constant(false))
@@ -1952,7 +1952,7 @@ public struct KFImage : SwiftUI.View {
   public func loadImmediately(_ start: Swift.Bool = true) -> YLCustomerService.KFImage
   public typealias Body = @_opaqueReturnTypeOf("$s17YLCustomerService7KFImageV4bodyQrvp", 0) 🦸
 }
-@available(iOS 13.0, OSX 10.15, tvOS 13.0, watchOS 6.0, *)
+@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
 extension KFImage {
   public func configure(_ block: @escaping (SwiftUI.Image) -> SwiftUI.Image) -> YLCustomerService.KFImage
   public func resizable(capInsets: SwiftUI.EdgeInsets = EdgeInsets(), resizingMode: SwiftUI.Image.ResizingMode = .stretch) -> YLCustomerService.KFImage
@@ -1972,10 +1972,10 @@ public enum CacheType {
     get
   }
   public static func == (a: YLCustomerService.CacheType, b: YLCustomerService.CacheType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
   }
-  public func hash(into hasher: inout Swift.Hasher)
 }
 public struct CacheStoreResult {
   public let memoryCacheResult: Swift.Result<(), Swift.Never>
