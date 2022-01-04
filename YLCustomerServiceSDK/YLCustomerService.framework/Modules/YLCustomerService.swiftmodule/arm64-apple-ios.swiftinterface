@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.4.2 effective-4.2 (swiftlang-1205.0.28.2 clang-1205.0.19.57)
+// swift-compiler-version: Apple Swift version 5.5.1 effective-4.2 (swiftlang-1300.0.31.4 clang-1300.0.29.6)
 // swift-module-flags: -target arm64-apple-ios10.0 -enable-objc-interop -enable-library-evolution -swift-version 4.2 -enforce-exclusivity=checked -O -module-name YLCustomerService
 import AVFoundation
 import AVKit
@@ -16,6 +16,7 @@ import Swift
 import SwiftUI
 import UIKit
 @_exported import YLCustomerService
+import _Concurrency
 @objc public protocol IMUIMessageCellLayoutProtocol : ObjectiveC.NSObjectProtocol {
   @objc var cellHeight: CoreGraphics.CGFloat { get }
   @objc var avatarFrame: CoreGraphics.CGRect { get }
@@ -32,7 +33,7 @@ import UIKit
   @objc var isExpend: Swift.Bool { get set }
   @objc var isExpendText: Swift.Bool { get set }
 }
-extension IMUIMessageCellLayoutProtocol {
+extension YLCustomerService.IMUIMessageCellLayoutProtocol {
   public var avatarFrame: CoreGraphics.CGRect {
     get
   }
@@ -49,17 +50,17 @@ extension IMUIMessageCellLayoutProtocol {
     get
   }
 }
-@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc open class IMUITextRobotContentView : UIKit.UIView, YLCustomerService.IMUIMessageContentViewProtocol {
-  @objc weak public var delegate: YLCustomerService.IMUIMessageContentViewDelegate?
-  @objc public static var outGoingTextColor: UIKit.UIColor?
-  @objc public static var inComingTextColor: UIKit.UIColor
-  @objc public static var outGoingTextFont: UIKit.UIFont
-  @objc public static var inComingTextFont: UIKit.UIFont
-  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @objc public func layoutContentView(message: YLCustomerService.IMUIMessageModelProtocol)
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) open class IMUITextRobotContentView : UIKit.UIView, YLCustomerService.IMUIMessageContentViewProtocol {
+  @_Concurrency.MainActor(unsafe) @objc weak public var delegate: YLCustomerService.IMUIMessageContentViewDelegate?
+  @objc @_Concurrency.MainActor(unsafe) public static var outGoingTextColor: UIKit.UIColor?
+  @objc @_Concurrency.MainActor(unsafe) public static var inComingTextColor: UIKit.UIColor
+  @objc @_Concurrency.MainActor(unsafe) public static var outGoingTextFont: UIKit.UIFont
+  @objc @_Concurrency.MainActor(unsafe) public static var inComingTextFont: UIKit.UIFont
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc public func layoutContentView(message: YLCustomerService.IMUIMessageModelProtocol)
   @objc deinit
 }
-extension CMSampleBuffer {
+extension CoreMedia.CMSampleBuffer {
   public func imageFromSampleBuffer_Type32BGRA(sampleBuffer: CoreMedia.CMSampleBuffer) -> UIKit.UIImage
 }
 public struct AVAssetImageDataProvider : YLCustomerService.ImageDataProvider {
@@ -77,23 +78,23 @@ public struct AVAssetImageDataProvider : YLCustomerService.ImageDataProvider {
   public init(assetURL: Foundation.URL, seconds: Foundation.TimeInterval)
   public func data(handler: @escaping (Swift.Result<Foundation.Data, Swift.Error>) -> Swift.Void)
 }
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class IMUIMessageDefaultStatusView : UIKit.UIButton, YLCustomerService.IMUIMessageStatusViewProtocol {
-  @objc public func layoutMediaDownloading()
-  @objc public func layoutMediaDownloadFail()
-  @objc public var statusViewID: Swift.String {
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class IMUIMessageDefaultStatusView : UIKit.UIButton, YLCustomerService.IMUIMessageStatusViewProtocol {
+  @_Concurrency.MainActor(unsafe) @objc public func layoutMediaDownloading()
+  @_Concurrency.MainActor(unsafe) @objc public func layoutMediaDownloadFail()
+  @_Concurrency.MainActor(unsafe) @objc public var statusViewID: Swift.String {
     @objc get
   }
-  @objc override dynamic public var frame: CoreGraphics.CGRect {
-    @objc get
-    @objc set(value)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public var frame: CoreGraphics.CGRect {
+    @_Concurrency.MainActor(unsafe) @objc get
+    @_Concurrency.MainActor(unsafe) @objc set(value)
   }
-  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @objc public func layoutFailedStatus()
-  @objc public func layoutSendingStatus()
-  @objc public func layoutSuccessStatus()
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc public func layoutFailedStatus()
+  @_Concurrency.MainActor(unsafe) @objc public func layoutSendingStatus()
+  @_Concurrency.MainActor(unsafe) @objc public func layoutSuccessStatus()
   @objc deinit
 }
-extension UIImage {
+extension UIKit.UIImage {
   public var jpegRepresentationData: Foundation.Data! {
     get
   }
@@ -101,13 +102,13 @@ extension UIImage {
     get
   }
 }
-extension Bundle {
+extension Foundation.Bundle {
   public class func imuiInputViewBundle() -> Foundation.Bundle
 }
-public typealias PrefetcherProgressBlock = (([YLCustomerService.Resource], [YLCustomerService.Resource], [YLCustomerService.Resource]) -> Swift.Void)
-public typealias PrefetcherSourceProgressBlock = (([YLCustomerService.Source], [YLCustomerService.Source], [YLCustomerService.Source]) -> Swift.Void)
-public typealias PrefetcherCompletionHandler = (([YLCustomerService.Resource], [YLCustomerService.Resource], [YLCustomerService.Resource]) -> Swift.Void)
-public typealias PrefetcherSourceCompletionHandler = (([YLCustomerService.Source], [YLCustomerService.Source], [YLCustomerService.Source]) -> Swift.Void)
+public typealias PrefetcherProgressBlock = ((_ skippedResources: [YLCustomerService.Resource], _ failedResources: [YLCustomerService.Resource], _ completedResources: [YLCustomerService.Resource]) -> Swift.Void)
+public typealias PrefetcherSourceProgressBlock = ((_ skippedSources: [YLCustomerService.Source], _ failedSources: [YLCustomerService.Source], _ completedSources: [YLCustomerService.Source]) -> Swift.Void)
+public typealias PrefetcherCompletionHandler = ((_ skippedResources: [YLCustomerService.Resource], _ failedResources: [YLCustomerService.Resource], _ completedResources: [YLCustomerService.Resource]) -> Swift.Void)
+public typealias PrefetcherSourceCompletionHandler = ((_ skippedSources: [YLCustomerService.Source], _ failedSources: [YLCustomerService.Source], _ completedSources: [YLCustomerService.Source]) -> Swift.Void)
 @_hasMissingDesignatedInitializers public class ImagePrefetcher : Swift.CustomStringConvertible {
   public var description: Swift.String {
     get
@@ -143,7 +144,7 @@ public protocol DataTransformable {
   static func fromData(_ data: Foundation.Data) throws -> Self
   static var empty: Self { get }
 }
-extension KingfisherWrapper where Base : YLCustomerService.KFCrossPlatformImageView {
+extension YLCustomerService.KingfisherWrapper where Base : UIKit.UIImageView {
   @discardableResult
   public func setImage(with source: YLCustomerService.Source?, placeholder: YLCustomerService.Placeholder? = nil, options: YLCustomerService.KingfisherOptionsInfo? = nil, progressBlock: YLCustomerService.DownloadProgressBlock? = nil, completionHandler: ((Swift.Result<YLCustomerService.RetrieveImageResult, YLCustomerService.KingfisherError>) -> Swift.Void)? = nil) -> YLCustomerService.DownloadTask?
   @discardableResult
@@ -158,7 +159,7 @@ extension KingfisherWrapper where Base : YLCustomerService.KFCrossPlatformImageV
   public func setImage(with provider: YLCustomerService.ImageDataProvider?, placeholder: YLCustomerService.Placeholder? = nil, options: YLCustomerService.KingfisherOptionsInfo? = nil, completionHandler: ((Swift.Result<YLCustomerService.RetrieveImageResult, YLCustomerService.KingfisherError>) -> Swift.Void)? = nil) -> YLCustomerService.DownloadTask?
   public func cancelDownloadTask()
 }
-extension KingfisherWrapper where Base : YLCustomerService.KFCrossPlatformImageView {
+extension YLCustomerService.KingfisherWrapper where Base : UIKit.UIImageView {
   public var taskIdentifier: YLCustomerService.Source.Identifier.Value? {
     get
   }
@@ -177,7 +178,7 @@ public struct ImageProgressive {
   public static var `default`: YLCustomerService.ImageProgressive
   public init(isBlur: Swift.Bool, isFastestScan: Swift.Bool, scanInterval: Foundation.TimeInterval)
 }
-public typealias downloadCompletionHandler = ((Foundation.Data?, Swift.Float, Swift.String, Swift.Error?) -> Swift.Void)
+public typealias downloadCompletionHandler = ((_ data: Foundation.Data?, _ progressValue: Swift.Float, _ urlString: Swift.String, _ error: Swift.Error?) -> Swift.Void)
 @_hasMissingDesignatedInitializers public class IMUIWebImageDownloader {
   public func getRequestUrl() -> Swift.String
   public func addCallback(callback: @escaping YLCustomerService.downloadCompletionHandler)
@@ -186,15 +187,15 @@ public typealias downloadCompletionHandler = ((Foundation.Data?, Swift.Float, Sw
   public func completionHandler(with error: Swift.Error?)
   @objc deinit
 }
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers open class IMUIBaseMessageCell : UIKit.UICollectionViewCell, YLCustomerService.IMUIMessageContentViewDelegate, UIKit.UIGestureRecognizerDelegate {
-  @objc public static var avatarCornerRadius: CoreGraphics.CGFloat
-  @objc public static var backgroundColor: UIKit.UIColor
-  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @objc public func click(index: Swift.Int)
-  @objc public func clickRobot(index: Swift.Int)
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) open class IMUIBaseMessageCell : UIKit.UICollectionViewCell, YLCustomerService.IMUIMessageContentViewDelegate, UIKit.UIGestureRecognizerDelegate {
+  @objc @_Concurrency.MainActor(unsafe) public static var avatarCornerRadius: CoreGraphics.CGFloat
+  @objc @_Concurrency.MainActor(unsafe) public static var backgroundColor: UIKit.UIColor
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc public func click(index: Swift.Int)
+  @_Concurrency.MainActor(unsafe) @objc public func clickRobot(index: Swift.Int)
   @objc deinit
 }
-extension Date {
+extension Foundation.Date {
   public func plus(seconds s: Swift.UInt) -> Foundation.Date
   public func minus(seconds s: Swift.UInt) -> Foundation.Date
   public func plus(minutes m: Swift.UInt) -> Foundation.Date
@@ -257,7 +258,7 @@ public enum MemoryStorage {
     @objc deinit
   }
 }
-extension MemoryStorage {
+extension YLCustomerService.MemoryStorage {
   public struct Config {
     public var totalCostLimit: Swift.Int
     public var countLimit: Swift.Int
@@ -270,7 +271,7 @@ extension MemoryStorage {
   @objc override dynamic public init()
   @objc deinit
 }
-extension SessionDelegate : Foundation.URLSessionDataDelegate {
+extension YLCustomerService.SessionDelegate : Foundation.URLSessionDataDelegate {
   @objc dynamic open func urlSession(_ session: Foundation.URLSession, dataTask: Foundation.URLSessionDataTask, didReceive response: Foundation.URLResponse, completionHandler: @escaping (Foundation.URLSession.ResponseDisposition) -> Swift.Void)
   @objc dynamic open func urlSession(_ session: Foundation.URLSession, dataTask: Foundation.URLSessionDataTask, didReceive data: Foundation.Data)
   @objc dynamic open func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didCompleteWithError error: Swift.Error?)
@@ -285,13 +286,13 @@ public protocol KFOptionSetter {
   var onProgressDelegate: YLCustomerService.Delegate<(Swift.Int64, Swift.Int64), Swift.Void> { get }
   var delegateObserver: Swift.AnyObject { get }
 }
-extension KF.Builder : YLCustomerService.KFOptionSetter {
+extension YLCustomerService.KF.Builder : YLCustomerService.KFOptionSetter {
   public var delegateObserver: Swift.AnyObject {
     get
   }
 }
 @available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
-extension KFImage : YLCustomerService.KFOptionSetter {
+extension YLCustomerService.KFImage : YLCustomerService.KFOptionSetter {
   public var options: YLCustomerService.KingfisherParsedOptionsInfo {
     get
     nonmutating set(newValue)
@@ -309,12 +310,12 @@ extension KFImage : YLCustomerService.KFOptionSetter {
     get
   }
 }
-extension KFOptionSetter {
+extension YLCustomerService.KFOptionSetter {
   public func onProgress(_ block: YLCustomerService.DownloadProgressBlock?) -> Self
   public func onSuccess(_ block: ((YLCustomerService.RetrieveImageResult) -> Swift.Void)?) -> Self
   public func onFailure(_ block: ((YLCustomerService.KingfisherError) -> Swift.Void)?) -> Self
 }
-extension KFOptionSetter {
+extension YLCustomerService.KFOptionSetter {
   public func targetCache(_ cache: YLCustomerService.ImageCache) -> Self
   public func originalCache(_ cache: YLCustomerService.ImageCache) -> Self
   public func downloader(_ downloader: YLCustomerService.ImageDownloader) -> Self
@@ -336,15 +337,15 @@ extension KFOptionSetter {
   public func lowDataModeSource(_ source: YLCustomerService.Source?) -> Self
   public func forceTransition(_ enabled: Swift.Bool = true) -> Self
 }
-extension KFOptionSetter {
+extension YLCustomerService.KFOptionSetter {
   public func requestModifier(_ modifier: YLCustomerService.ImageDownloadRequestModifier) -> Self
   public func requestModifier(_ modifyBlock: @escaping (inout Foundation.URLRequest) -> Swift.Void) -> Self
 }
-extension KFOptionSetter {
+extension YLCustomerService.KFOptionSetter {
   public func redirectHandler(_ handler: YLCustomerService.ImageDownloadRedirectHandler) -> Self
   public func redirectHandler(_ block: @escaping (YLCustomerService.KF.RedirectPayload) -> Swift.Void) -> Self
 }
-extension KFOptionSetter {
+extension YLCustomerService.KFOptionSetter {
   public func setProcessor(_ processor: YLCustomerService.ImageProcessor) -> Self
   public func setProcessors(_ processors: [YLCustomerService.ImageProcessor]) -> Self
   public func appendProcessor(_ processor: YLCustomerService.ImageProcessor) -> Self
@@ -357,15 +358,15 @@ extension KFOptionSetter {
   public func downsampling(size: CoreGraphics.CGSize) -> Self
   public func resizing(referenceSize: CoreGraphics.CGSize, mode: YLCustomerService.ContentMode = .none) -> Self
 }
-extension KFOptionSetter {
+extension YLCustomerService.KFOptionSetter {
   public func serialize(by cacheSerializer: YLCustomerService.CacheSerializer) -> Self
   public func serialize(as format: YLCustomerService.ImageFormat, jpegCompressionQuality: CoreGraphics.CGFloat? = nil) -> Self
 }
-extension KFOptionSetter {
+extension YLCustomerService.KFOptionSetter {
   public func imageModifier(_ modifier: YLCustomerService.ImageModifier?) -> Self
   public func imageModifier(_ block: @escaping (inout YLCustomerService.KFCrossPlatformImage) throws -> Swift.Void) -> Self
 }
-extension KFOptionSetter {
+extension YLCustomerService.KFOptionSetter {
   public func memoryCacheExpiration(_ expiration: YLCustomerService.StorageExpiration?) -> Self
   public func memoryCacheAccessExtending(_ extending: YLCustomerService.ExpirationExtending) -> Self
   public func diskCacheExpiration(_ expiration: YLCustomerService.StorageExpiration?) -> Self
@@ -390,12 +391,12 @@ public struct DefaultCacheSerializer : YLCustomerService.CacheSerializer {
   public func data(with image: YLCustomerService.KFCrossPlatformImage, original: Foundation.Data?) -> Foundation.Data?
   public func image(with data: Foundation.Data, options: YLCustomerService.KingfisherParsedOptionsInfo) -> YLCustomerService.KFCrossPlatformImage?
 }
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class IMUIVideoStatusContentView : UIKit.UIView, YLCustomerService.IMUIMessageContentViewProtocol {
-  @objc weak public var delegate: YLCustomerService.IMUIMessageContentViewDelegate?
-  public static var outGoingVideoDurationColor: UIKit.UIColor
-  public static var inComingVideoDurationColor: UIKit.UIColor
-  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @objc public func layoutContentView(message: YLCustomerService.IMUIMessageModelProtocol)
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class IMUIVideoStatusContentView : UIKit.UIView, YLCustomerService.IMUIMessageContentViewProtocol {
+  @_Concurrency.MainActor(unsafe) @objc weak public var delegate: YLCustomerService.IMUIMessageContentViewDelegate?
+  @_Concurrency.MainActor(unsafe) public static var outGoingVideoDurationColor: UIKit.UIColor
+  @_Concurrency.MainActor(unsafe) public static var inComingVideoDurationColor: UIKit.UIColor
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc public func layoutContentView(message: YLCustomerService.IMUIMessageModelProtocol)
   @objc deinit
 }
 public protocol IMUIFeatureCellProtocol {
@@ -403,7 +404,7 @@ public protocol IMUIFeatureCellProtocol {
   func activateMedia()
   func inactivateMedia()
 }
-extension IMUIFeatureCellProtocol {
+extension YLCustomerService.IMUIFeatureCellProtocol {
   public var featureDelegate: YLCustomerService.IMUIFeatureViewDelegate? {
     get
     set(newValue)
@@ -411,35 +412,34 @@ extension IMUIFeatureCellProtocol {
   public func activateMedia()
   public func inactivateMedia()
 }
-@objc open class IMUIFeatureView : UIKit.UIView {
-  @objc @IBOutlet weak open var featureCollectionView: UIKit.UICollectionView!
+@objc @_Concurrency.MainActor(unsafe) open class IMUIFeatureView : UIKit.UIView {
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak open var featureCollectionView: UIKit.UICollectionView!
   @objc override dynamic open func awakeFromNib()
-  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  public func register(_ cellClass: Swift.AnyClass?, forCellWithReuseIdentifier identifier: Swift.String)
-  public func register(_ nib: UIKit.UINib?, forCellWithReuseIdentifier identifier: Swift.String)
-  open func layoutFeature(with type: YLCustomerService.IMUIFeatureType)
-  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) public func register(_ cellClass: Swift.AnyClass?, forCellWithReuseIdentifier identifier: Swift.String)
+  @_Concurrency.MainActor(unsafe) public func register(_ nib: UIKit.UINib?, forCellWithReuseIdentifier identifier: Swift.String)
+  @_Concurrency.MainActor(unsafe) open func layoutFeature(with type: YLCustomerService.IMUIFeatureType)
   @objc deinit
 }
-extension IMUIFeatureView : UIKit.UICollectionViewDelegate, UIKit.UICollectionViewDataSource, UIKit.UICollectionViewDelegateFlowLayout {
-  @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, numberOfItemsInSection section: Swift.Int) -> Swift.Int
-  @objc dynamic public func numberOfSections(in collectionView: UIKit.UICollectionView) -> Swift.Int
-  @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, sizeForItemAt indexPath: Foundation.IndexPath) -> CoreGraphics.CGSize
-  @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, referenceSizeForFooterInSection section: Swift.Int) -> CoreGraphics.CGSize
-  @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, cellForItemAt indexPath: Foundation.IndexPath) -> UIKit.UICollectionViewCell
-  @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, didEndDisplaying: UIKit.UICollectionViewCell, forItemAt: Foundation.IndexPath)
+extension YLCustomerService.IMUIFeatureView : UIKit.UICollectionViewDelegate, UIKit.UICollectionViewDataSource, UIKit.UICollectionViewDelegateFlowLayout {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, numberOfItemsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func numberOfSections(in collectionView: UIKit.UICollectionView) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, sizeForItemAt indexPath: Foundation.IndexPath) -> CoreGraphics.CGSize
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, referenceSizeForFooterInSection section: Swift.Int) -> CoreGraphics.CGSize
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, cellForItemAt indexPath: Foundation.IndexPath) -> UIKit.UICollectionViewCell
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, didEndDisplaying: UIKit.UICollectionViewCell, forItemAt: Foundation.IndexPath)
 }
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class IMUIVideoMessageContentView : UIKit.UIView, YLCustomerService.IMUIMessageContentViewProtocol {
-  @objc weak public var delegate: YLCustomerService.IMUIMessageContentViewDelegate?
-  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @objc public func layoutContentView(message: YLCustomerService.IMUIMessageModelProtocol)
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class IMUIVideoMessageContentView : UIKit.UIView, YLCustomerService.IMUIMessageContentViewProtocol {
+  @_Concurrency.MainActor(unsafe) @objc weak public var delegate: YLCustomerService.IMUIMessageContentViewDelegate?
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc public func layoutContentView(message: YLCustomerService.IMUIMessageModelProtocol)
   @objc deinit
 }
-@_inheritsConvenienceInitializers @objc open class IMUIAttributeTextView : YLCustomerService.PasteboardTextView {
-  @objc override dynamic public init(frame: CoreGraphics.CGRect, textContainer: UIKit.NSTextContainer?)
-  @objc required dynamic public init?(coder: Foundation.NSCoder)
-  @objc override dynamic public var intrinsicContentSize: CoreGraphics.CGSize {
-    @objc get
+@_inheritsConvenienceInitializers @objc @_Concurrency.MainActor(unsafe) open class IMUIAttributeTextView : YLCustomerService.PasteboardTextView {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect, textContainer: UIKit.NSTextContainer?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public var intrinsicContentSize: CoreGraphics.CGSize {
+    @_Concurrency.MainActor(unsafe) @objc get
   }
   @objc deinit
 }
@@ -448,7 +448,7 @@ public protocol ImageDataProvider {
   func data(handler: @escaping (Swift.Result<Foundation.Data, Swift.Error>) -> Swift.Void)
   var contentURL: Foundation.URL? { get }
 }
-extension ImageDataProvider {
+extension YLCustomerService.ImageDataProvider {
   public var contentURL: Foundation.URL? {
     get
   }
@@ -491,14 +491,14 @@ public struct RawImageDataProvider : YLCustomerService.ImageDataProvider {
   @objc optional func previewImage() -> UIKit.UIImage?
   @objc optional func uploadProgress() -> CoreGraphics.CGFloat
 }
-extension Bundle {
+extension Foundation.Bundle {
   public class func imuiBundle() -> Foundation.Bundle
 }
 public protocol Resource {
   var cacheKey: Swift.String { get }
   var downloadURL: Foundation.URL { get }
 }
-extension Resource {
+extension YLCustomerService.Resource {
   public func convertToSource(overrideCacheKey: Swift.String? = nil) -> YLCustomerService.Source
 }
 public struct ImageResource : YLCustomerService.Resource {
@@ -506,7 +506,7 @@ public struct ImageResource : YLCustomerService.Resource {
   public let cacheKey: Swift.String
   public let downloadURL: Foundation.URL
 }
-extension URL : YLCustomerService.Resource {
+extension Foundation.URL : YLCustomerService.Resource {
   public var cacheKey: Swift.String {
     get
   }
@@ -537,27 +537,27 @@ public enum ImageFormat {
     get
   }
 }
-extension Data : YLCustomerService.KingfisherCompatibleValue {
+extension Foundation.Data : YLCustomerService.KingfisherCompatibleValue {
 }
-extension KingfisherWrapper where Base == Foundation.Data {
+extension YLCustomerService.KingfisherWrapper where Base == Foundation.Data {
   public var imageFormat: YLCustomerService.ImageFormat {
     get
   }
   public func contains(jpeg marker: YLCustomerService.ImageFormat.JPEGMarker) -> Swift.Bool
 }
-extension KingfisherWrapper where Base : UIKit.NSTextAttachment {
+extension YLCustomerService.KingfisherWrapper where Base : UIKit.NSTextAttachment {
   @discardableResult
   public func setImage(with source: YLCustomerService.Source?, attributedView: YLCustomerService.KFCrossPlatformView, placeholder: YLCustomerService.KFCrossPlatformImage? = nil, options: YLCustomerService.KingfisherOptionsInfo? = nil, progressBlock: YLCustomerService.DownloadProgressBlock? = nil, completionHandler: ((Swift.Result<YLCustomerService.RetrieveImageResult, YLCustomerService.KingfisherError>) -> Swift.Void)? = nil) -> YLCustomerService.DownloadTask?
   @discardableResult
   public func setImage(with resource: YLCustomerService.Resource?, attributedView: YLCustomerService.KFCrossPlatformView, placeholder: YLCustomerService.KFCrossPlatformImage? = nil, options: YLCustomerService.KingfisherOptionsInfo? = nil, progressBlock: YLCustomerService.DownloadProgressBlock? = nil, completionHandler: ((Swift.Result<YLCustomerService.RetrieveImageResult, YLCustomerService.KingfisherError>) -> Swift.Void)? = nil) -> YLCustomerService.DownloadTask?
   public func cancelDownloadTask()
 }
-extension KingfisherWrapper where Base : UIKit.NSTextAttachment {
+extension YLCustomerService.KingfisherWrapper where Base : UIKit.NSTextAttachment {
   public var taskIdentifier: YLCustomerService.Source.Identifier.Value? {
     get
   }
 }
-public typealias DownloadProgressBlock = ((Swift.Int64, Swift.Int64) -> Swift.Void)
+public typealias DownloadProgressBlock = ((_ receivedSize: Swift.Int64, _ totalSize: Swift.Int64) -> Swift.Void)
 public struct RetrieveImageResult {
   public let image: YLCustomerService.KFCrossPlatformImage
   public let cacheType: YLCustomerService.CacheType
@@ -568,7 +568,7 @@ public struct PropagationError {
   public let source: YLCustomerService.Source
   public let error: YLCustomerService.KingfisherError
 }
-public typealias DownloadTaskUpdatedBlock = ((YLCustomerService.DownloadTask?) -> Swift.Void)
+public typealias DownloadTaskUpdatedBlock = ((_ newTask: YLCustomerService.DownloadTask?) -> Swift.Void)
 public class KingfisherManager {
   public static var shared: YLCustomerService.KingfisherManager
   public var cache: YLCustomerService.ImageCache
@@ -623,61 +623,61 @@ open class ImageDownloader {
   @discardableResult
   open func downloadImage(with url: Foundation.URL, options: YLCustomerService.KingfisherOptionsInfo? = nil, completionHandler: ((Swift.Result<YLCustomerService.ImageLoadingResult, YLCustomerService.KingfisherError>) -> Swift.Void)? = nil) -> YLCustomerService.DownloadTask?
 }
-extension ImageDownloader {
+extension YLCustomerService.ImageDownloader {
   public func cancelAll()
   public func cancel(url: Foundation.URL)
 }
-extension ImageDownloader : YLCustomerService.AuthenticationChallengeResponsable {
+extension YLCustomerService.ImageDownloader : YLCustomerService.AuthenticationChallengeResponsable {
 }
-extension ImageDownloader : YLCustomerService.ImageDownloaderDelegate {
+extension YLCustomerService.ImageDownloader : YLCustomerService.ImageDownloaderDelegate {
 }
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers open class IMUIMessageCollectionView : UIKit.UIView {
-  @objc @IBOutlet weak open var messageCollectionView: UIKit.UICollectionView!
-  @objc weak open var delegate: YLCustomerService.IMUIMessageMessageCollectionViewDelegate?
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) open class IMUIMessageCollectionView : UIKit.UIView {
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak open var messageCollectionView: UIKit.UICollectionView!
+  @objc @_Concurrency.MainActor(unsafe) weak open var delegate: YLCustomerService.IMUIMessageMessageCollectionViewDelegate?
   @objc override dynamic open func awakeFromNib()
-  @objc override dynamic open var bounds: CoreGraphics.CGRect {
-    @objc get
-    @objc set(value)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var bounds: CoreGraphics.CGRect {
+    @_Concurrency.MainActor(unsafe) @objc get
+    @_Concurrency.MainActor(unsafe) @objc set(value)
   }
-  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @objc override dynamic open func layoutSubviews()
-  open func register(_ cellClass: Swift.AnyClass?, forCellWithReuseIdentifier identifier: Swift.String)
-  open subscript(index: Swift.Int) -> YLCustomerService.IMUIMessageProtocol {
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) open func register(_ cellClass: Swift.AnyClass?, forCellWithReuseIdentifier identifier: Swift.String)
+  @_Concurrency.MainActor(unsafe) open subscript(index: Swift.Int) -> YLCustomerService.IMUIMessageProtocol {
     get
   }
-  open subscript(msgId: Swift.String) -> YLCustomerService.IMUIMessageProtocol? {
+  @_Concurrency.MainActor(unsafe) open subscript(msgId: Swift.String) -> YLCustomerService.IMUIMessageProtocol? {
     get
   }
-  @objc open var messageCount: Swift.Int {
+  @objc @_Concurrency.MainActor(unsafe) open var messageCount: Swift.Int {
     @objc get
   }
-  @objc open func scrollToBottom(with animated: Swift.Bool)
-  @objc open func scrollToBottomSync(with animated: Swift.Bool)
-  @objc open func appendMessage(with message: YLCustomerService.IMUIMessageProtocol)
-  @objc open func appendMessage(with message: YLCustomerService.IMUIMessageProtocol, messageId: Swift.String)
-  @objc open func insertMessage(with message: YLCustomerService.IMUIMessageProtocol)
-  @objc open func insertMessages(with messages: [YLCustomerService.IMUIMessageProtocol])
-  @objc open func updateMessage(with message: YLCustomerService.IMUIMessageProtocol)
-  @objc open func removeMessage(with messageId: Swift.String)
-  @objc open func removeAllMessages()
-  @objc open func reloadMessageNotification()
-  @objc open func getMessage(with messageId: Swift.String) -> YLCustomerService.IMUIMessageProtocol?
+  @objc @_Concurrency.MainActor(unsafe) open func scrollToBottom(with animated: Swift.Bool)
+  @objc @_Concurrency.MainActor(unsafe) open func scrollToBottomSync(with animated: Swift.Bool)
+  @objc @_Concurrency.MainActor(unsafe) open func appendMessage(with message: YLCustomerService.IMUIMessageProtocol)
+  @objc @_Concurrency.MainActor(unsafe) open func appendMessage(with message: YLCustomerService.IMUIMessageProtocol, messageId: Swift.String)
+  @objc @_Concurrency.MainActor(unsafe) open func insertMessage(with message: YLCustomerService.IMUIMessageProtocol)
+  @objc @_Concurrency.MainActor(unsafe) open func insertMessages(with messages: [YLCustomerService.IMUIMessageProtocol])
+  @objc @_Concurrency.MainActor(unsafe) open func updateMessage(with message: YLCustomerService.IMUIMessageProtocol)
+  @objc @_Concurrency.MainActor(unsafe) open func removeMessage(with messageId: Swift.String)
+  @objc @_Concurrency.MainActor(unsafe) open func removeAllMessages()
+  @objc @_Concurrency.MainActor(unsafe) open func reloadMessageNotification()
+  @objc @_Concurrency.MainActor(unsafe) open func getMessage(with messageId: Swift.String) -> YLCustomerService.IMUIMessageProtocol?
   @objc deinit
 }
-extension IMUIMessageCollectionView : UIKit.UICollectionViewDelegate, UIKit.UICollectionViewDataSource, UIKit.UICollectionViewDelegateFlowLayout {
-  @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, numberOfItemsInSection section: Swift.Int) -> Swift.Int
-  @objc dynamic public func numberOfSections(in collectionView: UIKit.UICollectionView) -> Swift.Int
-  @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, sizeForItemAt indexPath: Foundation.IndexPath) -> CoreGraphics.CGSize
-  @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, cellForItemAt indexPath: Foundation.IndexPath) -> UIKit.UICollectionViewCell
-  @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, didSelectItemAt indexPath: Foundation.IndexPath)
-  @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, didEndDisplaying: UIKit.UICollectionViewCell, forItemAt: Foundation.IndexPath)
+extension YLCustomerService.IMUIMessageCollectionView : UIKit.UICollectionViewDelegate, UIKit.UICollectionViewDataSource, UIKit.UICollectionViewDelegateFlowLayout {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, numberOfItemsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func numberOfSections(in collectionView: UIKit.UICollectionView) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, sizeForItemAt indexPath: Foundation.IndexPath) -> CoreGraphics.CGSize
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, cellForItemAt indexPath: Foundation.IndexPath) -> UIKit.UICollectionViewCell
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, didSelectItemAt indexPath: Foundation.IndexPath)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, didEndDisplaying: UIKit.UICollectionViewCell, forItemAt: Foundation.IndexPath)
 }
-extension IMUIMessageCollectionView : UIKit.UIScrollViewDelegate {
-  @objc dynamic public func scrollViewWillBeginDragging(_ scrollView: UIKit.UIScrollView)
+extension YLCustomerService.IMUIMessageCollectionView : UIKit.UIScrollViewDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func scrollViewWillBeginDragging(_ scrollView: UIKit.UIScrollView)
 }
-extension UICollectionView {
-  public func reloadDataNoScroll()
-  public func reloadDataHorizontalNoScroll()
+extension UIKit.UICollectionView {
+  @_Concurrency.MainActor(unsafe) public func reloadDataNoScroll()
+  @_Concurrency.MainActor(unsafe) public func reloadDataHorizontalNoScroll()
 }
 public enum Source {
   public enum Identifier {
@@ -692,7 +692,7 @@ public enum Source {
     get
   }
 }
-extension Source : Swift.Hashable {
+extension YLCustomerService.Source : Swift.Hashable {
   public static func == (lhs: YLCustomerService.Source, rhs: YLCustomerService.Source) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
@@ -715,49 +715,49 @@ extension Source : Swift.Hashable {
     get
   }
 }
-@objc @_inheritsConvenienceInitializers open class IMUICustomInputView : UIKit.UIView {
-  @objc open var inputTextViewPadding: UIKit.UIEdgeInsets
-  @objc open var inputTextViewHeightRange: UIKit.UIFloatRange
-  @objc open var inputTextViewTextColor: UIKit.UIColor
-  @objc open var inputTextViewFont: UIKit.UIFont
-  @objc weak open var inputViewDelegate: YLCustomerService.IMUICustomInputViewDelegate?
-  @objc open var dataSource: YLCustomerService.IMUICustomInputViewDataSource? {
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class IMUICustomInputView : UIKit.UIView {
+  @objc @_Concurrency.MainActor(unsafe) open var inputTextViewPadding: UIKit.UIEdgeInsets
+  @objc @_Concurrency.MainActor(unsafe) open var inputTextViewHeightRange: UIKit.UIFloatRange
+  @objc @_Concurrency.MainActor(unsafe) open var inputTextViewTextColor: UIKit.UIColor
+  @objc @_Concurrency.MainActor(unsafe) open var inputTextViewFont: UIKit.UIFont
+  @objc @_Concurrency.MainActor(unsafe) weak open var inputViewDelegate: YLCustomerService.IMUICustomInputViewDelegate?
+  @objc @_Concurrency.MainActor(unsafe) open var dataSource: YLCustomerService.IMUICustomInputViewDataSource? {
     @objc get
     @objc set(newValue)
   }
-  @objc @IBOutlet weak open var bottomInputBarItemListView: YLCustomerService.IMUIFeatureListView!
-  @objc @IBOutlet weak open var featureView: YLCustomerService.IMUIFeatureView!
-  @objc @IBOutlet weak open var inputTextView: UIKit.UITextView!
-  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak open var bottomInputBarItemListView: YLCustomerService.IMUIFeatureListView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak open var featureView: YLCustomerService.IMUIFeatureView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak open var inputTextView: UIKit.UITextView!
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect)
   @objc override dynamic open func awakeFromNib()
-  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @objc public func layoutInputBar()
-  @objc public func setBackgroundColor(color: UIKit.UIColor)
-  public func register(_ cellClass: Swift.AnyClass?, in position: YLCustomerService.IMUIInputViewItemPosition, forCellWithReuseIdentifier identifier: Swift.String)
-  public func register(_ nib: UIKit.UINib?, in position: YLCustomerService.IMUIInputViewItemPosition, forCellWithReuseIdentifier identifier: Swift.String)
-  public func registerForFeatureView(_ cellClass: Swift.AnyClass?, forCellWithReuseIdentifier identifier: Swift.String)
-  public func registerForFeatureView(_ nib: UIKit.UINib?, forCellWithReuseIdentifier identifier: Swift.String)
-  @objc public func updateInputBarItemCell(_ position: YLCustomerService.IMUIInputViewItemPosition, at index: Swift.Int)
-  @objc public func reloadFeaturnView()
-  @objc public func reloadData()
-  @objc public func layoutInputView()
-  @objc public func showFeatureView()
-  @objc public func hideFeatureView()
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc @_Concurrency.MainActor(unsafe) public func layoutInputBar()
+  @objc @_Concurrency.MainActor(unsafe) public func setBackgroundColor(color: UIKit.UIColor)
+  @_Concurrency.MainActor(unsafe) public func register(_ cellClass: Swift.AnyClass?, in position: YLCustomerService.IMUIInputViewItemPosition, forCellWithReuseIdentifier identifier: Swift.String)
+  @_Concurrency.MainActor(unsafe) public func register(_ nib: UIKit.UINib?, in position: YLCustomerService.IMUIInputViewItemPosition, forCellWithReuseIdentifier identifier: Swift.String)
+  @_Concurrency.MainActor(unsafe) public func registerForFeatureView(_ cellClass: Swift.AnyClass?, forCellWithReuseIdentifier identifier: Swift.String)
+  @_Concurrency.MainActor(unsafe) public func registerForFeatureView(_ nib: UIKit.UINib?, forCellWithReuseIdentifier identifier: Swift.String)
+  @objc @_Concurrency.MainActor(unsafe) public func updateInputBarItemCell(_ position: YLCustomerService.IMUIInputViewItemPosition, at index: Swift.Int)
+  @objc @_Concurrency.MainActor(unsafe) public func reloadFeaturnView()
+  @objc @_Concurrency.MainActor(unsafe) public func reloadData()
+  @objc @_Concurrency.MainActor(unsafe) public func layoutInputView()
+  @objc @_Concurrency.MainActor(unsafe) public func showFeatureView()
+  @objc @_Concurrency.MainActor(unsafe) public func hideFeatureView()
   @objc deinit
 }
-extension IMUICustomInputView : UIKit.UITextViewDelegate {
-  @objc dynamic public func textViewDidChange(_ textView: UIKit.UITextView)
-  @objc dynamic public func textViewShouldBeginEditing(_ textView: UIKit.UITextView) -> Swift.Bool
+extension YLCustomerService.IMUICustomInputView : UIKit.UITextViewDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func textViewDidChange(_ textView: UIKit.UITextView)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func textViewShouldBeginEditing(_ textView: UIKit.UITextView) -> Swift.Bool
 }
-@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc open class IMUITextMessageContentView : UIKit.UIView, YLCustomerService.IMUIMessageContentViewProtocol {
-  @objc weak public var delegate: YLCustomerService.IMUIMessageContentViewDelegate?
-  @objc public static var outGoingTextColor: UIKit.UIColor?
-  @objc public static var inComingTextColor: UIKit.UIColor
-  @objc public static var outGoingTextFont: UIKit.UIFont
-  @objc public static var inComingTextFont: UIKit.UIFont
-  @objc public static var atTextColor: UIKit.UIColor
-  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @objc public func layoutContentView(message: YLCustomerService.IMUIMessageModelProtocol)
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) open class IMUITextMessageContentView : UIKit.UIView, YLCustomerService.IMUIMessageContentViewProtocol {
+  @_Concurrency.MainActor(unsafe) @objc weak public var delegate: YLCustomerService.IMUIMessageContentViewDelegate?
+  @objc @_Concurrency.MainActor(unsafe) public static var outGoingTextColor: UIKit.UIColor?
+  @objc @_Concurrency.MainActor(unsafe) public static var inComingTextColor: UIKit.UIColor
+  @objc @_Concurrency.MainActor(unsafe) public static var outGoingTextFont: UIKit.UIFont
+  @objc @_Concurrency.MainActor(unsafe) public static var inComingTextFont: UIKit.UIFont
+  @objc @_Concurrency.MainActor(unsafe) public static var atTextColor: UIKit.UIColor
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc public func layoutContentView(message: YLCustomerService.IMUIMessageModelProtocol)
   @objc deinit
 }
 public enum IMUIEmojiType {
@@ -774,10 +774,9 @@ public enum IMUIEmojiType {
   public init(_ emojiType: YLCustomerService.IMUIEmojiType, _ emoji: Swift.String?, _ mediaPath: Swift.String?)
   public convenience init(emojiType: YLCustomerService.IMUIEmojiType, emoji: Swift.String)
   public convenience init(emojiType: YLCustomerService.IMUIEmojiType, mediaPath: Swift.String)
-  @objc override dynamic public init()
   @objc deinit
 }
-extension String {
+extension Swift.String {
   public func heightWithConstrainedWidth(width: CoreGraphics.CGFloat, font: UIKit.UIFont) -> CoreGraphics.CGFloat
   public func sizeWithConstrainedWidth(with width: CoreGraphics.CGFloat, font: UIKit.UIFont) -> CoreGraphics.CGSize
 }
@@ -788,22 +787,22 @@ public class Delegate<Input, Output> {
   public func callAsFunction(_ input: Input) -> Output?
   @objc deinit
 }
-extension Delegate where Input == Swift.Void {
+extension YLCustomerService.Delegate where Input == Swift.Void {
   public func call() -> Output?
   public func callAsFunction() -> Output?
 }
-extension Delegate where Input == Swift.Void, Output : YLCustomerService.OptionalProtocol {
+extension YLCustomerService.Delegate where Input == Swift.Void, Output : YLCustomerService.OptionalProtocol {
   public func call() -> Output
   public func callAsFunction() -> Output
 }
-extension Delegate where Output : YLCustomerService.OptionalProtocol {
+extension YLCustomerService.Delegate where Output : YLCustomerService.OptionalProtocol {
   public func call(_ input: Input) -> Output
   public func callAsFunction(_ input: Input) -> Output
 }
 public protocol OptionalProtocol {
   static var _createNil: Self { get }
 }
-extension Optional : YLCustomerService.OptionalProtocol {
+extension Swift.Optional : YLCustomerService.OptionalProtocol {
   public static var _createNil: Swift.Optional<Wrapped> {
     get
   }
@@ -839,7 +838,7 @@ public protocol ImageDownloaderDelegate : AnyObject {
   func imageDownloader(_ downloader: YLCustomerService.ImageDownloader, didDownload image: YLCustomerService.KFCrossPlatformImage, for url: Foundation.URL, with response: Foundation.URLResponse?)
   func isValidStatusCode(_ code: Swift.Int, for downloader: YLCustomerService.ImageDownloader) -> Swift.Bool
 }
-extension ImageDownloaderDelegate {
+extension YLCustomerService.ImageDownloaderDelegate {
   public func imageDownloader(_ downloader: YLCustomerService.ImageDownloader, willDownloadImageForURL url: Foundation.URL, with request: Foundation.URLRequest?)
   public func imageDownloader(_ downloader: YLCustomerService.ImageDownloader, didFinishDownloadingImageForURL url: Foundation.URL, with response: Foundation.URLResponse?, error: Swift.Error?)
   public func imageDownloader(_ downloader: YLCustomerService.ImageDownloader, didDownload image: YLCustomerService.KFCrossPlatformImage, for url: Foundation.URL, with response: Foundation.URLResponse?)
@@ -877,7 +876,7 @@ public struct DelayRetryStrategy : YLCustomerService.RetryStrategy {
   public enum Interval {
     case seconds(Foundation.TimeInterval)
     case accumulated(Foundation.TimeInterval)
-    case custom(block: (Swift.Int) -> Foundation.TimeInterval)
+    case custom(block: (_ retriedCount: Swift.Int) -> Foundation.TimeInterval)
   }
   public let maxRetryCount: Swift.Int
   public let retryInterval: YLCustomerService.DelayRetryStrategy.Interval
@@ -888,40 +887,39 @@ public struct DelayRetryStrategy : YLCustomerService.RetryStrategy {
   @objc optional func onSelectedFeature(with cell: YLCustomerService.IMUIFeatureListIconCell)
   @objc optional func onClickSend(with cell: YLCustomerService.IMUIFeatureListIconCell)
 }
-@objc open class IMUIFeatureListView : UIKit.UIView {
-  public static var featureListItemSpace: CoreGraphics.CGFloat
-  public static var featureListBtnWidth: Swift.Int
-  @objc @IBOutlet weak open var featureListCollectionView: UIKit.UICollectionView!
-  weak public var delegate: YLCustomerService.IMUIFeatureListDelegate?
-  weak public var dataSource: YLCustomerService.IMUICustomInputViewDataSource? {
+@objc @_Concurrency.MainActor(unsafe) open class IMUIFeatureListView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public static var featureListItemSpace: CoreGraphics.CGFloat
+  @_Concurrency.MainActor(unsafe) public static var featureListBtnWidth: Swift.Int
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak open var featureListCollectionView: UIKit.UICollectionView!
+  @_Concurrency.MainActor(unsafe) weak public var delegate: YLCustomerService.IMUIFeatureListDelegate?
+  @_Concurrency.MainActor(unsafe) weak public var dataSource: YLCustomerService.IMUICustomInputViewDataSource? {
     get
     set(newValue)
   }
-  public var position: YLCustomerService.IMUIInputViewItemPosition?
-  public var totalWidth: CoreGraphics.CGFloat {
+  @_Concurrency.MainActor(unsafe) public var position: YLCustomerService.IMUIInputViewItemPosition?
+  @_Concurrency.MainActor(unsafe) public var totalWidth: CoreGraphics.CGFloat {
     get
   }
   @objc override dynamic open func awakeFromNib()
-  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  public func layoutFeatureListToCenter()
-  @objc override dynamic open var bounds: CoreGraphics.CGRect {
-    @objc get
-    @objc set(value)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) public func layoutFeatureListToCenter()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var bounds: CoreGraphics.CGRect {
+    @_Concurrency.MainActor(unsafe) @objc get
+    @_Concurrency.MainActor(unsafe) @objc set(value)
   }
-  public func register(_ cellClass: Swift.AnyClass?, forCellWithReuseIdentifier identifier: Swift.String)
-  public func register(_ nib: UIKit.UINib?, forCellWithReuseIdentifier identifier: Swift.String)
-  public func reloadData()
-  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @_Concurrency.MainActor(unsafe) public func register(_ cellClass: Swift.AnyClass?, forCellWithReuseIdentifier identifier: Swift.String)
+  @_Concurrency.MainActor(unsafe) public func register(_ nib: UIKit.UINib?, forCellWithReuseIdentifier identifier: Swift.String)
+  @_Concurrency.MainActor(unsafe) public func reloadData()
   @objc deinit
 }
-extension IMUIFeatureListView : UIKit.UICollectionViewDelegate {
+extension YLCustomerService.IMUIFeatureListView : UIKit.UICollectionViewDelegate {
 }
-extension IMUIFeatureListView : UIKit.UICollectionViewDataSource, UIKit.UICollectionViewDelegateFlowLayout {
-  @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, numberOfItemsInSection section: Swift.Int) -> Swift.Int
-  @objc dynamic public func numberOfSections(in collectionView: UIKit.UICollectionView) -> Swift.Int
-  @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, sizeForItemAt indexPath: Foundation.IndexPath) -> CoreGraphics.CGSize
-  @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, referenceSizeForFooterInSection section: Swift.Int) -> CoreGraphics.CGSize
-  @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, cellForItemAt indexPath: Foundation.IndexPath) -> UIKit.UICollectionViewCell
+extension YLCustomerService.IMUIFeatureListView : UIKit.UICollectionViewDataSource, UIKit.UICollectionViewDelegateFlowLayout {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, numberOfItemsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func numberOfSections(in collectionView: UIKit.UICollectionView) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, sizeForItemAt indexPath: Foundation.IndexPath) -> CoreGraphics.CGSize
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, referenceSizeForFooterInSection section: Swift.Int) -> CoreGraphics.CGSize
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, cellForItemAt indexPath: Foundation.IndexPath) -> UIKit.UICollectionViewCell
 }
 @objc @_inheritsConvenienceInitializers public class IMUIWebImageTaskCache : ObjectiveC.NSObject {
   @objc override dynamic public init()
@@ -949,7 +947,7 @@ public protocol IMUIAudioPlayerDelegate : ObjectiveC.NSObjectProtocol {
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class IMUIAudioPlayerHelper : ObjectiveC.NSObject {
   @objc public static var sharedInstance: YLCustomerService.IMUIAudioPlayerHelper
-  public typealias ProgressCallback = (Swift.String, Swift.Float, Foundation.TimeInterval, Foundation.TimeInterval) -> ()
+  public typealias ProgressCallback = (_ identify: Swift.String, _ averagePower: Swift.Float, _ currentTime: Foundation.TimeInterval, _ duration: Foundation.TimeInterval) -> ()
   public typealias FinishCallback = (Swift.String) -> ()
   public typealias StopCallback = (Swift.String) -> ()
   @objc deinit
@@ -957,18 +955,18 @@ public protocol IMUIAudioPlayerDelegate : ObjectiveC.NSObjectProtocol {
   open func renewProgressCallback(_ identfy: Swift.String, progressCallback: @escaping YLCustomerService.IMUIAudioPlayerHelper.ProgressCallback)
   @objc open func stopAudio()
 }
-extension IMUIAudioPlayerHelper : AVFAudio.AVAudioPlayerDelegate {
+extension YLCustomerService.IMUIAudioPlayerHelper : AVFAudio.AVAudioPlayerDelegate {
   @objc dynamic public func audioPlayerDidFinishPlaying(_ player: AVFAudio.AVAudioPlayer, successfully flag: Swift.Bool)
 }
 public protocol Placeholder {
   func add(to imageView: YLCustomerService.KFCrossPlatformImageView)
   func remove(from imageView: YLCustomerService.KFCrossPlatformImageView)
 }
-extension UIImage : YLCustomerService.Placeholder {
+extension UIKit.UIImage : YLCustomerService.Placeholder {
   public func add(to imageView: YLCustomerService.KFCrossPlatformImageView)
   public func remove(from imageView: YLCustomerService.KFCrossPlatformImageView)
 }
-extension Placeholder where Self : YLCustomerService.KFCrossPlatformView {
+extension YLCustomerService.Placeholder where Self : UIKit.UIView {
   public func add(to imageView: YLCustomerService.KFCrossPlatformImageView)
   public func remove(from imageView: YLCustomerService.KFCrossPlatformImageView)
 }
@@ -1013,7 +1011,6 @@ public protocol IMUIMessageDataSource {
   @objc open var resizableBubbleImage: UIKit.UIImage {
     @objc get
   }
-  @objc override dynamic public init()
   @objc deinit
 }
 public enum DiskStorage {
@@ -1033,7 +1030,7 @@ public enum DiskStorage {
     @objc deinit
   }
 }
-extension DiskStorage {
+extension YLCustomerService.DiskStorage {
   public struct Config {
     public var sizeLimit: Swift.UInt
     public var expiration: YLCustomerService.StorageExpiration
@@ -1047,47 +1044,47 @@ public protocol AuthenticationChallengeResponsable : AnyObject {
   func downloader(_ downloader: YLCustomerService.ImageDownloader, didReceive challenge: Foundation.URLAuthenticationChallenge, completionHandler: @escaping (Foundation.URLSession.AuthChallengeDisposition, Foundation.URLCredential?) -> Swift.Void)
   func downloader(_ downloader: YLCustomerService.ImageDownloader, task: Foundation.URLSessionTask, didReceive challenge: Foundation.URLAuthenticationChallenge, completionHandler: @escaping (Foundation.URLSession.AuthChallengeDisposition, Foundation.URLCredential?) -> Swift.Void)
 }
-extension AuthenticationChallengeResponsable {
+extension YLCustomerService.AuthenticationChallengeResponsable {
   public func downloader(_ downloader: YLCustomerService.ImageDownloader, didReceive challenge: Foundation.URLAuthenticationChallenge, completionHandler: @escaping (Foundation.URLSession.AuthChallengeDisposition, Foundation.URLCredential?) -> Swift.Void)
   public func downloader(_ downloader: YLCustomerService.ImageDownloader, task: Foundation.URLSessionTask, didReceive challenge: Foundation.URLAuthenticationChallenge, completionHandler: @escaping (Foundation.URLSession.AuthChallengeDisposition, Foundation.URLCredential?) -> Swift.Void)
 }
-@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc open class IMUITextAttributeContentView : UIKit.UIView, YLCustomerService.IMUIMessageContentViewProtocol, YLCustomerService.PasteboardTextViewDelegateall {
-  @objc weak public var delegate: YLCustomerService.IMUIMessageContentViewDelegate?
-  @objc public static var outGoingTextColor: UIKit.UIColor?
-  @objc public static var inComingTextColor: UIKit.UIColor
-  @objc public static var outGoingTextFont: UIKit.UIFont
-  @objc public static var inComingTextFont: UIKit.UIFont
-  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @objc public func layoutContentView(message: YLCustomerService.IMUIMessageModelProtocol)
-  @objc public func getContentSelected(_ attach: UIKit.NSTextAttachment!)
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) open class IMUITextAttributeContentView : UIKit.UIView, YLCustomerService.IMUIMessageContentViewProtocol, YLCustomerService.PasteboardTextViewDelegateall {
+  @_Concurrency.MainActor(unsafe) @objc weak public var delegate: YLCustomerService.IMUIMessageContentViewDelegate?
+  @objc @_Concurrency.MainActor(unsafe) public static var outGoingTextColor: UIKit.UIColor?
+  @objc @_Concurrency.MainActor(unsafe) public static var inComingTextColor: UIKit.UIColor
+  @objc @_Concurrency.MainActor(unsafe) public static var outGoingTextFont: UIKit.UIFont
+  @objc @_Concurrency.MainActor(unsafe) public static var inComingTextFont: UIKit.UIFont
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc public func layoutContentView(message: YLCustomerService.IMUIMessageModelProtocol)
+  @_Concurrency.MainActor(unsafe) @objc public func getContentSelected(_ attach: UIKit.NSTextAttachment!)
   @objc deinit
 }
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class IMUIVoiceMessageContentView : UIKit.UIView, YLCustomerService.IMUIMessageContentViewProtocol {
-  @objc weak public var delegate: YLCustomerService.IMUIMessageContentViewDelegate?
-  public static var outGoingVoiceDurationColor: UIKit.UIColor
-  public static var inComingVoiceDurationColor: UIKit.UIColor
-  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @objc public func layoutContentView(message: YLCustomerService.IMUIMessageModelProtocol)
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class IMUIVoiceMessageContentView : UIKit.UIView, YLCustomerService.IMUIMessageContentViewProtocol {
+  @_Concurrency.MainActor(unsafe) @objc weak public var delegate: YLCustomerService.IMUIMessageContentViewDelegate?
+  @_Concurrency.MainActor(unsafe) public static var outGoingVoiceDurationColor: UIKit.UIColor
+  @_Concurrency.MainActor(unsafe) public static var inComingVoiceDurationColor: UIKit.UIColor
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc public func layoutContentView(message: YLCustomerService.IMUIMessageModelProtocol)
   @objc deinit
 }
-extension KingfisherWrapper where Base : YLCustomerService.KFCrossPlatformImage {
+extension YLCustomerService.KingfisherWrapper where Base : UIKit.UIImage {
   public var imageFrameCount: Swift.Int? {
     get
     set(newValue)
   }
 }
-extension KingfisherWrapper where Base : YLCustomerService.KFCrossPlatformImage {
+extension YLCustomerService.KingfisherWrapper where Base : UIKit.UIImage {
   public var normalized: YLCustomerService.KFCrossPlatformImage {
     get
   }
 }
-extension KingfisherWrapper where Base : YLCustomerService.KFCrossPlatformImage {
+extension YLCustomerService.KingfisherWrapper where Base : UIKit.UIImage {
   public func pngRepresentation() -> Foundation.Data?
   public func jpegRepresentation(compressionQuality: CoreGraphics.CGFloat) -> Foundation.Data?
   public func gifRepresentation() -> Foundation.Data?
   public func data(format: YLCustomerService.ImageFormat, compressionQuality: CoreGraphics.CGFloat = 1.0) -> Foundation.Data?
 }
-extension KingfisherWrapper where Base : YLCustomerService.KFCrossPlatformImage {
+extension YLCustomerService.KingfisherWrapper where Base : UIKit.UIImage {
   public static func animatedImage(data: Foundation.Data, options: YLCustomerService.ImageCreatingOptions) -> YLCustomerService.KFCrossPlatformImage?
   public static func image(data: Foundation.Data, options: YLCustomerService.ImageCreatingOptions) -> YLCustomerService.KFCrossPlatformImage?
   public static func downsampledImage(data: Foundation.Data, to pointSize: CoreGraphics.CGSize, scale: CoreGraphics.CGFloat) -> YLCustomerService.KFCrossPlatformImage?
@@ -1096,57 +1093,57 @@ public protocol AnimatedImageViewDelegate : AnyObject {
   func animatedImageView(_ imageView: YLCustomerService.AnimatedImageView, didPlayAnimationLoops count: Swift.UInt)
   func animatedImageViewDidFinishAnimating(_ imageView: YLCustomerService.AnimatedImageView)
 }
-extension AnimatedImageViewDelegate {
+extension YLCustomerService.AnimatedImageViewDelegate {
   public func animatedImageView(_ imageView: YLCustomerService.AnimatedImageView, didPlayAnimationLoops count: Swift.UInt)
   public func animatedImageViewDidFinishAnimating(_ imageView: YLCustomerService.AnimatedImageView)
 }
-@objc @_inheritsConvenienceInitializers open class AnimatedImageView : UIKit.UIImageView {
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class AnimatedImageView : UIKit.UIImageView {
   public enum RepeatCount : Swift.Equatable {
     case once
     case finite(count: Swift.UInt)
     case infinite
     public static func == (lhs: YLCustomerService.AnimatedImageView.RepeatCount, rhs: YLCustomerService.AnimatedImageView.RepeatCount) -> Swift.Bool
   }
-  public var autoPlayAnimatedImage: Swift.Bool
-  public var framePreloadCount: Swift.Int
-  public var needsPrescaling: Swift.Bool
-  public var backgroundDecode: Swift.Bool
-  public var runLoopMode: Foundation.RunLoop.Mode {
+  @_Concurrency.MainActor(unsafe) public var autoPlayAnimatedImage: Swift.Bool
+  @_Concurrency.MainActor(unsafe) public var framePreloadCount: Swift.Int
+  @_Concurrency.MainActor(unsafe) public var needsPrescaling: Swift.Bool
+  @_Concurrency.MainActor(unsafe) public var backgroundDecode: Swift.Bool
+  @_Concurrency.MainActor(unsafe) public var runLoopMode: Foundation.RunLoop.Mode {
     get
     set(value)
   }
-  public var repeatCount: YLCustomerService.AnimatedImageView.RepeatCount {
+  @_Concurrency.MainActor(unsafe) public var repeatCount: YLCustomerService.AnimatedImageView.RepeatCount {
     get
     set(value)
   }
-  weak public var delegate: YLCustomerService.AnimatedImageViewDelegate?
-  public var animator: YLCustomerService.AnimatedImageView.Animator? {
+  @_Concurrency.MainActor(unsafe) weak public var delegate: YLCustomerService.AnimatedImageViewDelegate?
+  @_Concurrency.MainActor(unsafe) public var animator: YLCustomerService.AnimatedImageView.Animator? {
     get
   }
-  @objc override dynamic open var image: YLCustomerService.KFCrossPlatformImage? {
-    @objc get
-    @objc set(value)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var image: YLCustomerService.KFCrossPlatformImage? {
+    @_Concurrency.MainActor(unsafe) @objc get
+    @_Concurrency.MainActor(unsafe) @objc set(value)
   }
-  @objc override dynamic open var isHighlighted: Swift.Bool {
-    @objc get
-    @objc set(newValue)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var isHighlighted: Swift.Bool {
+    @_Concurrency.MainActor(unsafe) @objc get
+    @_Concurrency.MainActor(unsafe) @objc set(newValue)
   }
   @objc deinit
-  @objc override dynamic open var isAnimating: Swift.Bool {
-    @objc get
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var isAnimating: Swift.Bool {
+    @_Concurrency.MainActor(unsafe) @objc get
   }
-  @objc override dynamic open func startAnimating()
-  @objc override dynamic open func stopAnimating()
-  @objc override dynamic open func display(_ layer: QuartzCore.CALayer)
-  @objc override dynamic open func didMoveToWindow()
-  @objc override dynamic open func didMoveToSuperview()
-  @objc override dynamic public init(image: UIKit.UIImage?)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func startAnimating()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func stopAnimating()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func display(_ layer: QuartzCore.CALayer)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func didMoveToWindow()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func didMoveToSuperview()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(image: UIKit.UIImage?)
   @available(iOS 3.0, *)
-  @objc override dynamic public init(image: UIKit.UIImage?, highlightedImage: UIKit.UIImage?)
-  @objc override dynamic public init(frame: CoreGraphics.CGRect)
-  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(image: UIKit.UIImage?, highlightedImage: UIKit.UIImage?)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
 }
-extension AnimatedImageView {
+extension YLCustomerService.AnimatedImageView {
   @_hasMissingDesignatedInitializers public class Animator {
     final public let maxFrameCount: Swift.Int
     public var currentFrameImage: UIKit.UIImage? {
@@ -1252,7 +1249,7 @@ public struct KingfisherParsedOptionsInfo {
 @objc public protocol IMUIMessageProtocol : ObjectiveC.NSObjectProtocol {
   @objc var msgId: Swift.String { get }
 }
-extension KingfisherWrapper where Base : YLCustomerService.KFCrossPlatformImage {
+extension YLCustomerService.KingfisherWrapper where Base : UIKit.UIImage {
   public func image(withBlendMode blendMode: CoreGraphics.CGBlendMode, alpha: CoreGraphics.CGFloat = 1.0, backgroundColor: YLCustomerService.KFCrossPlatformColor? = nil) -> YLCustomerService.KFCrossPlatformImage
   public func image(withRoundRadius radius: CoreGraphics.CGFloat, fit size: CoreGraphics.CGSize, roundingCorners corners: YLCustomerService.RectCorner = .all, backgroundColor: YLCustomerService.KFCrossPlatformColor? = nil) -> YLCustomerService.KFCrossPlatformImage
   public func resize(to size: CoreGraphics.CGSize) -> YLCustomerService.KFCrossPlatformImage
@@ -1264,7 +1261,7 @@ extension KingfisherWrapper where Base : YLCustomerService.KFCrossPlatformImage 
   public func adjusted(brightness: CoreGraphics.CGFloat, contrast: CoreGraphics.CGFloat, saturation: CoreGraphics.CGFloat, inputEV: CoreGraphics.CGFloat) -> YLCustomerService.KFCrossPlatformImage
   public func scaled(to scale: CoreGraphics.CGFloat) -> YLCustomerService.KFCrossPlatformImage
 }
-extension KingfisherWrapper where Base : YLCustomerService.KFCrossPlatformImage {
+extension YLCustomerService.KingfisherWrapper where Base : UIKit.UIImage {
   public var decoded: YLCustomerService.KFCrossPlatformImage {
     get
   }
@@ -1297,7 +1294,7 @@ public protocol IMUIFeatureViewDelegate : ObjectiveC.NSObjectProtocol {
   func cameraFullScreen()
   func cameraRecoverScreen()
 }
-extension IMUIFeatureViewDelegate {
+extension YLCustomerService.IMUIFeatureViewDelegate {
   public func didSelectPhoto(with images: [UIKit.UIImage])
   public func startRecordVoice()
   public func didRecordVoice(with voicePath: Swift.String, durationTime: Swift.Double)
@@ -1309,39 +1306,39 @@ extension IMUIFeatureViewDelegate {
   public func cameraFullScreen()
   public func cameraRecoverScreen()
 }
-@objc @_inheritsConvenienceInitializers open class IMUIInputView : YLCustomerService.IMUICustomInputView {
-  @objc weak public var delegate: YLCustomerService.IMUIInputViewDelegate?
-  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class IMUIInputView : YLCustomerService.IMUICustomInputView {
+  @objc @_Concurrency.MainActor(unsafe) weak public var delegate: YLCustomerService.IMUIInputViewDelegate?
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect)
   @objc override dynamic open func awakeFromNib()
-  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @objc public func setupDataWithDic(dic: [Swift.String : [Swift.String]])
-  @objc public func isNeedShowBottomView() -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc @_Concurrency.MainActor(unsafe) public func setupDataWithDic(dic: [Swift.String : [Swift.String]])
+  @objc @_Concurrency.MainActor(unsafe) public func isNeedShowBottomView() -> Swift.Bool
   @objc deinit
 }
-extension IMUIInputView : YLCustomerService.IMUICustomInputViewDataSource {
-  @objc dynamic public func imuiInputView(_ inputBarItemListView: UIKit.UICollectionView, numberForItemAt position: YLCustomerService.IMUIInputViewItemPosition) -> Swift.Int
-  @objc dynamic public func imuiInputView(_ inputBarItemListView: UIKit.UICollectionView, _ position: YLCustomerService.IMUIInputViewItemPosition, sizeForIndex indexPath: Foundation.IndexPath) -> CoreGraphics.CGSize
-  @objc dynamic public func imuiInputView(_ inputBarItemListView: UIKit.UICollectionView, _ position: YLCustomerService.IMUIInputViewItemPosition, cellForItemAt indexPath: Foundation.IndexPath) -> UIKit.UICollectionViewCell
-  @objc dynamic public func imuiInputView(_ featureView: UIKit.UICollectionView, cellForItem indexPath: Foundation.IndexPath) -> UIKit.UICollectionViewCell
+extension YLCustomerService.IMUIInputView : YLCustomerService.IMUICustomInputViewDataSource {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func imuiInputView(_ inputBarItemListView: UIKit.UICollectionView, numberForItemAt position: YLCustomerService.IMUIInputViewItemPosition) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func imuiInputView(_ inputBarItemListView: UIKit.UICollectionView, _ position: YLCustomerService.IMUIInputViewItemPosition, sizeForIndex indexPath: Foundation.IndexPath) -> CoreGraphics.CGSize
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func imuiInputView(_ inputBarItemListView: UIKit.UICollectionView, _ position: YLCustomerService.IMUIInputViewItemPosition, cellForItemAt indexPath: Foundation.IndexPath) -> UIKit.UICollectionViewCell
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func imuiInputView(_ featureView: UIKit.UICollectionView, cellForItem indexPath: Foundation.IndexPath) -> UIKit.UICollectionViewCell
 }
-extension IMUIInputView : YLCustomerService.IMUIFeatureListDelegate {
-  public func updateSendBtnToPhotoSendStatus()
+extension YLCustomerService.IMUIInputView : YLCustomerService.IMUIFeatureListDelegate {
+  @_Concurrency.MainActor(unsafe) public func updateSendBtnToPhotoSendStatus()
 }
-extension IMUIInputView : YLCustomerService.IMUIFeatureViewDelegate {
-  public func cameraRecoverScreen()
-  public func cameraFullScreen()
-  public func didChangeSelectedGallery(with gallerys: [Photos.PHAsset])
-  public func didSelectPhoto(with images: [UIKit.UIImage])
-  public func didSeletedEmoji(with emoji: YLCustomerService.IMUIEmojiModel)
-  public func didRecordVoice(with voicePath: Swift.String, durationTime: Swift.Double)
-  public func didShotPicture(with image: Foundation.Data)
-  public func startRecordVideo()
-  public func startRecordVoice()
-  public func didRecordVideo(with videoPath: Swift.String, durationTime: Swift.Double)
+extension YLCustomerService.IMUIInputView : YLCustomerService.IMUIFeatureViewDelegate {
+  @_Concurrency.MainActor(unsafe) public func cameraRecoverScreen()
+  @_Concurrency.MainActor(unsafe) public func cameraFullScreen()
+  @_Concurrency.MainActor(unsafe) public func didChangeSelectedGallery(with gallerys: [Photos.PHAsset])
+  @_Concurrency.MainActor(unsafe) public func didSelectPhoto(with images: [UIKit.UIImage])
+  @_Concurrency.MainActor(unsafe) public func didSeletedEmoji(with emoji: YLCustomerService.IMUIEmojiModel)
+  @_Concurrency.MainActor(unsafe) public func didRecordVoice(with voicePath: Swift.String, durationTime: Swift.Double)
+  @_Concurrency.MainActor(unsafe) public func didShotPicture(with image: Foundation.Data)
+  @_Concurrency.MainActor(unsafe) public func startRecordVideo()
+  @_Concurrency.MainActor(unsafe) public func startRecordVoice()
+  @_Concurrency.MainActor(unsafe) public func didRecordVideo(with videoPath: Swift.String, durationTime: Swift.Double)
 }
-extension IMUIInputView : YLCustomerService.IMUICustomInputViewDelegate {
-  @objc dynamic public func textDidChange(text: Swift.String)
-  @objc dynamic public func keyBoardWillShow(height: CoreGraphics.CGFloat, durationTime: Swift.Double)
+extension YLCustomerService.IMUIInputView : YLCustomerService.IMUICustomInputViewDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func textDidChange(text: Swift.String)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func keyBoardWillShow(height: CoreGraphics.CGFloat, durationTime: Swift.Double)
 }
 @objc open class IMUIMessageCellLayout : ObjectiveC.NSObject, YLCustomerService.IMUIMessageCellLayoutProtocol {
   @objc public var isExpend: Swift.Bool
@@ -1423,7 +1420,6 @@ extension IMUIInputView : YLCustomerService.IMUICustomInputViewDelegate {
   @objc open var bubbleContentType: Swift.String {
     @objc get
   }
-  @objc override dynamic public init()
   @objc deinit
 }
 public typealias KFCrossPlatformImage = UIKit.UIImage
@@ -1439,25 +1435,25 @@ public protocol KingfisherCompatible : AnyObject {
 }
 public protocol KingfisherCompatibleValue {
 }
-extension KingfisherCompatible {
+extension YLCustomerService.KingfisherCompatible {
   public var kf: YLCustomerService.KingfisherWrapper<Self> {
     get
     set(newValue)
   }
 }
-extension KingfisherCompatibleValue {
+extension YLCustomerService.KingfisherCompatibleValue {
   public var kf: YLCustomerService.KingfisherWrapper<Self> {
     get
     set(newValue)
   }
 }
-extension UIImage : YLCustomerService.KingfisherCompatible {
+extension UIKit.UIImage : YLCustomerService.KingfisherCompatible {
 }
-extension UIImageView : YLCustomerService.KingfisherCompatible {
+extension UIKit.UIImageView : YLCustomerService.KingfisherCompatible {
 }
-extension UIButton : YLCustomerService.KingfisherCompatible {
+extension UIKit.UIButton : YLCustomerService.KingfisherCompatible {
 }
-extension NSTextAttachment : YLCustomerService.KingfisherCompatible {
+extension UIKit.NSTextAttachment : YLCustomerService.KingfisherCompatible {
 }
 public struct FormatIndicatedCacheSerializer : YLCustomerService.CacheSerializer {
   public static var png: YLCustomerService.FormatIndicatedCacheSerializer
@@ -1467,28 +1463,27 @@ public struct FormatIndicatedCacheSerializer : YLCustomerService.CacheSerializer
   public func data(with image: YLCustomerService.KFCrossPlatformImage, original: Foundation.Data?) -> Foundation.Data?
   public func image(with data: Foundation.Data, options: YLCustomerService.KingfisherParsedOptionsInfo) -> YLCustomerService.KFCrossPlatformImage?
 }
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class IMUITextTalkTimeContentView : UIKit.UIView, YLCustomerService.IMUIMessageContentViewProtocol {
-  @objc weak public var delegate: YLCustomerService.IMUIMessageContentViewDelegate?
-  public static var outGoingVideoDurationColor: UIKit.UIColor
-  public static var inComingVideoDurationColor: UIKit.UIColor
-  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @objc public func layoutContentView(message: YLCustomerService.IMUIMessageModelProtocol)
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class IMUITextTalkTimeContentView : UIKit.UIView, YLCustomerService.IMUIMessageContentViewProtocol {
+  @_Concurrency.MainActor(unsafe) @objc weak public var delegate: YLCustomerService.IMUIMessageContentViewDelegate?
+  @_Concurrency.MainActor(unsafe) public static var outGoingVideoDurationColor: UIKit.UIColor
+  @_Concurrency.MainActor(unsafe) public static var inComingVideoDurationColor: UIKit.UIColor
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc public func layoutContentView(message: YLCustomerService.IMUIMessageModelProtocol)
   @objc deinit
 }
 @objc public class IMUIFeatureIconModel : ObjectiveC.NSObject {
   public var photoCount: Swift.Int?
   public var isAllowToSend: Swift.Bool?
   public init(featureType: YLCustomerService.IMUIFeatureType, _ defoultImage: UIKit.UIImage?, _ selectedImage: UIKit.UIImage?, _ photoCount: Swift.Int?, _ isAllowToSend: Swift.Bool?)
-  @objc override dynamic public init()
   @objc deinit
 }
-@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc open class IMUITextExpendButton : UIKit.UIView {
-  @objc public static var TextColor: UIKit.UIColor
-  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @objc override dynamic open func layoutSubviews()
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) open class IMUITextExpendButton : UIKit.UIView {
+  @objc @_Concurrency.MainActor(unsafe) public static var TextColor: UIKit.UIColor
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutSubviews()
   @objc deinit
 }
-extension KingfisherWrapper where Base : UIKit.UIButton {
+extension YLCustomerService.KingfisherWrapper where Base : UIKit.UIButton {
   @discardableResult
   public func setImage(with source: YLCustomerService.Source?, for state: UIKit.UIControl.State, placeholder: UIKit.UIImage? = nil, options: YLCustomerService.KingfisherOptionsInfo? = nil, progressBlock: YLCustomerService.DownloadProgressBlock? = nil, completionHandler: ((Swift.Result<YLCustomerService.RetrieveImageResult, YLCustomerService.KingfisherError>) -> Swift.Void)? = nil) -> YLCustomerService.DownloadTask?
   @discardableResult
@@ -1502,10 +1497,10 @@ extension KingfisherWrapper where Base : UIKit.UIButton {
   public func setBackgroundImage(with resource: YLCustomerService.Resource?, for state: UIKit.UIControl.State, placeholder: UIKit.UIImage? = nil, options: YLCustomerService.KingfisherOptionsInfo? = nil, progressBlock: YLCustomerService.DownloadProgressBlock? = nil, completionHandler: ((Swift.Result<YLCustomerService.RetrieveImageResult, YLCustomerService.KingfisherError>) -> Swift.Void)? = nil) -> YLCustomerService.DownloadTask?
   public func cancelBackgroundImageDownloadTask()
 }
-extension KingfisherWrapper where Base : UIKit.UIButton {
+extension YLCustomerService.KingfisherWrapper where Base : UIKit.UIButton {
   public func taskIdentifier(for state: UIKit.UIControl.State) -> YLCustomerService.Source.Identifier.Value?
 }
-extension KingfisherWrapper where Base : UIKit.UIButton {
+extension YLCustomerService.KingfisherWrapper where Base : UIKit.UIButton {
   public func backgroundTaskIdentifier(for state: UIKit.UIControl.State) -> YLCustomerService.Source.Identifier.Value?
 }
 @objc public protocol IMUICustomInputViewDataSource : ObjectiveC.NSObjectProtocol {
@@ -1521,7 +1516,7 @@ public enum KF {
   public static func dataProvider(_ provider: YLCustomerService.ImageDataProvider?) -> YLCustomerService.KF.Builder
   public static func data(_ data: Foundation.Data?, cacheKey: Swift.String) -> YLCustomerService.KF.Builder
 }
-extension KF {
+extension YLCustomerService.KF {
   @_hasMissingDesignatedInitializers public class Builder {
     public var options: YLCustomerService.KingfisherParsedOptionsInfo
     final public let onFailureDelegate: YLCustomerService.Delegate<YLCustomerService.KingfisherError, Swift.Void>
@@ -1530,7 +1525,7 @@ extension KF {
     @objc deinit
   }
 }
-extension KF.Builder {
+extension YLCustomerService.KF.Builder {
   @discardableResult
   public func set(to imageView: YLCustomerService.KFCrossPlatformImageView) -> YLCustomerService.DownloadTask?
   @discardableResult
@@ -1540,11 +1535,11 @@ extension KF.Builder {
   @discardableResult
   public func setBackground(to button: UIKit.UIButton, for state: UIKit.UIControl.State) -> YLCustomerService.DownloadTask?
 }
-extension KF.Builder {
+extension YLCustomerService.KF.Builder {
   public func placeholder(_ placeholder: YLCustomerService.Placeholder?) -> Self
   public func placeholder(_ image: YLCustomerService.KFCrossPlatformImage?) -> Self
 }
-extension KF.Builder {
+extension YLCustomerService.KF.Builder {
   public func transition(_ transition: YLCustomerService.ImageTransition) -> Self
   public func fade(duration: Foundation.TimeInterval) -> Self
   public func keepCurrentImageWhileLoading(_ enabled: Swift.Bool = true) -> Self
@@ -1552,7 +1547,7 @@ extension KF.Builder {
   public func onFailureImage(_ image: YLCustomerService.KFCrossPlatformImage?) -> Self
   public func progressiveJPEG(_ progressive: YLCustomerService.ImageProgressive? = .default) -> Self
 }
-extension KF {
+extension YLCustomerService.KF {
   public struct RedirectPayload {
     public let task: YLCustomerService.SessionDataTask
     public let response: Foundation.HTTPURLResponse
@@ -1560,18 +1555,18 @@ extension KF {
     public let completionHandler: (Foundation.URLRequest?) -> Swift.Void
   }
 }
-@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc open class IMUITextRobotToHuman : UIKit.UIView, YLCustomerService.IMUIMessageContentViewProtocol {
-  @objc weak public var delegate: YLCustomerService.IMUIMessageContentViewDelegate?
-  @objc public static var outGoingTextColor: UIKit.UIColor?
-  @objc public static var inComingTextColor: UIKit.UIColor
-  @objc public static var outGoingTextFont: UIKit.UIFont
-  @objc public static var inComingTextFont: UIKit.UIFont
-  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @objc public func layoutContentView(message: YLCustomerService.IMUIMessageModelProtocol)
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) open class IMUITextRobotToHuman : UIKit.UIView, YLCustomerService.IMUIMessageContentViewProtocol {
+  @_Concurrency.MainActor(unsafe) @objc weak public var delegate: YLCustomerService.IMUIMessageContentViewDelegate?
+  @objc @_Concurrency.MainActor(unsafe) public static var outGoingTextColor: UIKit.UIColor?
+  @objc @_Concurrency.MainActor(unsafe) public static var inComingTextColor: UIKit.UIColor
+  @objc @_Concurrency.MainActor(unsafe) public static var outGoingTextFont: UIKit.UIFont
+  @objc @_Concurrency.MainActor(unsafe) public static var inComingTextFont: UIKit.UIFont
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc public func layoutContentView(message: YLCustomerService.IMUIMessageModelProtocol)
   @objc deinit
 }
 @available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
-extension KFImage {
+extension YLCustomerService.KFImage {
   public static func source(_ source: YLCustomerService.Source?, isLoaded: SwiftUI.Binding<Swift.Bool> = .constant(false)) -> YLCustomerService.KFImage
   public static func resource(_ resource: YLCustomerService.Resource?, isLoaded: SwiftUI.Binding<Swift.Bool> = .constant(false)) -> YLCustomerService.KFImage
   public static func url(_ url: Foundation.URL?, cacheKey: Swift.String? = nil, isLoaded: SwiftUI.Binding<Swift.Bool> = .constant(false)) -> YLCustomerService.KFImage
@@ -1579,7 +1574,7 @@ extension KFImage {
   public static func data(_ data: Foundation.Data?, cacheKey: Swift.String, isLoaded: SwiftUI.Binding<Swift.Bool> = .constant(false)) -> YLCustomerService.KFImage
 }
 @available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
-extension KFImage {
+extension YLCustomerService.KFImage {
   public func placeholder<Content>(@SwiftUI.ViewBuilder _ content: () -> Content) -> YLCustomerService.KFImage where Content : SwiftUI.View
   public func cancelOnDisappear(_ flag: Swift.Bool) -> YLCustomerService.KFImage
   public func fade(duration: Foundation.TimeInterval) -> YLCustomerService.KFImage
@@ -1610,7 +1605,7 @@ public enum IndicatorSizeStrategy {
   case full
   case size(CoreGraphics.CGSize)
 }
-extension Indicator {
+extension YLCustomerService.Indicator {
   public var centerOffset: CoreGraphics.CGPoint {
     get
   }
@@ -1623,7 +1618,7 @@ public protocol AsyncImageDownloadRequestModifier {
 public protocol ImageDownloadRequestModifier : YLCustomerService.AsyncImageDownloadRequestModifier {
   func modified(for request: Foundation.URLRequest) -> Foundation.URLRequest?
 }
-extension ImageDownloadRequestModifier {
+extension YLCustomerService.ImageDownloadRequestModifier {
   public func modified(for request: Foundation.URLRequest, reportModified: @escaping (Foundation.URLRequest?) -> Swift.Void)
   public var onDownloadTaskStarted: ((YLCustomerService.DownloadTask?) -> Swift.Void)? {
     get
@@ -1641,7 +1636,7 @@ public protocol ImageProcessor {
   var identifier: Swift.String { get }
   func process(item: YLCustomerService.ImageProcessItem, options: YLCustomerService.KingfisherParsedOptionsInfo) -> YLCustomerService.KFCrossPlatformImage?
 }
-extension ImageProcessor {
+extension YLCustomerService.ImageProcessor {
   public func append(another: YLCustomerService.ImageProcessor) -> YLCustomerService.ImageProcessor
 }
 public struct DefaultImageProcessor : YLCustomerService.ImageProcessor {
@@ -1750,34 +1745,34 @@ public struct DownsamplingImageProcessor : YLCustomerService.ImageProcessor {
 }
 infix operator |> : AdditionPrecedence
 public func |> (left: YLCustomerService.ImageProcessor, right: YLCustomerService.ImageProcessor) -> YLCustomerService.ImageProcessor
-@objc @_inheritsConvenienceInitializers public class IMUIFeatureListIconCell : UIKit.UICollectionViewCell {
-  @objc @IBOutlet weak public var featureIconBtn: UIKit.UIButton!
-  open var featureData: YLCustomerService.IMUIFeatureIconModel?
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class IMUIFeatureListIconCell : UIKit.UICollectionViewCell {
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var featureIconBtn: UIKit.UIButton!
+  @_Concurrency.MainActor(unsafe) open var featureData: YLCustomerService.IMUIFeatureIconModel?
   @objc override dynamic public func awakeFromNib()
-  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @objc override dynamic public init(frame: CoreGraphics.CGRect)
-  public func layout(with data: YLCustomerService.IMUIFeatureIconModel, onClickCallback: @escaping (YLCustomerService.IMUIFeatureListIconCell) -> ())
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @_Concurrency.MainActor(unsafe) public func layout(with data: YLCustomerService.IMUIFeatureIconModel, onClickCallback: @escaping (YLCustomerService.IMUIFeatureListIconCell) -> ())
   @objc deinit
 }
-@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc open class IMUITextRobotExpendContentView : UIKit.UIView, YLCustomerService.IMUIMessageContentViewProtocol {
-  @objc weak public var delegate: YLCustomerService.IMUIMessageContentViewDelegate?
-  @objc public static var outGoingTextColor: UIKit.UIColor?
-  @objc public static var inComingTextColor: UIKit.UIColor
-  @objc public static var outGoingTextFont: UIKit.UIFont
-  @objc public static var inComingTextFont: UIKit.UIFont
-  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @objc public func layoutContentView(message: YLCustomerService.IMUIMessageModelProtocol)
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) open class IMUITextRobotExpendContentView : UIKit.UIView, YLCustomerService.IMUIMessageContentViewProtocol {
+  @_Concurrency.MainActor(unsafe) @objc weak public var delegate: YLCustomerService.IMUIMessageContentViewDelegate?
+  @objc @_Concurrency.MainActor(unsafe) public static var outGoingTextColor: UIKit.UIColor?
+  @objc @_Concurrency.MainActor(unsafe) public static var inComingTextColor: UIKit.UIColor
+  @objc @_Concurrency.MainActor(unsafe) public static var outGoingTextFont: UIKit.UIFont
+  @objc @_Concurrency.MainActor(unsafe) public static var inComingTextFont: UIKit.UIFont
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc public func layoutContentView(message: YLCustomerService.IMUIMessageModelProtocol)
   @objc deinit
 }
-extension UIColor {
+extension UIKit.UIColor {
   @objc dynamic public convenience init(red: Swift.Int, green: Swift.Int, blue: Swift.Int)
   @objc dynamic public convenience init(netHex: Swift.Int)
   @objc dynamic public class func hexStringToUIColor(hex: Swift.String) -> UIKit.UIColor
 }
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class IMUIImageMessageContentView : UIKit.UIView, YLCustomerService.IMUIMessageContentViewProtocol {
-  @objc weak public var delegate: YLCustomerService.IMUIMessageContentViewDelegate?
-  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @objc public func layoutContentView(message: YLCustomerService.IMUIMessageModelProtocol)
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class IMUIImageMessageContentView : UIKit.UIView, YLCustomerService.IMUIMessageContentViewProtocol {
+  @_Concurrency.MainActor(unsafe) @objc weak public var delegate: YLCustomerService.IMUIMessageContentViewDelegate?
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc public func layoutContentView(message: YLCustomerService.IMUIMessageModelProtocol)
   @objc deinit
 }
 public enum ImageTransition {
@@ -1789,9 +1784,9 @@ public enum ImageTransition {
   case flipFromBottom(Foundation.TimeInterval)
   case custom(duration: Foundation.TimeInterval, options: UIKit.UIView.AnimationOptions, animations: ((UIKit.UIImageView, UIKit.UIImage) -> Swift.Void)?, completion: ((Swift.Bool) -> Swift.Void)?)
 }
-extension CGSize : YLCustomerService.KingfisherCompatibleValue {
+extension CoreGraphics.CGSize : YLCustomerService.KingfisherCompatibleValue {
 }
-extension KingfisherWrapper where Base == CoreGraphics.CGSize {
+extension YLCustomerService.KingfisherWrapper where Base == CoreGraphics.CGSize {
   public func resize(to size: CoreGraphics.CGSize, for contentMode: YLCustomerService.ContentMode) -> CoreGraphics.CGSize
   public func constrained(_ size: CoreGraphics.CGSize) -> CoreGraphics.CGSize
   public func filling(_ size: CoreGraphics.CGSize) -> CoreGraphics.CGSize
@@ -1805,51 +1800,51 @@ extension KingfisherWrapper where Base == CoreGraphics.CGSize {
   @objc func layoutMediaDownloadFail()
   @objc var statusViewID: Swift.String { get }
 }
-extension String : YLCustomerService.KingfisherCompatibleValue {
+extension Swift.String : YLCustomerService.KingfisherCompatibleValue {
 }
-extension UIView {
-  public var imui_left: CoreGraphics.CGFloat {
+extension UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public var imui_left: CoreGraphics.CGFloat {
     get
     set(newValue)
   }
-  public var imui_top: CoreGraphics.CGFloat {
+  @_Concurrency.MainActor(unsafe) public var imui_top: CoreGraphics.CGFloat {
     get
     set(newValue)
   }
-  public var imui_right: CoreGraphics.CGFloat {
+  @_Concurrency.MainActor(unsafe) public var imui_right: CoreGraphics.CGFloat {
     get
     set(newValue)
   }
-  public var imui_bottom: CoreGraphics.CGFloat {
+  @_Concurrency.MainActor(unsafe) public var imui_bottom: CoreGraphics.CGFloat {
     get
     set(newValue)
   }
-  public var imui_centerX: CoreGraphics.CGFloat {
+  @_Concurrency.MainActor(unsafe) public var imui_centerX: CoreGraphics.CGFloat {
     get
     set(newValue)
   }
-  public var imui_centerY: CoreGraphics.CGFloat {
+  @_Concurrency.MainActor(unsafe) public var imui_centerY: CoreGraphics.CGFloat {
     get
     set(newValue)
   }
-  public var imui_width: CoreGraphics.CGFloat {
+  @_Concurrency.MainActor(unsafe) public var imui_width: CoreGraphics.CGFloat {
     get
     set(newValue)
   }
-  public var imui_height: CoreGraphics.CGFloat {
+  @_Concurrency.MainActor(unsafe) public var imui_height: CoreGraphics.CGFloat {
     get
     set(newValue)
   }
-  public var imui_origin: CoreGraphics.CGPoint {
+  @_Concurrency.MainActor(unsafe) public var imui_origin: CoreGraphics.CGPoint {
     get
     set(newValue)
   }
-  public var imui_size: CoreGraphics.CGSize {
+  @_Concurrency.MainActor(unsafe) public var imui_size: CoreGraphics.CGSize {
     get
     set(newValue)
   }
-  public func move(with vector: CoreGraphics.CGVector)
-  public func positionInLeftSide(with point: CoreGraphics.CGPoint) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) public func move(with vector: CoreGraphics.CGVector)
+  @_Concurrency.MainActor(unsafe) public func positionInLeftSide(with point: CoreGraphics.CGPoint) -> Swift.Bool
 }
 public enum KingfisherError : Swift.Error {
   public enum RequestErrorReason {
@@ -1902,42 +1897,42 @@ public enum KingfisherError : Swift.Error {
     get
   }
 }
-extension KingfisherError : Foundation.LocalizedError {
+extension YLCustomerService.KingfisherError : Foundation.LocalizedError {
   public var errorDescription: Swift.String? {
     get
   }
 }
-extension KingfisherError : Foundation.CustomNSError {
+extension YLCustomerService.KingfisherError : Foundation.CustomNSError {
   public static var domain: Swift.String
   public var errorCode: Swift.Int {
     get
   }
 }
-@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc open class IMUITextActivityContentView : UIKit.UIView, YLCustomerService.IMUIMessageContentViewProtocol, YLCustomerService.PasteboardTextViewDelegateall {
-  @objc weak public var delegate: YLCustomerService.IMUIMessageContentViewDelegate?
-  @objc public static var outGoingTextColor: UIKit.UIColor?
-  @objc public static var inComingTextColor: UIKit.UIColor
-  @objc public static var outGoingTextFont: UIKit.UIFont
-  @objc public static var inComingTextFont: UIKit.UIFont
-  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @objc public func layoutContentView(message: YLCustomerService.IMUIMessageModelProtocol)
-  @objc public func getContentSelected(_ attach: UIKit.NSTextAttachment!)
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) open class IMUITextActivityContentView : UIKit.UIView, YLCustomerService.IMUIMessageContentViewProtocol, YLCustomerService.PasteboardTextViewDelegateall {
+  @_Concurrency.MainActor(unsafe) @objc weak public var delegate: YLCustomerService.IMUIMessageContentViewDelegate?
+  @objc @_Concurrency.MainActor(unsafe) public static var outGoingTextColor: UIKit.UIColor?
+  @objc @_Concurrency.MainActor(unsafe) public static var inComingTextColor: UIKit.UIColor
+  @objc @_Concurrency.MainActor(unsafe) public static var outGoingTextFont: UIKit.UIFont
+  @objc @_Concurrency.MainActor(unsafe) public static var inComingTextFont: UIKit.UIFont
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc public func layoutContentView(message: YLCustomerService.IMUIMessageModelProtocol)
+  @_Concurrency.MainActor(unsafe) @objc public func getContentSelected(_ attach: UIKit.NSTextAttachment!)
   @objc deinit
 }
 public typealias Transformer = (CoreImage.CIImage) -> CoreImage.CIImage?
 public protocol CIImageProcessor : YLCustomerService.ImageProcessor {
   var filter: YLCustomerService.Filter { get }
 }
-extension CIImageProcessor {
+extension YLCustomerService.CIImageProcessor {
   public func process(item: YLCustomerService.ImageProcessItem, options: YLCustomerService.KingfisherParsedOptionsInfo) -> YLCustomerService.KFCrossPlatformImage?
 }
 public struct Filter {
   public init(transform: @escaping YLCustomerService.Transformer)
-  public static var tint: (YLCustomerService.KFCrossPlatformColor) -> YLCustomerService.Filter
+  public static var tint: (_ color: YLCustomerService.KFCrossPlatformColor) -> YLCustomerService.Filter
   public typealias ColorElement = (CoreGraphics.CGFloat, CoreGraphics.CGFloat, CoreGraphics.CGFloat, CoreGraphics.CGFloat)
-  public static var colorControl: (YLCustomerService.Filter.ColorElement) -> YLCustomerService.Filter
+  public static var colorControl: (_ arg: YLCustomerService.Filter.ColorElement) -> YLCustomerService.Filter
 }
-extension KingfisherWrapper where Base : YLCustomerService.KFCrossPlatformImage {
+extension YLCustomerService.KingfisherWrapper where Base : UIKit.UIImage {
   public func apply(_ filter: YLCustomerService.Filter) -> YLCustomerService.KFCrossPlatformImage
 }
 @available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
@@ -1946,21 +1941,21 @@ public struct KFImage : SwiftUI.View {
   public init(source: YLCustomerService.Source?, options: YLCustomerService.KingfisherOptionsInfo? = nil, isLoaded: SwiftUI.Binding<Swift.Bool> = .constant(false))
   public init(source: YLCustomerService.Source?, isLoaded: SwiftUI.Binding<Swift.Bool> = .constant(false))
   public init(_ url: Foundation.URL?, isLoaded: SwiftUI.Binding<Swift.Bool> = .constant(false))
-  public var body: some SwiftUI.View {
+  @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
     get
   }
   public func loadImmediately(_ start: Swift.Bool = true) -> YLCustomerService.KFImage
-  public typealias Body = @_opaqueReturnTypeOf("$s17YLCustomerService7KFImageV4bodyQrvp", 0) 🦸
+  public typealias Body = @_opaqueReturnTypeOf("$s17YLCustomerService7KFImageV4bodyQrvp", 0) __
 }
 @available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
-extension KFImage {
+extension YLCustomerService.KFImage {
   public func configure(_ block: @escaping (SwiftUI.Image) -> SwiftUI.Image) -> YLCustomerService.KFImage
   public func resizable(capInsets: SwiftUI.EdgeInsets = EdgeInsets(), resizingMode: SwiftUI.Image.ResizingMode = .stretch) -> YLCustomerService.KFImage
   public func renderingMode(_ renderingMode: SwiftUI.Image.TemplateRenderingMode?) -> YLCustomerService.KFImage
   public func interpolation(_ interpolation: SwiftUI.Image.Interpolation) -> YLCustomerService.KFImage
   public func antialiased(_ isAntialiased: Swift.Bool) -> YLCustomerService.KFImage
 }
-extension NSNotification.Name {
+extension Foundation.NSNotification.Name {
   public static var KingfisherDidCleanDiskCache: Foundation.Notification.Name
 }
 public var KingfisherDiskCacheCleanedHashKey: Swift.String
@@ -1981,12 +1976,12 @@ public struct CacheStoreResult {
   public let memoryCacheResult: Swift.Result<(), Swift.Never>
   public let diskCacheResult: Swift.Result<(), YLCustomerService.KingfisherError>
 }
-extension UIImage : YLCustomerService.CacheCostCalculable {
+extension UIKit.UIImage : YLCustomerService.CacheCostCalculable {
   public var cacheCost: Swift.Int {
     get
   }
 }
-extension Data : YLCustomerService.DataTransformable {
+extension Foundation.Data : YLCustomerService.DataTransformable {
   public func toData() throws -> Foundation.Data
   public static func fromData(_ data: Foundation.Data) throws -> Foundation.Data
   public static var empty: Foundation.Data
@@ -2031,14 +2026,14 @@ open class ImageCache {
   open func calculateDiskStorageSize(completion handler: @escaping ((Swift.Result<Swift.UInt, YLCustomerService.KingfisherError>) -> Swift.Void))
   open func cachePath(forKey key: Swift.String, processorIdentifier identifier: Swift.String = DefaultImageProcessor.default.identifier) -> Swift.String
 }
-extension UIApplication : YLCustomerService.KingfisherCompatible {
+extension UIKit.UIApplication : YLCustomerService.KingfisherCompatible {
 }
-extension KingfisherWrapper where Base : UIKit.UIApplication {
+extension YLCustomerService.KingfisherWrapper where Base : UIKit.UIApplication {
   public static var shared: UIKit.UIApplication? {
     get
   }
 }
-extension UIImage {
+extension UIKit.UIImage {
   public class func imuiImage(with name: Swift.String) -> UIKit.UIImage?
 }
 public protocol ImageModifier {
@@ -2062,13 +2057,13 @@ public struct AlignmentRectInsetsImageModifier : YLCustomerService.ImageModifier
   public init(alignmentInsets: UIKit.UIEdgeInsets)
   public func modify(_ image: YLCustomerService.KFCrossPlatformImage) -> YLCustomerService.KFCrossPlatformImage
 }
-@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc open class IMUITextExpendContentView : UIKit.UIView, YLCustomerService.IMUIMessageContentViewProtocol {
-  @objc weak public var delegate: YLCustomerService.IMUIMessageContentViewDelegate?
-  @objc public static var outGoingTextColor: UIKit.UIColor?
-  @objc public static var inComingTextColor: UIKit.UIColor
-  @objc public static var outGoingTextFont: UIKit.UIFont
-  @objc public static var inComingTextFont: UIKit.UIFont
-  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @objc public func layoutContentView(message: YLCustomerService.IMUIMessageModelProtocol)
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) open class IMUITextExpendContentView : UIKit.UIView, YLCustomerService.IMUIMessageContentViewProtocol {
+  @_Concurrency.MainActor(unsafe) @objc weak public var delegate: YLCustomerService.IMUIMessageContentViewDelegate?
+  @objc @_Concurrency.MainActor(unsafe) public static var outGoingTextColor: UIKit.UIColor?
+  @objc @_Concurrency.MainActor(unsafe) public static var inComingTextColor: UIKit.UIColor
+  @objc @_Concurrency.MainActor(unsafe) public static var outGoingTextFont: UIKit.UIFont
+  @objc @_Concurrency.MainActor(unsafe) public static var inComingTextFont: UIKit.UIFont
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc public func layoutContentView(message: YLCustomerService.IMUIMessageModelProtocol)
   @objc deinit
 }
