@@ -91,7 +91,6 @@ public struct AVAssetImageDataProvider : YLCustomerService.ImageDataProvider {
   @objc public func layoutFailedStatus()
   @objc public func layoutSendingStatus()
   @objc public func layoutSuccessStatus()
-  @objc public func layoutUnSendStatus()
   @objc deinit
 }
 extension UIImage {
@@ -977,7 +976,6 @@ extension Placeholder where Self : YLCustomerService.KFCrossPlatformView {
   case failed
   case sending
   case success
-  case unsend
   case mediaDownloading
   case mediaDownloadFail
   public init?(rawValue: Swift.UInt)
@@ -1805,7 +1803,6 @@ extension KingfisherWrapper where Base == CoreGraphics.CGSize {
   @objc func layoutSuccessStatus()
   @objc func layoutMediaDownloading()
   @objc func layoutMediaDownloadFail()
-  @objc func layoutUnSendStatus()
   @objc var statusViewID: Swift.String { get }
 }
 extension String : YLCustomerService.KingfisherCompatibleValue {
