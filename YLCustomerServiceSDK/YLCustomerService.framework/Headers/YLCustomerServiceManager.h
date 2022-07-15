@@ -17,6 +17,7 @@
 @property (nonatomic, assign) BOOL hiddenPresentBack; //返回
 
 @property (nonatomic, assign) NSInteger env; //0 生产， 1 测试
+@property (nonatomic, assign) NSInteger languagesType; //1中文 2英文3越南文4菲律宾5葡萄牙，6韩文
 
 /**
  用户登录

@@ -22,7 +22,7 @@
 + (CGSize)getAttributedTextSize:(NSString *)text width:(CGFloat)width;
 
 + (CGSize)getAttributedTextSize:(NSString *)text width:(CGFloat)width font:(CGFloat)font;
-
++ (CGSize)getEndAttributedTextSize:(NSString *)text width:(CGFloat)width font:(CGFloat)font;
 + (CGSize)getAttributedOriginalTextSize:(NSString *)text width:(CGFloat)width font:(CGFloat)font;
 
 + (CGFloat)getAttributedTextHeight:(NSString *)text width:(CGFloat)width font:(CGFloat)font lineSpacing:(CGFloat)lineSpacing;
