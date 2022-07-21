@@ -19,6 +19,7 @@
 #import "YLBaseNavVC.h"
 #import "YLBaseVC.h"
 #import "YLBundle.h"
+#import "YLChangeLanguageTool.h"
 #import "YLCustomDeskHomeVC.h"
 #import "YLCustomerService.h"
 #import "YLCustomerServiceManager.h"

@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
-
+typedef void (^ClickBlock)(void);
 @interface YLBaseVC : UIViewController
 
 @property (nonatomic, strong) UITapGestureRecognizer *gestureRecognizer;
@@ -48,6 +48,12 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)endFooterRefresh:(id)tableView;
 
 @property (nonatomic, strong) UIButton *cancelButton; //返回
+
+/// 左边按钮
+@property (nonatomic, strong) UIButton *leftBtn;
+
+///
+@property (nonatomic, copy) ClickBlock leftBtnClickBlock;
 
 @end
 

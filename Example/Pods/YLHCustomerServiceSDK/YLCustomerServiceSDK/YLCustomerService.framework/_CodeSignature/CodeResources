@@ -4,6 +4,10 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>Headers/HttpClient.h</key>
+		<data>
+		RMbsDrPMRPSaT9UEhItydi3kTow=
+		</data>
 		<key>Headers/PasteboardTextView.h</key>
 		<data>
 		OCt7By4o+rJSFrAQ1Aol+BQlOA4=
@@ -22,7 +26,7 @@
 		</data>
 		<key>Headers/YLAttributeTextView.h</key>
 		<data>
-		jDoJD5JvW4pzTbDAzr4UyiPFNaw=
+		CVamNWbG+fSzXXx0Z0vT7flVcU4=
 		</data>
 		<key>Headers/YLAttributedString.h</key>
 		<data>
@@ -34,11 +38,19 @@
 		</data>
 		<key>Headers/YLBaseVC.h</key>
 		<data>
-		aGrfOdcmAoDSTLhwYyi1XyN5CdU=
+		1kfA8b19+eJGQPf40o9QuAO3Csg=
+		</data>
+		<key>Headers/YLBasicConfig.h</key>
+		<data>
+		wxbqQJGwrbBtdAMh5/SyCrhgpjo=
 		</data>
 		<key>Headers/YLBundle.h</key>
 		<data>
 		lGV6V5Jyy0l6xEHYxZo4uOlYN/I=
+		</data>
+		<key>Headers/YLChangeLanguageTool.h</key>
+		<data>
+		1lHvUn5zF6F/Ap2AbfItNmOn3Yw=
 		</data>
 		<key>Headers/YLCustomDeskHomeVC.h</key>
 		<data>
@@ -50,11 +62,11 @@
 		</data>
 		<key>Headers/YLCustomerService.h</key>
 		<data>
-		/znu1bjd/z+gVN3d75EV3+i3skU=
+		d9zlgdWZvuNPKHAdba2H0u4hqtA=
 		</data>
 		<key>Headers/YLCustomerServiceManager.h</key>
 		<data>
-		y9qcwKn4W6rdOZXBcfSAYeB3igQ=
+		5aQqInUSrNxoscOGS2nuKT+PveQ=
 		</data>
 		<key>Headers/YLHomeCstmVC.h</key>
 		<data>
@@ -78,123 +90,131 @@
 		</data>
 		<key>IMUICameraCell.nib/objects-12.3+.nib</key>
 		<data>
-		KUnNYEZqy7o+HMT/QHHYdmX2aFM=
+		LHzir4eVxdZmaReqDYb/5RljISM=
 		</data>
 		<key>IMUICameraCell.nib/runtime.nib</key>
 		<data>
-		CtVZL+751BhjiJ1grs3i2JMUulg=
+		dxi5sNgjxuhBcbN36SCUtxRaXTc=
 		</data>
 		<key>IMUICameraView.nib</key>
 		<data>
-		4ZPXTCaLJbmBGx5kWYoubgQiUfU=
+		g8brW0EDoew7ohBDwOulay1oDiU=
 		</data>
 		<key>IMUICustomInputView.nib</key>
 		<data>
-		NKjY8q7a2JuIw8/Q4B/CkBIbgWU=
+		sJuhBU3M9IKFe4QefO+C4k1aovs=
 		</data>
 		<key>IMUIEmojiCell.nib/objects-12.3+.nib</key>
 		<data>
-		4L6IwqToaBfJLYCP8sG4Hk+JPJ4=
+		tP3djc4uR8I7n05Y9yyRYsIp/ZE=
 		</data>
 		<key>IMUIEmojiCell.nib/runtime.nib</key>
 		<data>
-		VxCoia+HN4KTt1qX2zGMpbGXe24=
+		mEJq5gebloQwBCPzRVaTdiDv98g=
 		</data>
 		<key>IMUIEmojiItemCell.nib/objects-12.3+.nib</key>
 		<data>
-		9eHDzBo5BqWxse8ek4JBBBTjkUo=
+		as9SAsNixnqo/GU0YmHJ8aEjQhM=
 		</data>
 		<key>IMUIEmojiItemCell.nib/runtime.nib</key>
 		<data>
-		eruV3pDejOz3MsZi1DSE+uQxKJ0=
+		zxoHTY+E1gTePTNGkqot8PCQkaI=
 		</data>
 		<key>IMUIFeatureListIconCell.nib/objects-12.3+.nib</key>
 		<data>
-		Ff3m8FxQyViGHj72wNoBMznUMuA=
+		z5WaC9MHmFJu5DuMisz0iCUKOmY=
 		</data>
 		<key>IMUIFeatureListIconCell.nib/runtime.nib</key>
 		<data>
-		gl/HJWnDXLr+idLvLrLjYQRe8R0=
+		4jR1IQCPf+dXUfTvLjdxLuMI36Y=
 		</data>
 		<key>IMUIFeatureListView.nib</key>
 		<data>
-		chbVDxTiDJZ2VN3pMpim7WDzSeA=
+		IPn1EzqUJsEhEh6cldPifaN8ZPg=
 		</data>
 		<key>IMUIFeatureView.nib</key>
 		<data>
-		wmLyysdXikR/gYKKPTtuOiXW93M=
+		qefdQA+U7Y28tg59GqqGCuHvwM4=
 		</data>
 		<key>IMUIGalleryCell.nib/objects-12.3+.nib</key>
 		<data>
-		W0YmsQV8ZBXQrB0bBRrnzFsWHgI=
+		edR49o7MBUvAhI+5QPG475QocYc=
 		</data>
 		<key>IMUIGalleryCell.nib/runtime.nib</key>
 		<data>
-		arNuR11CxRa5lKqWbXznobb+Qww=
+		9FOt5efbQiQZGTCpsnbr27GK5nw=
 		</data>
 		<key>IMUIGalleryContainerCell.nib/objects-12.3+.nib</key>
 		<data>
-		6ERAQBHjerRByWDFZhT9S1Zrc1I=
+		8G2p/taXhkpgA73zSKgyJqzObu8=
 		</data>
 		<key>IMUIGalleryContainerCell.nib/runtime.nib</key>
 		<data>
-		EYQ1b0jYBaDk3wVPTsZTuQfrAt0=
+		SewGImm14qr3QCwff0OM+e5yQEw=
 		</data>
 		<key>IMUIMessageCollectionView.nib</key>
 		<data>
-		KVICjusUcXcDsGt7OUyIscuZbq0=
+		hqk8hVNkhko1Pbch5PH5FUzfZy0=
 		</data>
 		<key>IMUIPermissionDenyedView.nib</key>
 		<data>
-		0T6kgF9Yi+P3aruRehgOkqW4Rf0=
+		2dtUwD4xSIfideVod0UHtuYW4dw=
 		</data>
 		<key>IMUIRecordVoiceCell.nib/objects-12.3+.nib</key>
 		<data>
-		76p1e3nbosiimxeTu0KBi9/OMsg=
+		5HSM9uqOI7bUrzn0IHV3lAL1REc=
 		</data>
 		<key>IMUIRecordVoiceCell.nib/runtime.nib</key>
 		<data>
-		ma/CB0tau6PCZDTji+m828vTIao=
+		t3hoI+avJvtJqk+mS+oud8TWLNk=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		wIbMuv2tTgs6pSbCWVvFJyaj1Gw=
+		jhXkZ71Hm6dexcA8j7wBAY6yESI=
+		</data>
+		<key>LICENSE.txt</key>
+		<data>
+		am1FOegJOA+EIJosZhaTZ/n77fM=
 		</data>
 		<key>Modules/YLCustomerService.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<data>
-		TVemU3shrS56OGcXp23yMccUahg=
+		GT2UnwyMk5/6ZBrmxy/Z+iN5FC0=
 		</data>
 		<key>Modules/YLCustomerService.swiftmodule/Project/arm64.swiftsourceinfo</key>
 		<data>
-		TVemU3shrS56OGcXp23yMccUahg=
+		GT2UnwyMk5/6ZBrmxy/Z+iN5FC0=
 		</data>
 		<key>Modules/YLCustomerService.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		VQGNjcMHNRFTw5HBw28c4o95q14=
+		xK8PUctMnyOlu4PmN1DGNGj26/g=
 		</data>
 		<key>Modules/YLCustomerService.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		e+gNjfw+Ui8xzmlYhXqHiKRnbK0=
+		OpKi2ZwWctlaQdFpshZn643wTaU=
 		</data>
 		<key>Modules/YLCustomerService.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		s1vwfs3fhKi5iHgoH5xIZAMcaxk=
+		BqTngS/J+0M2k2TZSC1HMR33wf4=
 		</data>
 		<key>Modules/YLCustomerService.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		VQGNjcMHNRFTw5HBw28c4o95q14=
+		xK8PUctMnyOlu4PmN1DGNGj26/g=
 		</data>
 		<key>Modules/YLCustomerService.swiftmodule/arm64.swiftinterface</key>
 		<data>
-		e+gNjfw+Ui8xzmlYhXqHiKRnbK0=
+		OpKi2ZwWctlaQdFpshZn643wTaU=
 		</data>
 		<key>Modules/YLCustomerService.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		s1vwfs3fhKi5iHgoH5xIZAMcaxk=
+		BqTngS/J+0M2k2TZSC1HMR33wf4=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
 		5+oqwM703Jp4MGV77WGT0TxV78I=
+		</data>
+		<key>README.markdown</key>
+		<data>
+		9n4ugjVfpEu0fJ1zlwB9jWExzXY=
 		</data>
 		<key>YLCustomerService.bundle/MLEmoji_Expression.plist</key>
 		<data>
@@ -837,17 +857,25 @@
 		<data>
 		QKAVah+ooGcxElvjQDSA867u0Eg=
 		</data>
+		<key>YLCustomerService.bundle/image/message_status_Unsend.png</key>
+		<data>
+		5vtzK5KaZYSHDesXVul8ZdoZhiE=
+		</data>
+		<key>YLCustomerService.bundle/image/message_status_Unsend@2x.png</key>
+		<data>
+		X9hNrAvICLFMwq3Tcl9NDuaudgc=
+		</data>
 		<key>YLCustomerService.bundle/image/message_status_fail.png</key>
 		<data>
-		QXbTwtKhf42vDYVUmLdITVvvwH8=
+		GFyMNkY48JkuZ8PMgvHBXNJYQk8=
 		</data>
 		<key>YLCustomerService.bundle/image/message_status_fail@2x.png</key>
 		<data>
-		NbrI35uLobzEZwlBfLDQD2yKdX4=
+		AeAK5oPc8faDNfzZfLEx/YQKrIM=
 		</data>
 		<key>YLCustomerService.bundle/image/message_status_fail@3x.png</key>
 		<data>
-		s+i4zPLkVFenWn9ArbaDaj5w15o=
+		Dtz068o2AjfAwMhHrL4hafCaqm0=
 		</data>
 		<key>YLCustomerService.bundle/image/outGoing_bubble.png</key>
 		<data>
@@ -1240,6 +1268,14 @@
 			<key>optional</key>
 			<true/>
 		</dict>
+		<key>YLCustomerService.bundle/ylmore.png</key>
+		<data>
+		UHwyX7K2AFpmPmvRNC2lIgVZXNc=
+		</data>
+		<key>YLCustomerService.bundle/ylmore@2x.png</key>
+		<data>
+		VibnOg1z3LE1QHzytHE7q3mfnWs=
+		</data>
 		<key>YLCustomerService.bundle/zh-Hans.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash</key>
@@ -1258,9 +1294,67 @@
 			<key>optional</key>
 			<true/>
 		</dict>
+		<key>YLGuoJihua.bundle/Info.plist</key>
+		<data>
+		DFW0I/iW4PJviRQ43hnHyArVulo=
+		</data>
+		<key>YLGuoJihua.bundle/en.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			WKqW39XLQgEY6lA6AUrlUnEpits=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>YLGuoJihua.bundle/fil.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			EJItWbqscsQJqe2gdqYZg13WTx0=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>YLGuoJihua.bundle/ko.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			fWFKsLvopLhxyjJk6d4/Adq2Bm8=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>YLGuoJihua.bundle/pt-PT.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			9gfCputDJpV8uV8vDqf210Lc3tA=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>YLGuoJihua.bundle/vi.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			xGURgzL8n2q5e8K2vS5qaK3iazk=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>YLGuoJihua.bundle/zh-Hans.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			xZFe4cExFvF7Pflp1xknEocojjM=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>YLSkinDefault.bundle/Info.plist</key>
 		<data>
-		vrBxKKcnh5QnsYkBG+p67nikU7o=
+		75QNsrRHl1ybfQEklKjn790ofUk=
 		</data>
 		<key>YLSkinDefault.bundle/cs_rewoard_vip_icon@2x.png</key>
 		<data>
@@ -1773,6 +1867,17 @@
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>Headers/HttpClient.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			RMbsDrPMRPSaT9UEhItydi3kTow=
+			</data>
+			<key>hash2</key>
+			<data>
+			5oyoNfOo7Dk9h7OdolL6q/tZnbUt1m4oTS85AQy/9rU=
+			</data>
+		</dict>
 		<key>Headers/PasteboardTextView.h</key>
 		<dict>
 			<key>hash</key>
@@ -1821,11 +1926,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			jDoJD5JvW4pzTbDAzr4UyiPFNaw=
+			CVamNWbG+fSzXXx0Z0vT7flVcU4=
 			</data>
 			<key>hash2</key>
 			<data>
-			AqBUyU6Zy4KZXFUcdILifkm58D3DNy0RFY8z/b6v60Y=
+			Tw60CKBorcBZAofhykmK1bIuEFdYcKO8nSeUA+rH+4g=
 			</data>
 		</dict>
 		<key>Headers/YLAttributedString.h</key>
@@ -1854,11 +1959,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			aGrfOdcmAoDSTLhwYyi1XyN5CdU=
+			1kfA8b19+eJGQPf40o9QuAO3Csg=
 			</data>
 			<key>hash2</key>
 			<data>
-			6JZ8P+1HtyLaJP4fOo6jxAZJSaXHh4q2qKhSugK4REw=
+			p1FoFYe6HJgetGAOeMlBz88qcXMXSetwzjgMI2Q2irk=
+			</data>
+		</dict>
+		<key>Headers/YLBasicConfig.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			wxbqQJGwrbBtdAMh5/SyCrhgpjo=
+			</data>
+			<key>hash2</key>
+			<data>
+			Cw72fpOjCCiK5Xqp0eybVCbFuSO3NAsIbNEgPnBTT6Q=
 			</data>
 		</dict>
 		<key>Headers/YLBundle.h</key>
@@ -1870,6 +1986,17 @@
 			<key>hash2</key>
 			<data>
 			MBh/F1enrVSG6bvAGLNz1AnjS9c/XfKw32nl8jIup4Q=
+			</data>
+		</dict>
+		<key>Headers/YLChangeLanguageTool.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			1lHvUn5zF6F/Ap2AbfItNmOn3Yw=
+			</data>
+			<key>hash2</key>
+			<data>
+			IWXqquGe0aCLW8rHgRCVkmoW7rXH1j/KnlGohFmv9rM=
 			</data>
 		</dict>
 		<key>Headers/YLCustomDeskHomeVC.h</key>
@@ -1898,22 +2025,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			/znu1bjd/z+gVN3d75EV3+i3skU=
+			d9zlgdWZvuNPKHAdba2H0u4hqtA=
 			</data>
 			<key>hash2</key>
 			<data>
-			pqLQoGE5H3e7roaT6lQdE7gFi6owIcI6LEgaCRshi44=
+			2DfkpZOq/XYc+APNh4x69QOJ78PgVFYo/iCa6L5jAbk=
 			</data>
 		</dict>
 		<key>Headers/YLCustomerServiceManager.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			y9qcwKn4W6rdOZXBcfSAYeB3igQ=
+			5aQqInUSrNxoscOGS2nuKT+PveQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			SzTktXSnHs0pWCcaBQ0ARxsqlzocBPRhpp+k8LFBlHo=
+			6/TAGOqNfnPcvZ4pj/pJngmrsNX9eRlEx5FFrpfJOEk=
 			</data>
 		</dict>
 		<key>Headers/YLHomeCstmVC.h</key>
@@ -1975,308 +2102,319 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			KUnNYEZqy7o+HMT/QHHYdmX2aFM=
+			LHzir4eVxdZmaReqDYb/5RljISM=
 			</data>
 			<key>hash2</key>
 			<data>
-			qPTOxWFGyGWweBHQdRxAtlIf878xxn5chQcc/7sEiY4=
+			wPlalYLOmoGd25hyhzAceycPrsGdUX0kSejOQLhP7BE=
 			</data>
 		</dict>
 		<key>IMUICameraCell.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			CtVZL+751BhjiJ1grs3i2JMUulg=
+			dxi5sNgjxuhBcbN36SCUtxRaXTc=
 			</data>
 			<key>hash2</key>
 			<data>
-			aVCIFgbnC9rrbfnJjlPKgmVuUpd4pL+UkXKj1XWDQz4=
+			d/PtLskW1R6btx7F9MtN2DzpuzfQH2nmy9YPxYL7yqA=
 			</data>
 		</dict>
 		<key>IMUICameraView.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			4ZPXTCaLJbmBGx5kWYoubgQiUfU=
+			g8brW0EDoew7ohBDwOulay1oDiU=
 			</data>
 			<key>hash2</key>
 			<data>
-			3X2Lorf+i1ROHlu1o58kIBwtDjt0XRpRrPFihAE8kv4=
+			XRJ861wuZYdlEE8KY874hdGwFyabCwfcecthPXB9MuY=
 			</data>
 		</dict>
 		<key>IMUICustomInputView.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			NKjY8q7a2JuIw8/Q4B/CkBIbgWU=
+			sJuhBU3M9IKFe4QefO+C4k1aovs=
 			</data>
 			<key>hash2</key>
 			<data>
-			sLZb8FsIH1xH7vhYjLF9jS6g+R7oM8+uXk5zMAWtL1o=
+			tG7KmpikDUS4xCr4RiqJDO3bQvjP4s5aGmam/uHSG6s=
 			</data>
 		</dict>
 		<key>IMUIEmojiCell.nib/objects-12.3+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			4L6IwqToaBfJLYCP8sG4Hk+JPJ4=
+			tP3djc4uR8I7n05Y9yyRYsIp/ZE=
 			</data>
 			<key>hash2</key>
 			<data>
-			T0LYaHcXMB3Hegj2BDy8QFl9Ou0XxdNZ+0MIdvLIRm8=
+			P4jswYTnfQC7VMltM/nX1ymdXb11RySJmFA7sM93D+E=
 			</data>
 		</dict>
 		<key>IMUIEmojiCell.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			VxCoia+HN4KTt1qX2zGMpbGXe24=
+			mEJq5gebloQwBCPzRVaTdiDv98g=
 			</data>
 			<key>hash2</key>
 			<data>
-			WcNeutdfievqRnCh7l8oouicE0bW6A0wEgcXDSQc2IQ=
+			ShPvJR0p7wiW8hgVpyeH7QHgB8gmI2ZLnWuuKPw+ksU=
 			</data>
 		</dict>
 		<key>IMUIEmojiItemCell.nib/objects-12.3+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			9eHDzBo5BqWxse8ek4JBBBTjkUo=
+			as9SAsNixnqo/GU0YmHJ8aEjQhM=
 			</data>
 			<key>hash2</key>
 			<data>
-			2VkaSRK9R1dY9T17srt5hjNrTehuff2jYvfoor+dGmA=
+			T4vPsErhl9NHdu/oWoxZ1Vsw1gis98bT9tW4QwXsPfo=
 			</data>
 		</dict>
 		<key>IMUIEmojiItemCell.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			eruV3pDejOz3MsZi1DSE+uQxKJ0=
+			zxoHTY+E1gTePTNGkqot8PCQkaI=
 			</data>
 			<key>hash2</key>
 			<data>
-			kFnLhp1ji1mo3OexT20GqMr8Nt7woCyIheDSIjlUIq0=
+			ZzD38DWtmGS0HEO1e19d6VwgKTnFnBhQSfft8Vpyu30=
 			</data>
 		</dict>
 		<key>IMUIFeatureListIconCell.nib/objects-12.3+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Ff3m8FxQyViGHj72wNoBMznUMuA=
+			z5WaC9MHmFJu5DuMisz0iCUKOmY=
 			</data>
 			<key>hash2</key>
 			<data>
-			ffQvxh/HmnGJ3b4ZSi33cCIG+LBcrf9AYHzwDnyyI/4=
+			Q87HQW0Wc9PXRCyroYk/qzl7ZUFZKQ8OVC/S2kcta8U=
 			</data>
 		</dict>
 		<key>IMUIFeatureListIconCell.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			gl/HJWnDXLr+idLvLrLjYQRe8R0=
+			4jR1IQCPf+dXUfTvLjdxLuMI36Y=
 			</data>
 			<key>hash2</key>
 			<data>
-			xcc7hrUqRoYdti2mthPPn7KXW73zreLqNXQRwFcl3n0=
+			GXnVM7ZZJ8neN6Nwe/+9/4yvi/FqfRBH37sWTv31tr0=
 			</data>
 		</dict>
 		<key>IMUIFeatureListView.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			chbVDxTiDJZ2VN3pMpim7WDzSeA=
+			IPn1EzqUJsEhEh6cldPifaN8ZPg=
 			</data>
 			<key>hash2</key>
 			<data>
-			ABpi2fcwSN5S2COV1FuvqXydJGEq2PsTO/rlrwzJ6I8=
+			12flNiZeHYHyVYivxbXcmcGRlwty82+4Q0ykywWU1DI=
 			</data>
 		</dict>
 		<key>IMUIFeatureView.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			wmLyysdXikR/gYKKPTtuOiXW93M=
+			qefdQA+U7Y28tg59GqqGCuHvwM4=
 			</data>
 			<key>hash2</key>
 			<data>
-			nIPhnni97QgfA5kKVEKPcRo1w1aoZ2PWaEmdghG3u28=
+			EEvxjl5hnbsO96VacgD2v88/bRWMXJ3YYfo990dM27Q=
 			</data>
 		</dict>
 		<key>IMUIGalleryCell.nib/objects-12.3+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			W0YmsQV8ZBXQrB0bBRrnzFsWHgI=
+			edR49o7MBUvAhI+5QPG475QocYc=
 			</data>
 			<key>hash2</key>
 			<data>
-			fm40a9jzdiCDJ7BEnqS1QU4Ch15Yf00772bz6tAoDsU=
+			Zqugx9JKdVsBo6HqMaBxav1Acr3woYw3HGAuEZ8HGco=
 			</data>
 		</dict>
 		<key>IMUIGalleryCell.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			arNuR11CxRa5lKqWbXznobb+Qww=
+			9FOt5efbQiQZGTCpsnbr27GK5nw=
 			</data>
 			<key>hash2</key>
 			<data>
-			kBTjr9kZsw5EpU2v4G6gssWX2XBwZBj12AAJ3VTnIbs=
+			aYFQ2LE4PSiasSH+wNMVQV/uAcHhh4aDQDZqo02Eaqg=
 			</data>
 		</dict>
 		<key>IMUIGalleryContainerCell.nib/objects-12.3+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			6ERAQBHjerRByWDFZhT9S1Zrc1I=
+			8G2p/taXhkpgA73zSKgyJqzObu8=
 			</data>
 			<key>hash2</key>
 			<data>
-			kmTVnH5KyAdtTedTrV0pasf6/BAjgufIY0HKFQ6FJ+c=
+			5XQIaMm+j7Ih3D9BPnnPLKMw557S3b4/2HnO5Av0lbk=
 			</data>
 		</dict>
 		<key>IMUIGalleryContainerCell.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			EYQ1b0jYBaDk3wVPTsZTuQfrAt0=
+			SewGImm14qr3QCwff0OM+e5yQEw=
 			</data>
 			<key>hash2</key>
 			<data>
-			Y2S+d73wFTLnYyoEGeM+wOkifnjKrB2QRqWtkYljAqA=
+			44VEdY1Al2DHH8FgzDKrfca7ETbjDNAERZ4tUeFnQTU=
 			</data>
 		</dict>
 		<key>IMUIMessageCollectionView.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			KVICjusUcXcDsGt7OUyIscuZbq0=
+			hqk8hVNkhko1Pbch5PH5FUzfZy0=
 			</data>
 			<key>hash2</key>
 			<data>
-			kxq8wQDmO8nzmonmIIRyc72ewhLuNgzuZIOI9JAvYjo=
+			daiQobSfSi2OEE+KwW7WiqmDTRJ/zaIkDyozctYF9k8=
 			</data>
 		</dict>
 		<key>IMUIPermissionDenyedView.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			0T6kgF9Yi+P3aruRehgOkqW4Rf0=
+			2dtUwD4xSIfideVod0UHtuYW4dw=
 			</data>
 			<key>hash2</key>
 			<data>
-			gnzoLPaL40Ir7I+gHh+NqXMj6JW83yXiAT91LQfUD4I=
+			y4ViXOuLAP0YnCc8AQJiSIIDkEqphUHKZAJAPnkkKDY=
 			</data>
 		</dict>
 		<key>IMUIRecordVoiceCell.nib/objects-12.3+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			76p1e3nbosiimxeTu0KBi9/OMsg=
+			5HSM9uqOI7bUrzn0IHV3lAL1REc=
 			</data>
 			<key>hash2</key>
 			<data>
-			MpmlP1vn6iRz3/nMzgNdcveADv+lfYnQN7PxBTn93vE=
+			Pfg1sf+DIZ4OsIm+LPrb7JGjyBr010nX770DrWfIEBY=
 			</data>
 		</dict>
 		<key>IMUIRecordVoiceCell.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ma/CB0tau6PCZDTji+m828vTIao=
+			t3hoI+avJvtJqk+mS+oud8TWLNk=
 			</data>
 			<key>hash2</key>
 			<data>
-			07FpMZu4hw6JitOjtJX1Nwh0VPc83nFdL++6UMk3lFg=
+			L+RMjM4eEYwxTflEA5ds7UmJqzkV55wUxdiy7mYJqhA=
+			</data>
+		</dict>
+		<key>LICENSE.txt</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			am1FOegJOA+EIJosZhaTZ/n77fM=
+			</data>
+			<key>hash2</key>
+			<data>
+			zGz+FWyY8cqNQvWiNxJmaUYkqGs1/fthSo1g7iPHoQQ=
 			</data>
 		</dict>
 		<key>Modules/YLCustomerService.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			TVemU3shrS56OGcXp23yMccUahg=
+			GT2UnwyMk5/6ZBrmxy/Z+iN5FC0=
 			</data>
 			<key>hash2</key>
 			<data>
-			07tPnKkgXD/bEMGkp4tJln/PPRtjooSvBpEWSB5++MY=
+			UrujHOFrnwqBIy03I5e4VukItmt1CNWbgVgGoF9VXZ0=
 			</data>
 		</dict>
 		<key>Modules/YLCustomerService.swiftmodule/Project/arm64.swiftsourceinfo</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			TVemU3shrS56OGcXp23yMccUahg=
+			GT2UnwyMk5/6ZBrmxy/Z+iN5FC0=
 			</data>
 			<key>hash2</key>
 			<data>
-			07tPnKkgXD/bEMGkp4tJln/PPRtjooSvBpEWSB5++MY=
+			UrujHOFrnwqBIy03I5e4VukItmt1CNWbgVgGoF9VXZ0=
 			</data>
 		</dict>
 		<key>Modules/YLCustomerService.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			VQGNjcMHNRFTw5HBw28c4o95q14=
+			xK8PUctMnyOlu4PmN1DGNGj26/g=
 			</data>
 			<key>hash2</key>
 			<data>
-			DuCzc4bx/ZB2hMa58NwNjtFXxOe8yP8XKUOV/oH1jb0=
+			IJ4P9J0gZF5xpFfHs1Tl2fFCtH8qycZ+I/tQ5y5j3C4=
 			</data>
 		</dict>
 		<key>Modules/YLCustomerService.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			e+gNjfw+Ui8xzmlYhXqHiKRnbK0=
+			OpKi2ZwWctlaQdFpshZn643wTaU=
 			</data>
 			<key>hash2</key>
 			<data>
-			kTUzj+YqkKmPnuV8TYup/xL73Z0yghKhASyAc3AwfbQ=
+			VcXpe0nGql0u2cCduW9+d/hy97RtFhdv0t6FcWRgbmc=
 			</data>
 		</dict>
 		<key>Modules/YLCustomerService.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			s1vwfs3fhKi5iHgoH5xIZAMcaxk=
+			BqTngS/J+0M2k2TZSC1HMR33wf4=
 			</data>
 			<key>hash2</key>
 			<data>
-			xAJUXfRICK8lNQ9tl7mrMo4fFWEH2CiAMg/0ovhzYBk=
+			WKBshNlfk3joxal2GaiNjbWvpBZncXO07rCj6o/IDRQ=
 			</data>
 		</dict>
 		<key>Modules/YLCustomerService.swiftmodule/arm64.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			VQGNjcMHNRFTw5HBw28c4o95q14=
+			xK8PUctMnyOlu4PmN1DGNGj26/g=
 			</data>
 			<key>hash2</key>
 			<data>
-			DuCzc4bx/ZB2hMa58NwNjtFXxOe8yP8XKUOV/oH1jb0=
+			IJ4P9J0gZF5xpFfHs1Tl2fFCtH8qycZ+I/tQ5y5j3C4=
 			</data>
 		</dict>
 		<key>Modules/YLCustomerService.swiftmodule/arm64.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			e+gNjfw+Ui8xzmlYhXqHiKRnbK0=
+			OpKi2ZwWctlaQdFpshZn643wTaU=
 			</data>
 			<key>hash2</key>
 			<data>
-			kTUzj+YqkKmPnuV8TYup/xL73Z0yghKhASyAc3AwfbQ=
+			VcXpe0nGql0u2cCduW9+d/hy97RtFhdv0t6FcWRgbmc=
 			</data>
 		</dict>
 		<key>Modules/YLCustomerService.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			s1vwfs3fhKi5iHgoH5xIZAMcaxk=
+			BqTngS/J+0M2k2TZSC1HMR33wf4=
 			</data>
 			<key>hash2</key>
 			<data>
-			xAJUXfRICK8lNQ9tl7mrMo4fFWEH2CiAMg/0ovhzYBk=
+			WKBshNlfk3joxal2GaiNjbWvpBZncXO07rCj6o/IDRQ=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -2288,6 +2426,17 @@
 			<key>hash2</key>
 			<data>
 			+igtoU8W4n/WzKcuMMKNF2F8smb66VCE1EBcOIS6jgI=
+			</data>
+		</dict>
+		<key>README.markdown</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			9n4ugjVfpEu0fJ1zlwB9jWExzXY=
+			</data>
+			<key>hash2</key>
+			<data>
+			mRaRIhib+ya7PzKRpnh7bRS7PPjdmn9YpGgAuwpIIcA=
 			</data>
 		</dict>
 		<key>YLCustomerService.bundle/MLEmoji_Expression.plist</key>
@@ -4041,37 +4190,59 @@
 			v283cFDdTWcsE5IpWPpxsnLbTAlnEeaphR1KeVrEs84=
 			</data>
 		</dict>
+		<key>YLCustomerService.bundle/image/message_status_Unsend.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			5vtzK5KaZYSHDesXVul8ZdoZhiE=
+			</data>
+			<key>hash2</key>
+			<data>
+			+4H7/XtBsb252deAPYFK1mx1w++PDuzNnBeCODiaLRk=
+			</data>
+		</dict>
+		<key>YLCustomerService.bundle/image/message_status_Unsend@2x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			X9hNrAvICLFMwq3Tcl9NDuaudgc=
+			</data>
+			<key>hash2</key>
+			<data>
+			o5wFRP1ion4xHlmXBI/1k7ZHslNmTCILxfaa3w7MDgQ=
+			</data>
+		</dict>
 		<key>YLCustomerService.bundle/image/message_status_fail.png</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			QXbTwtKhf42vDYVUmLdITVvvwH8=
+			GFyMNkY48JkuZ8PMgvHBXNJYQk8=
 			</data>
 			<key>hash2</key>
 			<data>
-			UCU+2wMMxLPkczJyOXWksrmrCWS9dMNrnpkNDxGkKpk=
+			nDIQIjfm8miT6jlHHGSJZ3NAEc9zdmIFoQjlTpcwAOY=
 			</data>
 		</dict>
 		<key>YLCustomerService.bundle/image/message_status_fail@2x.png</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			NbrI35uLobzEZwlBfLDQD2yKdX4=
+			AeAK5oPc8faDNfzZfLEx/YQKrIM=
 			</data>
 			<key>hash2</key>
 			<data>
-			o1AS2qCZvtDCX2j5I+6W7cbgNdGiNk+KK9BbaC8ARjk=
+			HmKNc7SLl/1CfL4Lqprn+jKNzVBVUoSZnqSOYo0bIxs=
 			</data>
 		</dict>
 		<key>YLCustomerService.bundle/image/message_status_fail@3x.png</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			s+i4zPLkVFenWn9ArbaDaj5w15o=
+			Dtz068o2AjfAwMhHrL4hafCaqm0=
 			</data>
 			<key>hash2</key>
 			<data>
-			9ajG/IGlTwB1mUqZaXNkjDyQeKiBtPQ4rMLIpY0WgSs=
+			kmTXv6Kz8XvxR1MkQ4oPxuViHcl9c8l+RO7u/x5eCHc=
 			</data>
 		</dict>
 		<key>YLCustomerService.bundle/image/outGoing_bubble.png</key>
@@ -5114,6 +5285,28 @@
 			<key>optional</key>
 			<true/>
 		</dict>
+		<key>YLCustomerService.bundle/ylmore.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			UHwyX7K2AFpmPmvRNC2lIgVZXNc=
+			</data>
+			<key>hash2</key>
+			<data>
+			p5rpvPSUKbrPZ/1+COHhG0pcbyLR0dDFMeR0K33ef5g=
+			</data>
+		</dict>
+		<key>YLCustomerService.bundle/ylmore@2x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			VibnOg1z3LE1QHzytHE7q3mfnWs=
+			</data>
+			<key>hash2</key>
+			<data>
+			m+QtLLSz96VxtAYIg5Tz2dhghLjZCNhtSCiW2HOqidQ=
+			</data>
+		</dict>
 		<key>YLCustomerService.bundle/zh-Hans.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash</key>
@@ -5140,15 +5333,104 @@
 			<key>optional</key>
 			<true/>
 		</dict>
+		<key>YLGuoJihua.bundle/Info.plist</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			DFW0I/iW4PJviRQ43hnHyArVulo=
+			</data>
+			<key>hash2</key>
+			<data>
+			sd5/7Gtl+jS41ROcoDuEni17WQWg4yIhrt9a4VICH3g=
+			</data>
+		</dict>
+		<key>YLGuoJihua.bundle/en.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			WKqW39XLQgEY6lA6AUrlUnEpits=
+			</data>
+			<key>hash2</key>
+			<data>
+			4gWV606AMfg6PqnOVHtjlBF5ZvRU6Bk5ZKBFS/GkAJ0=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>YLGuoJihua.bundle/fil.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			EJItWbqscsQJqe2gdqYZg13WTx0=
+			</data>
+			<key>hash2</key>
+			<data>
+			/7qFHa4t5RHPvdMr42LWuXikooDUKpwoHmETIx7Hjes=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>YLGuoJihua.bundle/ko.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			fWFKsLvopLhxyjJk6d4/Adq2Bm8=
+			</data>
+			<key>hash2</key>
+			<data>
+			B8bK4FnOu/T6pTauNQIxvITL2W7mAl1fu/uqQQVuNgI=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>YLGuoJihua.bundle/pt-PT.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			9gfCputDJpV8uV8vDqf210Lc3tA=
+			</data>
+			<key>hash2</key>
+			<data>
+			71Yriq81l6Wv4pECCexP3xR+OHa0ISfWX70k95FcNN4=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>YLGuoJihua.bundle/vi.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			xGURgzL8n2q5e8K2vS5qaK3iazk=
+			</data>
+			<key>hash2</key>
+			<data>
+			Uxn6hwSQ2d7Qp+Np/GntbDcqGowdRSaI2gNgL6Q7MZI=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>YLGuoJihua.bundle/zh-Hans.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			xZFe4cExFvF7Pflp1xknEocojjM=
+			</data>
+			<key>hash2</key>
+			<data>
+			PIiYzjXVPshvYUKQwn6PgyHMM6QsfmjF1avSYlif/qE=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>YLSkinDefault.bundle/Info.plist</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			vrBxKKcnh5QnsYkBG+p67nikU7o=
+			75QNsrRHl1ybfQEklKjn790ofUk=
 			</data>
 			<key>hash2</key>
 			<data>
-			GG6Gm8QveEpQmYSim0ogmUgan+Q/cPFoaDJcIvCrBSk=
+			hJSMPQnVgYkpeMs2JjW3veSURrFRdFcVnE0jOk1W81s=
 			</data>
 		</dict>
 		<key>YLSkinDefault.bundle/cs_rewoard_vip_icon@2x.png</key>

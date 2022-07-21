@@ -57,9 +57,11 @@
 - (void)icsManager:(void(^ _Nonnull)(void))success {
     //根据需求可自行配置环境 这里是测试环境
     [YLCustomerServiceManager sharedManager].env = 1;
+    [[YLCustomerServiceManager sharedManager] setLanguagesType:1];
+
     YLLoginUserModel *loginModel = [[YLLoginUserModel alloc] init];
-    loginModel.accessToken = @"e98cf94573c8481aa0fe6e40cfadfaf5";
-    loginModel.userUid = @"20016300";
+    loginModel.accessToken = @"d5bc551467894886a5ea624edece5864";
+    loginModel.userUid = @"66330";
     //来源页 测试使用
     loginModel.sourcePage = @"test";
     [[YLCustomerServiceManager sharedManager] loginWithUserInfo:loginModel success:^{
