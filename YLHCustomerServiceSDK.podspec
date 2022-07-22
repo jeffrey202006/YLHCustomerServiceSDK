@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
 s.name             = 'YLHCustomerServiceSDK'
-s.version          = '1.3.37'
+s.version          = '1.3.38'
 s.summary          = '智能客服sdk.'
 
 # This description is used to generate tags and improve search results.
@@ -40,7 +40,7 @@ s.exclude_files = 'YLCustomerServiceSDK/Info.plist'
 s.source_files = ['YLCustomerServiceSDK/*.{m,h}', 'YLCustomerServiceSDK/YLCustomerService.framework/Headers/*.h']
 
 s.resource = ['YLCustomerServiceSDK/YLCustomerService.framework/YLSkinDefault.bundle',
-'YLCustomerServiceSDK/YLCustomerService.framework/YLCustomerService.bundle',
+'YLCustomerServiceSDK/YLCustomerService.framework/YLCustomerService.bundle','YLCustomerServiceSDK/YLCustomerService.framework/YLGuoJihua.bundle',
 'YLCustomerServiceSDK/mediasoup-client-nf-ios.framework/MediasoupFaceModel.bundle',
 'YLCustomerServiceSDK/YLCustomerService.framework/*.{nib}']
 
