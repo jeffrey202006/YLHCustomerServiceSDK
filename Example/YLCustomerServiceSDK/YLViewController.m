@@ -60,8 +60,8 @@
     [[YLCustomerServiceManager sharedManager] setLanguagesType:6];
 
     YLLoginUserModel *loginModel = [[YLLoginUserModel alloc] init];
-    loginModel.accessToken = @"d5bc551467894886a5ea624edece5864";
-    loginModel.userUid = @"66330";
+    loginModel.accessToken = @"d5bc53fdb45vfg24123324565864";
+    loginModel.userUid = @"24834340";
     //来源页 测试使用
     loginModel.sourcePage = @"test";
     [[YLCustomerServiceManager sharedManager] loginWithUserInfo:loginModel success:^{
