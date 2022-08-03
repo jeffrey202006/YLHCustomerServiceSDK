@@ -1,0 +1,359 @@
+/*
+  Localizable.strings
+  YLCustomerService-ios
+
+  Created by duhui on 2022/5/10.
+  Copyright © 2022 永亮iOS. All rights reserved.
+*/
+// 客服列表
+"Supports list" = "Supports list" ;
+"CSC" = "CSC";
+"Language" = "Language";
+"Change Skin" = "Change Skin";
+"Delete and exit" = "Delete and exit";
+"Please enter" = "Please enter";
+"The Support is offline" = "The Support is offline";
+"Associated questions" = "Associated questions";
+"Current version:" = "Current version:";
+"Come and chat~" = "Come and chat~";
+"Please fill in the questionnaire so that we can provide better service!" = "Please fill in the questionnaire so that we can provide better service!";
+"Allow location service prompt" = "Allow location service prompt";
+"Please turn on location service in the setting" = "Please turn on location service in the setting";
+"Turn on location service" = "Turn on location service";
+"Answer audio call" = "Answer audio call";
+"Answer video call" = "Answer video call";
+"Input parameter is invalid" = "Input parameter is invalid";
+"The verification code is empty" = "The verification code is empty";
+"Graphic verification code" = "Graphic verification code";
+"Enter the graphic verification code" = "Enter the graphic verification code";
+"No data" = "No data";
+"Other" = "Other";
+"Gives another feedback" = "Gives another feedback";
+"Waiting in line therefore can't chat, please wait" = "Waiting in line therefore can't chat, please wait";
+"You tipped" = "You tipped" ;
+"Wishes you wealth and prosperity" ="Wishes you wealth and prosperity";
+"Declined audio call" = "Declined audio call";
+"Declined video call" = "Declined video call";
+"Transfer to Support" = "Transfer to Support";
+"Unable to claim" = "Unable to claim";
+"The red envelope has exceeded 24 hours" = "The red envelope has exceeded 24 hours";
+"The red envelope has ran out" = "The red envelope has ran out";
+"Check claiming details" = "Check claiming details";
+"Please select the amount of K coins" = "Please select the amount of K coins";
+"Please enter the amount (bigger than 0)" = "Please enter the amount (bigger than 0)";
+"(Can exchange for" = "(Can exchange for";
+"If it's alright with you, please tell us why we couldn't help, so we can improve and bring you better service afterwards, thank you for your support!" = "If it's alright with you, please tell us why we couldn't help, so we can improve and bring you better service afterwards, thank you for your support!";
+"Conversation in progress" = "Conversation in progress";
+"Login error" = "Login error";
+"The message has violation content, and has been withdrawn by the administrator" = "The message has violation content, and has been withdrawn by the administrator";
+"Tipped" = "Tipped";
+"Welcome {} to the studio" = "Welcome %@to the studio" ;
+"Are you sure to end the conversation?" = "Are you sure to end the conversation?";
+"Exit" = "Exit";
+"Is going to leave the group, and will no longer recieve messages from the group?" = "Is going to leave the group, and will no longer recieve messages from the group?";
+"Close" = "Close" ;
+"Notice" = "Notice";
+"Event link :" ="Event link :" ;
+"The message length can't exceeds 1000 characters" = "The message length can't exceeds 1000 characters";
+"24-hour online Support" = "24-hour online Support";
+"Support is busy, please select other Support or consult later."= "Support is busy, please select other Support or consult later.";
+"Talking duration is too short" ="Talking duration is too short";
+"Dismiss group" = "Dismiss group";
+"{} claimed {} red envelopes" = "%@claimed%@red envelopes";
+"You claimed {} red envelopes" = "You claimed%@red envelopes";
+"Prompt"  = "Prompt";
+"[Image]" = " [Image] ";
+"[Link]" = " [Link] ";
+"Please go to setting-privacy-camera/album to open permission setting" = "Please go to setting-privacy-camera/album to open permission setting";
+"The size of the video exceeds 20M" = "The size of the video exceeds 20M";
+"Take a picture" = "Take a picture" ;
+"Select from album" = "Select from album" ;
+"Rate" = "Rate";
+"Please rate the service"="Please rate the service";
+"Succefully rate" = "Succefully rate";
+
+"Please describe in details" = "Please describe in details";
+"How the website" = "How the website";
+"Would you like to recommend our website?" = "Would you like to recommend our website?";
+"Anything more you want to say to us" = "Anything more you want to say to us";
+"Official answer:" = "Official answer:";
+"Red envelope" = "Red envelope";
+"[Red envelope]" = "[Red envelope]";
+"Group red envelope" = "Group red envelope";
+"{}'s red envelope" = "%@'s red envelope";
+"Claim {}" = "Claim %@/%@";
+"[The red envelope has been claimed]"="[The red envelope has been claimed]";
+"[Withdrawn]" = "[Withdrawn]";
+"[Audio]" = "[Audio]";
+"[Video]" = "[Video]";
+"[Activity]" ="[Activity]" ;
+"Can't tell" = "Can't tell";
+"Verification code login" = "Verification code login";
+"Login" = "Login" ;
+"Please enter password" = "Enter password" ;
+"Please enter the verification code" = "Please enter the verification code";
+"Password login" = "Password login";
+"Please enter user name/phone numbers" = "Please enter user name/phone numbers";
+"You still have questions haven't answered" = "You still have questions haven't answered";
+"Network abnormal" = "Network abnormal";
+"The network is unstable" = "The network is unstable";
+"Failed to send, please check your network" = "Failed to send, please check your network";
+"You're already in line, please wait" = "You're already in line, please wait";
+"You're already in a conversation~" = "You're already in a conversation~";
+"The transfer has expired, please ask again" = "The transfer has expired, please ask again";
+"Returning to server has error, failed to upload" = "Returning to server has error, failed to upload";
+"You're waiting in line" = "You're waiting in line";
+"On a call" = "On a call";
+"Feedback details" = "Feedback details";
+"No replies from the Support, please wait for the Support to manage it" = "No replies from the Support, please wait for the Support to manage it";
+"Failed to report" = "Failed to report";
+"Hasn't start yet" = "Hasn't start yet";
+"On going" = "On going";
+"Pause" = "Pause";
+"Has ended" = "Has ended";
+"Unknown" = "Unknown";
+"I'm a Support" = "I'm a Support";
+"Support {} send a red envelope" = "Support %@ send a red envelope";
+"The Support is not connected, please re-initiate the Support request" = "The Support is not connected, please re-initiate the Support request";
+"Please under 100 characters" = "Please under 100 characters";
+"Failed to read compressed video" = "Failed to read compressed video";
+"Video data doesn't exist" = "Video data doesn't exist";
+"I want to give feedback" = "I want to give feedback";
+"Getting through..." = "Getting through...";
+"Mute" = "Mute";
+"End" = "End";
+"Speaker" = "Speaker";
+"Disconnected" = "Disconnected";
+"Switch to audio" = "Switch to audio";
+"Select date" = "Select date";
+"Please select date" = "Please select date";
+"The streamer has left temporarily, pause time{}" = "The streamer has left temporarily, pause time %@";
+"The room has been dismissed" = "The room has been dismissed";
+"The room will be dismiss in {}, the users will be exited" = "The room will be dismiss in %@, the users will be exited";
+"Pull up to load more..." = "Pull up to load more...";
+"Loading more..." = "Loading more...";
+"Support" = "Support";
+"Please select who to be tipped" = "Please select who to be tipped";
+"The amount of tip can't be 0" = "The amount of tip can't be 0";
+"File complain" = "File complain";
+"Loading..." = "Loading...";
+"You didn't join any Support group" = "You didn't join any Support group";
+"Yesterday" = "Yesterday";
+"Unknow mistake" = "Unknow mistake";
+"The search result is empty" = "The search result is empty";
+"The studio is disconnected" = "The studio is disconnected";
+"Please check the network" = "Please check the network";
+"The live streaming has ended" = "The live streaming has ended";
+"The streamer leaves for a while" = "The streamer leaves for a while";
+"Title" = "Title";
+"Come and say something" = "Come and say something";
+"Failed to get Support status" = "Failed to get Support status";
+"Currently only support @robot, group robot will answer your questions" = "Currently only support @robot, group robot will answer your questions";
+"At me" = "At me ";
+"You're banned by the group offical, please be polite." = "You're banned by the group offical, please be polite.";
+"Only the administrator can speaks" = "Only the administrator can speaks";
+"Sunday" = "Sunday";
+"Monday" = "Monday";
+"Tuesday" = "Tuesday";
+"Wednesday" = "Wednesday";
+"Thursday" = "Thursday";
+"Friday" = "Friday";
+"Saturday" = "Saturday";
+"Message details" = "Message details";
+"Receive verification code" = "Receive verification code";
+"Product problem" = "Product problem";
+"Report problem" = "Report problem";
+"Small machine" = "Small machine";
+"The room is abnormal" = "The room is abnormal";
+"No one answer, please call again later" = "No one answer, please call again later";
+"Scroll to go to the next page" = "Scroll to go to the next page";
+"Release to go to the next page" = "Release to go to the next page";
+"X year X month" = "yyyy / MM ";
+"Release to load" = "Release to load";
+"All loaded" = "All loaded";
+"Pull down to refresh" = "Pull down to refresh";
+"Release to refresh" = "Release to refresh";
+"Dialing" = "Dialing";
+"Answering,Please wait" = "Answering,Please wait";
+"studio was broke" = "studio was broke";
+"The account balence is not enough" = "The account balence is not enough";
+"EndConversationnew" = "End ";
+"Confirmed that transfer to Support" = "Confirmed that transfer to Support";
+"Call cancelled" = "Call cancelled";
+"Video call starts" = "Video call starts";
+"Audio call starts" = "Audio call starts";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"Telemarketing social media support" = "Telemarketing social media support";
+"Exclusive Support" = "Exclusive Support";
+"Support Group" = "Support Group";
+"Support studio" = "Support studio";
+"Currently no Support's live streaming" = "Currently no Support's live streaming";
+"No online support" = "No online support";
+"No exclusive support" = "No exclusive support";
+"Search/Support/Group name" = "Search/Support/Group name";
+"Currently no search data" = "Currently no search data";
+
+//客服中心
+"Online Support" = "Online Support";
+"FAQs" = "FAQs";
+"Site Feedback" = "Site Feedback";
+"VIP Hotline" = "VIP Hotline";
+"Video Call" = "Video Call";
+"Call Support" = "Call Support";
+"Please enter keyword" = "Please enter keyword";
+"You might want to ask..." = "You might want to ask...";
+"More" = "More";
+
+
+
+// 26-50
+"Solved" = "Solved";
+"Unsolved" = "Unsolved";
+"Search history" = "Search history";
+"Currently no search history" = "Currently no search history";
+"Please enter keyword" = "Please enter keyword";
+"Search" = "Search";
+"List of feedback" = "List of feedback";
+"Type of Feedback" = "Type of Feedback";
+"Feedback Message" = "Feedback Message";
+"Currently no history data" = "Currently no history data";
+"No Feedback/Data" = "No Feedback/Data";
+"Check Replies" = "Check Replies";
+"No Reply" = "No Reply";
+"Site Feedback" = "Site Feedback";
+"Select type of feedback" = "elect type of feedback";
+"Please enter feedback message" = "Please enter feedback message";
+"Please enter feedback comment." = "Please enter feedback comment.";
+"Upload image (Maximun is 6 images)" = "Upload image (Maximun is 6 images)";
+"Submit" = "Submit";
+"Enquiry form" = "Enquiry form";
+"Submit" = "Submit";
+"Online Support" = "Online Support";
+"Sorry the robot can't help, would you like to transfer to human service?" = "Sorry the robot can't help, would you like to transfer to human service?";
+"Sorry, the customer service is busy right now. There're { } waiting in front of you, please be patient. We'll assign your exclusive support as soon as possible." = "Sorry, the customer service is busy right now. There're %ld waiting in front of you, please be patient. We'll assign your exclusive support as soon as possible.";
+"In contact with Support { }" = "In contact with Support %@";
+
+
+// 51 - 80
+"Copy to the paste board." = "Copy to the paste board.";
+"Tranfer to human service" = "human support";
+"End conversation" = "End conversation";
+"Audio message" = "Audio message";
+"Send" = "Send";
+"Copy" = "Copy";
+"Quote" = "Quote";
+"Already copied to the paste board" = "Already copied to the paste board";
+"Temporarily leaving the conversation, will hold for { } minutes." = "Temporarily leaving the conversation, will hold for %@ minutes.";
+"End conversation" = "End conversation";
+"End the conversation meaning closing it, come back as soon as possible if you leave. If no more message in { } minutes would close the conversation for you." = "End the conversation meaning closing it, come back as soon as possible if you leave. If no more message in %@ minutes would close the conversation for you.";
+"Cancel" = "Cancel";
+"Confirm" = "Confirm";
+"The conversation has ended." = "The conversation has ended.";
+"Please click here to rate the support." = "Please click here to rate the support.";
+"Conversation has ended, leaving the page in { } seconds." = "Conversation has ended, leaving the page in %@ seconds.";
+"Rate the support." = "Rate the support.";
+"Please rate the service." = "-Please rate the service.-";
+"Did the Support solve your problem?" = "Did the Support solve your problem? ";
+"Was the Support friendly?" = "Was the Support friendly?";
+"Would you recommend our site?" = "Would you recommend our site?";
+"No/Probably/Yes" = "No/Probably/Yes";
+"More things that you would like to share with us." = "More things that you would like to share with us.";
+"Describe in details." = "Describe in details.";
+"Submit" = "Submit";
+"VIP Hotline/Audio Call/Video Call" = "VIP Hotline/Audio Call/Video Call";
+"Current reception support is busy, you're transfer to text conversation. You can ask questions by sending messages." = "Current reception support is busy, you're transfer to text conversation. You can ask questions by sending messages.";
+"The Support {} that you asked for is currently offline, you're transfer to human service support { }, which does not support audio nor video calls, please enter your question." = "The Support %@ that you asked for is currently offline, you're transfer to human service support %@, which does not support audio nor video calls, please enter your question.";
+"Audio Call" = "Audio Call";
+"Video call" = "Video call";
+
+
+// 81-110
+"Send image" = "Send image";
+"In contact with Support{ }" = "In contact with Support %@";
+"End Conversation1" = " End ";
+"Audio message" = "Audio message";
+"Copy" = "Copy";
+"Quote" = "Quote";
+"Already canceled the audio call" = "Already canceled the audio call";
+"Already canceled the video call" = "Already canceled the video call";
+"Duration:" = "Duration:";
+"{ } invites you to an audio call." = "%@ invites you to an audio call.";
+"{ } invites you to a video call." = "%@ invites you to a video call.";
+"Decline" = "Decline";
+"Accept" = "Accept";
+"Skin setting" = "Skin setting";
+"Default" = "Default";
+"End the conversation" = "End the conversation";
+"Audio Call" = "Audio Call";
+"Video Call" = "Video Call";
+"Send Image" = "Send Image";
+"Tips" = "Tips";
+"Chat details" = "Chat details";
+"Search chat history" = "Search chat history";
+"Pin the chat history" = "Pin the chat history";
+"Support is currently offline, you could ask again later." = "Support is currently offline, you could ask again later.";
+"Thank you for your support and tips which motivate us." = "Thank you for your support and tips which motivate us.";
+"Please select the amount{ }" = "Please select the amount %@";
+"Custom" = "Custom";
+"Balance" = "Balance";
+"Okay, it's been tipped." = "Okay, it's been tipped.";
+"Cancel" = "Cancel";
+
+// 111-144
+"End conversation" = "End conversation";
+"Audio Call" = "Audio Call";
+"Video Call" = "Video Call";
+"Send Image" = "Send Image";
+"Chat details" = "Chat details";
+"Search chat history." = "Search chat history.";
+"Pin the chat history." = "Pin the chat history.";
+"Search by date." = "Search by date.";
+"Cancel" = "Cancel";
+"No more data." = "No more data.";
+"Select date" = "elect date";
+"Confirm" = "Confirm";
+"Audio message" = "Audio message";
+"Please enter your question." = "Please enter your question.";
+"You're banned by the group offical, please be polite." = "You're banned by the group offical, please be polite.";
+"You cliamed red envelope from support" = "You cliamed red envelope from support";
+"Chat details" = "Chat details";
+"Group members" = "Group members";
+"{ } members" = "%ld members";
+"Group robot" = "Group robot";
+"Group name" = "Group name";
+"Group notice" = "Group notice";
+"Search chat history" = "Search chat history";
+"Pin the chat" = "Pin the chat";
+"User" = "User";
+"Group Master" = "Group Master";
+"Administer" = "Administer";
+"Already selected { } people" = "Already selected %@ people";
+"Please select { } amount" = "Please select %@ amount";
+"Custom" = "Custom";
+"Balance" = "Balance";
+"Okay, it's been tipped." = "Okay, it's been tipped.";
+"Cancel" = "Cancel";
+"Please select the support that you would like to tip." = "Please select the support that you would like to tip.";
+
+
+
+// add
+"invites you to an audio call…" = "invites you to an audio call.";
+"invites you to a video call…" = "invites you to an audio call.";
+"Yes" = "Yes";
+"No" = "No";
+"Probably" = "Probably";

@@ -1,0 +1,359 @@
+/*
+  Localizable.strings
+  YLCustomerService-ios
+
+  Created by duhui on 2022/5/10.
+  Copyright © 2022 永亮iOS. All rights reserved.
+*/
+// 客服列表
+"Supports list" = "客服列表";
+"CSC" = "客服中心";
+"Language" = "语言";
+"Change Skin" = "换肤";
+"Delete and exit" = "删除并退出";
+"Associated questions" = "关联问题";
+"The Support is offline" = "当前客服不在线";
+"Please enter" = "请输入";
+"Current version:" = "当前版本:";
+"Come and chat~" = "来聊一聊啊～";
+"Please fill in the questionnaire so that we can provide better service!" = "为了更快速为您服务，请您回答以下问题：";
+"Allow location service prompt" = "允许定位提示";
+"Please turn on location service in the setting" = "请在设置中打开定位";
+"Turn on location service" = "打开定位";
+"Answer audio call" = "接听语音通话";
+"Answer video call" = "接听视频通话";
+"Input parameter is invalid" = "传入参数不合法";
+"The verification code is empty" = "验证码为空";
+"Graphic verification code" = "图形验证码";
+"Enter the graphic verification code" = "输入图形验证码";
+"No data" = "暂无数据";
+"Other" = "其他";
+"Gives another feedback" = "再次反馈";
+"Waiting in line therefore can't chat, please wait" = "当前排队中无法进行聊天，请耐心等待";
+"You tipped" = "你打赏了";
+"Wishes you wealth and prosperity" = "恭喜发财，大吉大利";
+"Declined audio call" = "已拒绝音频通话";
+"Declined video call" = "已拒绝视频通话";
+"Transfer to Support" = "转接客服";
+"Unable to claim" = "无法领取";
+"The red envelope has exceeded 24 hours"= "该红包已超过24小时";
+"The red envelope has ran out" = "该红包已被抢光";
+"Check claiming details" = "查看领取详情";
+"Please select the amount of K coins" = "请选择K币金额";
+"Please enter the amount (bigger than 0)" = "请输入金额（大于0）";
+"(Can exchange for" = " (可兑换";
+"If it's alright with you, please tell us why we couldn't help, so we can improve and bring you better service afterwards, thank you for your support!" = "如您方便，请告知我们没有帮助的原因，以便我们改良及日后为您带来更好的服务，万分感谢您的支持！";
+"Conversation in progress" = "有进行中的通话";
+"Login error" = "登陆异常";
+"The message has violation content, and has been withdrawn by the administrator" = "信息含违规内容，已被管理员撤回";
+"Tipped" = "打赏了";
+"Welcome {} to the studio" = "欢迎%@进入直播间";
+"Are you sure to end the conversation?" = "确认结束对话么?";
+"Exit" = "退出";
+"Is going to leave the group, and will no longer recieve messages from the group?" = "即将退群，且不会再接收此群消息，是否确定?";
+"Close" ="关闭";
+"Notice" = "公告";
+"Event link :" = "活动链接:";
+"The message length can't exceeds 1000 characters" = "消息长度不能大于1000";
+"24-hour online Support" = "24小时在线客服";
+"Support is busy, please select other Support or consult later." = "客服忙碌中，请选择其他客服或稍后咨询";
+"Talking duration is too short" = "说话时长太短";
+"Dismiss group" = "群组解散";
+"{} claimed {} red envelopes" = "%@领取了%@的红包";
+"You claimed {} red envelopes" = "你领取了%@的红包";
+"Prompt" ="提示";
+"[Image]" = " [图片] ";
+"[Link]" = " [链接] ";
+"Please go to setting-privacy-camera/album to open permission setting" = "请到设置-隐私-相机/相册中打开授权设置";
+"The size of the video exceeds 20M" = "视频大小超过20M";
+"Take a picture" = "拍照";
+"Select from album" = "从相册选择";
+"Rate" = "评价";
+"Please rate the service" = "请对本次服务做出评价";
+"Succefully rate"= "评价成功";
+"Please describe in details" = "请详情描述";
+"How the website" = "如何网站";
+"Would you like to recommend our website?" = "您是否会将我们网站推荐？";
+"Anything more you want to say to us" = "更多想对我们说的话";
+"Official answer:" = "官方解答:";
+"Red envelope" = "红包";
+"[Red envelope]" = "[红包]";
+"Group red envelope" = "群红包";
+"{}'s red envelope" = "%@的红包";
+"Claim {}" = "领取 %@/%@个";
+"[The red envelope has been claimed]" = "[红包已领取]";
+"[Withdrawn]" = "[撤销]";
+"[Audio]" = "[语音]";
+"[Video]" = "[视频]";
+"[Activity]" = "[活动]";
+"Can't tell" = "看不清";
+"Verification code login" = "验证码登录";
+"Login" = "登录";
+"Please enter password" = "请输入密码";
+"Please enter the verification code" = "请输入验证码";
+"Password login" = "密码登录";
+"Please enter user name/phone numbers" = "请输入用户名/手机号";
+"You still have questions haven't answered" = "您还有问题未作答";
+"Network abnormal" = "网络异常";
+"The network is unstable" = "当前网络不稳定" ;
+"Failed to send, please check your network" = "发送失败 请检测您的网络";
+"You're already in a conversation~" = "您已在会话中啦~";
+"You're already in line, please wait" = "您已正在排队了，请稍后哦！";
+"The transfer has expired, please ask again" = "转入已失效，请重新询问";
+"Returning to server has error, failed to upload" = "服务器返回异常，上传失败";
+"You're waiting in line" = "您在排队中";
+"On a call" = "通话中";
+"Feedback details" = "反馈详情";
+"No replies from the Support, please wait for the Support to manage it" = "暂无客服回复，请耐心等待客服处理。";
+"Failed to report" = "反馈失败";
+"Hasn't start yet" = "未开始";
+"On going" = "进行中";
+"Pause" = "暂停中";
+"Has ended" = "已结束";
+"Unknown" = "未知";
+"I'm a Support" = "我是一个小客服";
+"Support {} send a red envelope" = "客服%@发了个红包 /::HB";
+"The Support is not connected, please re-initiate the Support request" = "客服没有接入，请重新发起请求客服";
+"Please under 100 characters" = "请填写100字符以内";
+"Failed to read compressed video" = "压缩视频读取失败";
+"Video data doesn't exist" = "视频数据不存在";
+"I want to give feedback" = "我要反馈";
+"Getting through..." = "正在接通中…";
+"Mute" = "静音";
+"End" = "结束";
+"Speaker" = "扬声器";
+"Disconnected" = "已断开";//
+
+
+
+
+
+
+"Switch to audio" = "切换语音";
+"Select date" = "选择日期";
+"Please select date" = "请选择日期";
+"The streamer has left temporarily, pause time{}" = "主播暂时离开了，暂停时长 %@";
+"The room has been dismissed" = "房间已解散";
+"The room will be dismiss in {}, the users will be exited" = "房间将在 %@ 解散，用户将被移出";
+"Pull up to load more..." = "上拉加载更多";
+"Loading more..." = "正加载更多...";
+"Support" = "客服";
+"Please select who to be tipped" = "请选择打赏对象";
+"The amount of tip can't be 0" = "打赏金额不能为0";
+"File complain" = "投诉";
+"Loading..." = "正在加载...";
+"You didn't join any Support group" = "您没有加入任何客服群";
+"Yesterday" = "昨天";
+"Unknow mistake" = "未知错误";
+"The search result is empty" = "搜索为空";
+"The studio is disconnected" = "直播间断开";
+"Please check the network" = "请检查网络";
+"The live streaming has ended" = "直播已结束";
+"The streamer leaves for a while" = "主播暂时离开了";
+"Title" = "标题";
+"Come and say something" = "来说两句呗…";
+"Failed to get Support status" = "获取客服状态失败";
+"Currently only support @robot, group robot will answer your questions" = "当前只支持@机器人哦，群机器人会尽量回答您的问题";
+"At me" = "@我 ";
+"You're banned by the group offical, please be polite." = "您已被群管员禁言，请文明聊天";
+"Only the administrator can speaks" = "仅管理员发言";
+"Sunday" = "周日";
+"Monday" = "周一";
+"Tuesday" = "周二";
+"Wednesday" = "周三";
+"Thursday" = "周四";
+"Friday" = "周五";
+"Saturday" = "周六";
+"Message details" = "消息详情";
+"Receive verification code" = "获取验证码";
+"Product problem" = "产品问题";
+"Report problem" = "反馈问题";
+"Small machine" = "机小器";
+"The room is abnormal" = "房间异常";
+"No one answer, please call again later" = "无人接听,请稍后再拨";
+"Scroll to go to the next page" = "拖动进入下一页";
+"Release to go to the next page" = "释放进入下一页";
+"X year X month" = "yyyy / MM";
+"Release to load" = "释放立即加载";
+"All loaded" = "全部加载完成";
+"Pull down to refresh" = "下拉可以刷新";
+"Release to refresh" = "释放立即刷新";
+"Dialing" = "正在拨打中";
+"Answering,Please wait" = "正在接听中...";
+"studio was broke" = "直播间解散";
+"The account balence is not enough" = "账户余额不足";
+"Confirmed that transfer to Support" = "确认转接人工客服";
+"Call cancelled" = "已取消通话";
+"Video call starts" = "视频通话开始";
+"Audio call starts" = "开始语音对话";
+
+
+
+
+
+
+
+
+"Telemarketing social media support" = "电社客服";
+"Exclusive Support" = "专属客服";
+"Support Group" = "客服群";
+"Support studio" = "客服直播间";
+"Currently no Support's live streaming" = "暂时没有进行中的客服直播";
+"No online support" = "无在线值班客服";
+"No exclusive support" = "无专属客服";
+"Search/Support/Group name" = "搜索/客服/群名称";
+"Currently no search data" = "暂无搜索数据";
+
+//客服中心
+"Online Support" = "在线客服";
+"FAQs" = "常见问题";
+"Site Feedback" = "意见反馈";
+"VIP Hotline" = "VIP专线";
+"Video Call" = "视频通话";
+"Call Support" = "语音客服";
+"Please enter keyword" = "请输入关键字";
+"You might want to ask..." = "猜您想问";
+"More" = "更多";
+
+
+
+// 26-50
+"Solved" = "已解决";
+"Unsolved" = "没解决";
+"Search history" = "历史搜索";
+"Currently no search history" = "暂无历史数据";
+"Please enter keyword" = "请输入关键字";
+"Search" = "搜索";
+"List of feedback" = "反馈列表";
+"Type of Feedback" = "反馈类型";
+"Feedback Message" = "反馈信息";
+"Currently no history data" = "暂无历史数据";
+"No Feedback/Data" = "暂无意见反馈/数据";
+"Check Replies" = "查看回复";
+"No Reply" = "暂无回复";
+"Site Feedback" = "意见反馈";
+"Select type of feedback" = "选择反馈类型";
+"Please enter feedback message" = "请输入反馈信息";
+"Please enter feedback comment." = "请输入反馈意见";
+"Upload image (Maximun is 6 images)" = "上传图片（最多6张）";
+"Submit" = "提交";
+"Enquiry form" = "询前问卷";
+"Submit" = "提交";
+"Online Support" = "在线客服";
+"Sorry the robot can't help, would you like to transfer to human service?" = "很遗憾机器人无法为您服务，是否转人工客服？";
+"Sorry, the customer service is busy right now. There're { } waiting in front of you, please be patient. We'll assign your exclusive support as soon as possible." = "很抱歉，客服忙碌中，您前面排队%ld人，请耐心等待，我们会尽快安排您的专属客服为您服务！";
+"In contact with Support { }" = "接通客服%@";
+
+// 51 - 80
+"Copy to the paste board." = "已复制到粘贴板";
+"Tranfer to human service" = "转人工";
+"Audio message" = "语音说话";
+"Send" = "发送";
+"Copy" = "复制";
+"Quote" = "引用";
+"Already copied to the paste board" = "已复制到粘贴板";
+"Temporarily leaving the conversation, will hold for { } minutes." = "暂时离开会话将保留%@分钟哦";
+"End conversation" = "确认结束对话吗？";
+"End the conversation meaning closing it, come back as soon as possible if you leave. If no more message in { } minutes would close the conversation for you." = "结束则关闭对话，离开请尽快回来呀，超过%@分钟没有消息则会为您关闭此对话哦";
+"Cancel" = "取消";
+"Confirm" = "确认";
+"The conversation has ended." = "本次服务会话结束";
+"Please click here to rate the support." = "请点击此处对客服进行评价";
+"Conversation has ended, leaving the page in { } seconds." = "已结束对话，将在%@秒后跳出";
+"Rate the support." = "客服评价";
+"Please rate the service." = "-请您对本次服务评分-";
+"Did the Support solve your problem?" = "客服是否解决问题? ";
+"Was the Support friendly?" = "客服是否友善？";
+"Would you recommend our site?" = "你是否会将我们网站推荐？";
+"No/Probably/Yes" = "不会/有机会/会";
+"More things that you would like to share with us." = "更多想多我们说的话";
+"Describe in details." = "请详细描述";
+"Submit" = "提交";
+"VIP Hotline/Audio Call/Video Call" = "VIP专线/语音通话/视频通话";
+"Current reception support is busy, you're transfer to text conversation. You can ask questions by sending messages." = "当前接待客服音视频忙线中，已为您接入图文会话，您可以发送信息咨询";
+"The Support {} that you asked for is currently offline, you're transfer to human service support { }, which does not support audio nor video calls, please enter your question." = "您请求的%@客服不在线，已为您接通人工客服%@，不支持语音视频通话，请输入您的问题";
+"Audio Call" = "语音通话";
+"Video call" = "视频通话";
+
+// 81-110
+"Send image" = "发送图片";
+"EndConversationnew" = "结束会话";
+"Audio message" = "语音说话";
+"Copy" = "复制";
+"Quote" = "引用";
+"Already canceled the audio call" = "已取消音频通话";
+"Already canceled the video call" = "已取消视频通话";
+"Duration:" = "时长:";
+"{ } invites you to an audio call." = "%@邀请你音频通话";
+"{ } invites you to a video call." = "%@邀请你视频通话";
+"Decline" = "拒绝";
+"Accept" = "接受";
+"Skin setting" = "皮肤管理";
+"Default" = "默认";
+"Audio Call" = "语音通话";
+"Video Call" = "视频通话";
+"Send Image" = "发送图片";
+"Tips" = "打赏";
+"Chat details" = "聊天详情";
+"Search chat history" = "查找聊天记录";
+"Pin the chat history" = "置顶聊天记录";
+"Support is currently offline, you could ask again later." = "客服不在线，你可以稍后再询问";
+"Thank you for your support and tips which motivate us." = "谢谢您的支持和打赏，让我们更有动力";
+"Please select the amount{ }" = "请选择%@金额";
+"Custom" = "自定义";
+"Balance" = "余额";
+"Okay, it's been tipped." = "好，赏了";
+"Cancel" = "取消";
+
+// 111-144
+"Audio Call" = "语音通话";
+"Video Call" = "视频通话";
+"Send Image" = "发送图片";
+"Chat details" = "聊天详情";
+"Search chat history." = "查找聊天记录";
+"Pin the chat history." = "置顶聊天记录";
+"Search by date." = "按日期搜索";
+"Cancel" = "取消";
+"No more data." = "没有更多数据了";
+"Select date" = "日期选择";
+"Confirm" = "确定";
+"Audio message" = "语音说话";
+"Please enter your question." = "请输入您遇到的问题";
+"You're banned by the group offical, please be polite." = "您已被群官员禁言，请文明聊天";
+"You cliamed red envelope from support" = "你领取了客服的红包";
+"Chat details" = "聊天详情";
+"Group members" = "群成员";
+"{ } members" = "%ld个成员";
+"Group robot" = "群机器人";
+"Group name" = "群名";
+"Group notice" = "群公告";
+"Search chat history" = "查找聊天记录";
+"Pin the chat" = "置顶聊天";
+"User" = "用户";
+"Group Master" = "群主";
+"Administer" = "管理员";
+"Already selected { } people" = "已选中%@人";
+"Please select { } amount" = "请选择%@金额";
+"Custom" = "自定义";
+"Balance" = "余额";
+"Okay, it's been tipped." = "好，赏了";
+"Cancel" = "取消";
+"Please select the support that you would like to tip." = "请选择要打赏的客服";
+
+
+// add
+
+"invites you to an audio call…" = "邀请你音频通话";
+"invites you to a video call…" = "邀请你视频通话";
+"Yes" = "是";
+"No" = "否";
+
+"Probably" = "有机会";
+
+
+
+
+
+
+
+

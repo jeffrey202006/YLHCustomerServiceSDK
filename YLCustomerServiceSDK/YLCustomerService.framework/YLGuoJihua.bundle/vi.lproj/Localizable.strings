@@ -1,0 +1,401 @@
+/* 
+  Localizable.strings
+  YLGuoJihua
+
+  Created by yltech on 2022/7/12.
+  
+*/
+/*
+  Localizable.strings
+  YLCustomerService-ios
+
+  Created by duhui on 2022/5/10.
+  Copyright © 2022 永亮iOS. All rights reserved.
+*/
+//越南语
+// 客服列表
+"Supports list" = "Danh sách";
+"CSC" = "CSKH";
+"Language" = "Ngôn ngữ";
+"Change Skin" = "Thay skin";
+"Delete and exit" = "Xóa và thoát";
+"Please enter" = "Vui lòng nhập";
+"The Support is offline" = "Dịch vụ CSKH hiện đang ngoại tuyến";
+"Current version:" = "Phiên bản hiện tại:";
+"Come and chat~" = "Hãy trò chuyện ~";
+"Please fill in the questionnaire so that we can provide better service!" = "Vui lòng điền vào bảng câu hỏi để chúng tôi có thể cung cấp dịch vụ tốt hơn!";
+"Allow location service prompt" = "Cho phép gợi ý vị trí";
+"Please turn on location service in the setting" = "Vui lòng bật tính năng định vị trong cài đặt";
+"Turn on location service" = "Mở định vị";
+"Answer audio call" = "Trả lời cuộc gọi thoại";
+"Answer video call" = "Trả lời cuộc gọi video";
+"Input parameter is invalid" = "Thông số nhập không hợp lệ";
+"The verification code is empty" = "Mã xác minh trống";
+"Graphic verification code" = "Mã xác nhận hình ảnh";
+"Enter the graphic verification code" = "Nhập mã xác nhận";
+"No data" = "Không có dữ liệu";
+"Other" = "Khác";
+"Gives another feedback" = "Phản hồi lại";
+"Waiting in line therefore can't chat, please wait" = "Hiện tại đang xếp hàng chờ chưa thể tham gia trò chuyện, vui lòng chờ!";
+"You tipped" = "Phần thưởng của bạn";
+"Wishes you wealth and prosperity" = "Chúc Phát Tài, Đại Cát Đại Lợi";
+"Declined audio call" = "Đã từ chối cuộc gọi thoại";
+"Declined video call" = "Đã từ chối cuộc gọi video";
+"Transfer to Support" = "Chuyển tiếp CSKH";
+"Unable to claim" = "Không thể nhận";
+"The red envelope has exceeded 24 hours"= "Lì Xì này đã quá 24 giờ";
+"The red envelope has ran out" = "Lì Xì này đã bị lấy hết";
+"Check claiming details" = "Xem chi tiết nhận";
+"Please select the amount of K coins" = "Vui lòng chọn số K xu";
+"Please enter the amount (bigger than 0)" = "Vui lòng nhập số tiền ( lớn hơn 0)";
+"(Can exchange for" = "(Có thể đổi";
+"If it's alright with you, please tell us why we couldn't help, so we can improve and bring you better service afterwards, thank you for your support!" = "Nếu tiện, Bạn vui lòng cho chúng tôi biết lý do không hữu ích, để chúng tôi kịp thời điều chỉnh và mang đến dịch vụ tốt hơn trong tương lai. Cảm ơn sự ủng hộ của bạn.";
+"Conversation in progress" = "Có cuộc gọi đang diễn ra";
+"Login error" = "Đăng nhập bất thường";
+"The message has violation content, and has been withdrawn by the administrator" = "Đánh giá phiên này không hợp lệ, đã bị quản trị viên đẩy ra";
+"Tipped" = "Đã thưởng";
+"Welcome {} to the studio" = "Chào mừng %@ vào phòng trực tiếp";
+"Are you sure to end the conversation?" = "Bạn muốn kết thúc cuộc trò chuyện?";
+"Exit" = "Thoát";
+"Is going to leave the group, and will no longer recieve messages from the group?" = "Sắp rời khỏi nhóm và sẽ không nhận được tin nhắn từ nhóm này nữa. Bạn có chắc không?";
+"Close" ="Tắt";
+"Notice" = "Thông báo";
+"Event link :" = "Liên kết sự kiện:";
+"The message length can't exceeds 1000 characters" = "Độ dài tin nhắn không quá 1000 từ";
+"24-hour online Support" = "Dịch vụ CSKH trực tuyến 24h";
+"Support is busy, please select other Support or consult later." = "CSKH đang bận, vui lòng chọn CSKH khác hoặc chờ tư vấn sau";
+"Talking duration is too short" = "Thời gian nói quá ngắn";
+"Dismiss group" = "Giải tán nhóm";
+"{} claimed {} red envelopes" = "%@đã nhận được%@Lì xì";
+"You claimed {} red envelopes" ="Bạn đã nhận được%@Lì xì";
+"Prompt" ="Lời nhắc";
+"[Image]" = " [Hình ảnh] ";
+"[Link]" = " [Liên kết] ";
+"Please go to setting-privacy-camera/album to open permission setting" = "Vui lòng đi tới Cài đặt-Quyền riêng tư-Máy ảnh / Album để mở cài đặt ủy quyền";
+"The size of the video exceeds 20M" = "Kích thước video trên 20M";
+"Take a picture" = "Chụp ảnh";
+"Select from album" = "Chọn từ album";
+"Rate" = "Đánh giá";
+"Please rate the service" = "Vui lòng đánh giá dịch vụ này";
+"Succefully rate"= "Đánh giá thành công";
+"Please describe in details" = "Mô tả chi tiết";
+"How the website" = "Web thế nào";
+"Would you like to recommend our website?" = "Giới thiệu trang web của chúng tôi?";
+"Anything more you want to say to us" = "Nhiều điều để nói với chúng tôi";
+"Official answer:" = "Câu trả lời chính thức:";
+"Red envelope" = "Lì Xì";
+"[Red envelope]" = "[Lì Xì]";
+"Group red envelope" = "Nhóm lì xì";
+"{}'s red envelope" = "Lì xì của%@";
+"Claim {}" = "Nhận %@/%@ cái";
+"[The red envelope has been claimed]" = "[Đã nhận Lì xì]";
+"[Withdrawn]" = "[Thu hồi]";
+"[Audio]" = "[Thoại]";
+"[Video]" = "[Vídeo]";
+"[Activity]" = "[Hoạt động]";
+"Can't tell" = "Nhìn không rõ";
+"Verification code login" = "Đăng nhập mã xác minh";
+"Login" = "Đăng nhập";
+"Please enter password" = "Nhập mật khẩu";
+"Please enter the verification code" = "Vui lòng nhập mã xác nhận";
+"Password login" = "Mật khẩu đăng nhập";
+"Please enter user name/phone numbers" = "Vui lòng nhập tên người dùng / SĐT";
+"You still have questions haven't answered" = "Bạn có câu hỏi vẫn chưa trả lời";
+"Network abnormal" = "Lỗi mạng";
+"The network is unstable" = "Mạng không ổn định" ;
+"Failed to send, please check your network" = "Không gửi được, Vui lòng kiểm tra mạng của bạn";
+"You're already in a conversation~" = "Bạn đang trong phiên";
+"You're already in line, please wait" = "Bạn đang xếp hàng, vui lòng chờ";
+"The transfer has expired, please ask again" = "Chuyển tới thất bại, vui lòng hỏi lại";
+"Returning to server has error, failed to upload" = "Lỗi máy chủ, tải lên không thành công";
+"You're waiting in line" = "Đang ở phòng chờ";
+"On a call" = "Đang gọi điện";
+"Feedback details" = "Chi tiết phản hồi";
+"No replies from the Support, please wait for the Support to manage it" = "Chưa có phản hồi từ CSKH, vui lòng kiên nhẫn.";
+"Failed to report" = "Phản hồi thất bại";
+"Hasn't start yet" = "Chưa bắt đầu";
+"On going" = "Đang diễn ra";
+"Pause" = "Tạm dừng";
+"Has ended" = "Kết thúc";
+"Unknown" = "Không xác định";
+"I'm a Support" = "Tôi là một nhân viên CSKH";
+"Support {} send a red envelope" = "Dịch vụ CSKH %@ đã gửi một lì xì /::HB";
+"The Support is not connected, please re-initiate the Support request" = "Không thể kết nối CSKH, vui lòng kết nối lại";
+"Please under 100 characters" = "Vui lòng điền tối đa 100 ký tự";
+"Failed to read compressed video" = "Không đọc được video nén";
+"Video data doesn't exist" = "Dữ liệu video không tồn tại";
+"I want to give feedback" = "Tôi muốn phản hồi";
+"Getting through..." = "Đang kết nối...";
+"Mute" = "Im lặng";
+"End" = "Kết thúc";
+"Speaker" = "Loa";
+"Disconnected" = "Ngắt kết nối";
+"Switch to audio" = "Chuyển giọng nói";
+"Select date" = "Chọn ngày tháng";
+"Please select date" = "Vui lòng chọn một ngày";
+"The streamer has left temporarily, pause time{}" = "Streamer đã tạm thời rời đi, thời gian tạm dừng %@";
+"The room has been dismissed" = "Phòng đã giải thể";
+"The room will be dismiss in {}, the users will be exited" = "Phòng sẽ bị giải thể tại %@ và người dùng sẽ bị đẩy ra";
+"Pull up to load more..." = "Kéo lên để tải thêm....";
+"Loading more..." = "Đang tải thêm...";
+"Support" = "CSKH";
+"Please select who to be tipped" = "Vui lòng đối tượng thưởng";
+"The amount of tip can't be 0" = "Số tiền thưởng không được bằng 0";
+"File complain" = "Khiếu nại";
+"Loading..." = "Đang tải…";
+"You didn't join any Support group" = "Bạn chưa tham gia bất kỳ nhóm dịch vụ CSKH nào";
+"Yesterday" = "Hôm qua";
+"Unknow mistake" = "Lỗi không xác định";
+"The search result is empty" = "Tìm kiếm trống";
+"The studio is disconnected" = "Ngắt kết nối phát trực tiếp";
+"Please check the network" = "Vui lòng kiểm tra mạng";
+"The live streaming has ended" = "Chương trình phát trực tiếp đã kết thúc";
+"The streamer leaves for a while" = "Streamer đã tạm thời rời đi";
+"Title" = "Tiêu đề";
+"Come and say something" = "Hãy để tôi nói vài lời ...";
+"Failed to get Support status" = "Không thể nhận được trạng thái dịch vụ CSKH";
+"Currently only support @robot, group robot will answer your questions" = "Hiện tại chỉ hỗ trợ @chatbot, nhóm chatbot sẽ cố gắng trả lời câu hỏi của bạn";
+"At me" = "@Tôi ";
+"You're banned by the group offical, please be polite." = "Bạn bị Admin cấm phát ngôn, hãy trò chuyện một cách văn minh";
+"Only the administrator can speaks" = "Chỉ Admin phát ngôn";
+"Sunday" = "Chủ nhật";
+"Monday" = "Thứ 2";
+"Tuesday" = "Thứ 3";
+"Wednesday" = "Thứ 4";
+"Thursday" = "Thứ 5";
+"Friday" = "Thứ 6";
+"Saturday" = "Thứ 7";
+"Message details" = "Thông tin chi tiết";
+"Receive verification code" = "Nhận mã xác minh";
+"Product problem" = "Vấn đề sản phẩm";
+"Report problem" = "Câu hỏi phản hồi";
+"Small machine" = "Chatbot";
+"The room is abnormal" = "Lỗi phòng";
+"No one answer, please call again later" = "Không có phản hồi, vui lòng thử lại sau";
+"Scroll to go to the next page" = "Kéo sang trang tiếp theo";
+"Release to go to the next page" = "Đưa sang trang tiếp theo";
+"X year X month" = "yyyy Năm MM Tháng";
+"Release to load" = "Thả để tải lại";
+"All loaded" = "Tất cả đã được tải";
+"Pull down to refresh" = "Kéo xuống để làm mới";
+"Release to refresh" = "Phát hành để làm mới";
+"Dialing" = "Quay số";
+"Answering,Please wait" = "Đang hồi đáp, xin hãy đợi.";
+"studio was broke" = "studio đã bị phá";
+"EndConversationnew" = "Kết thúc phiên";
+"Confirmed that transfer to Support" = "Xác nhận chuyển sang CSKH thủ công";
+
+
+
+
+
+
+
+
+
+"Telemarketing social media support" = "CSKH qua điện thoại và mạng xã hội";
+"Exclusive Support" = "CSKH đặc biệt";
+"Support Group" = "Nhóm CSKH";
+"Support studio" = "Phòng CSKH trực tuyến";
+"Currently no Support's live streaming" = "Tạm thời không có dịch vụ CSKH trực tuyến";
+"No online support" = "Trực ban CSKH offline";
+"No exclusive support" = "Không có dịch vụ CSKH đặc biệt";
+"Search/Support/Group name" = "Tìm kiếm/CSKH/Tên nhóm";
+"Currently no search data" = "Chưa có dữ liệu tìm kiếm";
+
+//客服中心
+"Online Support" = "CSKH trực tuyến";
+"FAQs" = "Vấn đề chung";
+"Site Feedback" = "Ý kiến phản hồi";
+"VIP Hotline" = "Đường dây VIP";
+"Video Call" = "Gọi video";
+"Call Support" = "Âm thanh";
+"Please enter keyword" = "Vui lòng nhập từ khóa";
+"You might want to ask..." = "Bạn đang nghĩ gì";
+"More" = "Nhiều hơn";
+
+
+
+// 26-50
+"Solved" = "Đã xử lý";
+"Unsolved" = "Chưa xử lý";
+"Search history" = "Lịch sử tìm kiếm";
+"Currently no search history" = "Không có lịch sử dữ liệu";
+"Please enter keyword" = "Vui lòng nhập từ khóa";
+"Search" = "Tìm kiếm";
+"List of feedback" = "Danh sách phản hồi";
+"Type of Feedback" = "Loại phản hồi";
+"Feedback Message" = "Thông tin phản hồi";
+"Currently no history data" = "Không có dữ liệu lịch sử";
+"No Feedback/Data" = "Chưa có phản hồi / dữ liệu";
+"Check Replies" = "Xem câu trả lời";
+"No Reply" = "Chưa có câu trả lời";
+"Site Feedback" = "Ý kiến phản hồi";
+"Select type of feedback" = "Chọn loại phản hồi";
+"Please enter feedback message" = "Vui lòng nhập thông tin phản hồi";
+"Please enter feedback comment." = "Vui lòng nhập ý kiến phản hồi";
+"Upload image (Maximun is 6 images)" = "Tải ảnh lên (tối đa 6 ảnh)";
+"Submit" = "Gửi đi";
+"Enquiry form" = "Phiếu điều tra";
+"Submit" = "Gửi đi";
+"Online Support" = "CKSH trực tuyến";
+"Sorry the robot can't help, would you like to transfer to human service?" = "Rất tiếc hiện Chatbot không thể phục vụ bạn. Bạn có muốn kết nối với dịch vụ CSKH thủ công?";
+"Sorry, the customer service is busy right now. There're { } waiting in front of you, please be patient. We'll assign your exclusive support as soon as possible." = "Xin lỗi! Hiện đường dây CSKH đang bận, có %ld khách hàng đang chờ kết nối, Quý khách vui lòng chờ trong giây phút để được kết nối với nhân viên hỗ trợ!";
+"In contact with Support { }" = "Kết nối với dịch vụ CSKH %@";
+
+
+// 51 - 80
+"Copy to the paste board." = "Đã sao chép vào bộ nhớ tạm";
+"Tranfer to human service" = "CSKH thủ công";
+"End conversation" = "Phiên kết thúc";
+"Audio message" = "Tin nhắn thoại";
+"Send" = "Gửi đi";
+"Copy" = "Sao chép";
+"Quote" = "Trích dẫn";
+"Already copied to the paste board" = "Đã sao chép vào bộ nhớ tạm";
+"Temporarily leaving the conversation, will hold for { } minutes." = "Thoát tạm thời, phiên sẽ được bảo lưu trong %@ phút";
+"End conversation" = "Bạn có chắc chắn muốn kết thúc cuộc trò chuyện không?";
+"End the conversation meaning closing it, come back as soon as possible if you leave. If no more message in { } minutes would close the conversation for you." = "Đóng cuộc trò chuyện khi kết thúc, nếu bạn rời đi, vui lòng quay lại sớm nhất có thể, nếu quá %@ phút mà không có phản hồi thì cuộc trò chuyện sẽ được đóng lại.";
+"Cancel" = "Hủy bỏ";
+"Confirm" = "Xác nhận";
+"The conversation has ended." = "Phiên dịch vụ này đã kết thúc";
+"Please click here to rate the support." = "Đánh giá dịch vụ CSKH";
+"Conversation has ended, leaving the page in { } seconds." = "Cuộc trò chuyện đã kết thúc, sẽ thoát sau %@ giây";
+"Rate the support." = "Đánh giá dịch vụ CSKH";
+"Please rate the service." = "-Vui lòng đánh giá trải nghiệm dịch vụ CSKH này-";
+"Did the Support solve your problem?" = "Dịch vụ CSKH có giải quyết được vấn đề không?";
+"Was the Support friendly?" = "Dịch vụ khách hàng có thân thiện không? ";
+"Would you recommend our site?" = "Bạn có muốn giới thiệu trang web của chúng tôi không?";
+"No/Probably/Yes" = "Không/ Có thể/ Có";
+"More things that you would like to share with us." = "Chia sẻ nhiều hơn với chúng tôi";
+"Describe in details." = "Hãy mô tả chi tiết";
+"Submit" = "Gửi đi";
+"VIP Hotline/Audio Call/Video Call" = "Đường dây VIP / Cuộc gọi thoại / Cuộc gọi video";
+"Current reception support is busy, you're transfer to text conversation. You can ask questions by sending messages." = "Hiện tại đường dây CSKH video thoại đang bận, chúng tôi đã giúp bạn kết nối với đường dây CSKH bằng tin nhắn văn bản, bạn có thể gửi thông tin tư vấn";
+"The Support {} that you asked for is currently offline, you're transfer to human service support { }, which does not support audio nor video calls, please enter your question." = "Dịch vụ CSKH %@ bạn yêu cầu hiện không trực tuyến, chúng tôi đã giúp bạn kết nối với CSKH thủ công %@, không hỗ trợ cuộc gọi thoại và video.Vui lòng nhập câu hỏi của bạn";
+"Audio Call" = "Cuộc gọi thoại";
+"Video call" = "Cuộc gọi video";
+"The account balence is not enough" = "Số dư tài khoản không đủ";
+"Call cancelled" = "cuộc gọi bị hủy";
+"Video call starts" = "Bắt đầu video";
+"Audio call starts" = "Bắt đầu cuộc thoại";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 81-110
+"Send image" = "Gửi ảnh";
+"In contact with Support{ }" = "Liên hệ CSKH %@";
+"End Conversation" = "Phiên kết thúc";
+"Audio message" = "Tin nhắn thoại";
+"Copy" = "Sao chép";
+"Quote" = "Trích dẫn";
+"Already canceled the audio call" = "Cuộc gọi thoại đã bị hủy";
+"Already canceled the video call" = "Cuộc gọi video đã bị hủy";
+"Duration:" = "Thời lượng:";
+"{ } invites you to an audio call." = "%@ Mời bạn tham gia cuộc gọi thoại";
+"{ } invites you to a video call." = "%@ Mời bạn tham gia cuộc gọi video";
+"Decline" = "Từ chối";
+"Accept" = "Chấp nhận";
+"Skin setting" = "Quản lý skin";
+"Default" = "Mặc định";
+"End the conversation" = "Phiên kết thúc";
+"Audio Call" = "Cuộc gọi thoại";
+"Video Call" = "Cuộc gọi video";
+"Send Image" = "Gửi ảnh";
+"Tips" = "Phần thưởng";
+"Chat details" = "Chi tiết cuộc trò chuyện";
+"Search chat history" = "Tìm lịch sử trò chuyện";
+"Pin the chat history" = "Ghim lịch sử trò chuyện";
+"Support is currently offline, you could ask again later." = "Cảm ơn sự ủng hộ và phần thưởng của bạn, giúp chúng tôi có động lực hơn";
+"Thank you for your support and tips which motivate us." = "Cảm ơn sự ủng hộ và phần thưởng của bạn, giúp chúng tôi có động lực hơn";
+"Please select the amount{ }" = "Vui lòng chọn số tiền %@";
+"Custom" = "Tùy chỉnh";
+"Balance" = "Số dư";
+"Okay, it's been tipped." = "Tốt, được thưởng";
+"Cancel" = "Hủy bỏ";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 111-144
+"End conversation" = "Phiên kết thúc";
+"Audio Call" = "Cuộc gọi thoại";
+"Video Call" = "Cuộc gọi video";
+"Send Image" = "Gửi ảnh";
+"Chat details" = "Chi tiết cuộc trò chuyện";
+"Search chat history." = "Tìm lịch sử trò chuyện";
+"Pin the chat history." = "Ghim lịch sử trò chuyện";
+"Search by date." = "Tìm kiếm theo ngày";
+"Cancel" = "Hủy bỏ";
+"No more data." = "Không có thêm dữ liệu";
+"Select date" = "Chọn ngày";
+"Confirm" = "Chắc chắn";
+"Audio message" = "Tin nhắn thoại";
+"Please enter your question." = "Vui lòng nhập vấn đề của bạn";
+"You're banned by the group offical, please be polite." = "Bạn đã bị quản trị viên group chặn trò chuyện, hãy trò chuyện một cách văn minh";
+"You cliamed red envelope from support" = "Bạn đã nhận được Lì xì từ dịch vụ CSKH";
+"Chat details" = "Chi tiết cuộc trò chuyện";
+"Group members" = "Thành viên nhóm";
+"{ } members" = "%ld Thành viên";
+"Group robot" = "Nhóm Chatbot";
+"Group name" = "Tên nhóm";
+"Group notice" = "Thông báo nhóm";
+"Search chat history" = "Tìm lịch sử trò chuyện";
+"Pin the chat" = "Ghim trò chuyện";
+"User" = "Người dùng";
+"Group Master" = "Trưởng nhóm";
+"Administer" = "Admin";
+"Already selected { } people" = "Đã chọn %@ người";
+"Please select { } amount" = "Vui lòng chọn số tiền %@";
+"Custom" = "Tùy chỉnh";
+"Balance" = "Số dư";
+"Okay, it's been tipped." = "Tốt, được thưởng";
+"Cancel" = "Hủy bỏ";
+"Please select the support that you would like to tip." = "Vui lòng chọn dịch vụ CSKH bạn muốn tặng thưởng";
+
+
+// add
+"invites you to an audio call…" = "Mời bạn tham gia cuộc gọi thoại";
+"invites you to a video call…" = "Mời bạn tham gia cuộc gọi video";
+"Yes" = "Có";
+"No" = "Không";
+"Probably" = "Có thể";
+
+
+
+

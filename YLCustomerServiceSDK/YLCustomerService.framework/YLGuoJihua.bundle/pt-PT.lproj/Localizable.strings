@@ -1,0 +1,365 @@
+/* 
+  Localizable.strings
+  YLGuoJihua
+
+  Created by yltech on 2022/7/12.
+  
+*/
+/*
+  Localizable.strings
+  YLCustomerService-ios
+
+  Created by duhui on 2022/5/10.
+  Copyright © 2022 永亮iOS. All rights reserved.
+*/
+//葡萄牙语
+// 客服列表
+"Supports list" = "Lista";
+"CSC" = "Atendimento ao Cliente";
+"Language" = "Linguagem";
+"Change Skin" = "Trocar de Pele";
+"Delete and exit" = "Excluir e sair";
+"Please enter" = "Digitar";
+"The Support is offline" = "Atendimento ao cliente off-line";
+"Current version:" = "Atendimento ao Cliente:";
+"Come and chat~" = "Venha conversar~";
+"Please fill in the questionnaire so that we can provide better service!" = "Por favor, preencha o questionário para que possamos prestar um melhor serviço!";
+"Allow location service prompt" = "Permitir prompt de serviço de localização";
+"Please turn on location service in the setting" = "Ative o serviço de localização na configuração";
+"Turn on location service" = "Ativar o serviço de localização";
+"Answer audio call" = "Atender chamada de áudio";
+"Answer video call" = "Atender chamada de vídeo";
+"Input parameter is invalid" = "Parâmetro inválido";
+"The verification code is empty" = "O código de verificação está vazio";
+"Graphic verification code" = "Código de verificação gráfica";
+"Enter the graphic verification code" = "Insira o código de verificação gráfico";
+"No data" = "Sem dados";
+"Other" = "Outro";
+"Gives another feedback" = "Dá outro comentários";
+"Waiting in line therefore can't chat, please wait" = "Esperando na fila para não poder conversar, espere";
+"You tipped" = "Você deu gorjeta";
+"Wishes you wealth and prosperity" = "Desejo Riqueza e Prosperidade";
+"Declined audio call" = "Chamada de áudio recusada";
+"Declined video call" = "Chamada de vídeo recusada";
+"Transfer to Support" = "Transferir para o atendimento ao cliente";
+"Unable to claim" = "Não foi possível reivindicar";
+"The red envelope has exceeded 24 hours"= "Bônus ultrapassou 24 horas";
+"The red envelope has ran out" = "Bônus está esgotado";
+"Check claiming details" = "Verifique os detalhes da reivindicação";
+"Please select the amount of K coins" = "Selecione a quantidade de K moedas";
+"Please enter the amount (bigger than 0)" = "Digite o valor (maior que 0)";
+"(Can exchange for" = "(Pode trocar por";
+"If it's alright with you, please tell us why we couldn't help, so we can improve and bring you better service afterwards, thank you for your support!" = "Se você estiver disposto, por favor, diga-nos o que precisa ser melhorado para lhe trazer uma experiência melhor no futuro";
+"Conversation in progress" = "Conversa em andamento";
+"Login error" = "Erro de login";
+"The message has violation content, and has been withdrawn by the administrator" = "Há conteúdo de violação e retirado pelo administrador";
+"Tipped" = "Com gorjeta";
+"Welcome {} to the studio" = "Bem-vindo %@ ao estúdio";
+"Are you sure to end the conversation?" = "Certeza de encerrar a conversa?";
+"Exit" = "Saída";
+"Is going to leave the group, and will no longer recieve messages from the group?" = "Vai sair do grupo e não receberá mais mensagens do grupo?";
+"Close" ="Perto";
+"Notice" = "Perceber";
+"Event link :" = "Link do evento:";
+"The message length can't exceeds 1000 characters" = "O comprimento da mensagem não pode exceder 1.000 caracteres";
+"24-hour online Support" = "Atendimento ao cliente on-line 24 horas";
+"Support is busy, please select other Support or consult later." = "Sem atendimento ao cliente de telemarketing e mídia social";
+"Talking duration is too short" = "A duração da conversa é muito curta";
+"Dismiss group" = "Dispensar grupo";
+"{} claimed {} red envelopes" = "%@reivindicou%@bônus";
+"You claimed {} red envelopes" = "Vocês reivindicou%@bônus";
+"Prompt" ="Dica";
+"[Image]" = " [Imagem] ";
+"[Link]" = " [ ] ";
+"Please go to setting-privacy-camera/album to open permission setting" = "Vá para setting-privacy-camera/album para configuração de permissão";
+"The size of the video exceeds 20M" = "Vídeo excede 20 milhões";
+"Take a picture" = "Foto aqui";
+"Select from album" = "Selecionar do álbum";
+"Rate" = "Avaliar";
+"Please rate the service" = "Avalie o serviço";
+"Succefully rate"= "Avaliado com sucesso";
+"Please describe in details" = "Descreva em detalhes";
+"How the website" = "Como o site";
+"Would you like to recommend our website?" = "Quer recomendar nosso site?";
+"Anything more you want to say to us" = "Mais para nos dizer";
+"Official answer:" = "Resposta oficial:";
+"Red envelope" = "Bônus";
+"[Red envelope]" = "[Bônus]";
+"Group red envelope" = "Bônus de grupo";
+"{}'s red envelope" = "envelope vermelho de %@";
+"Claim {}" = "Alegar  %@/%@";
+"[The red envelope has been claimed]" = "[O bônus foi reivindicado]";
+"[Withdrawn]" = "[Retirado]";
+"[Audio]" = "[Áudio]";
+"[Video]" = "[Vídeo]";
+"[Activity]" = "[Atividade]";
+"Can't tell" = "Não posso dizer";
+"Verification code login" = "Código de verificação de login";
+"Login" = "Conecte-se";
+"Please enter password" = "Digite a senha";
+"Please enter the verification code" = "Insira o código de verificação";
+"Password login" = "Senha de acesso";
+"Please enter user name/phone numbers" = "Insira o nome de usuário/números de telefone";
+"You still have questions haven't answered" = "Você ainda tem perguntas não respondidas";
+"Network abnormal" = "Rede anormal";
+"The network is unstable" = "Rede instável" ;
+"Failed to send, please check your network" = "Falha ao enviar, verifique sua rede";
+"You're already in a conversation~" = "Já em uma conversa~";
+"You're already in line, please wait" = "Você já está na fila, por favor aguarde";
+"The transfer has expired, please ask again" = "Transferência expirou,pergunte novamente";
+"Returning to server has error, failed to upload" = "Erro ao retornar ao servidor, falha no upload";
+"You're waiting in line" = "Esperando na fila agora";
+"On a call" = "Em uma chamada";
+"Feedback details" = "Detalhes do comentários";
+"No replies from the Support, please wait for the Support to manage it" = "Nenhuma resposta do atendimento ao cliente, aguarde o atendimento ao cliente gerenciar。";
+"Failed to report" = "Falha ao relatar";
+"Hasn't start yet" = "Não começar";
+"On going" = "Em andamento";
+"Pause" = "Pausa";
+"Has ended" = "Finalizado";
+"Unknown" = "Desconhecido";
+"I'm a Support" = "sou atendimento ao cliente";
+"Support {} send a red envelope" = "Atendimento ao cliente %@ envie um bônus /::HB";
+"The Support is not connected, please re-initiate the Support request" = "O atendimento ao cliente não está conectado, reinicie a solicitação";
+"Please under 100 characters" = "Menos de 100 caracteres";
+"Failed to read compressed video" = "Falha ao ler o vídeo compactado";
+"Video data doesn't exist" = "Os dados de vídeo não existem";
+"I want to give feedback" = "quero dar comentários";
+"Getting through..." = "Passando...";
+"Mute" = "Mudo";
+"End" = "Fim";
+"Speaker" = "Palestrante";
+"Disconnected" = "Desconectado";
+"Switch to audio" = "Mudar para áudio";
+"Select date" = "Selecione a data";
+"Please select date" = "Selecione a data";
+"The streamer has left temporarily, pause time{}" = "Streamer saiu temporariamente, tempo de pausa %@";
+"The room has been dismissed" = "Sala dispensada";
+"The room will be dismiss in {}, the users will be exited" = "Sala será dispensada em %@, os usuários serão encerrados";
+"Pull up to load more..." = "Puxe para cima para carregar mais...";
+"Loading more..." = "Carregando mais...";
+"Support" = "Atendimento ao Cliente";
+"Please select who to be tipped" = "Selecione quem receberá a gorjeta";
+"The amount of tip can't be 0" = "Dica não pode ser 0";
+"File complain" = "Conteúdo da reclamação";
+"Loading..." = "Carregando...";
+"You didn't join any Support group" = "Nenhum grupo de atendimento ao cliente";
+"Yesterday" = "Ontem";
+"Unknow mistake" = "Erro desconhecido";
+"The search result is empty" = "Nenhum resultado de pesquisa";
+"The studio is disconnected" = "Estúdio desconectado";
+"Please check the network" = "Verifique a rede";
+"The live streaming has ended" = "Transmissão ao vivo terminou";
+"The streamer leaves for a while" = "Streamer sai por um tempo";
+"Title" = "Título";
+"Come and say something" = "Venha e diga algo";
+"Failed to get Support status" = "Falha ao obter o status de atendimento ao cliente";
+"Currently only support @robot, group robot will answer your questions" = "Atualmente, apenas suporte @robot, o robô do grupo responderá às suas perguntas";
+"At me" = "Em mim ";
+"You're banned by the group offical, please be polite." = "Você foi banido pelo oficial do grupo, por favor, seja educado.";
+"Only the administrator can speaks" = "Somente o administrador pode falar";
+"Sunday" = "Domingo";
+"Monday" = "Segunda-feira";
+"Tuesday" = "Terça-feira";
+"Wednesday" = "Quarta-feira";
+"Thursday" = "Quinta-feira";
+"Friday" = "Sexta-feira";
+"Saturday" = "Sábado";
+"Message details" = "Detalhes da mensagem";
+"Receive verification code" = "Receber código de verificação";
+"Product problem" = "Problema no produto";
+"Report problem" = "Reportar problema";
+"Small machine" = "Máquina pequena";
+"The room is abnormal" = "O quarto é anormal";
+"No one answer, please call again later" = "Ninguém atende, ligue novamente mais tarde";
+"Scroll to go to the next page" = "Role para ir para a próxima página";
+"Release to go to the next page" = "Solte para ir para a próxima página";
+"X year X month" = "yyyy ano MM mês";
+"Release to load" = "Solte para carregar";
+"All loaded" = "Todos carregados";
+"Pull down to refresh" = "Puxe para baixo para atualizar";
+"Release to refresh" = "Solte para atualizar";
+"Dialing" = "Discagem";
+"Answering,Please wait" = "respondendo, por favor aguarde";
+"studio was broke" = "estúdio estava quebrado";
+"The account balence is not enough" = "Saldo Insuficiente Na Conta";
+"EndConversationnew" = "Conversa termina";
+"Confirmed that transfer to Support" = "Transferência confirmada para atendimento ao cliente";
+"Call cancelled" = "chamada cancelada";
+"Video call starts" = "Videochamada é iniciada";
+"Audio call starts" = "Chamada de áudio é iniciada";
+
+"End the conversation meaning closing it, come back as soon as possible if you leave. If no more message in { } minutes would close the conversation for you." = "Conversa Será Encerrada Após o Término, Por Favor, Volte o Mais Rápido Possível Após Sair. Se Não Houver Mensagens Por Mais de %@ Minutos, Esta Conversa Será Encerrada para Você";
+
+
+
+
+
+
+
+
+
+
+
+
+
+"Telemarketing social media support" = "Lista de Atendimento ao Cliente";
+"Exclusive Support" = "Atendimento Exclusivo ao Cliente";
+"Support Group" = "Grupo de Atendimento ao Cliente";
+"Support studio" = "Atendimento ao Cliente Sala ao Vivo";
+"Currently no Support's live streaming" = "No Momento, Não Há Atendimento ao Cliente ao Vivo Em Andamento";
+"No online support" = "Sem Atendimento ao Cliente On-Line Em Serviço";
+"No exclusive support" = "Sem Atendimento ao Cliente DeNotificação de Alertado";
+"Search/Support/Group name" = "Pesquisa/Atendimento ao Cliente/Nome do Grupo";
+"Currently no search data" = "Ainda Não Há Dados de Pesquisa";
+
+//客服中心
+"Online Support" = "Serviço On-Line";
+"FAQs" = "Problema Comum";
+"Site Feedback" = "Comentários";
+"VIP Hotline" = "Linha VIP";
+"Video Call" = "Video Chamada";
+"Call Support" = "Atendimento ao Cliente Por Voz";
+"Please enter keyword" = "Por Favor, Insira Palavras-Chave";
+"You might want to ask..." = "Você Deveria Estar Perguntando";
+"More" = "Quer Mais";
+
+// 26-50
+"Solved" = "Resolvido";
+"Unsolved" = "Não Resolvido";
+"Search history" = "Registro de Pesquisa";
+"Currently no search history" = "No Momento, Não Há Dados Históricos";
+"Please enter keyword" = "Por Favor, Insira Palavras-Chave";
+"Search" = "Procurar";
+"List of feedback" = "Lista de Comentários";
+"Type of Feedback" = "Tipo de Feedback";
+"Feedback Message" = "Comentários";
+"Currently no history data" = "No Momento Não Há Registro de Dados";
+"No Feedback/Data" = "No Momento Não Há Feedback/Dados";
+"Check Replies" = "Ver Respostas";
+"No Reply" = "Nenhuma Resposta Ainda";
+"Site Feedback" = "Comentários";
+"Select type of feedback" = "Escolha o Tipo de Feedback";
+"Please enter feedback message" = "Por Favor, Insira Comentários";
+"Please enter feedback comment." = "Por Favor, Insira Comentários";
+"Upload image (Maximun is 6 images)" = "Carregar Fotos (Até 6)";
+"Submit" = "Enviar";
+"Enquiry form" = "Questionário Antes da Consulta";
+"Submit" = "Enviar";
+"Online Support" = "Serviço On-Line";
+"Sorry the robot can't help, would you like to transfer to human service?" = "É Uma Pena Que o Robô Não Possa Atendê-Lo. Você Gostaria de Entregá-Lo a Um Atendimento ao Cliente Humano?";
+"Sorry, the customer service is busy right now. There're { } waiting in front of you, please be patient. We'll assign your exclusive support as soon as possible." = "Desculpe, o Atendimento ao Cliente Está Ocupado. Há %ld Pessoas Na Fila À Sua Frente, Por Favor, Seja Paciente, Providenciaremos Seu Atendimento Exclusivo ao Cliente o Mais Rápido Possível!";
+"In contact with Support { }" = "Atendimento ao Cliente Conectado %@";
+
+// 51 - 80
+"Copy to the paste board." = "Copiado para o Papelão";
+"Tranfer to human service" = "apoio humano";
+"End conversation" = "Encerrar Sessão";
+"Audio message" = "Conversa de Voz";
+"Send" = "Mandar";
+"Copy" = "Cópia de";
+"Quote" = "Citar";
+"Already copied to the paste board" = "Copiado para o Papelão";
+"Temporarily leaving the conversation, will hold for { } minutes." = "Saia Temporariamente, a Sessão Será Reservada Por %@ Minutos";
+"End conversation" = "Quer Encerrar a Conversa?";
+
+"Please enter your question."= "Conversa Será Encerrada Após o Término, Por Favor, Volte o Mais Rápido Possível Após Sair. Se Não Houver Mensagens Por Mais de %@ Minutos, Esta Conversa Será Encerrada para Você";
+"Cancel" = "Cancelar";
+"Confirm" = "Confirme";
+"The conversation has ended." = "Esta Sessão de Serviço Terminou";
+"Please click here to rate the support." = "Avaliar o serviço ao cliente";
+"Conversation has ended, leaving the page in { } seconds." = "Conversa Foi Encerrada, Sairá Em %@ Segundos";
+"Rate the support." = "Avaliação de Atendimento ao Cliente";
+"Please rate the service." = "-Avalie Este Serviço-";
+"Did the Support solve your problem?" = "Atendimento ao Cliente Resolveu o Problema? ";
+"Was the Support friendly?" = "Atendimento ao Cliente É Amigável? ";
+"Would you recommend our site?" = "Você Recomendaria Nosso Site?";
+"No/Probably/Yes" = "Não Terá/Terá Chance";
+"More things that you would like to share with us." = "Mais Comentários";
+"Describe in details." = "Por Favor, Descreva Em Detalhes";
+"Submit" = "Enviar";
+"VIP Hotline/Audio Call/Video Call" = "Linha VIP/Chamada de Voz/Chamada de Vídeo";
+"Current reception support is busy, you're transfer to text conversation. You can ask questions by sending messages." = "Linha de Áudio e Vídeo da Recepcionista de Atendimento ao Cliente Está Ocupada No Momento e a Conversa de Vídeo e Texto Foi Conectada para Você. Você Pode Enviar Uma Mensagem para Consultar";
+"The Support {} that you asked for is currently offline, you're transfer to human service support { }, which does not support audio nor video calls, please enter your question." = "Serviço de Atendimento ao Cliente %@ Solicitado Não Está Online e Foi Transferido para Um Atendimento ao Cliente Humano %@. Chamadas de Voz e Vídeo Não São Suportadas Aqui. Por Favor, Insira Sua Pergunta";
+"Audio Call" = "Chamadas de Voz";
+"Video call" = "Video Chamada";
+
+
+// 81-110
+"Send image" = "Enviar Fotos";
+"In contact with Support{ }" = "Ligue para o Atendimento ao Cliente %@";
+"End Conversation" = "Encerrar Sessão";
+"Audio message" = "Conversa de Voz";
+"Copy" = "Cópia de";
+"Quote" = "Citar";
+"Already canceled the audio call" = "Chamada de Áudio Cancelada";
+"Already canceled the video call" = "Videochamada Cancelada";
+"Duration:" = "Duração:";
+"{ } invites you to an audio call." = "%@ Convida Você para Uma Chamada de Áudio";
+"{ } invites you to a video call." = "%@ Convida Você para Uma Videochamada";
+"Decline" = "Rejeitar";
+"Accept" = "Aceitar";
+"Skin setting" = "Gerenciamento de Pele";
+"Default" = "Padrões";
+"End the conversation" = "Encerrar Sessão";
+"Audio Call" = "Chamadas de Voz";
+"Video Call" = "Video Chamada";
+"Send Image" = "Enviar Fotos";
+"Tips" = "Dar da Gorjeta";
+"Chat details" = "Detalhes do Bate-Papo";
+"Search chat history" = "Encontrar Histórico de Bate-Papo";
+"Pin the chat history" = "Histórico de Bate-Papo Fixo";
+"Support is currently offline, you could ask again later." = "Atendimento ao Cliente Não Está Online, Pergunte Novamente Mais Tarde";
+"Thank you for your support and tips which motivate us." = "Obrigado Pelo Seu Apoio e da Gorjeta, Isso Nos Deixa Mais Motivados";
+"Please select the amount{ }" = "Selecione o Valor de %@";
+"Custom" = "Customizar";
+"Balance" = "Saldo";
+"Okay, it's been tipped." = "Ok, Já Premiado";
+"Cancel" = "Cancelar";
+
+// 111-144
+"End conversation" = "Encerrar Sessão";
+"Audio Call" = "Chamadas de Voz";
+"Video Call" = "Video Chamada";
+"Send Image" = "Enviar Fotos";
+"Chat details" = "Detalhes do Bate-Papo";
+"Search chat history." = "Encontrar Histórico de Bate-Papo";
+"Pin the chat history." = "Histórico de Bate-Papo Fixo";
+"Search by date." = "Pesquisar Por Data";
+"Cancel" = "Cancelar";
+"No more data." = "Sem Mais Dados";
+"Select date" = "Seleção de Data";
+"Confirm" = "Certo";
+"Audio message" = "Conversa de Voz";
+"Please enter your question." = "Por Favor, Digite o Problema Que Você Está Enfrentando";
+"You're banned by the group offical, please be polite." = "Você Foi Banido Pelos Funcionários do Grupo, Por Favor, Seja Educado e Civilizado";
+"You cliamed red envelope from support" = "Você Recebeu Bônus de Atendimento ao Cliente";
+"Chat details" = "Detalhes do Bate-Papo";
+"Group members" = "Membro do Grupo";
+"{ } members" = "%ld Membros";
+"Group robot" = "Enxame de Robôs";
+"Group name" = "Nome do Grupo";
+"Group notice" = "Anúncio do Grupo";
+"Search chat history" = "Encontrar Histórico de Bate-Papo";
+"Pin the chat" = "Bate-Papo Fixo";
+"User" = "Utilizador";
+"Group Master" = "Líder de Grupo";
+"Administer" = "Administrador";
+"Already selected { } people" = "%@Pessoa Selecionada";
+"Please select { } amount" = "Selecione o Valor de %@";
+"Custom" = "Customizar";
+"Balance" = "Saldo";
+"Okay, it's been tipped." = "Ok, Já Premiado";
+"Cancel" = "Cancelar";
+"Please select the support that you would like to tip." = "Por Favor, Selecione o Serviço ao Cliente Que Você Deseja Dar Gorjeta";
+
+
+
+
+// add
+"invites you to an audio call…" = "Convida Você para Uma Chamada de Áudio";
+"invites you to a video call…" = "Convida Você para Uma Videochamada";
+"Yes" = "Sim";
+"No" = "Não";
+"Probably" = "Terá Chance";
+
