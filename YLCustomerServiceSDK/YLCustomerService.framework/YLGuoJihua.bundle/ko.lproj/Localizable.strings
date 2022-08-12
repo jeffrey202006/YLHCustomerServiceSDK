@@ -34,7 +34,7 @@
 "Wishes you wealth and prosperity" = "돈 많이 버세요";
 "Declined audio call" = "음성통화를 거절했습니다";
 "Declined video call" = "영통을 거절했습니다";
-"Transfer to Support" = "서비스로";
+"Transfer to Support" = "서비스로%@";
 "Unable to claim" = "받지 못함";
 "The red envelope has exceeded 24 hours"= "이 상여금은 24시간 초과";
 "The red envelope has ran out" = "이 상여금은 이제 없음";
@@ -73,7 +73,6 @@
 "Succefully rate"= "평가 성공";
 "Please describe in details" = "자세히 말하기";
 "How the website" = "사이트 어떻게";
-"Would you like to recommend our website?" = "우리 사이트를 추천할겁니까?";
 "Anything more you want to say to us" = "우리에게 하고픈 말";
 "Official answer:" = "공식 답장:";
 "Red envelope" = "상여금";
@@ -96,7 +95,7 @@
 "You still have questions haven't answered" = "답하지 않은 문제가 있습니다";
 "Network abnormal" = "인터넷 이상";
 "The network is unstable" = "현재 데이터가 안정하지 않음" ;
-"Failed to send, please check your network" = "보내기 실패,인터넷 검사 부탁";
+//"Failed to send, please check your network" = "보내기 실패,인터넷 검사 부탁";
 "You're already in a conversation~" = "대화중입니다~";
 "You're already in line, please wait" = "줄서는중입니다,잠시만요!";
 "The transfer has expired, please ask again" = "로딩 실패,다시 질문하기";
@@ -115,6 +114,7 @@
 "Support {} send a red envelope" = "%@ 고객서비스가 상여금을 줬습니다/::HB";
 "The Support is not connected, please re-initiate the Support request" = "고객서비스와 연결되지 않음,다시 시도";
 "Please under 100 characters" = "100자이내 쓰세요";
+"Please under 500 characters" = "500자이내 쓰세요";
 "Failed to read compressed video" = "영상 압촉 로딩 실패";
 "Video data doesn't exist" = "영상 데이터가 없음";
 "I want to give feedback" = "리뷰하기";
@@ -123,7 +123,7 @@
 "End" = "끝";
 "Speaker" = "스피커";
 "Disconnected" = "끊김";
-"Switch to audio" = "음성으로";
+"Switch to audio" = "음성으로 바꾸기";
 "Select date" = "날짜를 선택";
 "Please select date" = "날짜를 선택";
 "The streamer has left temporarily, pause time{}" = "방송주 잠시 나갔습니다,정시 시간장 %@";
@@ -151,13 +151,13 @@
 "At me" = "@나 ";
 "You're banned by the group offical, please be polite." = "관리원에서 금언 당함,문자로 하세요";
 "Only the administrator can speaks" = "관리원만 발언 가능";
-"Sunday" = "일요일";
-"Monday" = "월요일";
-"Tuesday" = "화요일";
-"Wednesday" = "수요일";
-"Thursday" = "목요일";
-"Friday" = "금요일";
-"Saturday" = "토요일";
+"Sunday" = "Sun";
+"Monday" = "Mon";
+"Tuesday" = "Tue";
+"Wednesday" = "Wed";
+"Thursday" = "Thu";
+"Friday" = "Fri";
+"Saturday" = "Sat";
 "Message details" = "자세한 소식";
 "Receive verification code" = "인증번호 받기";
 "Product problem" = "제품문제";
@@ -219,23 +219,19 @@
 "Unsolved" = "해결 안 됨";
 "Search history" = "검색 기록";
 "Currently no search history" = "데이터가 없었음";
-"Please enter keyword" = "키월드를 입력하기";
 "Search" = "검색";
 "List of feedback" = "리뷰 리스트";
 "Type of Feedback" = "리뷰 타입";
 "Feedback Message" = "리뷰 소식";
-"Currently no history data" = "데이터가 없었음";
 "No Feedback/Data" = "의견 리뷰/데이터가 없음";
 "Check Replies" = "대답 보기";
 "No Reply" = "대답 없음";
-"Site Feedback" = "의견 리뷰";
 "Select type of feedback" = "리뷰 타입 고르기";
 "Please enter feedback message" = "리뷰를 입력하기";
 "Please enter feedback comment." = "리뷰를 입력하기";
 "Upload image (Maximun is 6 images)" = "사진 올리기(최대 6장)";
 "Submit" = "제출";
 "Enquiry form" = "문제를 제출하기";
-"Submit" = "제출";
 "Online Support" = "온라인 고객 서비스";
 "Sorry the robot can't help, would you like to transfer to human service?" = "아쉽게도 로봇이 지금 고객님도와 줄 수 없습니다,인공으로 바꾸기";
 "Sorry, the customer service is busy right now. There're { } waiting in front of you, please be patient. We'll assign your exclusive support as soon as possible." = "죄송합니다. 고객 서비스가 바쁘고 앞에 %ld명이 줄을 서 있습니다. 조금만 기다려 주세요. 최대한 빨리 고객 서비스를 제공할 수 있도록 전용 고객 서비스를 준비하겠습니다!";
@@ -265,22 +261,16 @@
 "Was the Support friendly?" = "고객서비스가 친절했습니까?";
 "Would you recommend our site?" = "우리 사이트를 추천할겁니까?";
 "No/Probably/Yes" = "아니요/가능한/네";
-"More things that you would like to share with us." = "우리에게 하고 싶은 말";
+//"More things that you would like to share with us." = "우리에게 하고 싶은 말";
 "Describe in details." = "자세히 말하기";
-"Submit" = "제출";
 "VIP Hotline/Audio Call/Video Call" = "VIP전선/음성통화/영상통화";
 "Current reception support is busy, you're transfer to text conversation. You can ask questions by sending messages." = "영상 고객 서비스 는 현재 바쁩니다,사진 대화로 들어가겠습니다";
 "The Support {} that you asked for is currently offline, you're transfer to human service support { }, which does not support audio nor video calls, please enter your question." = "요청하신%@ 고객 서비스는 온라인이 아니며 수동 고객 서비스%@이(가) 연결되었습니다. 음성 및 화상 통화는 지원되지 않습니다. 질문을 입력하세요.";
-"Audio Call" = "음성통화";
-"Video call" = "영상통화";
 
 
 // 81-110
-"Send image" = "사진 보내기";
 "In contact with Support{ }" = "고객 서비스 %@ 에 전화";
 "End Conversation" = "대화 끝나기";
-"Audio message" = "음성으로 말하기";
-"Copy" = "복제";
 "Quote" = "인용";
 "Already canceled the audio call" = "음성통화 취소했습니다";
 "Already canceled the video call" = "영상통화 취소했습니다";
@@ -292,56 +282,35 @@
 "Skin setting" = "피부 관리";
 "Default" = "확인";
 "End the conversation" = "대화 끝나기";
-"Audio Call" = "음성통화";
-"Video Call" = "영상통화";
-"Send Image" = "사진 보내기";
 "Tips" = "상 주기";
-"Chat details" = "이야기 자세히 보기";
-"Search chat history" = "이야기 기록 찾기";
 "Pin the chat history" = "이야기 기록 조정";
 "Support is currently offline, you could ask again later." = "고객 서비스는 지금 없습니다,잠시 후에 다시 시도해보세요";
 "Thank you for your support and tips which motivate us." = "후원 감사합니다,저희에게는 큰 의미가 됩니다";
-"Please select the amount{ }" = "%@ 금액을 선택하세요";
 "Custom" = "자정의";
 "Balance" = "여액";
-"Okay, it's been tipped." = "네,줬습니다";
-"Cancel" = "취소";
 
 // 111-144
 "End conversation" = "대화 끝나기";
 "Audio Call" = "음성통화";
 "Video Call" = "영상통화";
 "Send Image" = "사진 보내기";
-"Chat details" = "이야기 자세히 보기";
 "Search chat history." = "이야기 기록 찾기";
-"Pin the chat history." = "이야기 기록 조정";
 "Search by date." = "날짜로 검색하기";
-"Cancel" = "취소";
 "No more data." = "데이터가 더 이상 업습니다";
-"Select date" = "날짜를 선택하기";
 "Confirm" = "확인";
-"Audio message" = "음성으로 말하기";
-"Please enter your question." = "문제를 입력하세요";
 "You're banned by the group offical, please be polite." = "팀원에게 금어를 당했습니다,적당히 문자로 하세요";
 "You cliamed red envelope from support" = "고객 서비스의 상여금을 받았습니다";
-"Chat details" = "이야기 자세히 보기";
 "Group members" = "그룹 멤버";
 "{ } members" = "%ld 명 멤버";
 "Group robot" = "팀 로봇";
 "Group name" = "그룹 명";
 "Group notice" = "그룹 공지";
-"Search chat history" = "이야기 기록 찾기";
-"Pin the chat" = "이야기 기록 고정";
 "User" = "사용자";
 "Group Master" = "방장";
 "Administer" = "관리원";
 "Already selected { } people" = "%@ 명 선택했습니다";
 "Please select { } amount" = "%@ 금액을 선택하세요";
-"Custom" = "자정의";
-"Balance" = "여액";
 "Okay, it's been tipped." = "네,줬습니다";
-"Cancel" = "취소";
-"Please select the support that you would like to tip." = "상을 줄 고객서비스를 선택하세요";
 
 
 // add
@@ -350,3 +319,6 @@
 "Yes" = "예";
 "No" = "아니요";
 "Probably" = "가능한";
+"The customer service agent has changed,Please wait patiently" = "고객서비스 자리가 변동했기 때문에,다시 배속했습니다,당신 앞엔 %ld 명 있음,기다려주세요";
+"Sorry, all customer service is off duty, ending the conversation for you, please try again later." = "죄송합니다,모든 고객서비스가 퇴근했습니다,대화를 끝나겠습니다,잠시후 시도";
+

@@ -41,7 +41,7 @@
 "Wishes you wealth and prosperity" = "Desejo Riqueza e Prosperidade";
 "Declined audio call" = "Chamada de áudio recusada";
 "Declined video call" = "Chamada de vídeo recusada";
-"Transfer to Support" = "Transferir para o atendimento ao cliente";
+"Transfer to Support" = "Transferir para o atendimento ao cliente %@";
 "Unable to claim" = "Não foi possível reivindicar";
 "The red envelope has exceeded 24 hours"= "Bônus ultrapassou 24 horas";
 "The red envelope has ran out" = "Bônus está esgotado";
@@ -80,7 +80,6 @@
 "Succefully rate"= "Avaliado com sucesso";
 "Please describe in details" = "Descreva em detalhes";
 "How the website" = "Como o site";
-"Would you like to recommend our website?" = "Quer recomendar nosso site?";
 "Anything more you want to say to us" = "Mais para nos dizer";
 "Official answer:" = "Resposta oficial:";
 "Red envelope" = "Bônus";
@@ -103,7 +102,7 @@
 "You still have questions haven't answered" = "Você ainda tem perguntas não respondidas";
 "Network abnormal" = "Rede anormal";
 "The network is unstable" = "Rede instável" ;
-"Failed to send, please check your network" = "Falha ao enviar, verifique sua rede";
+//"Failed to send, please check your network" = "Falha ao enviar, verifique sua rede";
 "You're already in a conversation~" = "Já em uma conversa~";
 "You're already in line, please wait" = "Você já está na fila, por favor aguarde";
 "The transfer has expired, please ask again" = "Transferência expirou,pergunte novamente";
@@ -122,6 +121,7 @@
 "Support {} send a red envelope" = "Atendimento ao cliente %@ envie um bônus /::HB";
 "The Support is not connected, please re-initiate the Support request" = "O atendimento ao cliente não está conectado, reinicie a solicitação";
 "Please under 100 characters" = "Menos de 100 caracteres";
+"Please under 500 characters" = "Menos de 500 caracteres";
 "Failed to read compressed video" = "Falha ao ler o vídeo compactado";
 "Video data doesn't exist" = "Os dados de vídeo não existem";
 "I want to give feedback" = "quero dar comentários";
@@ -130,10 +130,10 @@
 "End" = "Fim";
 "Speaker" = "Palestrante";
 "Disconnected" = "Desconectado";
-"Switch to audio" = "Mudar para áudio";
+"Switch to audio" = "Lumipat sa audio";
 "Select date" = "Selecione a data";
 "Please select date" = "Selecione a data";
-"The streamer has left temporarily, pause time{}" = "Streamer saiu temporariamente, tempo de pausa %@";
+"The streamer has left temporarily, pause time{}" = "Leave for a while, pause for %@";
 "The room has been dismissed" = "Sala dispensada";
 "The room will be dismiss in {}, the users will be exited" = "Sala será dispensada em %@, os usuários serão encerrados";
 "Pull up to load more..." = "Puxe para cima para carregar mais...";
@@ -158,13 +158,13 @@
 "At me" = "Em mim ";
 "You're banned by the group offical, please be polite." = "Você foi banido pelo oficial do grupo, por favor, seja educado.";
 "Only the administrator can speaks" = "Somente o administrador pode falar";
-"Sunday" = "Domingo";
-"Monday" = "Segunda-feira";
-"Tuesday" = "Terça-feira";
-"Wednesday" = "Quarta-feira";
-"Thursday" = "Quinta-feira";
-"Friday" = "Sexta-feira";
-"Saturday" = "Sábado";
+"Sunday" = "Sun";
+"Monday" = "Mon";
+"Tuesday" = "Tue";
+"Wednesday" = "Wed";
+"Thursday" = "Thu";
+"Friday" = "Fri";
+"Saturday" = "Sat";
 "Message details" = "Detalhes da mensagem";
 "Receive verification code" = "Receber código de verificação";
 "Product problem" = "Problema no produto";
@@ -229,23 +229,19 @@
 "Unsolved" = "Não Resolvido";
 "Search history" = "Registro de Pesquisa";
 "Currently no search history" = "No Momento, Não Há Dados Históricos";
-"Please enter keyword" = "Por Favor, Insira Palavras-Chave";
 "Search" = "Procurar";
 "List of feedback" = "Lista de Comentários";
 "Type of Feedback" = "Tipo de Feedback";
 "Feedback Message" = "Comentários";
-"Currently no history data" = "No Momento Não Há Registro de Dados";
 "No Feedback/Data" = "No Momento Não Há Feedback/Dados";
 "Check Replies" = "Ver Respostas";
 "No Reply" = "Nenhuma Resposta Ainda";
-"Site Feedback" = "Comentários";
 "Select type of feedback" = "Escolha o Tipo de Feedback";
 "Please enter feedback message" = "Por Favor, Insira Comentários";
 "Please enter feedback comment." = "Por Favor, Insira Comentários";
 "Upload image (Maximun is 6 images)" = "Carregar Fotos (Até 6)";
 "Submit" = "Enviar";
 "Enquiry form" = "Questionário Antes da Consulta";
-"Submit" = "Enviar";
 "Online Support" = "Serviço On-Line";
 "Sorry the robot can't help, would you like to transfer to human service?" = "É Uma Pena Que o Robô Não Possa Atendê-Lo. Você Gostaria de Entregá-Lo a Um Atendimento ao Cliente Humano?";
 "Sorry, the customer service is busy right now. There're { } waiting in front of you, please be patient. We'll assign your exclusive support as soon as possible." = "Desculpe, o Atendimento ao Cliente Está Ocupado. Há %ld Pessoas Na Fila À Sua Frente, Por Favor, Seja Paciente, Providenciaremos Seu Atendimento Exclusivo ao Cliente o Mais Rápido Possível!";
@@ -263,7 +259,6 @@
 "Temporarily leaving the conversation, will hold for { } minutes." = "Saia Temporariamente, a Sessão Será Reservada Por %@ Minutos";
 "End conversation" = "Quer Encerrar a Conversa?";
 
-"Please enter your question."= "Conversa Será Encerrada Após o Término, Por Favor, Volte o Mais Rápido Possível Após Sair. Se Não Houver Mensagens Por Mais de %@ Minutos, Esta Conversa Será Encerrada para Você";
 "Cancel" = "Cancelar";
 "Confirm" = "Confirme";
 "The conversation has ended." = "Esta Sessão de Serviço Terminou";
@@ -275,22 +270,16 @@
 "Was the Support friendly?" = "Atendimento ao Cliente É Amigável? ";
 "Would you recommend our site?" = "Você Recomendaria Nosso Site?";
 "No/Probably/Yes" = "Não Terá/Terá Chance";
-"More things that you would like to share with us." = "Mais Comentários";
+//"More things that you would like to share with us." = "Mais Comentários";
 "Describe in details." = "Por Favor, Descreva Em Detalhes";
-"Submit" = "Enviar";
 "VIP Hotline/Audio Call/Video Call" = "Linha VIP/Chamada de Voz/Chamada de Vídeo";
 "Current reception support is busy, you're transfer to text conversation. You can ask questions by sending messages." = "Linha de Áudio e Vídeo da Recepcionista de Atendimento ao Cliente Está Ocupada No Momento e a Conversa de Vídeo e Texto Foi Conectada para Você. Você Pode Enviar Uma Mensagem para Consultar";
 "The Support {} that you asked for is currently offline, you're transfer to human service support { }, which does not support audio nor video calls, please enter your question." = "Serviço de Atendimento ao Cliente %@ Solicitado Não Está Online e Foi Transferido para Um Atendimento ao Cliente Humano %@. Chamadas de Voz e Vídeo Não São Suportadas Aqui. Por Favor, Insira Sua Pergunta";
-"Audio Call" = "Chamadas de Voz";
-"Video call" = "Video Chamada";
 
 
 // 81-110
-"Send image" = "Enviar Fotos";
 "In contact with Support{ }" = "Ligue para o Atendimento ao Cliente %@";
 "End Conversation" = "Encerrar Sessão";
-"Audio message" = "Conversa de Voz";
-"Copy" = "Cópia de";
 "Quote" = "Citar";
 "Already canceled the audio call" = "Chamada de Áudio Cancelada";
 "Already canceled the video call" = "Videochamada Cancelada";
@@ -302,56 +291,35 @@
 "Skin setting" = "Gerenciamento de Pele";
 "Default" = "Padrões";
 "End the conversation" = "Encerrar Sessão";
-"Audio Call" = "Chamadas de Voz";
-"Video Call" = "Video Chamada";
-"Send Image" = "Enviar Fotos";
 "Tips" = "Dar da Gorjeta";
-"Chat details" = "Detalhes do Bate-Papo";
-"Search chat history" = "Encontrar Histórico de Bate-Papo";
 "Pin the chat history" = "Histórico de Bate-Papo Fixo";
 "Support is currently offline, you could ask again later." = "Atendimento ao Cliente Não Está Online, Pergunte Novamente Mais Tarde";
 "Thank you for your support and tips which motivate us." = "Obrigado Pelo Seu Apoio e da Gorjeta, Isso Nos Deixa Mais Motivados";
-"Please select the amount{ }" = "Selecione o Valor de %@";
 "Custom" = "Customizar";
 "Balance" = "Saldo";
-"Okay, it's been tipped." = "Ok, Já Premiado";
-"Cancel" = "Cancelar";
 
 // 111-144
 "End conversation" = "Encerrar Sessão";
 "Audio Call" = "Chamadas de Voz";
 "Video Call" = "Video Chamada";
 "Send Image" = "Enviar Fotos";
-"Chat details" = "Detalhes do Bate-Papo";
 "Search chat history." = "Encontrar Histórico de Bate-Papo";
-"Pin the chat history." = "Histórico de Bate-Papo Fixo";
 "Search by date." = "Pesquisar Por Data";
-"Cancel" = "Cancelar";
 "No more data." = "Sem Mais Dados";
-"Select date" = "Seleção de Data";
 "Confirm" = "Certo";
-"Audio message" = "Conversa de Voz";
-"Please enter your question." = "Por Favor, Digite o Problema Que Você Está Enfrentando";
 "You're banned by the group offical, please be polite." = "Você Foi Banido Pelos Funcionários do Grupo, Por Favor, Seja Educado e Civilizado";
 "You cliamed red envelope from support" = "Você Recebeu Bônus de Atendimento ao Cliente";
-"Chat details" = "Detalhes do Bate-Papo";
 "Group members" = "Membro do Grupo";
 "{ } members" = "%ld Membros";
 "Group robot" = "Enxame de Robôs";
 "Group name" = "Nome do Grupo";
 "Group notice" = "Anúncio do Grupo";
-"Search chat history" = "Encontrar Histórico de Bate-Papo";
-"Pin the chat" = "Bate-Papo Fixo";
 "User" = "Utilizador";
 "Group Master" = "Líder de Grupo";
 "Administer" = "Administrador";
 "Already selected { } people" = "%@Pessoa Selecionada";
 "Please select { } amount" = "Selecione o Valor de %@";
-"Custom" = "Customizar";
-"Balance" = "Saldo";
 "Okay, it's been tipped." = "Ok, Já Premiado";
-"Cancel" = "Cancelar";
-"Please select the support that you would like to tip." = "Por Favor, Selecione o Serviço ao Cliente Que Você Deseja Dar Gorjeta";
 
 
 
@@ -362,4 +330,7 @@
 "Yes" = "Sim";
 "No" = "Não";
 "Probably" = "Terá Chance";
+
+"The customer service agent has changed,Please wait patiently" = "Conversa foi reatribuída devido à mudança de atendimento ao cliente. Há %ld usuários esperando na fila à sua frente, seja paciente";
+"Sorry, all customer service is off duty, ending the conversation for you, please try again later." = "Com licença, todo o atendimento ao cliente está fora do trabalho, conversa terminou, tente novamente mais tarde";
 

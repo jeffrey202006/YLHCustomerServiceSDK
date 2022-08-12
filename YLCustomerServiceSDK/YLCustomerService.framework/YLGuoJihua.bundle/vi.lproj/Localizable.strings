@@ -41,7 +41,7 @@
 "Wishes you wealth and prosperity" = "Chúc Phát Tài, Đại Cát Đại Lợi";
 "Declined audio call" = "Đã từ chối cuộc gọi thoại";
 "Declined video call" = "Đã từ chối cuộc gọi video";
-"Transfer to Support" = "Chuyển tiếp CSKH";
+"Transfer to Support" = "Chuyển tiếp CSKH %@";
 "Unable to claim" = "Không thể nhận";
 "The red envelope has exceeded 24 hours"= "Lì Xì này đã quá 24 giờ";
 "The red envelope has ran out" = "Lì Xì này đã bị lấy hết";
@@ -80,7 +80,6 @@
 "Succefully rate"= "Đánh giá thành công";
 "Please describe in details" = "Mô tả chi tiết";
 "How the website" = "Web thế nào";
-"Would you like to recommend our website?" = "Giới thiệu trang web của chúng tôi?";
 "Anything more you want to say to us" = "Nhiều điều để nói với chúng tôi";
 "Official answer:" = "Câu trả lời chính thức:";
 "Red envelope" = "Lì Xì";
@@ -103,7 +102,7 @@
 "You still have questions haven't answered" = "Bạn có câu hỏi vẫn chưa trả lời";
 "Network abnormal" = "Lỗi mạng";
 "The network is unstable" = "Mạng không ổn định" ;
-"Failed to send, please check your network" = "Không gửi được, Vui lòng kiểm tra mạng của bạn";
+//"Failed to send, please check your network" = "Không gửi được, Vui lòng kiểm tra mạng của bạn";
 "You're already in a conversation~" = "Bạn đang trong phiên";
 "You're already in line, please wait" = "Bạn đang xếp hàng, vui lòng chờ";
 "The transfer has expired, please ask again" = "Chuyển tới thất bại, vui lòng hỏi lại";
@@ -122,6 +121,7 @@
 "Support {} send a red envelope" = "Dịch vụ CSKH %@ đã gửi một lì xì /::HB";
 "The Support is not connected, please re-initiate the Support request" = "Không thể kết nối CSKH, vui lòng kết nối lại";
 "Please under 100 characters" = "Vui lòng điền tối đa 100 ký tự";
+"Please under 500 characters" = "Vui lòng điền tối đa 500 ký tự";
 "Failed to read compressed video" = "Không đọc được video nén";
 "Video data doesn't exist" = "Dữ liệu video không tồn tại";
 "I want to give feedback" = "Tôi muốn phản hồi";
@@ -158,13 +158,13 @@
 "At me" = "@Tôi ";
 "You're banned by the group offical, please be polite." = "Bạn bị Admin cấm phát ngôn, hãy trò chuyện một cách văn minh";
 "Only the administrator can speaks" = "Chỉ Admin phát ngôn";
-"Sunday" = "Chủ nhật";
-"Monday" = "Thứ 2";
-"Tuesday" = "Thứ 3";
-"Wednesday" = "Thứ 4";
-"Thursday" = "Thứ 5";
-"Friday" = "Thứ 6";
-"Saturday" = "Thứ 7";
+"Sunday" = "Sun";
+"Monday" = "Mon";
+"Tuesday" = "Tue";
+"Wednesday" = "Wed";
+"Thursday" = "Thu";
+"Friday" = "Fri";
+"Saturday" = "Sat";
 "Message details" = "Thông tin chi tiết";
 "Receive verification code" = "Nhận mã xác minh";
 "Product problem" = "Vấn đề sản phẩm";
@@ -221,23 +221,19 @@
 "Unsolved" = "Chưa xử lý";
 "Search history" = "Lịch sử tìm kiếm";
 "Currently no search history" = "Không có lịch sử dữ liệu";
-"Please enter keyword" = "Vui lòng nhập từ khóa";
 "Search" = "Tìm kiếm";
 "List of feedback" = "Danh sách phản hồi";
 "Type of Feedback" = "Loại phản hồi";
 "Feedback Message" = "Thông tin phản hồi";
-"Currently no history data" = "Không có dữ liệu lịch sử";
 "No Feedback/Data" = "Chưa có phản hồi / dữ liệu";
 "Check Replies" = "Xem câu trả lời";
 "No Reply" = "Chưa có câu trả lời";
-"Site Feedback" = "Ý kiến phản hồi";
 "Select type of feedback" = "Chọn loại phản hồi";
 "Please enter feedback message" = "Vui lòng nhập thông tin phản hồi";
 "Please enter feedback comment." = "Vui lòng nhập ý kiến phản hồi";
 "Upload image (Maximun is 6 images)" = "Tải ảnh lên (tối đa 6 ảnh)";
 "Submit" = "Gửi đi";
 "Enquiry form" = "Phiếu điều tra";
-"Submit" = "Gửi đi";
 "Online Support" = "CKSH trực tuyến";
 "Sorry the robot can't help, would you like to transfer to human service?" = "Rất tiếc hiện Chatbot không thể phục vụ bạn. Bạn có muốn kết nối với dịch vụ CSKH thủ công?";
 "Sorry, the customer service is busy right now. There're { } waiting in front of you, please be patient. We'll assign your exclusive support as soon as possible." = "Xin lỗi! Hiện đường dây CSKH đang bận, có %ld khách hàng đang chờ kết nối, Quý khách vui lòng chờ trong giây phút để được kết nối với nhân viên hỗ trợ!";
@@ -267,14 +263,12 @@
 "Was the Support friendly?" = "Dịch vụ khách hàng có thân thiện không? ";
 "Would you recommend our site?" = "Bạn có muốn giới thiệu trang web của chúng tôi không?";
 "No/Probably/Yes" = "Không/ Có thể/ Có";
-"More things that you would like to share with us." = "Chia sẻ nhiều hơn với chúng tôi";
+//"More things that you would like to share with us." = "Chia sẻ nhiều hơn với chúng tôi";
 "Describe in details." = "Hãy mô tả chi tiết";
-"Submit" = "Gửi đi";
 "VIP Hotline/Audio Call/Video Call" = "Đường dây VIP / Cuộc gọi thoại / Cuộc gọi video";
 "Current reception support is busy, you're transfer to text conversation. You can ask questions by sending messages." = "Hiện tại đường dây CSKH video thoại đang bận, chúng tôi đã giúp bạn kết nối với đường dây CSKH bằng tin nhắn văn bản, bạn có thể gửi thông tin tư vấn";
 "The Support {} that you asked for is currently offline, you're transfer to human service support { }, which does not support audio nor video calls, please enter your question." = "Dịch vụ CSKH %@ bạn yêu cầu hiện không trực tuyến, chúng tôi đã giúp bạn kết nối với CSKH thủ công %@, không hỗ trợ cuộc gọi thoại và video.Vui lòng nhập câu hỏi của bạn";
-"Audio Call" = "Cuộc gọi thoại";
-"Video call" = "Cuộc gọi video";
+
 "The account balence is not enough" = "Số dư tài khoản không đủ";
 "Call cancelled" = "cuộc gọi bị hủy";
 "Video call starts" = "Bắt đầu video";
@@ -283,29 +277,9 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // 81-110
-"Send image" = "Gửi ảnh";
 "In contact with Support{ }" = "Liên hệ CSKH %@";
 "End Conversation" = "Phiên kết thúc";
-"Audio message" = "Tin nhắn thoại";
-"Copy" = "Sao chép";
 "Quote" = "Trích dẫn";
 "Already canceled the audio call" = "Cuộc gọi thoại đã bị hủy";
 "Already canceled the video call" = "Cuộc gọi video đã bị hủy";
@@ -317,38 +291,12 @@
 "Skin setting" = "Quản lý skin";
 "Default" = "Mặc định";
 "End the conversation" = "Phiên kết thúc";
-"Audio Call" = "Cuộc gọi thoại";
-"Video Call" = "Cuộc gọi video";
-"Send Image" = "Gửi ảnh";
 "Tips" = "Phần thưởng";
-"Chat details" = "Chi tiết cuộc trò chuyện";
-"Search chat history" = "Tìm lịch sử trò chuyện";
 "Pin the chat history" = "Ghim lịch sử trò chuyện";
 "Support is currently offline, you could ask again later." = "Cảm ơn sự ủng hộ và phần thưởng của bạn, giúp chúng tôi có động lực hơn";
 "Thank you for your support and tips which motivate us." = "Cảm ơn sự ủng hộ và phần thưởng của bạn, giúp chúng tôi có động lực hơn";
-"Please select the amount{ }" = "Vui lòng chọn số tiền %@";
 "Custom" = "Tùy chỉnh";
 "Balance" = "Số dư";
-"Okay, it's been tipped." = "Tốt, được thưởng";
-"Cancel" = "Hủy bỏ";
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -357,36 +305,23 @@
 "Audio Call" = "Cuộc gọi thoại";
 "Video Call" = "Cuộc gọi video";
 "Send Image" = "Gửi ảnh";
-"Chat details" = "Chi tiết cuộc trò chuyện";
 "Search chat history." = "Tìm lịch sử trò chuyện";
-"Pin the chat history." = "Ghim lịch sử trò chuyện";
 "Search by date." = "Tìm kiếm theo ngày";
-"Cancel" = "Hủy bỏ";
 "No more data." = "Không có thêm dữ liệu";
-"Select date" = "Chọn ngày";
 "Confirm" = "Chắc chắn";
-"Audio message" = "Tin nhắn thoại";
-"Please enter your question." = "Vui lòng nhập vấn đề của bạn";
 "You're banned by the group offical, please be polite." = "Bạn đã bị quản trị viên group chặn trò chuyện, hãy trò chuyện một cách văn minh";
 "You cliamed red envelope from support" = "Bạn đã nhận được Lì xì từ dịch vụ CSKH";
-"Chat details" = "Chi tiết cuộc trò chuyện";
 "Group members" = "Thành viên nhóm";
 "{ } members" = "%ld Thành viên";
 "Group robot" = "Nhóm Chatbot";
 "Group name" = "Tên nhóm";
 "Group notice" = "Thông báo nhóm";
-"Search chat history" = "Tìm lịch sử trò chuyện";
-"Pin the chat" = "Ghim trò chuyện";
 "User" = "Người dùng";
 "Group Master" = "Trưởng nhóm";
 "Administer" = "Admin";
 "Already selected { } people" = "Đã chọn %@ người";
 "Please select { } amount" = "Vui lòng chọn số tiền %@";
-"Custom" = "Tùy chỉnh";
-"Balance" = "Số dư";
 "Okay, it's been tipped." = "Tốt, được thưởng";
-"Cancel" = "Hủy bỏ";
-"Please select the support that you would like to tip." = "Vui lòng chọn dịch vụ CSKH bạn muốn tặng thưởng";
 
 
 // add
@@ -399,3 +334,5 @@
 
 
 
+"The customer service agent has changed,Please wait patiently" = "Cuộc trò chuyện của bạn đã được kết nối lại vì sự thay đổi của bộ phận CSKH, có %ld người dùng đang ở phòng chờ, xin hãy kiên nhẫn";
+"Sorry, all customer service is off duty, ending the conversation for you, please try again later." = "Rất tiếc, bộ phận CSKH đã ngừng hoạt động, cuộc trò chuyện đã kết thúc, vui lòng thử lại sau。";

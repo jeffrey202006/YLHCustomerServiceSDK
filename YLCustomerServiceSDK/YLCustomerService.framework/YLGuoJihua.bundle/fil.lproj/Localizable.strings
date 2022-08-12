@@ -33,7 +33,7 @@
 "Wishes you wealth and prosperity" = "Binabati ka ng kasaganaan";
 "Declined audio call" = "Tinanggihan ang audio call";
 "Declined video call" = "Tinanggihan ang video call";
-"Transfer to Support" = "Lumipat kay suporta";
+"Transfer to Support" = "Lumipat kay suporta%@";
 "Unable to claim" = "Hindi makuha";
 "The red envelope has exceeded 24 hours"= "Ang red envelope ay lumampas sa 24 na oras";
 "The red envelope has ran out" = "Naubusan ng red envelope";
@@ -72,7 +72,6 @@
 "Succefully rate"= "Matagumpay ang pag-rate";
 "Please describe in details" = "Mangyaring ilarawan ng detalyado";
 "How the website" = "Kamusta ang website";
-"Would you like to recommend our website?" = "Nais mo bang i-rekomenda ang aming website?";
 "Anything more you want to say to us" = "Anumang bagay na nais mong sabihin sa amin";
 "Official answer:" = "Opisyal na sagot:";
 "Red envelope" = "Red envelope";
@@ -95,7 +94,7 @@
 "You still have questions haven't answered" = "Mayroon ka pa ring mga katanungan na hindi pa nasagot";
 "Network abnormal" = "Abnormal na network";
 "The network is unstable" = "Ang network ay hindi matatag" ;
-"Failed to send, please check your network" = "Nabigong magpadala, mangyaring suriin ang iyong network";
+//"Failed to send, please check your network" = "Nabigong magpadala, mangyaring suriin ang iyong network";
 "You're already in a conversation~" = "Nasa pag-uusap ka na ~";
 "You're already in line, please wait" = "Nasa linya ka na, mangyaring maghintay";
 "The transfer has expired, please ask again" = "Nag-expire na ang paglipat, mangyaring magtanong muli";
@@ -114,6 +113,7 @@
 "Support {} send a red envelope" = "Ang sumuportang si %@ ay nagpadala ng red envelope /::HB";
 "The Support is not connected, please re-initiate the Support request" = "Ang suporta ay hindi konektado, mangyaring muling simulan ang kahilingan";
 "Please under 100 characters" = "Mangyaring sa ilalim ng 100 character";
+"Please under 500 characters" = "Mangyaring sa ilalim ng 500 character";
 "Failed to read compressed video" = "Nabigong basahin ang naka-compress na video";
 "Video data doesn't exist" = "Ang data ng video ay hindi umiiral";
 "I want to give feedback" = "Gusto kong magbigay ng puna";
@@ -151,13 +151,13 @@
 "At me" = "Sa akin ";
 "You're banned by the group offical, please be polite." = "Pinagbawalan ka ng opisyal ng grupo, mangyaring maging magalang.";
 "Only the administrator can speaks" = "Tanging ang administrator lamang ang maaaring magsalita";
-"Sunday" = "Linggo";
-"Monday" = "Lunes";
-"Tuesday" = "Martes";
-"Wednesday" = "Miyerkules";
-"Thursday" = "Huwebes";
-"Friday" = "Biyernes";
-"Saturday" = "Sabado";
+"Sunday" = "Sun";
+"Monday" = "Mon";
+"Tuesday" = "Tue";
+"Wednesday" = "Wed";
+"Thursday" = "Thu";
+"Friday" = "Fri";
+"Saturday" = "Sat";
 "Message details" = "Mga detalye ng mensahe";
 "Receive verification code" = "Kumuha ng verification code";
 "Product problem" = "Problema sa produkto";
@@ -235,12 +235,10 @@
 "Unsolved" = "Hindi naresolba";
 "Search history" = "Kasaysayan ng Paghahanap";
 "Currently no search history" = "Kasalukuyang walang kasaysayan ng paghahanap";
-"Please enter keyword" = "Pakilagay ng keyword";
 "Search" = "Hanapin";
 "List of feedback" = "Listahan ng feedback";
 "Type of Feedback" = "Uri ng Feedback";
 "Feedback Message" = "Feedback";
-"Currently no history data" = "Kasalukuyang walang kasaysayan ng data";
 "No Feedback/Data" = "Walang Feedback/Data";
 "Check Replies" = "Tingnan ang mga tugon";
 "No Reply" = "Wala pang tugon";
@@ -250,7 +248,6 @@
 "Upload image (Maximun is 6 images)" = "Mag-upload ng larawan (hanggang 6)";
 "Submit" = "Isumite";
 "Enquiry form" = "Inquiry form";
-"Submit" = "Isumite";
 "Sorry the robot can't help, would you like to transfer to human service?" = "Paumanhin at hindi ito masasagot ng aming bot. Gusto mo bang lumipat sa aming tauhing magbibigay tugon?";
 "Sorry, the customer service is busy right now. There're { } waiting in front of you, please be patient. We'll assign your exclusive support as soon as possible." = "Paumanhin at kasalukuyang busy ang aming %ld mga tauhan. Maaaring mag-antabay at itatalaga namin ang mag-aasikaso sayo sa lalong madaling panahon..";
 "In contact with Support { }" = "Nakikipag-ugnayan sa tutugon %@";
@@ -278,22 +275,15 @@
 "Was the Support friendly?" = "Magiliw ba ang tumugon? ";
 "Would you recommend our site?" = "Irerekomenda mo ba ang aming site?";
 "No/Probably/Yes" = "Hindi/Marahil/Oo";
-"More things that you would like to share with us." = "Higit pang mga bagay na nais mong ibahagi sa amin.";
+//"More things that you would like to share with us." = "Higit pang mga bagay na nais mong ibahagi sa amin.";
 "Describe in details." = "Ilarawan ng detalyado.";
-"Submit" = "Isumite";
 "VIP Hotline/Audio Call/Video Call" = "VIP Hotline/Audio Call/Video Call";
 "Current reception support is busy, you're transfer to text conversation. You can ask questions by sending messages." = "Kasalukuyang busy ang reception, ililipat ka sa pag-uusap sa text. Maaari kang magtanong sa pamamagitan ng pagpapadala ng mga mensahe.";
 "The Support {} that you asked for is currently offline, you're transfer to human service support { }, which does not support audio nor video calls, please enter your question." = "Kasalukuyang offline ang tutugon %@ na iyong hiniling, ililipat ka sa taong maglilingkod %@, na hindi tumataguyod ng audio o video call, mangyaring ilagay ang iyong tanong.";
-"Audio Call" = "Audio Call";
-"Video call" = "Video call";
-
 
 // 81-110
-"Send image" = "Magpadala ng larawan";
 "In contact with Support{ }" = "Nakikipag-ugnayan sa tutugon %@";
 "End Conversation" = "Tapusin";
-"Audio message" = "Audio message";
-"Copy" = "Kopyahin";
 "Quote" = "I-quote";
 "Already canceled the audio call" = "Nakansela na ang audio call.";
 "Already canceled the video call" = "Nakansela na ang video call.";
@@ -305,56 +295,35 @@
 "Skin setting" = "Setting ng anyo";
 "Default" = "Default";
 "End the conversation" = "Tapusin ang usapan";
-"Audio Call" = "Audio Call";
-"Video Call" = "Video Call";
-"Send Image" = "Magpadala ng larawan";
 "Tips" = "Mga tip";
-"Chat details" = "Mga detalye ng chat";
-"Search chat history" = "Hanapin sa chat history";
 "Pin the chat history" = "I-pin ang chat history";
 "Support is currently offline, you could ask again later." = "Kasalukuyang offline ang tutugon, maaari kang magtanong muli sa ibang pagkakataon.";
 "Thank you for your support and tips which motivate us." = "Salamat sa iyong suporta at mga tip na nag-uudyok sa amin.";
-"Please select the amount{ }" = "Pakipili ng halaga %@";
 "Custom" = "Sadyain";
 "Balance" = "Balanse";
-"Okay, it's been tipped." = "Okay, na-tip na.";
-"Cancel" = "Kanselahin";
 
 // 111-144
 "End conversation" = "Tapusin ang pag-uusap";
 "Audio Call" = "Audio Call";
 "Video Call" = "Video Call";
 "Send Image" = "Magpadala ng larawan";
-"Chat details" = "Mga detalye ng chat";
 "Search chat history." = "Hanapin sa chat history";
-"Pin the chat history." = "I-pin ang chat history";
 "Search by date." = "Hanapin ayon sa petsa.";
-"Cancel" = "Kanselahin";
 "No more data." = "Wala ng data.";
-"Select date" = "Pumili ng petsa";
 "Confirm" = "Kumpirmahin";
-"Audio message" = "Audio message";
-"Please enter your question." = "Pakilagay ang iyong tanong.";
 "You're banned by the group offical, please be polite." = "Ikaw ay na-ban ng opisyal ng grupo, mangyaring maging magalang.";
 "You cliamed red envelope from support" = "Nag-claim ka ng red envelope mula sa tumugon";
-"Chat details" = "Mga detalye ng chat";
 "Group members" = "Mga myembro ng grupo";
 "{ } members" = "%ld mga miyembro";
 "Group robot" = "Group robot";
 "Group name" = "Pangalan ng grupo";
 "Group notice" = "Paunawa ng grupo";
-"Search chat history" = "Hanapin sa chat history";
-"Pin the chat" = "I-pin ang chat";
 "User" = "User";
 "Group Master" = "Master ng grupo";
 "Administer" = "Pangasiwaan";
 "Already selected { } people" = "Napili na ang %@ mga tao";
 "Please select { } amount" = "Pakipili ng %@ halaga";
-"Custom" = "Sadyain";
-"Balance" = "Balanse";
 "Okay, it's been tipped." = "Okay, na-tip na.";
-"Cancel" = "Kanselahin";
-"Please select the support that you would like to tip." = "Mangyaring piliin ang tumugon na gusto mong bigyan ng tip.";
 
 
 // add
@@ -363,6 +332,8 @@
 "Yes" = "Oo";
 "No" = "Hindi";
 "Probably" = "Marahil";
+"The customer service agent has changed,Please wait patiently" = "Ang iyong pag-uusap ay na-reassign dahil sa pagbabago ng customer support. Mayroong %ld tao sa harap mo, mangyaring maghintay nang matiyaga.";
+"Sorry, all customer service is off duty, ending the conversation for you, please try again later." = "Paumanhin. Ang lahat ng customer support ay wala sa trabaho upang tapusin ang session para sa iyo. Pakisubukang muli sa ibang pagkakataon.";
 
 
 
